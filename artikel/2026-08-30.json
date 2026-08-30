@@ -1,87 +1,67 @@
 {
  "tag": "2026-08-30",
- "lage": "- Micron-Mitarbeiter unterstützen den Streik zunehmend, da sie keine hohen Boni wie Konkurrenten erhalten, während Intel sein NAND-Geschäft verkauft und an Wert verliert.\n- Kioxia und SanDisk planen bis 2032 Investitionen von über 31 Milliarden US-Dollar in japanische NAND-Fabriken, um neue Produktionskapazitäten zu schaffen.\n- Nvidia dominiert den Rechenzentrumsmarkt mit deutlich höherem Umsatz als AMD, während Marvell und Intel unter Druck geraten oder kaum anziehen.\n- Apple validiert den M6-Chip mit TSMC am 2-Nanometer-Prozess, und SK Hynix erweitert seine HBM-Produktion in den USA für 4 Milliarden US-Dollar.\n- Bedrohungsakteure imitieren KI-Firmen für Phishing, Tech-Unternehmen führen Stellenabbau durch, und Oracle gilt nicht als praktikable Alternative zu Palantir für NHS-Daten.",
+ "lage": "- Micron-Mitarbeiter unterstützen den Streik zunehmend, während Samsung und SK hynix hohe Bonuszahlungen leisten.\n- Kioxia und SanDisk planen bis 2032 Investitionen von über 31 Milliarden US-Dollar in japanische NAND-Fabriken.\n- Intel hat sein NAND-Speicher-Geschäft für rund 9 Milliarden US-Dollar verkauft und ist nun weniger wert als Micron.\n- Bedrohungsakteure geben sich als KI-Unternehmen aus, um Zugangsdaten zu erbeuten, und Marvell-Aktien fallen aufgrund verzögerter Gewinne.\n- Alphabet profitiert von steigenden Cloud-Einnahmen, während Amazon und Anthropic Millionen von Büchern für KI-Trainingsdaten löschen.",
  "straenge": {
   "#NVIDIA": [
-   "123f0b3345ea675f",
-   "c423e03d63b50921",
+   "3b7f223f94f17c8f",
    "f016a257e8d2ac24",
+   "f582415cd9f8ea18",
+   "c548665867c5e909",
+   "cabf7f442c0f54db",
    "8df1d806909cb0c5",
    "d68d1e330aba23aa",
    "81d51d1d5fe96d00",
-   "39057bf8efab86b4",
+   "c423e03d63b50921",
+   "1142b2dc8a0af707",
    "459fb0889db60775"
   ],
-  "#Exportkontrolle": [
-   "123f0b3345ea675f",
-   "c423e03d63b50921",
-   "6a05c6733d75e34c",
-   "79032f64defe8182",
-   "c44a8e7098a79a7c",
-   "39057bf8efab86b4",
-   "2f7d312307d21687"
-  ],
-  "#Micron": [
-   "68f4bc713d57d489",
-   "4e7358474de6a26c",
-   "837088a62031b4c8",
-   "925754230a8fc961",
-   "2386d7007b099b22"
+  "#Amazon": [
+   "d791cc40191dc020",
+   "49bba32bab14d370",
+   "0ee5e08f47690406",
+   "fa84663920720927",
+   "0ead9fab51f45c5b",
+   "4075db8c9d235c13",
+   "c548665867c5e909",
+   "cabf7f442c0f54db",
+   "8df1d806909cb0c5",
+   "f40ec95108ad468b"
   ],
   "#Apple": [
-   "6a05c6733d75e34c",
    "752308a8d26d33fa",
+   "49bba32bab14d370",
+   "0ee5e08f47690406",
+   "4075db8c9d235c13",
+   "f40ec95108ad468b",
    "2e473e69a91bc78b",
-   "cfe7d944bd2127c3",
-   "f3ef176c124d5e24"
+   "cfe7d944bd2127c3"
   ],
-  "#CoWoS": [
-   "6a05c6733d75e34c",
-   "79032f64defe8182",
-   "46ccd32aa03342e8",
-   "11ca1eaf06ec32ae",
-   "2f7d312307d21687"
+  "#SKHynix": [
+   "68f4bc713d57d489",
+   "2e64468bff954ae8",
+   "de5931dcf7f479e3",
+   "c905b594bc0c3c4c",
+   "798b028bf3ec891a"
   ],
   "#NAND": [
    "dd92bc3f2f98f8d2",
    "68471e263c056d01",
+   "2e64468bff954ae8",
    "4e7358474de6a26c",
    "837088a62031b4c8"
   ],
-  "#RechenzentrumStrom": [
-   "123f0b3345ea675f",
-   "842823497043579d",
-   "81d51d1d5fe96d00",
-   "d2a624132a591c6c"
-  ],
-  "#TSMC": [
-   "6a05c6733d75e34c",
-   "46ccd32aa03342e8",
-   "11ca1eaf06ec32ae",
-   "2f7d312307d21687"
-  ],
-  "#OpenAI": [
-   "9510541d7b426747",
-   "39057bf8efab86b4",
-   "62d6651d9ba63a4c",
-   "a40f50a0896fd65c"
-  ],
   "#Anthropic": [
+   "d791cc40191dc020",
    "9510541d7b426747",
    "8b045c54c254cbc6",
    "e92ec5bbf6dd061d",
    "46f6806788bb29f9"
   ],
-  "#Amazon": [
-   "fa84663920720927",
-   "0ead9fab51f45c5b",
-   "8df1d806909cb0c5",
-   "431158d0ba1f1165"
-  ],
-  "#SKHynix": [
+  "#Micron": [
    "68f4bc713d57d489",
-   "c44a8e7098a79a7c",
-   "2386d7007b099b22"
+   "4e7358474de6a26c",
+   "837088a62031b4c8",
+   "925754230a8fc961"
   ],
   "#SanDisk": [
    "dd92bc3f2f98f8d2",
@@ -103,25 +83,27 @@
    "f016a257e8d2ac24",
    "837088a62031b4c8"
   ],
+  "#OpenAI": [
+   "9510541d7b426747",
+   "62d6651d9ba63a4c",
+   "a40f50a0896fd65c"
+  ],
+  "#SamsungElectronics": [
+   "de5931dcf7f479e3",
+   "c905b594bc0c3c4c",
+   "798b028bf3ec891a"
+  ],
   "#Kioxia": [
    "dd92bc3f2f98f8d2",
    "68471e263c056d01"
   ],
-  "#AMD": [
-   "123f0b3345ea675f",
-   "c423e03d63b50921"
-  ],
-  "#Oracle": [
-   "752308a8d26d33fa",
-   "842823497043579d"
-  ],
-  "#Palantir": [
-   "842823497043579d",
-   "8df1d806909cb0c5"
-  ],
   "#Alphabet": [
    "fa84663920720927",
    "0ead9fab51f45c5b"
+  ],
+  "#Broadcom": [
+   "f582415cd9f8ea18",
+   "c423e03d63b50921"
   ],
   "#NVIDIAArchitektur": [
    "81d51d1d5fe96d00",
@@ -129,7 +111,7 @@
   ]
  },
  "modell": {
-  "stand": "2026-08-30T13:44:29",
+  "stand": "2026-08-30T13:52:00",
   "name": "Qwen3.6-35B-A3B lokal",
   "eingedeutscht": 40,
   "eskaliert": 0
