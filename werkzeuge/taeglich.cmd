@@ -4,7 +4,8 @@ REM Von Hand aufrufen geht genauso - der Lauf merkt sich, was er schon hatte.
 REM
 REM   1. sammeln.py    Nachrichten zu allen beobachteten Eintraegen holen
 REM   2. schreiben.py  lokales Modell: eindeutschen und Lage schreiben
-REM   3. committen und pushen, mit drei Versuchen
+REM   3. archivieren.py  Tagesstand in archiv/korpus.jsonl fortschreiben
+REM   4. committen und pushen, mit drei Versuchen
 REM
 REM Rueckgabewerte:
 REM   0  fertig und gepusht
@@ -30,6 +31,8 @@ if errorlevel 1 (
 python werkzeuge\schreiben.py >> lauf.log 2>&1
 set SCHREIB=%ERRORLEVEL%
 if "%SCHREIB%"=="2" echo HINWEIS Modell war aus - Feed ohne deutsche Zeilen >> lauf.log
+
+python werkzeugerchivieren.py >> lauf.log 2>&1
 
 git add -A nachrichten.json themen.json archiv artikel analyse >> lauf.log 2>&1
 git diff --cached --quiet

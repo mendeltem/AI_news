@@ -1572,7 +1572,17 @@
    "suchen": [
     "HBM4",
     "HBM Preis",
-    "HBM Kapazitaet"
+    "HBM Kapazitaet",
+    "HBM4E"
+   ],
+   "stichworte": [
+    "HBM",
+    "HBM3",
+    "HBM3E",
+    "HBM4",
+    "HBM4E",
+    "NVHBM",
+    "High Bandwidth Memory"
    ],
    "stufe": 1,
    "art": "thema",
@@ -1585,7 +1595,20 @@
    "suchen": [
     "DRAM Preis",
     "DRAM Kontraktpreis",
-    "DDR5 Preis"
+    "DDR5 Preis",
+    "DRAM contract price"
+   ],
+   "stichworte": [
+    "DRAM",
+    "DDR4",
+    "DDR5",
+    "DDR3",
+    "LPDDR",
+    "Arbeitsspeicher",
+    "RAM-Preis",
+    "RAM-Preise",
+    "Speicherpreis",
+    "Speicherpreise"
    ],
    "stufe": 1,
    "art": "thema",
@@ -1598,7 +1621,17 @@
    "suchen": [
     "NAND Preis",
     "NAND Flash Nachfrage",
-    "eSSD"
+    "eSSD Nachfrage",
+    "NAND fab"
+   ],
+   "stichworte": [
+    "NAND",
+    "SSD-Preis",
+    "SSD-Preise",
+    "eSSD",
+    "3D NAND",
+    "Flash-Speicher",
+    "NAND flash"
    ],
    "stufe": 1,
    "art": "thema",
@@ -1609,8 +1642,33 @@
    "name": "CoWoS",
    "schicht": "Packaging",
    "suchen": [
+    "CoWoS",
     "CoWoS Kapazitaet",
-    "Advanced Packaging"
+    "CoWoS capacity TSMC",
+    "TSMC advanced packaging capacity",
+    "SoIC TSMC",
+    "Amkor advanced packaging",
+    "ASE advanced packaging",
+    "panel level packaging"
+   ],
+   "stichworte": [
+    "CoWoS",
+    "CoWoS-L",
+    "CoWoS-S",
+    "CoWoS-R",
+    "SoIC",
+    "InFO",
+    "Chip-on-Wafer",
+    "advanced packaging",
+    "Advanced Packaging",
+    "Fan-Out",
+    "fan-out",
+    "Panel Level Packaging",
+    "panel-level",
+    "2.5D packaging",
+    "3D-Stacking",
+    "Interposer",
+    "interposer"
    ],
    "stufe": 1,
    "art": "thema",
@@ -1622,7 +1680,22 @@
    "schicht": "Energie",
    "suchen": [
     "Rechenzentrum Netzanschluss",
-    "data center power constraint"
+    "data center power constraint",
+    "data center grid connection",
+    "Rechenzentrum Stromversorgung"
+   ],
+   "stichworte": [
+    "Netzanschluss",
+    "Rechenzentrum",
+    "Rechenzentren",
+    "Stromnetz",
+    "data center power",
+    "grid connection",
+    "power constraint",
+    "Gigawatt",
+    "Umspannwerk",
+    "Netzkapazitaet",
+    "Netzkapazität"
    ],
    "stufe": 1,
    "art": "thema",
@@ -1636,7 +1709,22 @@
     "Rubin GPU",
     "Vera Rubin",
     "Blackwell Ultra",
-    "Feynman GPU"
+    "Feynman GPU",
+    "Rubin CPX"
+   ],
+   "stichworte": [
+    "Rubin",
+    "Vera Rubin",
+    "Blackwell",
+    "Feynman",
+    "Grace Hopper",
+    "GB200",
+    "GB300",
+    "VR200",
+    "NVL72",
+    "NVL576",
+    "Kyber",
+    "NVLink"
    ],
    "stufe": 1,
    "art": "thema",
@@ -1648,7 +1736,25 @@
    "schicht": "Politik",
    "suchen": [
     "Chip Exportkontrolle China",
-    "semiconductor export restriction"
+    "semiconductor export restriction",
+    "chip export ban",
+    "Entity List semiconductor"
+   ],
+   "stichworte": [
+    "Exportkontrolle",
+    "Exportbeschraenkung",
+    "Exportbeschränkung",
+    "export control",
+    "export restriction",
+    "export ban",
+    "Entity List",
+    "Sanktion",
+    "Sanktionen",
+    "sanctions",
+    "Ausfuhrbeschraenkung",
+    "tariff",
+    "Zoelle",
+    "Zölle"
    ],
    "stufe": 1,
    "art": "thema",

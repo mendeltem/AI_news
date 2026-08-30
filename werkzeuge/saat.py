@@ -53,17 +53,58 @@ LABORE = [
 
 # Themen ohne Firmenbezug, die den Kern der Frage beruehren: was kostet der
 # Speicher, was kostet der Strom, wie schnell kommt die naechste Architektur.
+#
+# Zwei getrennte Listen, und die Trennung ist der Punkt:
+#   suchen      was in die Suchmaschine geht - darf weit sein
+#   stichworte  was im Titel stehen muss, damit die Meldung das Thema wirklich
+#               betrifft - muss eng sein
+# Frueher wurde das Stichwort aus dem ersten Wort des Suchbegriffs abgeleitet.
+# Aus "Advanced Packaging" wurde "Advanced", aus "semiconductor export
+# restriction" wurde "semiconductor" - und damit trug jede zweite Chipmeldung
+# den Hashtag #CoWoS oder #Exportkontrolle.
 THEMEN = [
-    ("HBM", "Speicher", ["HBM4", "HBM Preis", "HBM Kapazitaet"]),
-    ("DRAM", "Speicher", ["DRAM Preis", "DRAM Kontraktpreis", "DDR5 Preis"]),
-    ("NAND", "Speicher", ["NAND Preis", "NAND Flash Nachfrage", "eSSD"]),
-    ("CoWoS", "Packaging", ["CoWoS Kapazitaet", "Advanced Packaging"]),
-    ("Rechenzentrum-Strom", "Energie", ["Rechenzentrum Netzanschluss",
-                                        "data center power constraint"]),
-    ("NVIDIA-Architektur", "Silizium", ["Rubin GPU", "Vera Rubin",
-                                        "Blackwell Ultra", "Feynman GPU"]),
-    ("Exportkontrolle", "Politik", ["Chip Exportkontrolle China",
-                                    "semiconductor export restriction"]),
+    ("HBM", "Speicher",
+     ["HBM4", "HBM Preis", "HBM Kapazitaet", "HBM4E"],
+     ["HBM", "HBM3", "HBM3E", "HBM4", "HBM4E", "NVHBM", "High Bandwidth Memory"]),
+
+    ("DRAM", "Speicher",
+     ["DRAM Preis", "DRAM Kontraktpreis", "DDR5 Preis", "DRAM contract price"],
+     ["DRAM", "DDR4", "DDR5", "DDR3", "LPDDR", "Arbeitsspeicher", "RAM-Preis",
+      "RAM-Preise", "Speicherpreis", "Speicherpreise"]),
+
+    ("NAND", "Speicher",
+     ["NAND Preis", "NAND Flash Nachfrage", "eSSD Nachfrage", "NAND fab"],
+     ["NAND", "SSD-Preis", "SSD-Preise", "eSSD", "3D NAND", "Flash-Speicher",
+      "NAND flash"]),
+
+    ("CoWoS", "Packaging",
+     ["CoWoS", "CoWoS Kapazitaet", "CoWoS capacity TSMC",
+      "TSMC advanced packaging capacity", "SoIC TSMC", "Amkor advanced packaging",
+      "ASE advanced packaging", "panel level packaging"],
+     ["CoWoS", "CoWoS-L", "CoWoS-S", "CoWoS-R", "SoIC", "InFO",
+      "Chip-on-Wafer", "advanced packaging", "Advanced Packaging",
+      "Fan-Out", "fan-out", "Panel Level Packaging", "panel-level",
+      "2.5D packaging", "3D-Stacking", "Interposer", "interposer"]),
+
+    ("Rechenzentrum-Strom", "Energie",
+     ["Rechenzentrum Netzanschluss", "data center power constraint",
+      "data center grid connection", "Rechenzentrum Stromversorgung"],
+     ["Netzanschluss", "Rechenzentrum", "Rechenzentren", "Stromnetz",
+      "data center power", "grid connection", "power constraint", "Gigawatt",
+      "Umspannwerk", "Netzkapazitaet", "Netzkapazität"]),
+
+    ("NVIDIA-Architektur", "Silizium",
+     ["Rubin GPU", "Vera Rubin", "Blackwell Ultra", "Feynman GPU", "Rubin CPX"],
+     ["Rubin", "Vera Rubin", "Blackwell", "Feynman", "Grace Hopper", "GB200",
+      "GB300", "VR200", "NVL72", "NVL576", "Kyber", "NVLink"]),
+
+    ("Exportkontrolle", "Politik",
+     ["Chip Exportkontrolle China", "semiconductor export restriction",
+      "chip export ban", "Entity List semiconductor"],
+     ["Exportkontrolle", "Exportbeschraenkung", "Exportbeschränkung",
+      "export control", "export restriction", "export ban", "Entity List",
+      "Sanktion", "Sanktionen", "sanctions", "Ausfuhrbeschraenkung",
+      "tariff", "Zoelle", "Zölle"]),
 ]
 
 
@@ -177,8 +218,8 @@ def main():
         e["hashtag"] = hashtag(e["name"])
 
     themen = [{"id": re.sub(r"[^0-9A-Za-z]+", "_", n).upper(), "name": n,
-               "schicht": s, "suchen": q, "stufe": 1, "art": "thema",
-               "hashtag": hashtag(n)} for n, s, q in THEMEN]
+               "schicht": s, "suchen": q, "stichworte": w, "stufe": 1,
+               "art": "thema", "hashtag": hashtag(n)} for n, s, q, w in THEMEN]
 
     aus = {
         "erzeugt": date.today().isoformat(),
