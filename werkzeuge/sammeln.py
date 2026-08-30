@@ -37,7 +37,8 @@ LOG = WURZEL / "lauf.log"
 KOPF = {"User-Agent": "Mozilla/5.0 (compatible; AI-news-sammler/1.0; "
                       "+https://github.com/mendeltem/AI_news)"}
 PAUSE = 0.35          # Sekunden zwischen zwei Abfragen
-ZEITFENSTER_TAGE = 2  # aelter als das interessiert im Tagesfeed nicht
+ZEITFENSTER_TAGE = 2    # Firmen: aelteres interessiert im Tagesfeed nicht
+ZEITFENSTER_THEMEN = 8  # Themen bewegen sich im Wochentakt, nicht taeglich
 
 # Quellen, deren Meldungen erfahrungsgemaess Substanz haben. Kein Filter -
 # nur ein Bonus bei der Sortierung, damit oben nicht die Aggregatoren stehen.
@@ -85,16 +86,20 @@ def log(msg):
         pass
 
 
-def rss_url(suche, sprache="de"):
+def rss_url(suche, sprache="de", tage=7):
     """Beide Sprachen, absichtlich: die deutsche Presse bringt Golem und heise,
     die Substanz zu Speicherpreisen und Fertigung steht bei TrendForce,
-    DigiTimes und Reuters und erscheint nur englisch."""
+    DigiTimes und Reuters und erscheint nur englisch.
+
+    tage steuert das Fenster der Anfrage. Es muss mindestens so breit sein wie
+    das Fenster, nach dem spaeter gefiltert wird - sonst filtert man Material,
+    das gar nicht erst geholt wurde."""
     q = urllib.parse.quote(suche)
     if sprache == "en":
-        return ("https://news.google.com/rss/search?q=%s+when:7d"
-                "&hl=en-US&gl=US&ceid=US:en" % q)
-    return ("https://news.google.com/rss/search?q=%s+when:7d"
-            "&hl=de&gl=DE&ceid=DE:de" % q)
+        return ("https://news.google.com/rss/search?q=%s+when:%dd"
+                "&hl=en-US&gl=US&ceid=US:en" % (q, tage))
+    return ("https://news.google.com/rss/search?q=%s+when:%dd"
+            "&hl=de&gl=DE&ceid=DE:de" % (q, tage))
 
 
 def hole(url, versuche=2):
@@ -164,16 +169,26 @@ def treffer(text, eintrag):
             and tic.isupper() and tic not in {"ON", "ARM", "NOW", "ALL"}):
         if re.search(r"\b%s\b" % re.escape(tic), text):
             return True
-    for s in eintrag.get("suchen", []):
-        kern = s.split()[0]
-        if len(kern) >= 3 and re.search(r"\b%s\b" % re.escape(kern), text, re.I):
+    # Stichworte sind der Relevanzbeweis und werden als ganze Wendung geprueft.
+    #
+    # Hier stand frueher eine Ableitung aus den Suchbegriffen: kern =
+    # s.split()[0]. Aus "TSMC advanced packaging capacity" wurde damit "TSMC",
+    # aus "semiconductor export restriction" wurde "semiconductor" - und jede
+    # TSMC-Meldung trug #CoWoS. Der Suchbegriff sagt, wonach gesucht wird; er
+    # sagt nicht, wovon die gefundene Meldung handelt.
+    for w in eintrag.get("stichworte", []):
+        muster = r"\b%s\b" % re.escape(w) if re.match(r"\w", w) else re.escape(w)
+        if re.search(muster, text, re.I):
             return True
     return False
 
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--tage", type=int, default=ZEITFENSTER_TAGE)
+    p.add_argument("--tage", type=int, default=ZEITFENSTER_TAGE,
+                   help="Zeitfenster fuer Firmen (Vorgabe 2)")
+    p.add_argument("--tage-themen", type=int, default=ZEITFENSTER_THEMEN,
+                   help="Zeitfenster fuer Querschnittsthemen (Vorgabe 8)")
     p.add_argument("--limit", type=int, help="nur die ersten N Eintraege abfragen")
     p.add_argument("--nur", help="Kommaliste von IDs, sonst alles")
     a = p.parse_args()
@@ -197,7 +212,12 @@ def main():
         except json.JSONDecodeError:
             log("gesehen.json unlesbar - wird neu angelegt")
 
-    grenze = datetime.now(timezone.utc) - timedelta(days=a.tage)
+    # Zwei Zeitfenster, und der Unterschied ist beabsichtigt: Firmennachrichten
+    # sind Tagesgeschaeft, Querschnittsthemen wie CoWoS oder NAND-Preise
+    # bewegen sich im Wochentakt. Mit einem gemeinsamen 2-Tage-Fenster sehen
+    # genau die strukturellen Themen leer aus, wegen derer die Seite existiert.
+    grenze_firma = datetime.now(timezone.utc) - timedelta(days=a.tage)
+    grenze_thema = datetime.now(timezone.utc) - timedelta(days=a.tage_themen)
     meldungen = {}
     ok = 0
 
@@ -206,13 +226,16 @@ def main():
         # Kern-Eintraege in beiden Sprachen, Anwendungsfirmen nur englisch -
         # ueber die schreibt die deutsche Presse ohnehin kaum.
         sprachen = ("de", "en") if e.get("stufe") == 1 else ("en",)
+        ist_thema = e.get("art") == "thema"
+        fenster = (a.tage_themen if ist_thema else a.tage) + 2
         for s in suchen:
             for spr in sprachen:
-                roh = hole(rss_url(s, spr))
+                roh = hole(rss_url(s, spr, fenster))
                 time.sleep(PAUSE)
                 if roh is None:
                     continue
                 ok += 1
+                grenze = grenze_thema if ist_thema else grenze_firma
                 for titel, link, quelle, iso in parse_rss(roh):
                     if iso:
                         try:
@@ -236,15 +259,17 @@ def main():
         return 1
 
     # Bezug bestimmen: welcher beobachtete Eintrag steht wirklich im Titel.
+    #
+    # Frueher wurde hier zusaetzlich uebernommen, worueber die Meldung
+    # *gefunden* wurde. Das war der eigentliche Grund fuer die falschen
+    # Hashtags: die Suchanfrage "TSMC advanced packaging capacity" liefert
+    # allgemeine TSMC-Meldungen, und die trugen dann alle #CoWoS. Gefunden
+    # zu werden ist kein Beleg fuer Relevanz - es steht deshalb nur noch in
+    # gefunden_ueber und wird nicht mehr zum Hashtag.
     alle = {e["id"]: e for e in T["beobachtet"]}
     for m in meldungen.values():
         text = m["titel"]
-        bezug = [eid for eid, e in alle.items() if treffer(text, e)]
-        # Was die Suche gefunden hat, zaehlt auch - aber nachrangig.
-        for eid in m["gefunden_ueber"]:
-            if eid not in bezug:
-                bezug.append(eid)
-        m["bezug"] = bezug[:6]
+        m["bezug"] = [eid for eid, e in alle.items() if treffer(text, e)][:6]
         m["hashtags"] = [alle[b]["hashtag"] for b in m["bezug"] if b in alle]
         m["neu"] = m["id"] not in gesehen
 

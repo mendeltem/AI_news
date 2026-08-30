@@ -81,10 +81,12 @@ THEMEN = [
      ["CoWoS", "CoWoS Kapazitaet", "CoWoS capacity TSMC",
       "TSMC advanced packaging capacity", "SoIC TSMC", "Amkor advanced packaging",
       "ASE advanced packaging", "panel level packaging"],
-     ["CoWoS", "CoWoS-L", "CoWoS-S", "CoWoS-R", "SoIC", "InFO",
-      "Chip-on-Wafer", "advanced packaging", "Advanced Packaging",
+     # "InFO" stand hier und traf case-insensitiv das "info" in "photon.info".
+     # Fan-Out deckt dasselbe Verfahren ab, ohne die Kollision.
+     ["CoWoS", "CoWoS-L", "CoWoS-S", "CoWoS-R", "SoIC", "CoPoS", "EMIB",
+      "Foveros", "FOPLP", "Chip-on-Wafer", "advanced packaging",
       "Fan-Out", "fan-out", "Panel Level Packaging", "panel-level",
-      "2.5D packaging", "3D-Stacking", "Interposer", "interposer"]),
+      "2.5D packaging", "3D-Stacking", "Interposer"]),
 
     ("Rechenzentrum-Strom", "Energie",
      ["Rechenzentrum Netzanschluss", "data center power constraint",

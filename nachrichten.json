@@ -78177,12 +78177,12 @@
   }
  ],
  "modell": {
-  "stand": "2026-08-30T14:06:18",
+  "stand": "2026-08-30T14:07:19",
   "name": "Qwen3.6-35B-A3B lokal",
   "eingedeutscht": 40,
   "eskaliert": 0
  },
- "lage": "- SK hynix treibt Hybridbonding für HBM5 voran und plant den Einsatz von Intel EMIB, während die HBM-Preise 2027 stark steigen könnten.\n- OpenAIs 700W Jalapeño-ASIC übertrifft laut Angaben die Effizienz und Latenz von Nvidias Blackwell-GPUs und wurde mit Broadcom entwickelt.\n- Nvidia plant eigene NVHBM-Speicher mit einem eigenen Controller sowie Preiserhöhungen für Server-Systeme ab 2027.\n- TSMCs Wechsel in der Verpackungstechnik könnte AMDs CoWoS-Anteil erhöhen, während AMD und Broadcom FOPLP-Kapazitäten bei Powertech vorbuchen.\n- Micron-Mitarbeiter unterstützen Streiks wegen Bonuszahlungen, während Kioxia und SanDisk Milliardeninvestitionen in japanische NAND-Fabriken planen.",
+ "lage": "- SK hynix treibt HBM5-Entwicklung voran und plant NVHBM mit eigenem Memory-Controller, während Nvidia Preiserhöhungen für 2027 anstrebt.\n- OpenAIs neuer Jalapeño-ASIC soll in Effizienz und Latenz die Nvidia Blackwell-GPUs übertreffen und wird gemeinsam mit Broadcom entwickelt.\n- TSMC-Verpackungswechsel und Kapazitätsbuchungen bei Powertech könnten AMDs CoWoS-Anteil erhöhen und Nvidias Zuteilung verringern.\n- Micron-Mitarbeiter unterstützen den Streik über Bonuszahlungen zunehmend, während Konkurrenten wie Samsung und SK hynix hohe Boni zahlen.\n- Kioxia und SanDisk planen massive Investitionen in japanische NAND-Fabriken bis 2032, um neue Produktionskapazitäten aufzubauen.",
  "straenge": {
   "#NVIDIA": [
    "143ffb45518f5a39",
@@ -78202,6 +78202,30 @@
    "56135d1db8bc5c51",
    "3b5123b03335ca96",
    "07ed21888dab7381"
+  ],
+  "#SKHynix": [
+   "143ffb45518f5a39",
+   "8a4810f8f9ca198e"
+  ],
+  "#HBM": [
+   "143ffb45518f5a39",
+   "cecebeec320d97a0"
+  ],
+  "#Micron": [
+   "cecebeec320d97a0",
+   "21a825441bfa32bf"
+  ],
+  "#SanDisk": [
+   "bd181321655ff856",
+   "aff0c19276279083"
+  ],
+  "#Claude": [
+   "56135d1db8bc5c51",
+   "3b5123b03335ca96"
+  ],
+  "#Microsoft": [
+   "18595c67deabb267",
+   "b39cc851b43ee1be"
   ]
  }
 }

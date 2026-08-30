@@ -127,16 +127,41 @@ def main():
         return 2
 
     kandidaten = [m for m in N["meldungen"] if not m.get("rauschen")][:a.max]
-    log("%d Meldungen werden eingedeutscht" % len(kandidaten))
+
+    # Was schon einmal uebersetzt wurde, steht im Korpus. Das Zeitfenster ist
+    # zwei Tage breit, die meisten Schlagzeilen kommen also mehrfach vor - ohne
+    # dieses Nachschlagen uebersetzt der Lauf jeden Morgen dieselben Zeilen neu,
+    # bei rund 40 Sekunden je Zeile.
+    bekannt = {}
+    korpus = WURZEL / "archiv" / "korpus.jsonl"
+    if korpus.exists():
+        with korpus.open(encoding="utf-8") as f:
+            for z in f:
+                z = z.strip()
+                if not z:
+                    continue
+                try:
+                    e = json.loads(z)
+                except json.JSONDecodeError:
+                    continue
+                if e.get("zeile"):
+                    bekannt[e.get("id")] = e["zeile"]
+
+    offen = [m for m in kandidaten if m["id"] not in bekannt]
+    log("%d Meldungen: %d aus dem Korpus, %d neu zu uebersetzen"
+        % (len(kandidaten), len(kandidaten) - len(offen), len(offen)))
 
     eskaliert = 0
-    for i, m in enumerate(kandidaten, 1):
+    for m in kandidaten:
+        if m["id"] in bekannt:
+            m["zeile"] = bekannt[m["id"]]
+    for i, m in enumerate(offen, 1):
         zeile, code = deutsch(m["titel"])
         m["zeile"] = zeile
         if code == 2:
             eskaliert += 1
         if i % 10 == 0:
-            log("%d/%d" % (i, len(kandidaten)))
+            log("%d/%d" % (i, len(offen)))
 
     # Tageslage aus den obersten Schlagzeilen. Bewusst knapp gehalten - ein
     # laengerer Prompt kostet bei diesem Modell vor allem Wartezeit.
@@ -147,14 +172,24 @@ def main():
         lage = None
         log("Tageslage eskaliert oder leer (Code %d)" % code)
 
-    # Unterartikel: nach Hashtag gruppieren, damit die Seite Straenge zeigt
-    # statt einer flachen Liste. Nur Straenge mit mehr als einer Meldung.
+    # Straenge: worueber heute mehrfach NEU berichtet wurde.
+    #
+    # Zwei Zuschnitte waren hier falsch. Erst wurden sie nur aus den 40
+    # uebersetzten Meldungen gebildet - das ist eine willkuerliche Stichprobe.
+    # Ueber alle Meldungen gerechnet ist die Schwelle "mehr als eine" dagegen
+    # bedeutungslos: bei 3000 Meldungen im Fenster hat jedes Thema mehr als
+    # eine. Was den Tag beschreibt, sind die neu hinzugekommenen Meldungen.
+    neue = [m for m in N["meldungen"] if m.get("neu") and not m.get("rauschen")]
     straenge = {}
-    for m in kandidaten:
+    for m in neue:
         for h in m.get("hashtags", []):
             straenge.setdefault(h, []).append(m["id"])
+    # Schwelle zwei, nicht drei: gemessen wird ueber die neuen Meldungen, und
+    # an ruhigen Tagen sind das wenige Dutzend. Bei drei bliebe das Brett dann
+    # leer, obwohl sich sehr wohl etwas bewegt hat.
     straenge = {h: v for h, v in sorted(straenge.items(),
-                                        key=lambda kv: -len(kv[1])) if len(v) > 1}
+                                        key=lambda kv: -len(kv[1]))[:14]
+                if len(v) >= 2}
 
     heute = N.get("tag") or datetime.now().strftime("%Y-%m-%d")
     N["modell"] = {

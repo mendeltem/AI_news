@@ -2,6 +2,7 @@
 REM Taeglicher Lauf um 06:00, angestossen von der Aufgabenplanung.
 REM Von Hand aufrufen geht genauso - der Lauf merkt sich, was er schon hatte.
 REM
+REM   0. pruefen.py    Selbsttest der Zuordnung - schlaegt er an, bricht der Lauf ab
 REM   1. sammeln.py    Nachrichten zu allen beobachteten Eintraegen holen
 REM   2. schreiben.py  lokales Modell: eindeutschen und Lage schreiben
 REM   3. archivieren.py  Tagesstand in archiv/korpus.jsonl fortschreiben
@@ -12,6 +13,7 @@ REM   0  fertig und gepusht
 REM   1  Sammeln fehlgeschlagen, alter Stand bleibt stehen
 REM   2  Modell war aus - gepusht, aber ohne deutsche Zeilen
 REM   3  Push fehlgeschlagen - Commit liegt lokal, naechster Lauf schiebt nach
+REM   4  Selbsttest gescheitert - nichts angefasst
 REM
 REM Protokoll: lauf.log (steht nicht im Repo, siehe .gitignore)
 
@@ -21,6 +23,12 @@ cd /d "%WURZEL%"
 
 echo. >> lauf.log
 echo ===== %DATE% %TIME% ===== >> lauf.log
+
+python werkzeuge\pruefen.py >> lauf.log 2>&1
+if errorlevel 1 (
+  echo FEHLER Selbsttest - Lauf abgebrochen, es wird nichts veroeffentlicht >> lauf.log
+  exit /b 4
+)
 
 python werkzeuge\sammeln.py >> lauf.log 2>&1
 if errorlevel 1 (
@@ -32,7 +40,7 @@ python werkzeuge\schreiben.py >> lauf.log 2>&1
 set SCHREIB=%ERRORLEVEL%
 if "%SCHREIB%"=="2" echo HINWEIS Modell war aus - Feed ohne deutsche Zeilen >> lauf.log
 
-python werkzeugerchivieren.py >> lauf.log 2>&1
+python werkzeuge\archivieren.py >> lauf.log 2>&1
 
 git add -A nachrichten.json themen.json archiv artikel analyse >> lauf.log 2>&1
 git diff --cached --quiet

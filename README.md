@@ -61,9 +61,12 @@ sind das 40 % der Rohtreffer.
 | `nachrichten.json` | der aktuelle Stand |
 | `archiv/JJJJ-MM-TT.json` | jeder Tag einzeln, plus `gesehen.json` fürs Entdoppeln |
 | `analyse/` | die Redaktionsartikel, `index.json` listet sie |
+| `archiv/korpus.jsonl` | **der Datensatz** — eine Zeile je Meldung, genau einmal |
 | `werkzeuge/saat.py` | erzeugt `themen.json` neu aus den Schwesterseiten |
+| `werkzeuge/pruefen.py` | Selbsttest der Zuordnung — Torwächter des Laufs |
 | `werkzeuge/sammeln.py` | der Sammellauf |
 | `werkzeuge/schreiben.py` | der Modell-Lauf |
+| `werkzeuge/archivieren.py` | schreibt den Korpus fort |
 | `werkzeuge/taeglich.cmd` | was die Aufgabenplanung startet |
 
 `lauf.log` steht bewusst **nicht** im Repo — es wird nach dem Commit
@@ -72,7 +75,49 @@ weitergeschrieben und hielte den Arbeitsbaum sonst dauerhaft schmutzig.
 Rückgabewerte von `taeglich.cmd`: `0` fertig und gepusht · `1` Sammeln
 fehlgeschlagen, alter Stand bleibt · `2` Modell war aus, gepusht ohne deutsche
 Zeilen · `3` Push nach drei Versuchen fehlgeschlagen, der Commit liegt lokal und
-der nächste Lauf schiebt ihn mit.
+der nächste Lauf schiebt ihn mit · `4` Selbsttest gescheitert, nichts angefasst.
+
+## Der Selbsttest, und warum es ihn gibt
+
+`werkzeuge/pruefen.py` läuft als **Torwächter** vor jedem Lauf. Schlägt er an,
+bricht der Lauf ab und veröffentlicht nichts — ein falsch etikettierter Feed ist
+schlimmer als ein alter.
+
+Anlass war ein Fehler, der zweimal hintereinander ausgeliefert wurde und beide
+Male richtig aussah. Die Relevanzprüfung leitete ihr Stichwort aus dem
+*Suchbegriff* ab, indem sie dessen erstes Wort nahm:
+
+```python
+kern = s.split()[0]     # "TSMC advanced packaging capacity"  ->  "TSMC"
+```
+
+Damit trug jede TSMC-Meldung `#CoWoS` und jede mit „Chip" `#Exportkontrolle`.
+Der Feed war voll, die Hashtags standen dran, sie bezogen sich nur auf nichts.
+Aufgefallen ist es erst beim Nachzählen: 23 Meldungen mit `#CoWoS`, davon 0
+über CoWoS.
+
+**Der Merksatz:** Der Suchbegriff sagt, wonach gesucht wird. Er sagt nicht,
+wovon die gefundene Meldung handelt. `suchen` darf weit sein, `stichworte` muss
+eng sein.
+
+Der Test deckt 28 Fälle ab — einen je Fehler, den es schon gab, dazu die Ticker,
+die auch normale Wörter sind (`ON`, `NOW`, `ARM`), den Rauschfilter und das
+Entdoppeln.
+
+## Zwei Zeitfenster
+
+Firmennachrichten sind Tagesgeschäft, Querschnittsthemen nicht. CoWoS,
+NAND-Preise oder Exportregeln bewegen sich im Wochentakt — mit einem gemeinsamen
+2-Tage-Fenster sehen genau die strukturellen Themen leer aus, wegen derer die
+Seite existiert.
+
+| | Fenster |
+|---|---|
+| Firmen | 2 Tage |
+| Themen | 8 Tage |
+
+Nach der Korrektur der Etiketten hatte CoWoS zunächst **eine** Meldung. Mit dem
+breiteren Fenster sind es 21, alle echt.
 
 ## Selbst laufen lassen
 
