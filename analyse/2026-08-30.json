@@ -1,0 +1,48 @@
+{
+ "tag": "2026-08-30",
+ "titel": "Nvidia hoert auf, Speicher zu kaufen, und faengt an, ihn zu entwerfen",
+ "autor": "Redaktion",
+ "hashtags": ["#NVIDIA", "#HBM", "#DRAM", "#NAND", "#SKHynix", "#Micron", "#Kioxia"],
+ "bezug": ["NVDA", "HBM", "DRAM", "NAND", "SKHYNIX", "MU", "SAMSUNG", "KIOXIA", "SNDK"],
+ "absaetze": [
+  {"art": "absatz", "text": "Am 26. August hat Nvidia <strong>NVHBM</strong> vorgestellt, und die Meldung ist in der allgemeinen Speicherkrisen-Berichterstattung fast untergegangen. Sie gehoert aber zum Folgenreichsten, was dieses Jahr in der Kette passiert ist &mdash; nicht wegen der Bandbreite, sondern wegen der Frage, wem kuenftig welcher Teil des Speichers gehoert."},
+
+  {"art": "zwischentitel", "text": "Was NVHBM tatsaechlich ist"},
+
+  {"art": "absatz", "text": "Nvidia baut keine Speicherfabrik. NVHBM ist ein <strong>kundenspezifischer HBM4-Unterbau</strong>: HBM4 trennt die gestapelten DRAM-Lagen von der Logikschicht darunter, dem Base-Die, der den Stapel ansteuert. Genau diesen Base-Die und die zugehoerige PHY entwirft Nvidia jetzt selbst und laesst ihn in einem Logikprozess fertigen statt im DRAM-Prozess des Speicherherstellers."},
+
+  {"art": "absatz", "text": "Die Zahlen, die Nvidia dazu nennt: bis zu <strong>30 Prozent mehr Bandbreite</strong> als HBM4E, rund 15 Prozent weniger Leistungsaufnahme im Speicher &mdash; und, das ist der eigentliche Gewinn, bis zu <strong>25 Prozent mehr nutzbare Flaeche auf dem Rechen-Die</strong>, weil PHY und Stuetzlogik um bis zu zwei Drittel schrumpfen. NVHBM haengt an NVLink Fusion; erster Partner ausserhalb Nvidias ist Annapurna Labs, die Chiptochter von Amazon."},
+
+  {"art": "kasten", "text": "Der Satz, auf den es ankommt: 25 Prozent mehr Rechenflaeche bei gleichem Retikel. Das ist ein Generationssprung, den Nvidia bekommt, <em>ohne</em> einen Fertigungsknoten zu wechseln &mdash; erkauft dadurch, dass ein Stueck Wertschoepfung vom Speicherhersteller zum Chipentwerfer wandert."},
+
+  {"art": "zwischentitel", "text": "Was das fuer SK hynix, Micron und Samsung heisst"},
+
+  {"art": "absatz", "text": "Kurzfristig wenig, mittelfristig einiges. Die drei liefern weiterhin die DRAM-Stapel, und daran haengt der Grossteil des Umsatzes. Aber der Base-Die war der Teil, ueber den sie sich differenzieren und Marge holen konnten. Wandert er zum Kunden, wird der Rest austauschbarer &mdash; das klassische Muster, wenn ein grosser Abnehmer beginnt, Spezifikationen selbst zu schreiben."},
+
+  {"art": "absatz", "text": "Der Gegeneinwand ist stark genug, um ihn stehen zu lassen: solange HBM ausverkauft ist, verkauft sich jeder Stapel ohnehin. Die Verhandlungsmacht der Speicherhersteller kommt derzeit aus Knappheit, nicht aus Technikvorsprung. NVHBM wird erst zum Problem, wenn die Knappheit nachlaesst &mdash; und genau das erwarten Bernstein und TrendForce fruehestens 2027."},
+
+  {"art": "absatz", "text": "Dass SK hynix jetzt den ersten HBM-Standort in den USA hochzieht und Kioxia zusammen mit SanDisk <strong>ueber 31 Milliarden Dollar</strong> bis 2032 in japanische NAND-Fabs stecken will, passt ins selbe Bild: Die Speicherhersteller binden Kapital fuer ein Jahrzehnt, um ihre Position in einer Kette zu halten, deren Architektur ihnen gerade aus der Hand genommen wird."},
+
+  {"art": "zwischentitel", "text": "DRAM: der Engpass, den alle spueren"},
+
+  {"art": "absatz", "text": "Die Lage im normalen Speicher ist inzwischen brutal. DDR4-Kontraktpreise liegen ueber <strong>50 Prozent</strong> hoeher, ein 32-GB-DDR5-Satz kostete Mitte 2025 rund 80 bis 120 Dollar und im Juni 2026 etwa 375. Der Grund ist keine Nachfrage nach PC-Speicher, sondern ihr Gegenteil: Die DRAM-Kapazitaet waechst 2026 nach TrendForce nur um rund <strong>fuenf Prozent</strong>, und mehr als zwei Drittel des Nachfragezuwachses gehen auf KI-Infrastruktur. HBM verdraengt Consumer-DRAM physisch von den Linien &mdash; ein HBM-Stapel bindet ein Vielfaches der Waferflaeche eines gewoehnlichen DRAM-Chips."},
+
+  {"art": "absatz", "text": "Hier wird NVHBM interessant und mehrdeutig zugleich. Mehr Bandbreite je Stapel heisst im Prinzip: weniger Stapel fuer dieselbe Leistung, also Entlastung. Nur ist das noch nie so ausgegangen. Effizienzgewinne in dieser Kette wurden bisher ausnahmslos in mehr Rechenleistung umgesetzt, nicht in weniger Einkauf. Die 25 Prozent zusaetzliche Rechenflaeche sind der Beleg: Nvidia nutzt den Gewinn, um mehr Compute unterzubringen &mdash; und mehr Compute will wieder mehr Speicher."},
+
+  {"art": "zwischentitel", "text": "NAND: die zweite Speicherwelle"},
+
+  {"art": "absatz", "text": "NAND galt lange als der langweilige Teil. Das aendert sich, und die 31 Milliarden von Kioxia und SanDisk sind kein Zufall. Der Grund steht in Nvidias eigener Roadmap: Ab BlueField-4 wandert die <strong>KV-Cache-Verwaltung</strong> von der GPU auf die DPU, bei Feynman soll BlueField-5 Storage und Cache als Rechenzentrums-Betriebssystem uebernehmen. Uebersetzt heisst das: Der Zwischenspeicher langer Kontexte gehoert nicht mehr komplett ins teure HBM, sondern wandert schichtweise auf schnelles NAND."},
+
+  {"art": "absatz", "text": "Wenn dieses Muster traegt, bekommt NAND eine Rolle, die es im KI-Aufbau bisher nicht hatte &mdash; nicht als Archiv, sondern als aktive Speicherstufe zwischen HBM und Netzwerk. Das ist die plausibelste Erklaerung dafuer, warum ausgerechnet jetzt Kapital dieser Groessenordnung in NAND-Fabs geht, waehrend Intel sein NAND-Geschaeft fuer rund neun Milliarden abgegeben hat und Micron heute mehr wert ist als Intel."},
+
+  {"art": "zwischentitel", "text": "Der Faktor, den niemand modelliert"},
+
+  {"art": "absatz", "text": "In Taiwan haben rund 80 Prozent der Micron-Beschaeftigten fuer einen Streik gestimmt; es geht um Boni und Gewinnbeteiligung. Das ist die unbequemste Meldung des Tages, weil sie eine Variable einfuehrt, die in keinem Kapazitaetsmodell steht. Wenn Speicherhersteller Rekordmargen ausweisen &mdash; SK hynix meldet ueber 80 Prozent Bruttomarge &mdash; und die Belegschaft das in der Zeitung liest, wird die Verteilungsfrage Teil der Lieferkette. Ein Ausstand in einer ausverkauften Fab wirkt anders als in einer normalen."},
+
+  {"art": "zwischentitel", "text": "Woran man merken wuerde, dass ich falsch liege"},
+
+  {"art": "absatz", "text": "Drei Dinge. Erstens: Wenn ausser Annapurna kein weiterer Partner NVHBM uebernimmt, ist es kein Industriewandel, sondern eine hausinterne Optimierung &mdash; dann bleibt die Verhandlungsmacht bei den Speicherherstellern. Zweitens: Wenn die DRAM-Kapazitaet 2027 staerker waechst als die angekuendigten fuenf Prozent, loest sich der Preisdruck ohne strukturelle Verschiebung. Drittens: Wenn die KV-Cache-Auslagerung auf NAND in der Praxis an Latenz scheitert, war die NAND-Investition eine Wette auf ein Muster, das nie eintritt."},
+
+  {"art": "absatz", "text": "Und ein Vorbehalt zur ganzen Uebung: Das hier sind Schlagzeilen und Herstellerangaben, keine geprueften Zahlen. Die 30 Prozent Bandbreite kommen von Nvidia, die 31 Milliarden sind eine Absichtserklaerung ueber sechs Jahre, und die Preisentwicklung bei DDR4 ist eine Momentaufnahme in einem Markt, der sich halbjaehrlich dreht."}
+ ]
+}

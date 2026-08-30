@@ -1,0 +1,45 @@
+{
+ "tag": "2026-08-30",
+ "lage": "- Micron-Mitarbeiter in Taiwan streiken für höhere Bonuszahlungen und ein Gewinnbeteiligungsmodell.\n- OpenAI präsentiert einen effizienteren Jalapeño-Chip und Nvidia entwickelt den eigenen KI-Speicher NVHBM.\n- SK hynix baut in den USA die erste HBM-Fabrik, während Kioxia und SanDisk massive Investitionen in japanische NAND-Fabriken planen.\n- Der Speichermarkt leidet unter einer Krise, die zu Preisanstiegen bei DDR4 und steigenden Kosten für Smartphones und PCs führt.\n- Intel verkaufte sein NAND-Geschäft und liegt nun in der Marktkapitalisierung hinter Micron, während Nvidia bei Umsatzbeteiligungen zurückrudert.",
+ "straenge": {
+  "#HBM": [
+   "39057bf8efab86b4",
+   "e72b33ea762485f9",
+   "1cc5f82c19407373",
+   "98e62eadbf95dc1f",
+   "1142b2dc8a0af707"
+  ],
+  "#Micron": [
+   "4cbab02cd8b1db3d",
+   "68f4bc713d57d489",
+   "4e7358474de6a26c",
+   "2386d7007b099b22"
+  ],
+  "#SKHynix": [
+   "4cbab02cd8b1db3d",
+   "68f4bc713d57d489",
+   "e72b33ea762485f9",
+   "2386d7007b099b22"
+  ],
+  "#NVIDIA": [
+   "39057bf8efab86b4",
+   "1142b2dc8a0af707",
+   "459fb0889db60775",
+   "0c1a67844f887639"
+  ],
+  "#NAND": [
+   "68471e263c056d01",
+   "4e7358474de6a26c"
+  ],
+  "#DRAM": [
+   "1cc5f82c19407373",
+   "98e62eadbf95dc1f"
+  ]
+ },
+ "modell": {
+  "stand": "2026-08-30T10:39:38",
+  "name": "Qwen3.6-35B-A3B lokal",
+  "eingedeutscht": 12,
+  "eskaliert": 0
+ }
+}

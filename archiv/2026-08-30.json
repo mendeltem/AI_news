@@ -1,0 +1,3193 @@
+{
+ "stand": "2026-08-30T10:30:31",
+ "tag": "2026-08-30",
+ "abgefragt": 6,
+ "meldungen_gesamt": 160,
+ "meldungen_neu": 160,
+ "meldungen": [
+  {
+   "id": "4cbab02cd8b1db3d",
+   "titel": "80 Prozent für Streik: Micron-Angestellte in Taiwan fordern höhere Boni - Golem.de",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNWVZwYmdBZ0g4NEp5dFg2VzFZSzBpUlJtWEVFbExyWHdpUkhyWTh3SzE4a29xQjJnbnpkN05kSlNud3dRNHhCVkRZZVVweEtLQW5zTWRwZUh2TGFJOEYwQWl2MFg3VGpVS0JnS09MNTdfYWRPQ0NGU0F3QkNaVVNWeUp2LXlJU21BZHRPVVdRTFpCQmZ4dmdRd3BkTDJ2d3ZaRlQ2cjlLMVVRMnNpQWNIMTBXOXhWZw?oc=5",
+   "quelle": "Golem.de",
+   "datum": "2026-08-28T09:22:01+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX",
+    "MU"
+   ],
+   "bezug": [
+    "MU",
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#Micron",
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 11
+  },
+  {
+   "id": "68f4bc713d57d489",
+   "titel": "Micron workers increasingly support strike over bonus pay — labor union wants profit-sharing scheme, as employees at Samsung, SK hynix enjoy bonuses worth hundreds of thousands of dollars - Tom's Hardware",
+   "link": "https://news.google.com/rss/articles/CBMiygJBVV95cUxOWnRoU3ZncG5TdGRjMm1ZSFJXV180VHN0bmpTM1dtRUdwTGxNSTdrYXBMeHFXOXk2U3FBUzVIZ3RDNHdMVTNVUmxmYW5sXzVvbkhySUgzanpnQ0c1WDQwdnpuclA4cmJoTXo0cllKZnBaeHdPVVVMOGlSWXVHQ2N4U3M4ZnFIa1FVeURHLWdiRUNmNXgtTGM2MGVJX1JveHlyY2s4SUY3UjRUVTBvYS0tZ2RMWnVlLU1Lc2NVaHhZNll3a2ZUUUpjcURPblBCQVItRzlUV1NjQzYxdUJnRzRTLVVWaVBOOENsOFNqRU9FaG5FUXUwNjhMdF9sM3pPUjYzVUdLX2VaNjJIMkV1b3dWRXJFYjBBemdOakF1YmZZQ0RiaFdkTS01YTd0WEZmRWNJV0dHM1ZmTjV6WEJGQ3JCeldmZEp6ZFZ3LVE?oc=5",
+   "quelle": "Tom's Hardware",
+   "datum": "2026-08-28T13:07:55+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX",
+    "MU"
+   ],
+   "bezug": [
+    "SKHYNIX",
+    "MU"
+   ],
+   "hashtags": [
+    "#SKHynix",
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 11
+  },
+  {
+   "id": "39057bf8efab86b4",
+   "titel": "Jalapeño-Chip: OpenAI schlägt Nvidia bei Effizienz um Faktor 1,9 - AD HOC NEWS",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOdzdRSEFwUFBGMVRUY2tIUlhGekNMbHFyUklZeHo4N2lwMV83NzZlY1Axc3FZa3V1eTlweDhUM2UtZDFlc1hYaU92QzlSMktTUmNNT1l2M1dhT1VtSzJKZ08yUDBvbUduUFBHSGJGamhtQ3NFUWJPdWlwVk1sWXZTdzBsa05RSmtjOVpaUEl3eFlYV1JVZGdYSWJ3M3o3YVlrck96RV9taldEOC1pclR4M2JFOA?oc=5",
+   "quelle": "AD HOC NEWS",
+   "datum": "2026-08-29T19:33:06+00:00",
+   "gefunden_ueber": [
+    "HBM"
+   ],
+   "bezug": [
+    "NVDA",
+    "OPENAI",
+    "EXPORTKONTROLLE",
+    "HBM"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#OpenAI",
+    "#Exportkontrolle",
+    "#HBM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 11
+  },
+  {
+   "id": "e72b33ea762485f9",
+   "titel": "SK hynix breaks ground on the first HBM plant in the US, bringing key AI component production to the States — says production starts in 2029 - Tom's Hardware",
+   "link": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNSmt2Sl91VXY5MlZiZURPWEV5X09qQzM3X0U1SklReHJXNHAwY2JZUnFoTnlTUlJLWkxEVml5aUxMWUVaUHk5TUI1NlozUEs0eDVhOWRrbEVVM2ItTHdnay1rRVVTbFFsT2FGNlhHQlFBZjlDVjVJcElDSU03aDlZbFJwYlMzMjctQURqQ2o1QkI1cl9ZR2dHT2ZUTFVMZHhGalVCQ3AxNkd4eHBZYXRlbnZRWDMtc0RCVWh2a0JkN0pqR3JBaWZFWjV1SHdlMFptQW9FZl9kVS10MG9kTm9yQ00zQWd3anIwWjhpRy11MEItQ3pENXhwYVd5TUtxOTZ6VnEzdUNwRDAwUV9nbGdLc285dw?oc=5",
+   "quelle": "Tom's Hardware",
+   "datum": "2026-08-28T09:58:37+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX",
+    "HBM"
+   ],
+   "hashtags": [
+    "#SKHynix",
+    "#HBM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 10
+  },
+  {
+   "id": "68471e263c056d01",
+   "titel": "Kioxia and Sandisk Plan Over $31 Billion for Japan NAND Fabs Through 2032, With Kitakami Fab3 Targeting Fis... - StorageReview.com",
+   "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPT05QdnRzZDNFaU16U3ctQmpKcXBVejdUcjJ2Sk9vbmxsMXJZaWF6UnNqTFpQZFoydzVxVTBFUFAtb2FJUnpEU0NlU3N2TXY2ZERsNzZ6b2MtMkFvaVJid0JUNDBqMXhjTG5JdzE1RC1VSnJUNWFKUDVHQmIxRVA0Nl9OcnlZRGpNWDdKWklQM25Vc2hWV09sRE5mMFdGWUJhdmJFLTJoOFRvMUdzNHFHbDhYR2hwYUp6dUZxdG1fdGVmTWJCTHJZbWZiX1RGRmpBb0xfYkVvQnl4N0gyd0pfZWtwY3Zld9IB6wFBVV95cUxNQzh3SmpEVFhlTXlSbXJmM1p5bDNPRFA1c0RDSGVrcWdqNXpjODBLcHB6eGxxVGJpUmx1MGY4eTRSV2RfT0tlaTFUVUZZRERlcEprcm5hZUZYZXRFZElyMk9SOXd1R3d3cFhwcjZ2aTZURDAyRDJ1cmh2RkNrMGhFdWMwYmdkdkFWcU9yZUNTYVNvSm1EZmxKelRuZHoyZlNoRWNjeWNtRFRNWjVOeWR1Z1VSUEJhWGdUdGhsVVhFcUdYaUs1OHpaVm9sVGF6QllXWFpyT0cxejZqcnI1dDIwUVl2b3JBaDJkSnJF?oc=5",
+   "quelle": "StorageReview.com",
+   "datum": "2026-08-28T17:46:26+00:00",
+   "gefunden_ueber": [
+    "NAND"
+   ],
+   "bezug": [
+    "SNDK",
+    "KIOXIA",
+    "NAND"
+   ],
+   "hashtags": [
+    "#SanDisk",
+    "#Kioxia",
+    "#NAND"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 9
+  },
+  {
+   "id": "4e7358474de6a26c",
+   "titel": "Intel Sold Its NAND Memory Business for About $9 Billion. Micron Is Now Worth More Than Twice What Intel Is. - Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNOFR4QnZ3Z25VU3MxUmdJeDJpWWNTMktENWF5aVNjcGZ1S2dyMG13Snd2QlpJejZYellJMWlmRmp0Rmd5eXRrZTFIdnlNQ1UzakxURFhpd1NWejBDcUpUT3VUWTNLaFRrSUdVM2NyREF4UWE0MjRVQlZfSWExN1h1TV9UUGNmdWZrOVQ3VWM4VUFWNTJSbEFOSkZvUDY?oc=5",
+   "quelle": "Yahoo Finance",
+   "datum": "2026-08-29T09:07:01+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "INTC",
+    "MU",
+    "NAND"
+   ],
+   "hashtags": [
+    "#Intel",
+    "#Micron",
+    "#NAND"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 9
+  },
+  {
+   "id": "1cc5f82c19407373",
+   "titel": "Speicherkrise: Smartphone- und PC-Kosten steigen um bis zu 40% - AD HOC NEWS",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPY016Rl85STBlTGdac0JieGN0X1dFaXAxcGEzVXozMXhRTHB4dmoteVBNY25FVHdXZHFCYnJkSFpWTHBYMVMwNUg1MEJjTU1BbEhzLXVIUnhCcFBxTUp1WXVaYy1wdDdQVWROV0NRdi0xNFQxTXkxV1Y0S2ZQemJXNFNVQWNpc0pEREFuTW5ZMmdWT1VWWEd0ck1wSVBLeHRSaFllT1RMMXlmejk2VDcwdndYdUVpQWM?oc=5",
+   "quelle": "AD HOC NEWS",
+   "datum": "2026-08-28T09:01:33+00:00",
+   "gefunden_ueber": [
+    "HBM",
+    "DRAM"
+   ],
+   "bezug": [
+    "HBM",
+    "DRAM"
+   ],
+   "hashtags": [
+    "#HBM",
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 8
+  },
+  {
+   "id": "98e62eadbf95dc1f",
+   "titel": "Speichermarkt: DDR4-Preise schießen um 50 Prozent in die Höhe - AD HOC NEWS",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOcmEtWVVRa1A0WjlxcU5fbmJMemtTblVJc1M0cnI4dUgwazhsUW1iSEtZWXk0Ymd3X1JMenI1MXZ3MlhBZ19CZFhadzR0R3FQU3FiRHRfVWVFWi12dDRDWWlvSVlncTNZLTB5ay1GeHRsSjZjbzRPWWVrX1JySXc3OWlkV2hYb1lhV3dMZjZWdGM2dTltUDdwYzVHb0w2YVkyc0JfbVBPeWpuQkNVSTUwZg?oc=5",
+   "quelle": "AD HOC NEWS",
+   "datum": "2026-08-28T09:12:55+00:00",
+   "gefunden_ueber": [
+    "HBM",
+    "DRAM"
+   ],
+   "bezug": [
+    "HBM",
+    "DRAM"
+   ],
+   "hashtags": [
+    "#HBM",
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 8
+  },
+  {
+   "id": "1142b2dc8a0af707",
+   "titel": "Nvidia baut eigenen KI-Speicher: Was hinter NVHBM steckt - t3n",
+   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOd3RRd0hrU3E0U2tSWG1rbjBZS0RONmhxYXNHd0lqM25SU2txVTJxTHhjUkRtTVd5dzdUYUpVS1RUTnVyZXdKMDlkOGpjd3VlOEhydEQxYXd6T1NNV1NtTmJHa0ZwVFN5UnZQSUo1NWFNTjhuTnZqZ1Q3NzQ2OFdaOUEwOVFjbzdzSHR6NQ?oc=5",
+   "quelle": "t3n",
+   "datum": "2026-08-28T12:00:27+00:00",
+   "gefunden_ueber": [
+    "NVDA",
+    "HBM"
+   ],
+   "bezug": [
+    "NVDA",
+    "HBM"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#HBM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 8
+  },
+  {
+   "id": "459fb0889db60775",
+   "titel": "Nvidia DLSS 5: Modder machen KI-Gesichter in allerlei Spielen lauffähig - heise online",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNZkVkRnFDc3Vsd2ZBTmpkWmFIWWNxSkJNX0tjLWtyaHowR2h6LWUyOVZJSzgzT0QxVkhIdktMalBaNTdNTFZVMUx3TlRkalFXd1oxejAwMDRFQkJxQVp3N2lTa0tpREFPR3VHYW1zZDhMMERjYk5qTk9IM1RzNDMtWGEzMmZJZzlsVGlncUxIb2I2WDBJZGhVZmxjZFZqdGM5Y2tscjdiOHZVQW1aVGZGeQ?oc=5",
+   "quelle": "heise online",
+   "datum": "2026-08-28T14:27:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 8
+  },
+  {
+   "id": "2386d7007b099b22",
+   "titel": "Why Micron Stock Didn’t Get a Leg Up From SK Hynix’s Memory Optimism - Barron's",
+   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBpeFlxd09KZ3lCQXY2dXdLRFRIQmg2UnFCRDVmZjBqcFNIRWxVR2tLSzRNVmpnWnRjVUVIZE9GOWxWenFHYmVFQzFhb0I2S254TUJmSkZwTzZxT1pULWRFZG14Tk56Qy1Iekt2alJnQl9DWVdncVBObjN3?oc=5",
+   "quelle": "Barron's",
+   "datum": "2026-08-28T14:46:00+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX",
+    "MU"
+   ],
+   "bezug": [
+    "SKHYNIX",
+    "MU"
+   ],
+   "hashtags": [
+    "#SKHynix",
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 8
+  },
+  {
+   "id": "0c1a67844f887639",
+   "titel": "Nach interner Kritik: Nvidia rudert bei Rechenzentrums-Umsatzbeteiligung zurück - Golem.de",
+   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQSjlLWGhOVU9GYWxGRkFTdXgwNzlWbUl0VFJwNGQzRVI2aERIdlJUbmgyTGdRN0psRlVROW1LSzRXY2pxd3RodzczS29aV09uMHZRUDBqaWFiM3gxdHBJUlNtWXdqMi1weXIwZmNlVnlwd3RuX2hRZTZrQmFzTVlERjRTcGlNVEs5dURpRXRVUzM2cTlPWk03d2lhb1V6WEdkY0x5VlV5cGtyUGZuMkpJbXh5VVZVSjRTOTVLV1hnYw?oc=5",
+   "quelle": "Golem.de",
+   "datum": "2026-08-28T14:59:02+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 8
+  },
+  {
+   "id": "9c39f49c3acca70a",
+   "titel": "SK Hynix: Higher Revenue Than Micron, Cheaper Than Micron (Initiating Buy) (NASDAQ:SKHY) - Seeking Alpha",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOTGt1YklxWTVKbGxXU2FhWEhZUXNjVEdpYkRWOXZQWWdNS1h1VVVscmNHWURiVEZkZ2kxenBoMVNiTElweXA4U1ZSSWdDRnpXWVpkMTg1cmpvSS11SWtkMDBwSWsydjJJUEdTYnppd0U4aHkyYzFRX1lDTEF3TU5tbFVyRjhHQ2RiRzFPaDYzX21xTlRDWUplR25PWTBid2phcXBQWUxJZkFyUTIxdVVMRw?oc=5",
+   "quelle": "Seeking Alpha",
+   "datum": "2026-08-28T15:39:21+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX",
+    "MU"
+   ],
+   "bezug": [
+    "SKHYNIX",
+    "MU"
+   ],
+   "hashtags": [
+    "#SKHynix",
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 8
+  },
+  {
+   "id": "2a76a346ffad912c",
+   "titel": "MacBook Air 13 Zoll: 50-Prozent-Rabatt auf Refurbished-Modelle zum Schulstart - AD HOC NEWS",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPNl95MUFMdmdjeDZMbVFtR2xTQnlZTm5XNDUzMmF2Zi1ROEFEWHFFR0c1RlFzckZTaWJzVGgtS3VGa1hXZDE3Q1MwUlAxOUN2bllIVmNrdm9Pd2Z0N2VLTVVyb3dwbldrSWhnZENGQkpXeWk5NEhqY2RnUE0tb0JFcnlSRVFPczNtTTdyUFFoMVJjT0wyTl9IUUhCUTVrMFJyS2F3NEVuelZCMDV2Z0ZuNDNsTlc?oc=5",
+   "quelle": "AD HOC NEWS",
+   "datum": "2026-08-29T05:34:56+00:00",
+   "gefunden_ueber": [
+    "DRAM",
+    "NAND"
+   ],
+   "bezug": [
+    "DRAM",
+    "NAND"
+   ],
+   "hashtags": [
+    "#DRAM",
+    "#NAND"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 8
+  },
+  {
+   "id": "d68d1e330aba23aa",
+   "titel": "Nvidia’s AI advantage is moving beyond the GPU - TechCrunch",
+   "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOa3NWOXg4X1dBMmtBMlVxVnAzOEktMHdrdHo2M05SVWctNGktUmxEMkJOMUdvRXhWWllQbnZmbGxZY0JKRjhtT2lGaTlKTG1wdGVLODB2dklZcmU1QzFxNlNGNEJNSEJFclNyb3JqRDRpSm1qY2x2ZGhYZmhzN3Bza3hCdnExMXc?oc=5",
+   "quelle": "TechCrunch",
+   "datum": "2026-08-29T13:00:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 8
+  },
+  {
+   "id": "bbcfedab628d113e",
+   "titel": "Chinese CXMT's Earnings Surprise Challenges Samsung, SK Hynix - 조선일보",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQZmp6X1kzLVdXUlBFVmpFR1pWV2pCRzNzdDZGRXNjR0tjZTNXREZSOWZ0QzJTdUJSQTNYVU4xejdMMmlpWTJuZlE5VkRrb2ZfbGxFdHZ4SW5UZGY0VlhqZTRTLTV3ZVd4RUkzam5QYWlHaEhVajcwTU1sWkxVMjZPSXBwek5SeUFRa004VWln?oc=5",
+   "quelle": "조선일보",
+   "datum": "2026-08-30T04:48:01+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX",
+    "DRAM"
+   ],
+   "bezug": [
+    "SKHYNIX",
+    "DRAM"
+   ],
+   "hashtags": [
+    "#SKHynix",
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 8
+  },
+  {
+   "id": "b951840448cebee9",
+   "titel": "DDR5 Prices Surge Fivefold in a Year — China's HBM Obsession Creates a Legacy DRAM Shortage Paradox - finance.biggo.com",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB1bDI0eE9hSXB4V1c2Y04xWjVXbDdpd213bXNVdndoV19JSjBHWFRCMHZ2LUo1U3I3UW1UbDBFcE5WLUcyNWJYcHN3RWR4SWVaajZ2MkQwSzJzMlB1NFJqQWxwM2VVR2hKOUI1S3VFMnQ5QVRCRHc?oc=5",
+   "quelle": "finance.biggo.com",
+   "datum": "2026-08-28T08:35:00+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "HBM",
+    "DRAM"
+   ],
+   "hashtags": [
+    "#HBM",
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "3fae24b90c7f7a73",
+   "titel": "NVHBM: Nvidia mischt bei Custom-HBM mit keiner neuen Erfindung mit - ComputerBase",
+   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOdndQdTFXZTJoaWRGa0t2VzFyN2dNamoyaTJYcFhNY0tnRmZBUXFmQnl1TnV6YkY2UHBfNmU1X2ZwOWxRelJPRVprUFBsZHFaNlJrQmVOb2lXdVBZQWlLekM5RFVkMTFFU3JSVEpYV1lFUlc4d19abFpsTDRub0VfVW9JbmpUYzlvRXlFejZRS1JsWlZfc0M5SGh4azBpWmd6d05xY2psTm9uenNwYTNadER0Q2ZidzZWc0xYOHJn?oc=5",
+   "quelle": "ComputerBase",
+   "datum": "2026-08-28T09:00:00+00:00",
+   "gefunden_ueber": [
+    "HBM"
+   ],
+   "bezug": [
+    "NVDA",
+    "HBM"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#HBM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "9d8d5a6ccd5eaaff",
+   "titel": "SK hynix Holds Groundbreaking Ceremony for HBM Production Base in Indiana, “Beginning a New Future for US-Korea AI” - SK hynix",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9kQkhINnljdnlPOW9laExtMDFVR2ExSzJvWlJMZ29nYmUxVzZaeUNvY0QxQ0pWaDVNTlFvcENvblg1VGE1UkdWNjhWdThQaVkzX1dIS1d1VWlXVGsyeFZDRXYxVzNURktJM014WjBWeVhPZFU?oc=5",
+   "quelle": "SK hynix",
+   "datum": "2026-08-28T09:57:35+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX",
+    "HBM"
+   ],
+   "hashtags": [
+    "#SKHynix",
+    "#HBM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "d52f9eba303976f4",
+   "titel": "SK hynix breaks ground on the first HBM plant in the US, bringing key AI component production to the States — says production starts in 2029 - Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQNlc2UlN0UUc3TzdsV2lfNFpFcDV0TEpCT180RHZzeVN1VkhWcmlqNHFWRVFuSXVvaHgzMVdPTnlHeHhvLXZENkc2X1BzZV9WLU05aUtCNUVsUkpBdEE1clBpYjRmeVN5aXF6czh2bzVFbnVGdnVPWXdnVjJCcEN0dzRHWUVSRDdVcjZPU0lnV3g4ZzNoZTRN?oc=5",
+   "quelle": "Yahoo Finance",
+   "datum": "2026-08-28T09:58:37+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX",
+    "HBM"
+   ],
+   "hashtags": [
+    "#SKHynix",
+    "#HBM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "4e0fe0e0cc5cddb4",
+   "titel": "Roundhill Memory ETF (Derivatives) Price Today | Live DRAM Price, Chart & Market Data - Binance",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ycDBzeXNheWdWRDNlUHBFU1luSWRYQjJjV2cwQWJNeHN4bzI1QXhvRzJodFlON2xRTlhUaGhpemZKb3hHRDh6blpBcmJvanBtLVNFSU5NYU54VUQxV3EzUWFmVDR5UnA3dDlPcm1ZLVRMNlU?oc=5",
+   "quelle": "Binance",
+   "datum": "2026-08-28T11:22:00+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM",
+    "RECHENZENTRUM_STROM"
+   ],
+   "hashtags": [
+    "#DRAM",
+    "#RechenzentrumStrom"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "b3e4f3e9936ec68d",
+   "titel": "Samsung’s 8-Layer HBM4E Could Power Nvidia’s Custom NVHBM - SammyGuru",
+   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPdzUtLVF1VjJfLUpaWWRVOFkxazRxSDF3Yl9reEZSR0M2ZHNSOFgycmo0WU9ad2s2WDdua09BOW1jQTd4SHZ3cWhKX2llRTlnbW14Q1BtSW5pMTZkYW5Pa1V6aEpLTVNxOHRtNS1HUW5aWmFab2hRcl9TbTZZZkVyRGtB?oc=5",
+   "quelle": "SammyGuru",
+   "datum": "2026-08-28T11:33:05+00:00",
+   "gefunden_ueber": [
+    "HBM"
+   ],
+   "bezug": [
+    "NVDA",
+    "HBM"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#HBM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "39230b74edf26f51",
+   "titel": "Die Micron-Technology-Aktie steigt nach Rekordquartal und starker KI-Nachfrage - AD HOC NEWS",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPc3EySzE5Q2hOblpmdWV1VENpZmpmeU5lVDgtUnkwTXhZWEk1cWNhMTVCbmhBN29maEl2dXR5TGUta0dZdUFYU2N4YmNIQk1KN29vNmlQODJsakNlU01vcDhOVWk4YXEzVUlVeV9fclR3VGZYdGNlMDlmWnEyQ2l6cW9nNk9hSUZyV0FuMGphTzAwak9BNUpBb19TTHdMVmpCRjd0dnRuTkt3bXBIM21vZlBsbDVpNUF1cHBGUExQckZ0U2pJbnhv?oc=5",
+   "quelle": "AD HOC NEWS",
+   "datum": "2026-08-28T12:16:11+00:00",
+   "gefunden_ueber": [
+    "NAND"
+   ],
+   "bezug": [
+    "MU",
+    "NAND"
+   ],
+   "hashtags": [
+    "#Micron",
+    "#NAND"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "59829922c4f954d0",
+   "titel": "Nvidia's Margin Pressure Is Micron's Revenue Boost - Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQS0V0Um9VblF1VFYyOC14c0laNGtHS1VOdzVmVmFRejJzUFRFUVJhLXdkQ3R3UG93emw4RTVaNGNFZVJUV18yQW01VG5TTER0Q2Z6czBZSDUxZzkyVnZMRUZNWTZrc2hCdF9VNy1uNTVydXRRWEpQTFdLVmFIWWRpdTQ2Q051elVzbS1TeUhocFlyc05jZTU1SkJlLXJPM0ZsRHpyOUUzcw?oc=5",
+   "quelle": "Yahoo Finance",
+   "datum": "2026-08-28T12:17:00+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "NVDA",
+    "MU"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "bc88851a4da0969a",
+   "titel": "Nvidia Stock Is Too Cheap. Apple Once Had the Same Problem. - Barron's",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQVUd0NThwNElUVlBkb1VrQXRBVDRPaHhqdFRNbzl6RmE3RHZMNEhoS0xkamFvSDNwdWpqODFIRXZlRnpEVVotUTZUMUotXy11RmFLZllaSG1yMDlBOWhwbGN0MzloX0hqTVJWMmVteG50elJjSmo1bkxKb1BYa2VXejRGQ1NubDgya3prc2ZHTExNa1JHS1VZel9TNGM?oc=5",
+   "quelle": "Barron's",
+   "datum": "2026-08-28T12:38:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA",
+    "AAPL"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#Apple"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "850a585e6bf3262c",
+   "titel": "Neues DRAM-Packaging in Indiana: SK hynix sieht DRAM-Knappheit bis 2030 - Hardwareluxx",
+   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxON21lSzBNelBJd2VPRmJJQndBOUFOSDVRMjY1OGpldWxuUDVUTTNkMmt0WS1rMHh5NTU3UjNhTElVNzJrTE4xa2I0UTI4amFQemNNY2pRYkhacHJnZms2OF92Y1JtalMtWFpUb0FYdEltUkkzTHhsX2R1SDhoWVJkS3VtTjRmbkRsbGRZNDNjbEVTOEdwNkZiX2c5VjZUaU9GYTJhSnN6Y2x1d3hOVi1qVGlIVHQtekF4TEVfakNhRmdsaW83Y0FHRDlQN2xwb0pkTXRMWURRZVJnZkVnREE?oc=5",
+   "quelle": "Hardwareluxx",
+   "datum": "2026-08-28T13:02:41+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX",
+    "DRAM"
+   ],
+   "hashtags": [
+    "#SKHynix",
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "925754230a8fc961",
+   "titel": "A Once-in-a-Decade Buying Opportunity: Sandisk and Micron Shares Are Dirt Cheap and Look Primed to Skyrocket - Currently.com",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNaUtxQjFtZ3lLNDhjQXJBZHE4enNLN2JlX0NhSkF0NXMzSkVpZlZJeDhBWjd3cUdaTjFOa3FDdUpIXzNJQUo2aGxzaHBSbXhYbjFOR2lWUnJ3a3plOWFzZ1VVNEt2WUZUVEU4RlZmQVhCUEFEVmZOSy1qWDBQbTRsZ0U3U1ZrWWN4V0ZCeFV3MFVpYUk?oc=5",
+   "quelle": "Currently.com",
+   "datum": "2026-08-28T13:40:00+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU",
+    "SNDK"
+   ],
+   "hashtags": [
+    "#Micron",
+    "#SanDisk"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "e9bcf78693c8c197",
+   "titel": "Trump Calls Micron One of the World’s “Hottest” Companies a Day After Nvidia Disclosed $279 Billion in Supplier Commitments - Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQbFV2U3o4d1o4a0Q1OUtUdHVLbG9KTEludDdpZmtRNzBZQlJKc19wUGpxaHhndXYtakdMUnBVM09ESThWdXNJMWkzRERodF9yaGw4WjducVRwV3lYdFBNejhmdGZrOE1EeG9jQ2VVNjRhd21YcTVNRDNGc0pyd1RPTXgtX2hvM1ZZOTUyTUl0ZWdyU3FfYmJrYQ?oc=5",
+   "quelle": "Yahoo Finance",
+   "datum": "2026-08-28T14:01:50+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "NVDA",
+    "MU"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "aec6686a212371ab",
+   "titel": "Nvidia Just Validated Micron’s Biggest AI Bull Case (NASDAQ:MU) - Seeking Alpha",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOeVlfV0lhWXc0MGE3cVhCX3FxenZPLUdQUlVDWmdHR1R3bWphUmwtRlk5MV9kNXU5S2ZFMFJ4TjVSLWMwbUdRS2lQVjQ5d1FTZ21PWWJPenZBU2NIYjdEeVRPWEtveGtpSjQwMU45SGt6SFlGTWdTUEM1cFV0bVFwUGo4a1kySmpES1pvUEVvSGtHNE1q?oc=5",
+   "quelle": "Seeking Alpha",
+   "datum": "2026-08-28T16:46:39+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "NVDA",
+    "MU"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "3aba68cc159d7bbf",
+   "titel": "Micron stock falls despite rising DRAM prices a... - Pluang",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNSHBEaGEtOWJUZWJQZGstOFQ5R2JteDVaN3h6N0RMb0t2QlB3eDV2QkJyT2gyYlZtMXNXNjNDMmRfUmd4aG1iRmJGbVdha0tPbTdLX3NpcVRPd1NRVkpHWERLc0ZCdDJfWGszd1FNTXhtZDJ5X3c2cEo1bE1JQ201SGxyQQ?oc=5",
+   "quelle": "Pluang",
+   "datum": "2026-08-28T17:13:44+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "MU",
+    "DRAM"
+   ],
+   "hashtags": [
+    "#Micron",
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "e7104811ed5d32d6",
+   "titel": "AMD Ryzen 7 7800X3D von AMD - 8 Kerne, 5 GHz Boost und 96 MB Cache - AD HOC NEWS",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNY25raWpVM1BWSUk0OVNqUmxkM1ZLSWlJRnVMc2tvRy1rd3huaVYzNGJ3VDR6N3NrNHJoTU5tMnRJUmh5b1J0UmJwa055S3FsRFMtV2hqcTM2LWFCbW4zUGI1eUV2WDUyQlpnYVNPSUkxUUZkMnR6YzNKc1NUbHJfOXotV0t1T1gwc3RDcXR0elJDTjVtSDktOFZZT2Z2TUkxeGtnYXREMkkydVI4YTYtdEpKQjlWWTR6alNF?oc=5",
+   "quelle": "AD HOC NEWS",
+   "datum": "2026-08-28T17:38:15+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "AMD",
+    "DRAM"
+   ],
+   "hashtags": [
+    "#AMD",
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "4c9ced4ed8a0d24b",
+   "titel": "SK hynix breaks ground on $4 billion HBM plant in Indiana - upi.com",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOajVwUHpPQk85WlpQQ3R4b21EeFpnV21UWEYycHl2eU51RGVyUGJnU2YxMXdlU3FNRE5wZ2wxRlFma2xFajZwNHZ1cEVaTFEySHhvbzRZUzlMZlc5eko5QktJYnJZQllWOThRMEdROWhuQ0x3dGdEdFR6bVZROEVXcm0tMUZncFl0VXdjdzlicndlYzhZb1otU0p0MkEtQnFRdER4SklhdG5oOVVLQ2pyWNIBtgFBVV95cUxOR1l4N0xGWkItT05pcUhzMl9rU3JpRTdSMzlWSHFQbzdDYms3RkJEbGRwNFh3ci1KZjk3SjBmamVIbWMxV01raTNZQ1QxeUVkX0dfZUwydlhOZUQ3cXlUSl9Da2pOMWVIMjZxeXZ2T1ctTG5NbE4yT1ZKRVlneFFFZWhKUXNDY0ZCcjNjRjdsb2I0LXZtTGhBYm5KRThHNXNOY3o3MjEyUERsRldsMHZUY011a2JqZw?oc=5",
+   "quelle": "upi.com",
+   "datum": "2026-08-28T19:17:55+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX",
+    "HBM"
+   ],
+   "hashtags": [
+    "#SKHynix",
+    "#HBM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "3e34575f120620bb",
+   "titel": "Apple TV: Preise um 15 Prozent erhöht, Jahresabo +20% - BornCity",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPMVN5b0RpZGVvWnVFb25IUkt1RG1Ld2pYbE5USk9qU0V0SGlQVTZyRUVqcHlSTmtUS3VCVkZ1eHpVal9qaU5GOGQ4Y3c1bjdYT0YzMllKTEFGXzNzZ2tLSXl1YU5wM043MXlEcUozRXlZeld4OWVCb2Q4SnhHMU9yU3dGdw?oc=5",
+   "quelle": "BornCity",
+   "datum": "2026-08-28T22:24:05+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "AAPL",
+    "DRAM"
+   ],
+   "hashtags": [
+    "#Apple",
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "317ef61002fb782a",
+   "titel": "Nvidia gibt Micron Rückenwind: Warum der jüngste AI-Schub die Erwartungen neu kalibriert - 29.08.26 - News - Ariva",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQRHdZcjliZ2RQeWFBWXdrVmk4RFkxNld5QW02cEVBcVk3cDQyTkIwNVdjYW9PcVMxaGtEbGh0cXYycjB3MVhRanNxMnpNODItN0JFTkN0OGlNb1dNSmx5RlExV1VwZWdrQUx4ZU5ycW1oZGJIZ182WWFoQzdUTUVCRXVPRklJTDJXMTBabmdsWmltLVU2Vmp1YjBobGNnYlI3cVdFa1ZQTEFfblpoS0ZUVGhQcWtjLTFxci00U2YyLVBPUVExc2Rr?oc=5",
+   "quelle": "Ariva",
+   "datum": "2026-08-29T06:01:07+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "NVDA",
+    "MU"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "aaa7c4d388339786",
+   "titel": "Memory chip prices to stay high through 2027 as AI drives demand, favoring DRAM ETF investments. - Pluang",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNaUJyRDVFamxxelk0MlItUmcwR25HVmtOcjlHY3J2XzVZN1JmOXd2eDNETV9wQzJ0TjhLOVZ5YlRia20wMTBaNi1yOU45RXNMeXBGWTRUWUNLb0gzMVJ4eDVqdXlFLTBpVUdXam9ZUWRhMVZMNmhieE5RYU9UNlpSUjV6WXVZazNuNjJEajZB?oc=5",
+   "quelle": "Pluang",
+   "datum": "2026-08-29T08:37:21+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM",
+    "EXPORTKONTROLLE"
+   ],
+   "hashtags": [
+    "#DRAM",
+    "#Exportkontrolle"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "cb0a983a853388f9",
+   "titel": "Kioxia and Advantest Continue Earnings Growth on AI Semiconductors; Growth Expectations Remain Firm Despite Stock Price Volatility - finance.biggo.com",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1EX0ZHNE1LVzg1Q3R2UEZQdUExQ3daS3NkRG5NSFR5U1RUWXZ6S3E2T2RxeTg2UzRYNS1sdnMzUkRLcUhZOWZsRmc4RnlyNXc2MUNpSGk4WTFQbGdSY0RNV2lTNGRBalpiTmxrb3YwaTNtdzlEaGc?oc=5",
+   "quelle": "finance.biggo.com",
+   "datum": "2026-08-29T12:55:00+00:00",
+   "gefunden_ueber": [
+    "NAND"
+   ],
+   "bezug": [
+    "KIOXIA",
+    "NAND"
+   ],
+   "hashtags": [
+    "#Kioxia",
+    "#NAND"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "4b5631c4698e6867",
+   "titel": "Netlist Asks US Customs to Block Micron's AI Memory Chips at the Border - Startup Fortune",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOVHlhN0F2V2xUMWFEYjhBUkVyV1lJNnViNXM2aUlhc0tLeGM4WWV5dEhjVUhacUNzUWFyNVNlNnNTekcydWp5WGpscE1laGJOSlRsamx4YVFlTmQ4QkxsSUdVVHBpeTNrQ0Q2aFJ1UWlXOEpsRU13OWJheThRMTB2X3ZtdjM2TXVNcmc0cWlvdHllcDBXTjRHeTM5WUluM28?oc=5",
+   "quelle": "Startup Fortune",
+   "datum": "2026-08-29T13:12:37+00:00",
+   "gefunden_ueber": [
+    "HBM"
+   ],
+   "bezug": [
+    "MU",
+    "HBM"
+   ],
+   "hashtags": [
+    "#Micron",
+    "#HBM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "e5ae37130c9d7dde",
+   "titel": "Preiserhöhungen: Apple zieht Preis des Mac mini um 50 Prozent an - ComputerBase",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNU2tvZ09FNVhBY0o3Y0FWQ2RhMTVTcWQ4RW93OTg0aXJiaVdpWDkwaEJqTUxzVnhXVVJuUElWT1ZRNEhMUUxSMjh4SVRWYkJPSTZ0TjlIdlhpcndtcWp3TmZCV0l3T1JRTlkyTVJoalBXV2tYNURUei1tTlNKY3ZzUnJad2c4aHdJekdEWUM0MHNKb3FOQ3ZwbzFQMFk4QlM4OXVhNlJQcklLZ0x4YmF4LVpPUW5mQQ?oc=5",
+   "quelle": "ComputerBase",
+   "datum": "2026-08-29T13:20:00+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "AAPL",
+    "DRAM"
+   ],
+   "hashtags": [
+    "#Apple",
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "9197b85bc8c9a4fa",
+   "titel": "DRAM And NAND Flash Combination Of Non-Flagship Smartphones Now Exceed Premium Chipset Costs, New Estimate Says Price Has Increased By 340% Since Last Year - Wccftech",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1OYTI5SmFxSTZwTmw2ZzR4b3lRVXRxX0tGZXNBM1hfR0kxTTNCX213WHVDVi1HQldTODd4UXJhTHBEM2ZtOFNZUUVXaFZkRl9TT3RhVlpPSmluUkRfVU1qZXZuSmE1V3VSa3fSAW9BVV95cUxONEN6ZDZVUlNmUmxjM1Y0MHFHbWdSOGlKdGVJd0JwdXdEWHQ4ejZxOUt2bVU2d0o3Mm1RQ0lZUHhFQnF4QzVRUXVTY1lrM0QzZDY1aFdac1gzWlNFSFZUdldoU3NydHR6MzJfU2x4Z0k?oc=5",
+   "quelle": "Wccftech",
+   "datum": "2026-08-29T17:26:56+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM",
+    "NAND"
+   ],
+   "hashtags": [
+    "#DRAM",
+    "#NAND"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "079af9753cc8b5ae",
+   "titel": "SNDK Stock Today – August 28, 2026: SanDisk Falls 2.2% on Rate Shock as NAND Flash Market Recovery Continues - The Eastern Herald",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOeGYwQXlGU3l5S1hQNWNaYWpBM1hmcjRsQmpldzV0aVJvNmV0Q1g4YVlXWElyeGpQZnl2ZmdfbXp2WUh0Zk15ajJyU1c2ekJwSjZfMkxJMEJpS21PZ2xSWU10SFpJb2hFSWYzalA0U0tJYmV4UXZhRzd5WVlOS0h1YWFKODgzcWs5LXNvNk9xNi1WTEU4SWpFVjNKOEhLazRkck1MREhtaWx6dw?oc=5",
+   "quelle": "The Eastern Herald",
+   "datum": "2026-08-29T23:09:42+00:00",
+   "gefunden_ueber": [
+    "NAND"
+   ],
+   "bezug": [
+    "SNDK",
+    "NAND"
+   ],
+   "hashtags": [
+    "#SanDisk",
+    "#NAND"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "1628421bbba55c3b",
+   "titel": "SK Hynix (NasdaqGS:SKHY) Breaks Ground On $4 Billion Indiana HBM Facility - Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVmVqamNlZ19lbnRwOEdZdktkMEVhT2FBUGFUMGZTTlVKTmJDQTJVbFV5Q2IyX1R6Ql95ZjZqMVJfMngxNUFobXUtNnBGZnY1YVdJbFRBUnF4R0lacjJVVWRfWnFLdWduQllFWlMtTXZwT3FIb0pNMi1Sc0syNllEdmp2VHVLR2w5Y2NFdW1RbzRrWk9hUXlzNA?oc=5",
+   "quelle": "Yahoo Finance",
+   "datum": "2026-08-30T02:15:00+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX",
+    "HBM"
+   ],
+   "hashtags": [
+    "#SKHynix",
+    "#HBM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 7
+  },
+  {
+   "id": "f62e1ec1b97558ec",
+   "titel": "SK hynix to Start HBM4E Production at Indiana Plant in 2029 - thelec.net",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE02SHdPVmVrUkZrTkdVekFqemZPdHZOVGFqa2lneVAxSE1JOXJCb1ZVaGY1eWZBOGIxS050RlNBUmVkNWRnUGJVUmxYcGU1Y0RhNVB3R2JUWmlCYXhUSXpQRFllRVFrYnc?oc=5",
+   "quelle": "thelec.net",
+   "datum": "2026-08-28T08:36:52+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "68ed0f55f0660fc1",
+   "titel": "Nvidia und Hugging Face: 12,9 Mrd. Dollar für die Kontrolle über offene KI - Business Punk",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQZU5iUDlGaVpNYXF0WWNWaEQ1eElyd0l1YnJUQzVKVi1aNkxuVjU5UGhXZmZSTW9MY0ZxQ00zRTlyblp2YnpPTjN5NVdmNUJsTTJYd1B1YTA2V3dIb2JYZmlaNHRiOXRmOVpHZ2stcU11NXNuejVfaVlXRjJBTlRzWFc3azdnQmtHUHZRcGxXdHBibklLWlJzT3dGUFF2dnJSRmREU090MHU2dlRvcFE?oc=5",
+   "quelle": "Business Punk",
+   "datum": "2026-08-28T08:42:32+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "d5f8ca47f689e00c",
+   "titel": "Jim Cramer Said Micron Technology, Inc. (NASDAQ:MU) Fell Because Of Samsung’s Share Buybacks - Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONHBKQ2htTG1qakRXYW40alRIYWtCaEMyZjkzSmN5bldSWjVnTEFhWkgyd0lFYnVEUndSeDRJX1hIbXRKckE1T1otZ0lFSFRidkhLVnBySzl4bkZrRjQtRGRlUVFpb2NRZDFONmwtMWVOVm9yYkx5RWJMUWdDVWg1eVR2SlY2TWFybWdUOVQwUnd2RVJYSFhqeTNzVTZfSmc?oc=5",
+   "quelle": "Yahoo Finance",
+   "datum": "2026-08-28T09:16:30+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "d799ebe9a4c14299",
+   "titel": "Börse aktuell: Prognosen für Nvidia-Aktie steigen, Paypal stürzt ab - Hamburger Abendblatt",
+   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOR2lCQmpqRzVQVnFjeVNVUXV0STZMaTRGMVJhN0poVVdZYV9Rcm1ZcUp0X0ZCajN2Nk1DUW9PdFdZQ29venIwYUxZV24zc2pfMDJkQU9vd1ljSUJMdzFOVG5ZdXRhTHZCWTFRdVNMUnBLRnNYYkFGWXNNQURKMkhfaVZGNncwajlaQ3YtUVdxRWliVm51Q1JoMVlsMGsxZld1UFQ1OXVwMVptZldjdHdUb3F1dU40Rlg5U29GTlpwNUdqYXczaThwTnVwRQ?oc=5",
+   "quelle": "Hamburger Abendblatt",
+   "datum": "2026-08-28T09:29:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "d89f1195c16cad23",
+   "titel": "ROG Strix G17 (2023) G713 - ASUS setzt auf 17,3 Zoll und 90Wh - AD HOC NEWS",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNREpBMWNIZlhOdk0zS2NKZkdZNGh5bkVpaEVnODAzVnhXLURCT285d29iWGJCOTlrM084ajkwWDRwNWc1VF9KNTVQaDRoWFBQcjRObnhOY0xXdmlhRkd5bFFIR01fRVU1QlYwRVlFVlUzekxqcHExZExxdkNnM19hSkVPQWdKeXpOUmtSdWtUdkQ0OUVtbHYyR0FJTzlVUU1yNzhCcDZ0RW5jaEVGb2txSlIxYw?oc=5",
+   "quelle": "AD HOC NEWS",
+   "datum": "2026-08-28T09:43:06+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "e1c6970579c148e8",
+   "titel": "CXMT Returned To Profit As DRAM Prices Jumped - Finimize",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFByQk9DMXV5blRSbGJfWUVVWDRQY1luVlpxU3U2NldyaHNrLXBWNmtnaFJCTXI4RXFRaGZEc3FNSXRFNDFCUE44RWNyYXlWaXhpMVhlVDZ3bHFOSHl5VTRDaUU3b1NCZmtxWWJ3OU1peUdCQmZFZHJheldqQWlhSEU?oc=5",
+   "quelle": "Finimize",
+   "datum": "2026-08-28T10:03:48+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "a683ea7d70a3dce2",
+   "titel": "RAM bis 2030+ knapp: SK Hynix sieht bei US-Grundsteinlegung Nachfrage nicht zurückgehen - ComputerBase",
+   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNdmVDb2dycVljZldvd3BzdGM5RjNxMmx0VnkzZ3pXS3JuRnZaclZQOElPUTVjd2R0NWtCek5BazZfMVVaZnpnWjhycVlPalBiVmpIV0NSdlJnMXJXMXM0VjR4emxlVE5acUlzUGpHaGU2Zl9fMzBlZnhzMjd5YUI2YndYbVJ6S29HeG5RWEM5aEd3SUZpOFVLd2k5SkJ4MGNveU5ybW9HdUFzVEpqNFg4TjAzR296TXAzVkZCem1VTGdoOUtBQ1ZBcnA2NloxNFVkWXhVeXBLZHB6TWJKVGtLZA?oc=5",
+   "quelle": "ComputerBase",
+   "datum": "2026-08-28T11:30:00+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "dea45a0c94aaed49",
+   "titel": "Micron Biomedical Honored with Georgia Life Sciences' Prestigious Phoenix Award for Transformative Research - Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOeURZUEVOYkRrU3Rqc2hRLUJyRFNTbkpONEJDZjN6am5ydWNYNHk3NEgyd0FDX2FqOUF0LUlqell0dlBYaVAzTW1XbEtsc3FGWFg5NU52blJjYTkwZ05VcUN6N1J6UFdSTm1BZGJSZ3FSVW1yRkpkV1dXMGRXRm1jSUFIdjVWUHVScWVObl9QS3ZaM3dkM0lzaWtVVDlPZTBh?oc=5",
+   "quelle": "Yahoo Finance",
+   "datum": "2026-08-28T11:30:00+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "6adcd3188e946263",
+   "titel": "iPad Pro M5: 2-TB-Topvariante mit 16 GB RAM verfügbar - BornCity",
+   "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNR3BfUjRyNEYwVlFqOG1vXzh1b2xnc2tNRm54OUh1ZlBRTFFCODVsaElrTGZONUd1czZKSk1Vc2tWeFRzaklDVmtORDZ0by1jSTJvVTFtZzB6R2V3SXRlR3NZc3VsSU1RYXBKUUZieUhBVk81bFUzeWxsTDdnUU8zNmZoNklZNWM?oc=5",
+   "quelle": "BornCity",
+   "datum": "2026-08-28T11:31:04+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "dcedfd234278de39",
+   "titel": "iPhone 17 Pro Max: Rabattkombination senkt Preis um Rs 44.000 - BornCity",
+   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNcy05MEpJTTJ3d1dwTjdIajhweUthTGJETUtsSGVaNGJUeUotSjdJX042d2dFX3U4TElpUHppY1p4ZHdGd1FCLURhb2NQMkVDNm8tOUhqMFNwb3FoV2YwRG9YeDJYWUJaTzBsT3k1VWx4Y1NpSW9CSGZTYjFPX2RWc2N5akh1bEk0Z2w4ZnZjVlQ?oc=5",
+   "quelle": "BornCity",
+   "datum": "2026-08-28T12:02:04+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "1c4a15b8ed5ea92d",
+   "titel": "Die Aufpreis-Liste des neuen Mac mini und Mac Studio - MacTechNews",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOdWNUcDhURkhzQkplQWRSMGtROWhZZGRvYzNUMFdycW0zdVUydXRnV3B4WWYzVFc4M1ZWeTlaQ1JpVkRxM0lESko5bkU3MnBNQ2Q2YlZHeWdDczNHTkRUdnQzVjV1ZW1QUWJCYmtnZVhfRVlfM1gxbmZ4U2tPLXJBNHp6c016VVdya21ScDZJcldLMHA1YnJDYXByWl9fU2E3R2JUMUdlSQ?oc=5",
+   "quelle": "MacTechNews",
+   "datum": "2026-08-28T12:05:15+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "930bb6b87e7a7065",
+   "titel": "Micron Has Already Sold Out 2026. The Stock Fell 7% Anyway - TIKR.com",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNTDFSVTlRdE9Ia0JRVkJ4Uk5PaWl2LXU1aVg2TjZsOU42T3M3Z2c3cVh4cUtiUTE5bkRXVWNNQ0g2R1AwdkprUVBtOVZYSzIyb0gyWFRkX2tkTEF2NUxEeGhaMjBkRmxzcW9VcjNIdktycERxN0lVa0xPaDZpbDBETTlfLWQ2ZWJ4aEhjV0NR?oc=5",
+   "quelle": "TIKR.com",
+   "datum": "2026-08-28T12:08:47+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "8d714674b23f4178",
+   "titel": "Für den Preis eines Teslas: Spieler baut vier RTX 5090 in seinen Rechner, doch sie sind nicht für Spiele, sondern einen nobleren Zweck - GameStar",
+   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPWWM2bHN4SGRsdmlNMVBXOHpiOVJzdlBEeVdhN05XZXpNbTY1cWdibFk1Njk0TFRaQUY0blpWRHE0WGFEcEFnUDJRcUpua2NSM3JXc2Z2Y3RWRVhORUVJWlU4UGJUeFUxV2l1djFCbDR6V0lfUS0ySkttUmNHVmxaRUNxZExsNXlCdERKaw?oc=5",
+   "quelle": "GameStar",
+   "datum": "2026-08-28T12:20:16+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "60611adc246ad305",
+   "titel": "Micron’s Chinese rival just reported its first earnings as a public company — and sales are booming - MarketWatch",
+   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPdFRWM3pEeC1LaGQ0RURCblBVWHhLZlMwOFFsSUJOZGNBWDREUUczNV9hMWZ1c0gyWGxfSnRKMUZWWDgxS3JQdUJmdTBLWXhBbFlrejZQc2NWRzRfMnV4RXZPRWp5c2NHNDNCT05NNzRlQVZkT3VFbkN1ajZSZTk2QVFqVDY1a3hFQ3hfWklMc01YQkY1MWVsWFI5M0hsUnNNYzdWTTJub3kwMENVSjNYMEZDS2hNSDcwcHlHbFB4MjFtNldQUXpoZThQTk9kN2ZEVmFyTkxB?oc=5",
+   "quelle": "MarketWatch",
+   "datum": "2026-08-28T13:01:00+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "6a6371b68e3828d1",
+   "titel": "Nvidia’s Blockbuster Quarter Has One Ugly Loose End. $27 Billion of Free Cash Flow Vanished - Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPTno4WjRVQjdNNHBxMWl4YkZNa3FjZjM1ODd5MExhRlVQd0UwNk91aUtEcjV5NUM2SkdNRDRjQ2FnY2h3eXZBTER0MlRHVWRDWklQOXhHT0JXSUo0QklKeGFDZ0Y4U29qVFE1N2ZvejM0aFU0dzF6TWlpeUFOTnhQdi1tTnZRaUVnZzNhYzBocFFtN1FRVnVJZGNMbVZET0VOUGc?oc=5",
+   "quelle": "Yahoo Finance",
+   "datum": "2026-08-28T13:41:04+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "1e16820d79220596",
+   "titel": "MSI Falls Back On Cheaper DDR4 For Its RTX 5070 Katana 15 Laptop As DDR5 Prices Skyrocket - Wccftech",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPZ1dTclVEMkhOdDFwcFlza3J3aklZTFI5Rkk3T0Q2a0M0YVBfTmYweGFQN2Zfai1jQ3lma1JnT0JsczJSTmdNQVhIbi1rRnJvWjJrUTNUbElGaGFIelJPdXRPS0t0Mmc5eW02cVdHOTVTUHFrQ2tpcGpHbDB1S2xpWnBNVWNzckxKRXNQdEVzQnpJVnEtYnJSQlE4aHZ1VFdyTFpMMXdFeUdaMkJuWExoMNIBtgFBVV95cUxPLVBRVF9xYmNWcXNtZEQySGdSeHFqS1lWeXFzUEU5TF9KTERJUGc0cTR1ZG4tdTJEb1RFdDVqenZ1eXQ0VFVBSDk3LVVGelUyUHhRd19LYW56THBaTm9rbG1lX2hqZHlNLUl6WHZha2VHVUhTdnhxN1pSeG1ZLTU2S2Z3UnE4UmEyWnNjVk9PUjhIa2hUX0hvTVEzTFZFTm5JQTNaNGV3MjQ4Qk0tbkQ4S291MktyZw?oc=5",
+   "quelle": "Wccftech",
+   "datum": "2026-08-28T14:24:50+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "829d50d0f22f81db",
+   "titel": "DRAM Prices Explode 401% as One Kilogram Now Costs as Much as 620 Grams of 24K Gold - Wccftech",
+   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQMmdTdDhHLTA2clJIZkJrRURkSTZPaUVpNlF5bVRWcU4wVnM2U2JZN3BaMktveHo1a2lWVnE3QTdYRy1QRklQTDc1Q2hCQTZMaG1rbFVkSUtkQ1VaVHd5TDRiZWdveG5oYVdKMVI5UXh0REk4QW13TEJkVUpQTElxZl9LdnpSZnlVSkh4RVBabjQyb21GZzV2M1FUQTU5ejZXeUt6OHhWUzVtR1M4SFM3T3p3U09oMm1Hd2tYV0VB0gHDAUFVX3lxTFAySTc0MldLd3JSYmtxMFhGSXJoWHl5N2hVcEpNNE5rclNiekRsTFBUVnJQNFhYbW0xX3JCanJRNlpYalAzMVFvemJsNjhRRXJWMzhiUDdzcDJfOEdwWlFYR1VMUUpORnQzSE9kUjU2TXNwMk4wS0VScGd3d2E2QzJmZzdKc29IaDY4bldLbENGMFVvY2Exa2pMdWN2M0FPZEY2ZkNEM2g3UkV2SkVjMjZMOFVzd1kzT0lFRGRrYlZnQW9Jdw?oc=5",
+   "quelle": "Wccftech",
+   "datum": "2026-08-28T14:35:53+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "9be50c830f419272",
+   "titel": "ARD führt bei Filmen, RTL bei Drama-Serien, Netflix in der Comedy - DWDL",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNLUtkQk9MbVp6QUY4d0plNmMxaFMxek9oQTUtSzR2dFF3RnQtVG9HajFqM1pabkcxbm1LQkZ3OEgwWTlrazgteVVTbDZ6RDdack9wRTBsU0ZqS0JuM3dYMllGSHdQOTI4WjJLcTE4SExrOERvTWVKd2U0NG14MC1ETjdnWXo4dlZUMVNaNHFLYVN6XzdLd3d1Z0Njb2ZodTZDTjBoeDRKZ2xraEVt?oc=5",
+   "quelle": "DWDL",
+   "datum": "2026-08-28T14:45:00+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "98063fe893e5534d",
+   "titel": "Chinese CXMT Sees 10-Fold Revenue Surge Amid AI-Driven Memory Shortage - 조선일보",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQUS1rU29ERDVUTHpsNi15a1pvWVFyZ2c1VWJ6aldGSGhuTURIRUVVTEhLWDRzYVF2cmFxbmlUSVlIdTB5V2tfOWpRVjh0bFZxTks5OXVJT0oyUzdqTzdzNnI1UDh2VkF5eFZyeXZ4OU4wd2taY194UndseTh5MVFaMzVneU1VdFBh?oc=5",
+   "quelle": "조선일보",
+   "datum": "2026-08-28T15:04:50+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "104620830637d757",
+   "titel": "Samsung P9: Erste portable SSD mit 8 TB und 4.000 MB/ s - AD HOC NEWS",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNOXd6Z1ZjcW5jRk5FNklXeDVjVzZOT2U4cTlkaVBudzN4bmFrU1M1cFdsTk85aGVpMzdxakdGLVlkVk56WUQ1eUJrNTZySU5EcnVrTDlpRGVZbEhCRUsydEhUV2ZiNjZWbGtfVkNSUTVQNU1xdkt5OExDaDMyVHg0RFZoMm9qeThfR0dfZ1ZVRTFqbWZzSUhmOTlkTkM3Zmt0aFplRg?oc=5",
+   "quelle": "AD HOC NEWS",
+   "datum": "2026-08-28T15:11:45+00:00",
+   "gefunden_ueber": [
+    "NAND"
+   ],
+   "bezug": [
+    "NAND"
+   ],
+   "hashtags": [
+    "#NAND"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "145f10a75f3520fa",
+   "titel": "Nvidia (NVDA) Pulls Back A Financing Program Right After Blowout Earnings - Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQVGo1Rm56UUkxdTFHZVh4VXBBSDNvc2J0QUtnbDE2aUpHbUs0ckJ2MzJQWGZLeU9nWm54SV8wQ1JMZG1QVE5MdXgtZVlNR05XX0lQdG04RXdUNkwzOUs0bHlyWDdrZ2FHcUQzUVY0WFFtZGZVRXI4RjJnSXU4RFFBVURkdTVZdjhfWkFHNEFFcUM0OFJnT0RKOXl5ZFdHdw?oc=5",
+   "quelle": "Yahoo Finance",
+   "datum": "2026-08-28T15:34:23+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "7357c1ad9da72b37",
+   "titel": "Why Nvidia’s Hugging Face Deal Is Really About Its Biggest Threat - Time Magazine",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1vYjlnRlZaYWZaV3N2RExoOS1QckxiVWVoREhnYjZYLUI1bUhQVHhNcU8wSExPNVgteWg3SG9WaVdtQ3JTSG1sVzZfa29BTDVpaE0xTEw5NVJWdklxZURxdWNrNll0eElUNXZJZUl0U3Jlb2tuSG9udlRMaUx3VUE?oc=5",
+   "quelle": "Time Magazine",
+   "datum": "2026-08-28T15:41:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "65fcf27b2495b9c5",
+   "titel": "Trump praises Micron’s $10 billion investment in US for AI research - The American Bazaar",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUWRKa3pxTEFJSkRIUG1KUXpuZjZWLVdocm1BRFExRWIxa1BlR19qNUpKS2ZWMXVGam1MdTF0MEpNU0xMVmpLUU0yZGNSYzREM2s3UDZORlVPZHlPY3NiU1REVXR4TUJPT0lkWmlsRzNyOVhrWko4MlluV191T0JfUUhVTm44cG9qeTFCWTAwSm1hZHpzOFFrSTZ6ZFlVRURLS2dfcjJSOExVZnRVM3lzRXROZUZKRzBB?oc=5",
+   "quelle": "The American Bazaar",
+   "datum": "2026-08-28T15:51:57+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "74c6f2f72125094c",
+   "titel": "SK Hynix starts construction at site in US’ Indiana - Taipei Times",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9HVmp0ekY3Q3lBdnJHOWlFemg5a1pzeXBiSTZ4d2FPWUpaMVBndVYwNUtLSmMxeEVaV243THdRa0Y3ZHFHOGl4VVpLTTdQNTR2OHpSVGNTcnNnVWxqcGFIbU00RHlNcDVWaDlMM3FWQ1V0WTZzcnc?oc=5",
+   "quelle": "Taipei Times",
+   "datum": "2026-08-28T16:00:00+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "78995909aee7e24b",
+   "titel": "America Wants More AI Chips Made At Home. SK Hynix’s Has Broken Ground In Indiana. - International Business Times",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaDEweU9EYXhOZUY5U0p1cDJ6OTZublBaY0lWRDVidnFkRUhwZFRfMDhvZnNpdlAxRDhxZU93WWVFb09VVVd4RUhaT1BkSmo5RG82Y3BucnBZTFVDMkRkbjRUT0tZRHAwbm9iSnZsbENrZWxlZ1Y0SFpOSy1GUUJ5RnVGczVwRkNpdE95LXphcURkWHVUMDdiWkJHUFlWWmlUUmZkdUlmXzQ?oc=5",
+   "quelle": "International Business Times",
+   "datum": "2026-08-28T16:07:11+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "d53a54ce887c42db",
+   "titel": "Micron nach Führungswechsel: Trägt der Speicherboom die Bewertung bis zum Quartalsbericht? - Kapitalmarktexperten",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQek04ZGk1c20wZG1HRGxvdXFfcjFFRHNubWJ5N3BoS3ZNUWRLNXduNjlXT1pfdE1YN0V3V05XcHdmNHRNUDVMQThLY015cVBNM0c1RWwyVjJXVDFwb1NLaVp0MHAyanpUbXFuRkY1cVVsUGpQWUxCMTNWdW9JbmItV3huNGNYLTVVMFNlQ2ZVd2lNTk0zQU1BTmxEOUxtRW1Hd0ZNZW56Ymk2UmwydFU5bW9vYXZ4VURuQklRU3QxS295VHBxVkE?oc=5",
+   "quelle": "Kapitalmarktexperten",
+   "datum": "2026-08-28T16:10:05+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "68dc6434ac70009b",
+   "titel": "Micron (MU) CEO: AI Shift Breaks Traditional Memory Market Cycles - Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPcnVMREtyQmtOTHRVMHNqaVNyWUV3d2tnTVJsRTlrVGw1QTRQd1FkaUtxSlBmQmpmVUQ3SlZEeXRLNGV4MHExMWp5Y3hCSXptWXJKTjJiUm9IRTN6aE5tbWFyXzdVSVByc0FYTnNrRUlvRkgtQW5HaVM3QWZiR19MVHJhR09ORFFVY0x3dWFxQQ?oc=5",
+   "quelle": "Yahoo Finance",
+   "datum": "2026-08-28T16:14:24+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "7fd1b9c3c5141bfd",
+   "titel": "SK Hynix building first US AI memory hub - thestack.technology",
+   "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1WXzJWaUdrWDkwWXFFQUd6dUNGaERCcFFzV2xsUkdKdGEwWDFaSmUzc2dvcUNUVTJuTjlfeVZXaGZXek1tbENTQzhxT2ZoVGhsN0tQTk9SZFFsdGxfRkxNa3BpUGlzc2RFd2pzWUoxdUYxN3lxZmw4cVNLaEZ0Zw?oc=5",
+   "quelle": "thestack.technology",
+   "datum": "2026-08-28T17:20:55+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "2bd962732087f9fd",
+   "titel": "State could award large piece of land near Micron to Boise developer - BoiseDev",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUnBydWpxN3B4WktLUlczMnV0N2RKUWZhUEdyeVlXTGR5TGJORlR4VVhra1NtQXdBOU5FLTNDelA4X3FFU1VrQ3hoUGdZRlpUaV8zRWNzZFdqR3hRM3RESzNleG1pUmNlQXJOaU5iTjZXeUFERmw4MFdmb1U3Qm0yc3RtWnIwMXBrSEo1LWJFZUs3TzIzeldjRW1zWDhzZzhuUjVZamRRVlU3bkZwUDRkNjZ3TDhxRXQ4WjVUVGROeUVnazQ?oc=5",
+   "quelle": "BoiseDev",
+   "datum": "2026-08-28T17:49:42+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "a148f0e227b37188",
+   "titel": "MSI Taps Cheaper DDR4 Memory for New Katana 15 Gaming Laptop as DRAM Prices Soar - finance.biggo.com",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBlNjFldVg5QlFuU0R6bmpEZXZWdVRQSHk0WThpOHpiWXhMSE5zMWN2UGpnWWhqRVIzLUdxUFJNVHJzQm1jOUVmbGpRU3piOTVDbkFmU1pES08xeU1zcUpyVndBN2c2dF9rM1QwbmZWVk1ETjN2bUE?oc=5",
+   "quelle": "finance.biggo.com",
+   "datum": "2026-08-28T19:07:00+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "45a6852ee6269bbd",
+   "titel": "Prediction: This Is What a $1,000 Investment in Micron Stock Will Be Worth by 2030 - Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWXU2V0ljSWVVV043Z04yQXZ0TkNRay1xRHo3YXpNeHdZcDRzZFAxZUwtbW9OTjUzamNJdFFpLXRSRDBELS1Zdmp5T3hHZG1ybktIYzVhckc5RDhmdURGMGgtTEdmdWNFX3R5eDAxYmRWb1VjVjl3WHVDa1hMRW05RTNfbkNkYU83MW1rNlhjRXNkSjk5blN6NEpkNF85b3Yw?oc=5",
+   "quelle": "Yahoo Finance",
+   "datum": "2026-08-28T21:53:01+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "0c162e57dadc226a",
+   "titel": "Nvidia CEO Jensen Huang Took a Call From Donald Trump in the Middle of an All-Hands - WIRED",
+   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNdWFTTkxPOG5welJZTXIwcGYxV3hfbDNNUm83dTdFdDZMY1NIRDF1aFlQNkxEWHJ2ZFJ5TDhlUmhOWTlPcU5UOXlzVFV1dGNSZkhjaUg2VUl3dnhaczJMY0dzbUhEQnBXVWw4dThNTFlDb3h0di1WOVUwdnY3d04wd3Z2U0FGMUlvYm5pcUo4S3d5MEZ4eWRuY1BlaURsTTBGeFgxSjZ5Uk9pREt1QWVSQy1B?oc=5",
+   "quelle": "WIRED",
+   "datum": "2026-08-28T22:29:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "de9f5a1753d6dc94",
+   "titel": "SK Hynix To Build Memory/Packaging Plant In U.S. - Semiecosystem",
+   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5lcHp6Nzl0Vkt4SUpYNXh5WEcyWnM2V044M2xpbTdaa0g4Tkl5T3pmUWRHM3BsQmUyOGZLTkg5bGhfNzJMdVpEOHd4WUtKdThQdV9CZk50MXlKZkJjSWp1Y18wR3A2MFJvbjU1SUtrX2JoT183NVM4?oc=5",
+   "quelle": "Semiecosystem",
+   "datum": "2026-08-29T00:15:50+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "298669d53e8fe72d",
+   "titel": "Wichtig für Sparer: Sensation bei Nvidia – was tun mit der Jahrhundert-Aktie? - BILD",
+   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPR2kyY0xFRU1FNmJ6Y2cxUmdfT3hFRW1UaHY4cXd0WjczWlZsV0lHWnd6Yi1tZUNSOGwtYVdTRmwxdnQ4VUpzZE9NSXQ4V05ycU9SUWxvMW9VWE5SWEtKWXBJck5VcDREMndqMmh2eWwzUDdkNkk4RFRwYmEyZ0t1YXJ0MWQ2Y19vR0lmUm91MnYyeWdWZzFjTUdfVnk2VjhPZDduVDJ0Y2g2UVlXSFhhZVc5aWN5N0JyTTFXUWtWOTZ3R1V0RTdrR0RpVzVCbEItdVlUWkVHeWMxeE4tb2JHLVdWaWo4RVZUUDlV?oc=5",
+   "quelle": "BILD",
+   "datum": "2026-08-29T00:18:19+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "e44cb9603be4c4cd",
+   "titel": "CXMT soars on AI-fueled DRAM boom, challenges US military label - CHOSUNBIZ - Chosunbiz",
+   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE03QmhrR2I0U21WVFF2ckdQcWt2VTVNbC1MdkptNVd5SnJGTXNnTlhrbGlFTEhIbnBBWVlhMnUtcFhiZUNQa0swb1k3VE5FRjlnLXp0SXozOGFHVGN6SkItS1hkdjN3Vlp1b2ZpaUpSdU5GUlRMTzJ1T1RB0gGOAUFVX3lxTE4tVUQ0eVRwZVVhSmxlT2ZMZWZwVGNyVFJXSlp0ZUNqX2NmZGhUOEs2ajZYX0xYNGxTOVNJdXZocVBTRkI0bzBjSXpiQ0tqenBsOVlTamRSaFRiSjVYNmY4VFRsQXVBNlNZRE5QeGxTYmxyRi1fREp2cmR3NUZfckVzMHNTMjRDb2NSZWlXOEE?oc=5",
+   "quelle": "Chosunbiz",
+   "datum": "2026-08-29T04:16:00+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "f2b79d0a02dbfb30",
+   "titel": "SK Hynix Aktie: Speicherknappheit bis 2030 prognostiziert - Kapitalmarktexperten",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxORmZoWUg1MVEtdVNESXRESktMbEVGUnZkSUtRbzk1czFZNEZwd2MwU1JDcEhadWxEQU5IaU9YUEVZeFgtUG9aTzZ0RGs4QkUybkF5Mi1heWxuM0dOaXVOM1h3dWxiZExaM01NbV9SUlA1YXBIVDFCZm1SbEtYa1lLUGJhRVdRbmhpT2RKdzFVRWxwVlJ5QjFXbQ?oc=5",
+   "quelle": "Kapitalmarktexperten",
+   "datum": "2026-08-29T05:36:04+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "53ccc691cf24c086",
+   "titel": "SECI Invites Bids For 50 MW/100 MWh Standalone Energy Storage System - SolarQuarter",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQTEo2MTM5WnozUERvMGx4WDF5b002Z2d1V2lucm9GOEF2WW5NT1QyN3hwYTBKUWdER1c3Vk1KMFQyMl9CRl9vMlZtYWUydlNFV1NkUTJyME4wT3ZmYXNrbms3VlBuQlJPd1FNS1lhV1VQWi1fUF9GQVIzZ3d3M2RIU0k5NkZZRmdKa1ZjbVlzTExUTjYwNDRYMElobjEtc3h2azZDdl9mTGM?oc=5",
+   "quelle": "SolarQuarter",
+   "datum": "2026-08-29T06:45:00+00:00",
+   "gefunden_ueber": [
+    "NAND"
+   ],
+   "bezug": [
+    "NAND"
+   ],
+   "hashtags": [
+    "#NAND"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "9415d26fe5994bfc",
+   "titel": "Krasse Preis-Leistung bei Gaming-Laptop mit RTX 5060 und Komplett-PC mit RTX 5070 Ti und 32 GB RAM - GameStar",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNHlkYk9XdXVMSTFkT0Q4Y2VwN0pFTHhfZ0UyWjRnZmswZUxwQTFnOTJxSlpGTWFIQ0NLSHUxcTA3TFZpSFI2eVNSRzVmQ2preEExNmlmV19yMW1UV3pvSF9KaUctYXJINEJnTUN5b1VsTUhTeFFNb1JXdGZKNmxZbDJ3OTduOXZkZDlKR0RLTFV6eHh2V2Zfb2JIeGhLa3doMkJoeEROTVo?oc=5",
+   "quelle": "GameStar",
+   "datum": "2026-08-29T08:09:00+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "fafa635bcc91ea57",
+   "titel": "Die SK-Hynix-Aktie fällt nach CEO-Warnung und Baustart in Indiana deutlich - AD HOC NEWS",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPQjh1dDFVdE5mLWF3YXZhMWRIRFdfSGl6dTBJc2NBZUNlcG1rc0x1NnVQcU1tbndTZ1M4aV9BNjBCbENidzF0TXk3UkZWSVVZZzZNSGotNGZrMEo5UXI5OXBUNmV1Q3Nkc1dnS3hWcE9ld3JIT1ZrZjl5WUdBMWN4SU5fdk9tZk11eHh3UFozNHExSVlKSHFwTmtnOEF1Q1BhTEIwREJ4WkJhbldxSXRzdkhNbm5qRUVSdXE0MDlPWWxDYW8?oc=5",
+   "quelle": "AD HOC NEWS",
+   "datum": "2026-08-29T08:25:34+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "f86554a3bf6e6f46",
+   "titel": "A 64GB RAM Kit Now Costs $1,118 Because AI Datacenters Are Eating the Supply - Startup Fortune",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQkR6bW5OajVXM3RSelhmUFMyYmUyaklhLWtCdDVCeVJXZmpiQl95Q3RKemVjQURHWTJXTGhMcmZISmdtS1VMaGNtNkRXdEZhR3VvT1k4RVdwSWV4WW16bTB6akdJeF9wTjNXYXVPUFVOUUFVR2liNF9EUnNVY294Mk9UQkw1SGdHMk9CaUltak45VXYtbVZ2TkdteWRBMU1VTkJGMw?oc=5",
+   "quelle": "Startup Fortune",
+   "datum": "2026-08-29T08:33:42+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "e7746705772bee22",
+   "titel": "Micron Technology Aktie: Netlist fordert Importausschluss - Kapitalmarktexperten",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOekpBX2hlWkFNTzMzZVpWSm9GT1p4Rm9UQ2p6M3Q3U0JGSWRiM3ZGMVV1VHFVdWozVVVyV3ZCMlh3Q2p3Y3Y1MEd3UXdFaWJyNDcxSUxQNC0ybVo0Ymd1WDVFbGx3VmFZLXVKdmJXTllHbUo4ZzdrTEFkdm5COFpMUUVnbDVveFd4ZWROWDF3RzF0alVJNC1lQw?oc=5",
+   "quelle": "Kapitalmarktexperten",
+   "datum": "2026-08-29T10:08:09+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "c6d5eb6371db351a",
+   "titel": "Drohende DRAM-Knappheit ab 2027: Warum der nächste Speicher-Superzyklus Anlegern kaum Ausweichmöglichkeiten lässt - Ariva",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQRGV0YWFRZWVuSE9nN1hqbElEbkZQQlRna3Boem55c252cURwTlUxR3NfXzdhcHdmeGZ4Ujg5eEtaRzJ0b2VmNmh1UzhrQXltSXdNeHdzSmllLWh6akl3UnVNd0NjU1lSNnF4cDZXQXk3RU1kbnBxSlpWYnM4cHJoc0JSSm1OTFJ3M2pmdS1n?oc=5",
+   "quelle": "Ariva",
+   "datum": "2026-08-29T10:41:30+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "03a8ec697062788d",
+   "titel": "RAM and DDR5 Prices Statistics (2026) - Shane the Gamer",
+   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE83QlhNN2ZqOE0wdDhINkNPdkhPMXpoSl9mclVlNjlRdFVHSmZjcm5YZ0tzWVpfb3Nod2lMeXoyNGdpZ0VoSVUxcTRnTzIxMV95M2p4R3FKR0s?oc=5",
+   "quelle": "Shane the Gamer",
+   "datum": "2026-08-29T11:37:11+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "f1ac564dc2ae5e9f",
+   "titel": "Nvidia-Treiber überrascht: Bis zu 8,1 Prozent mehr Leistung - aber nicht für Spiele - PC Games Hardware",
+   "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNbnR4TF9PMnpwbU9jVUlNSUt2cFVUYzlGTi1ZR1dmam5nOEd6dFUxUlJ5dTlpbUV6cjFmSjM3cWRMaXpFSlMwVERZLUx0YlVPZi1RVVdzMFVzU3hDSzNNN2dhQVh1akxDQjd6YlQ0NVBxbkltaFVKVlljdlRsV2JEbUVrV0dFTnUyUHVJWmVEbEE3cjRzUndLSjdsejJERzlMUnZJSEprM0tUWC1ydUpiY0FDRHNMNGhuc0lLQm9mOGE5NDQzS3dlb1FyWGlaVFdkZEItSTlLQW40T3pyY1NPeWZfTmVJSHZJX1VmUkFySHQwZw?oc=5",
+   "quelle": "PC Games Hardware",
+   "datum": "2026-08-29T12:00:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "2b604dac310e6b29",
+   "titel": "Nvidia Wants to Run the World’s Robots. China Is an Eager Customer. - WSJ",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOYXl6OG5lWGF2aEJWbHVGdzRaVENwZXNZRTN2VFoxQXE2UnZfXzZ2YmVFa1ZFR1NnU3NpaGdlanRiSXNFSUVDbnRZOTU5SVlyY010RUhTRkVzNXo4MHBKWS1sUU45R3JEWk9SM0QtcXFFYTRyaTRMa2ZsM2thOGhIRjFVTXJvX2R3cC11Q1JXZUhUTzBsU25SaFdJdncxY3dtNmtJ?oc=5",
+   "quelle": "WSJ",
+   "datum": "2026-08-29T15:00:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "ff2b80c106a9e0ba",
+   "titel": "Tom Lee Says Nvidia Just Broke Wall Street's Most Unusual Pattern - Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQQ3l1ZFdIOGlwUVRoTlRJdTRTRF9fYWdtNVMzdTlCT25rMHhPck1DYUV5UjJhSDhoQlRCTkZKcS1Xcjc4T19kNzlZNWh5ejRMMUFUanZrU3lnNF9zbjVtWkVnM21nbWlsZDBGc0NjY1JGQjJmUmdzYVk0RXNsd3FQQngxMjZfMnJUTk1tODVpSDJ4dXc?oc=5",
+   "quelle": "Yahoo Finance",
+   "datum": "2026-08-29T15:04:46+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "772acecd533c13af",
+   "titel": "Rolle rückwärts: MSI bringt DDR4 ins Gaming-Notebook zurück - ComputerBase",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQaDl0RVloR2VPYS1XMDJpMlE1YU5sOFdWR0l6YjBkWU9PRGxlbHU3dE1hMEhIZFNZbEx0eUs4R1JhaGdVT1c0NkdNT1dfejZINmNkV1VuM1JkTGFFYTc0czI3QVJfaTRNTm5acndKckVlRHh2OFg4M01iVGpxc0ZYcFdQRTFTWU5Ub01LZ1ZVM0k5NFluMEhqdmltRVFNVC1Bek9RcXZjMmhoNHViNjRIUg?oc=5",
+   "quelle": "ComputerBase",
+   "datum": "2026-08-29T15:14:00+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "2d5ce1234c67e662",
+   "titel": "Why I'm Still Holding Nvidia (NVDA) Stock Despite Its Sky-High P/E Ratio - Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOUjF2OE1WWW1XYV9sa3ZoY3FKa2dXNnA2VjFUelBlXzlQdEg4TEVsRklEUllqY3dXUTdZak5vV0Z5MnU3ekIwNkxId3NtOXJVSVZfX00xdWdxZENCczM0MV83RU1hYlFCZUZlLVhHUDVvTjNBN0pRRzBfOVZqSmtsUnpzdU92dnR2UEdwa1RXWHA4N1JvUXpR?oc=5",
+   "quelle": "Yahoo Finance",
+   "datum": "2026-08-29T18:20:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "a73eebee6adc5fce",
+   "titel": "Die Preise für Speicherchips steigen rasant; ein Kilogramm DRAM entspricht 620 Gramm Gold. - Vietnam.vn",
+   "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNLTlwN3oxZDJFei1Lak5lSGlSaEFtN1ZRRE9VY0lrSEE5VHVMLVpOMnlEQ3VDalFhUXpmMEtEZXpKTE84TVUyVks4TS14TVB2MDI5a3p3emNOSkVJX2wxYURLU3ozRlRoRzVxa21uODhIRGtwSXBsZ3RRX29JMDhwRkQ0VXBablk?oc=5",
+   "quelle": "Vietnam.vn",
+   "datum": "2026-08-29T19:27:05+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "3a76ae5d5ca8fdce",
+   "titel": "LPDDR5X-PIM: Samsung senkt KI-Inferenz-Kosten drastisch - BornCity",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcHo3N243QzNUZFBDMjBqTzZZU2o3aXBTLS00VmJDblYzWm5xRy1BYmZpTFpkWWJPWEl5YUtNLVFrb09ocjBQS0lIVldiQXR2cVlMQzZYeUlQaDRTbjF2WkRKSml1VDdRYTllYzFnaUhFWGhfZ3lfNDJDU0F5dFROaXh5empoTmw1?oc=5",
+   "quelle": "BornCity",
+   "datum": "2026-08-30T00:47:04+00:00",
+   "gefunden_ueber": [
+    "HBM"
+   ],
+   "bezug": [
+    "HBM"
+   ],
+   "hashtags": [
+    "#HBM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "9b2c913afe1e9fa1",
+   "titel": "SK Hynix CEO Warns Memory Shortage Will Persist Through 2030 as Chipmaker Builds $4 Billion Indiana Fab - Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPV1Z0SWtZZXNacHNieHVvR0Q3b3RKTkZxcTU1MUpWdmpCNFVmUHNwV3hoQkh4VjVCams0aEU1VG9oWllnb3RnMG5oNXgxY2wteXVtMU9yaTJfeUJSOFVac21BUDdrZnNzVDNUVTFCVUJiZ1JFMHAyRVR6M3pYekMtUEJsRWZrT0RDb2Njdnc0TQ?oc=5",
+   "quelle": "Yahoo Finance",
+   "datum": "2026-08-30T01:30:00+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "c142a507466addd5",
+   "titel": "Nvidia-Sensation: Darum müssen Finanzprofis die Jahrhundertaktie neu bewerten - WELT",
+   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPNkc5Y3pERXdCVFRYZ1l6am94eTJ1ek9iQ0Y3MXFOb0RaT0FJMHJNc0J0S29NeTJQUHZjY2xhOTM2VEdzbjk5bTcxSk5NOUJIajU1LVU0Rm1ydFlRN2tRaDlmR2NZSzVvYTJTVWs0RkFObFpxVnFGdDN2VHcxNVlRSU81OGQxODdZb3hGUmxQaG9RamZJeDUwa0k5NTQyNWRLdWJQclFVaGZOcEZJd0tLSkpyLUJJcG9PLUhQQUtmSUlsM29JTWNNX081WDJJMjlOTG93QUx5RQ?oc=5",
+   "quelle": "WELT",
+   "datum": "2026-08-30T04:07:04+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "181844fc7d4d77b9",
+   "titel": "Ram ProMaster City 2027 startet bei 39.995 Dollar — Zuladung von 987 kg übertrifft eigene Frühjahrsangabe - SpeedMe.ru",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQVXY3LVN3VnJGV3Itc1dCcXpyUXl2cklwa3NuUGcwQ0YwZVRnRW00STFJMzBzVE80WmJLb0tTMFRrUVM2RTVIQnFSSXk3NGdXeTVXbGwwS1c1c2dxdWN4SzkwMkhrQjU0VVE0d1Z6SnlEWUhjaUs3cXViRV9ZT1hRMndVOHhTbzYxN1N5cFBWeUhUQlJxSFh5NUVJTzZtZ3Y1M3loZUVWcE94Skx6VHZnNWNsVnh0SnJFTTZIVtIBwAFBVV95cUxQMElTZUc4b3h6ZXpreGNHQVktM3FNeU9UOUpzYmYzVzN1bEliMEdiTzVWbTdaX0UzcUxHNDhzajdmVGpndG11M0t0cllwV0xGRS1CMlNZdE5lOENoVjRMZ01tb19XYXFLV2VUd0poSWwyWVhrTXNEcHBwcDdlbmVqV1BDZV8ySlJ4Znc0bHo4TzlDSWlLcHh6a09fQlBTSFc2SHo0UDB4cHMzWFQ1a1JQM1FXSG1QQy1CLVRvcGRsbjE?oc=5",
+   "quelle": "SpeedMe.ru",
+   "datum": "2026-08-30T05:01:05+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "855eb48f6bd5d632",
+   "titel": "GTC - NVIDIA - NVIDIA",
+   "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Xc2Y5eWRzZ2NhaVY2cURNUDM2VC1VczhUdVdLSWM5Ql8xdG5KMXNxUWdhanJfUFc2SncyTnFPWktwbWd3TDI2SWg2SkVKZmlvMFk1SC05REswc29WSlF4bGZIWQ?oc=5",
+   "quelle": "NVIDIA",
+   "datum": "2026-08-30T05:04:35+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "831deca96377d747",
+   "titel": "Angesichts steigender RAM-Preise setzt MSI bei seinen Gaming-Laptops wieder auf DDR4. - Vietnam.vn",
+   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQaHVId2ZsemxjaUg5VlF5aXVJZ1NwQ3FxbXRDZVpQVERRQXhudU5tVUFoTm1NeW5RdGc3QnFMSU01eWRCSFVTZHVRb2FjZk5XMXgyMlFpMWpmZWtnNGFkV3l2MzBTNzZpdm9Ld0VyOEkzR2V5M1l5SHFZSkUteHI3MG14R1Q1Zw?oc=5",
+   "quelle": "Vietnam.vn",
+   "datum": "2026-08-30T06:00:39+00:00",
+   "gefunden_ueber": [
+    "DRAM"
+   ],
+   "bezug": [
+    "DRAM"
+   ],
+   "hashtags": [
+    "#DRAM"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "d2535449af45c5ff",
+   "titel": "Neuer Hype um Nvidia – diese ETFs sind die perfekte Chance-Risiko-Option - WELT",
+   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQRmNVWkNCMGVQX0xkS0s0cUhoNjJ0Q0VmclJwNVlPUDFkUkV5TEN5RkdLcktjZEQyVGVkakhnLVZQR2psRGxLVEJEb0o4bEkyUm5ZeGVjQ3I0ODBJMlQ5cENoWFd1YjI0TDVBSW5PakJaTFRiV19oODkwOGczRnVBeXByTG5pWXd6anp6X09zd3JnWmFfZlFnNVNCUXZuRGJrcTB0SHFpYnc5RU1CRkJ6UUVHaVdJMHIyY2Yzd3VIb2ZYanZzM3lVamlNdU5Idw?oc=5",
+   "quelle": "WELT",
+   "datum": "2026-08-30T06:58:17+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": false,
+   "gewicht": 5
+  },
+  {
+   "id": "e6106db1251113cb",
+   "titel": "Megatrend Folger: Nvidia zündet – kommt jetzt der Rebound bei Micron, KLA und Applied Materials? - Der Aktionär",
+   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPUFZVbGRJQzBQczZSWjV2M0E5N1Atd1ZPdVl0eHFHaVNPR0VIYm9Eald2bmduaXdyX05QNDRWUE1jbWF4Ynk4MkJuQmVvaW9hdXFkbmkwdzZ0aElKSktaZWJIWEtiajZ5Y0pZbEJXYmtQT2Z5R0JxenMycFdISEVITFZZM1J0NXF1ME9SRVpiMmpGWjE2dzZpSlpUR3JFN2prWHl0Nm1uNFlyeUR3NzlzTHpRQjJ0OWZRVUR0OWJCYnVVbWcyR0NBMi1lTGo4djRfM2JRTWpOTGIyMlZ4U25UWW9lcw?oc=5",
+   "quelle": "Der Aktionär",
+   "datum": "2026-08-30T05:51:21+00:00",
+   "gefunden_ueber": [
+    "NVDA",
+    "MU"
+   ],
+   "bezug": [
+    "NVDA",
+    "AMAT",
+    "MU"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#AppliedMaterials",
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 4
+  },
+  {
+   "id": "9952ba9512b15b01",
+   "titel": "Südkoreas Chip-Riesen im Aufwind: Darum treiben die NVIDIA-Zahlen die Aktien von SK hynix und Samsung an - Finanzen.net",
+   "link": "https://news.google.com/rss/articles/CBMilAJBVV95cUxQeWxTd19xZTRKR2tjN0hEQTRPTHd2emFxTzl6azNvQlIyR2dWV3JLTEFNQ0dYSlR4WlZvVU9lWW01Y19nV3dpVmt2SXk3SDRVejFzakdYT0hKd1B4RjUwV3JLSVNRT29hQjdNLWZNazdhUjRCU3RGc1RVeC05ckFmTFJSMnhHTDBDV3JqN1Q0R3BOWEN1S3NPRExETDBYT2tWUkRuUFBTS0xJZk4zRjB5NzZUWjlWYU9pbWlIVGNhNjJYYTI1OVRKUUVLd2Q1NXFnTV9SRi1VUk9HUmZZdzgyb1VjS1k3eVAxV1d3UFBXZzJrOHJmUlBDNmxDRnc3NVpkM2ZVMG84Y3V1aElIWm1nblR2R0k?oc=5",
+   "quelle": "Finanzen.net",
+   "datum": "2026-08-28T13:59:49+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "NVDA",
+    "SKHYNIX",
+    "EXPORTKONTROLLE"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#SKHynix",
+    "#Exportkontrolle"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 3
+  },
+  {
+   "id": "2262a434576b60e4",
+   "titel": "NVIDIA earnings signal durable tailwind for Micron, SK Hynix, and Samsung memory - Investing.com",
+   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPNS1ZUTlKOERDWHJBR0pldlExcjhjeEpiOE1ZVVNZTUhIaFBpT2tmQUs3WFBPUVoxaUJJbVl5bWF3ZjN4NGRLX19XQTc2dU5jS0tWdVFKTFhOeEVyNUhURnRJOFVrMmw5SExfTEF1bUQ1YzFyMjZheXpEOFRCaFRmWTk1Yk9qNTRmOFdSZHB2VHpRT19fMW1zOUF4UTNTVk96cTl1eWJQbWxZZXRCV0ppVU10NGVhY0cxd29uVHNwdjFYbFJjalNrc1E2S0d6VUpHSlNsR0lwaw?oc=5",
+   "quelle": "Investing.com",
+   "datum": "2026-08-28T15:15:58+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "NVDA",
+    "SKHYNIX",
+    "MU"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#SKHynix",
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 3
+  },
+  {
+   "id": "669eaac8b359159f",
+   "titel": "Megatrend Folger: Nasdaq Gewinnsprung – Nvidia, Microsoft und Amazon im Fokus - Der Aktionär",
+   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNZGRoMHFwZjFhT25UamlUVS1PYnRURnNDdkYyZmt3ZjJPY0VJN1RQcFoxZExBN3JLblBVSzNFdGk5YzVVYVItOVp6Rmw0dmstbXlGTEpWMnpPZXFXNUJVTklseGxqN3ZNVFhuMWU0dVhTb0NsWGFaUWkzaTFWazVqZmJCdm45dFVybjVVbUZsa2RGZkNTVTlRQXdtXzE4Q0NkNGw2RkdtS0RPcmc0VzZtYXQxMkgwWjFac0U5UUE4eW43MTZ0OGtsUF9n?oc=5",
+   "quelle": "Der Aktionär",
+   "datum": "2026-08-29T06:15:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA",
+    "MSFT",
+    "AMZN"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#Microsoft",
+    "#Amazon"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 3
+  },
+  {
+   "id": "d1572c8338f9393e",
+   "titel": "Nvidias Mega-Prognose beflügelt Chip-Sektor, Marvell bleibt außen vor - Börse Global",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQSENtdjA4bzVzd2poZzNJLUtmMGpUbUtzUE1vaUtIbXE5cXRHbjJoZzhTcEU1Ui1UQm1KVzFKbVE4Y2theFhuUHREVG9UbWJUN2s4dVh1djUtRVJZczFtTlNvNkVJbThFRnlPYWlWMWJFVGlNTEtWRXNRZXpEeFYxUjRGYk1PRms5cTNfR0lUSm5xU2NqeExTS2V1TkVmREx1RXREc2V3b1FJdw?oc=5",
+   "quelle": "Börse Global",
+   "datum": "2026-08-29T12:43:21+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "MRVL",
+    "EXPORTKONTROLLE",
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#Marvell",
+    "#Exportkontrolle",
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 3
+  },
+  {
+   "id": "fc1497ca72483d9b",
+   "titel": "Micron: Zwischen Speicherboom und Bewertungsfrage – wohin führt der Weg bis 2030? - Börse Express",
+   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNU0IzV1hDUlZhVG5wSTFRcUNXbnExdlZ0SmJjNHhWVTFQMFNhdlNGOTRkVzFXNXVlMnFqbTgwVkdULUt5dGNER3RYVm1kMEFpcmRVS1BCY0VQTS1Bd1NtSFZ5SEtHVlJnVjEwY1ZDWXhGb3ZGc0FBUVppZFZpd04wM09jZGhYdTZwb2xpQWt5aGNyT0NKdzFyU0FZTktocHhXcHJwbWp4c0REenBHeTFWR2xuaDFPb2NPWEhaa0kxVk9CM3JlaWRWTlpB?oc=5",
+   "quelle": "Börse Express",
+   "datum": "2026-08-29T07:52:04+00:00",
+   "gefunden_ueber": [
+    "MU",
+    "HBM"
+   ],
+   "bezug": [
+    "MU",
+    "HBM"
+   ],
+   "hashtags": [
+    "#Micron",
+    "#HBM"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 2
+  },
+  {
+   "id": "e6dbf81c5c175f9e",
+   "titel": "Micron: HBM4-Hochvolumen ab Q1 2026 - Börse Express",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQb0NqWDA0WlVYd2ZBTmFoZHh5bmtXOUZHZW9tZHA4MnItbjlaYjZhN3d3am9YM2hJZE02NE9Fc0NSYzRDWlIxQ0t2d1kyVFBVRDFWVjdrTEZsWWJsdTRqdmI5RlRLNFJVeTI2S2RvUHZoSTUtOHZKZUZyR0pUMnB5QjZPbjVlRE5VQldJOEhodw?oc=5",
+   "quelle": "Börse Express",
+   "datum": "2026-08-30T05:35:04+00:00",
+   "gefunden_ueber": [
+    "MU",
+    "HBM"
+   ],
+   "bezug": [
+    "MU",
+    "HBM"
+   ],
+   "hashtags": [
+    "#Micron",
+    "#HBM"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 2
+  },
+  {
+   "id": "84a308f3442d8456",
+   "titel": "Meet the Super Semiconductor ETF Obliterating the S&P 500 and the Nasdaq-100 in 2026 - The Motley Fool",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQUEw5NEVCWFpXNW1aZS1qSjM1M0d3dUdWbzF2MEVPS19OQi1iYnM5NXh6alZKZ2VlUF91RXpyY0JZclpSWVlEUWhMZGh3SVA3ZzV2MHZld1BJRVppNkRJaGt4MC00NVlKSlg3UHdkZVJYc1gzM29aUmNoX3NVUTdPNzFZZC1KU1ktTHhWWW5hRXUybGEtbEE?oc=5",
+   "quelle": "The Motley Fool",
+   "datum": "2026-08-28T09:30:00+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "EXPORTKONTROLLE",
+    "MU"
+   ],
+   "hashtags": [
+    "#Exportkontrolle",
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 1
+  },
+  {
+   "id": "cac956dd04cd2356",
+   "titel": "SanDisk, Micron und SpaceX fallen auch im Sommer - Wallstreet Online",
+   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPcEMwWkVWOWdFQUpKSU94elltRXVLNktuS3djdEN3d3Y3Vm80VVIxekJIdEJVMUY2cURWcTZiaVI4UGs3UHBtY2xTWkxPYUlMR2UtaFJIT25LRWVYdjJKeVlBYU5ONlk2VXAtOVRxdlJ0SkRaWVZIMDJJcUVLUU11a3JyMHBJSGR6azg3UVVwTUM?oc=5",
+   "quelle": "Wallstreet Online",
+   "datum": "2026-08-28T11:54:17+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU",
+    "SNDK"
+   ],
+   "hashtags": [
+    "#Micron",
+    "#SanDisk"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 1
+  },
+  {
+   "id": "d20b70f51f41579c",
+   "titel": "Nvidia's Margin Pressure Is Micron's Revenue Boost - The Motley Fool",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPeUVVbkwtYkxZZGg4dDBFY3ktaW5fVXNXTU01RVBWVFNybkVsMzlvTHE5eFBpTDQxNVJKd3NrQm5zQWRKM1I2a2hxS0NjZEtNZGtMRVhPUmlnUWd5X2F1VGVvUHQwbXRnUVNoVnpaaVhDZkpqa3dZYjRPSVIwczNiLTU0YUxmUlp3M0ttdjB3dUJ5eUcxTGc?oc=5",
+   "quelle": "The Motley Fool",
+   "datum": "2026-08-28T12:57:00+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "NVDA",
+    "MU"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 1
+  },
+  {
+   "id": "3f3c9c676dd342c5",
+   "titel": "ASML: SK Hynix plant 8-Milliarden-Auftrag - Börse Express",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPRURWVDhBRDhpZjZ6eXkxbHdua08wNjJTdWtrSnVhTDU1Zk9vWHVrYlpIcUx2cHU4UlJjajRIemFvVlZiM0lxZlZoV0xtdExGWWhpRU53ZlNOX1dDdXpoQ0lGVTJTWnZfeXRjN29kMmdURXlpZlFDQmY4LUthZ05vZmRNNS1ueG5RcXY4V0xWU2xaYkIxVjg0?oc=5",
+   "quelle": "Börse Express",
+   "datum": "2026-08-28T13:13:04+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "ASML",
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#ASML",
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 1
+  },
+  {
+   "id": "578c21ce21d5b92a",
+   "titel": "Trump Calls Micron One of the World's \"Hottest\" Companies a Day After Nvidia Disclosed $279 Billion in Supplier Commitments - 24/7 Wall St.",
+   "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNMU5lQWNoZFMzTU04YnZoTTBWNjlXVWktS3BUM0x2bWt1WUZsZEZ5QVZaQ2pibEU1YVpNLTN0cFVNd0tObkRhU3VmVGg1alFTazRDVGhEMjY3QkpyeHhVMkl2X1RHM0EzTWQzY3VnM194Nm94MmtqSU1JUno5STMxUFo1aDBTUjl0SWF5Vmt2aTFfT0MyS25qV21fTzdkN01Ua3BXMUh6NE4tYlhvakgtVkZrVWhvRmlDd3R1TlY0cmZ4UWZqc2xoN3pVNnVLWUVKZElZVDNrWTJVUFhadnpVd0Z6MWJNQzVWem9FRWpnYTBPc1V4OVE?oc=5",
+   "quelle": "24/7 Wall St.",
+   "datum": "2026-08-28T14:01:00+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "NVDA",
+    "MU"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 1
+  },
+  {
+   "id": "86388dd39d7864f6",
+   "titel": "A Once-in-a-Decade Buying Opportunity: Sandisk and Micron Shares Are Dirt Cheap and Look Primed to Skyrocket - The Motley Fool",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMC1CY2FReFJOTFdBYlBzcU1UT1ZrRlRxal9pcUxPZ0JqazE3dWpnbktOYXA0MktsWDRJOEswdFVtcFo4Y2d4TXZLTUxNaFdfazlOZ21aR000QUpjYWV2MXEyVmd2cjNUMTdCTER5a3pRUWR5c2ZVNWhGVDJsZGFUQ0ctYnRQUkN6alZmT09KZm9jTm1UbENn?oc=5",
+   "quelle": "The Motley Fool",
+   "datum": "2026-08-28T14:20:00+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU",
+    "SNDK"
+   ],
+   "hashtags": [
+    "#Micron",
+    "#SanDisk"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 1
+  },
+  {
+   "id": "a50f652793632b3b",
+   "titel": "Sandisk (SNDK) Plant Bis 2032 Investitionen Von Mehr Als $31 Billion In Japan - simplywall.st",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPSzY3TEZqSUVJdzNOR2Npc0p4aEQ0NElCSDdldTlTZ05KV2F5d1NvYzFDUVRUYVdlVmF0WGxYT0g4LUdpRlhOenlXQlk5NVBlSVpKdlFfczJEZjlod1ZrYW03TVc1RmE4b0RVaWhyalc3NEozVVpEcEhQV2ZxREROUDdFcWRGNDZGNHRDZTM3M0ViMDhNVWdqMy02b1NMX2RuTkY2eHFqNmtWRHpENlRMOWtYVFYxY0xKaGRSQ1MtUGtPZlXSAcgBQVVfeXFMUEN4N2FzT2M2bE5zLU00bHg0WG8wVmxTY3VzVzhYbXFaaHYtWUdoZFRkakNYZzNWYmE2cmstTmI3VENSRjc2dFAzREtPNXJZVHl4UGdLbHI2MkVPMGduNlRlVXVoRDFHc2ZZVFlWVnBieUZLSEJsb0RLRVFVSWhuYUcxM29ST2JBWWFPZUpGa3E0eVNmV3dtRElRVWVPV28tQVdFR3lQajUwZDRPdC1UVXBULVg5bTk4Tk1wekp1UEZmZWJJVFVWQlo?oc=5",
+   "quelle": "simplywall.st",
+   "datum": "2026-08-28T16:07:18+00:00",
+   "gefunden_ueber": [
+    "NAND"
+   ],
+   "bezug": [
+    "SNDK",
+    "NAND"
+   ],
+   "hashtags": [
+    "#SanDisk",
+    "#NAND"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 1
+  },
+  {
+   "id": "dd2a8fcde75e5711",
+   "titel": "Amazon: Milliarden-Auftrag an Nvidia – AWS greift nach der KI-Krone - Der Aktionär",
+   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPYjltUVU4SjBBQU9jU2VfSl9YTnBOOGFyOW1QOUhKMC1iSDNKR05tS0NiWXM5b2tUcVNMNldtQUFCUXFiblpUTkxBTXNiSXVYYk9yelFTUHE2RHR4WVFJNjRSNXZBQVYzWnBwRkdHTE9iQkRMaWhLaDl6TlI5T3ZWaFJ6VzB0U1NPcGt3R2N1dVYwczIzX1cwcGxDME1qWFJ2YmIxaUZiRHhQbWhMdEZySTBQZ0E2dFRpS2stYkxwT0RGYWZmYUNZeE42OXJUNjZGWURrOQ?oc=5",
+   "quelle": "Der Aktionär",
+   "datum": "2026-08-28T17:29:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA",
+    "AMZN"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#Amazon"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 1
+  },
+  {
+   "id": "e95760e536eea207",
+   "titel": "TSMC: Impulse von Nvidia und Xiaomi - Der Aktionär",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPcG96dEFHMWlBNk1iTzVjZjN2UVhCbkJ2SU5tZWlkNDFLWDhnYlZOUDVFcDhFVG90YjZfbkp2ME1IaVpzaDJQSzRjOVlvSU85WHFUeW53bUpwQXpvUnZCWDV0b2dqR1ZLcEpNZVNjSzJOY0RHSzM0eEF3VkZSUG1XeVQtc2lGdTFMNGNGQlpiY2FfbFdDbWtObF9RX281aE9ab3ZCU1Y4NUJ0Sk9G?oc=5",
+   "quelle": "Der Aktionär",
+   "datum": "2026-08-29T04:46:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA",
+    "TSM"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#TSMC"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 1
+  },
+  {
+   "id": "85ddcf71697423c0",
+   "titel": "Amazon-Aktie: 2 Millionen Nvidia-Chips – kapituliert Trainium? - sharedeals.de",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPSmVGVzZzU2RjVGh2Mk53NXdQcXFkdndnSWE0dHJQSzNMZ0lpanR4ZXNVUVo2QnJNckVFY09ienlmMU0wR1VISnB1VGIydDIzWW9pVnU4eU02Y0Vsd1ZKTnA1ZnBCSGIwcWNhdkQybmNjcjNHN3EzVENRSkIzdkQzNkgwbHJKcFRwQzBvTWFR?oc=5",
+   "quelle": "sharedeals.de",
+   "datum": "2026-08-29T06:08:44+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA",
+    "AMZN"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#Amazon"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 1
+  },
+  {
+   "id": "afc85306822587cd",
+   "titel": "Sandisk (SNDK) Weekend Outlook: Can the S&P 500's Best Stock Extend Its 857% Rally? - TradingKey",
+   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPUGktaU50QjhYb3FKOGNVdU1BRlRsYlRJWHRWbkVsTTJvQl9ScHFFMGV1T3JjTndZSm51NDc0a0dxVnJEbzNNXzBzaXNkT1dSUUdIWmhCRDVVRm5CdUVyREdsMXNYZUlXN1k5NkFsdmtON2Jzbm8tVVl4ckFjWHplSUxibmRZRHh0SFN4bUdoQzZuV0h6Tk9qTlJXVEhWczREUktmQkZiMHB3XzN3eG5lbDFfb3JxMFNMbDdkaVVSZUFMQ2dkQzJJUW1FM0VsQzVTVXA2SQ?oc=5",
+   "quelle": "TradingKey",
+   "datum": "2026-08-29T15:11:51+00:00",
+   "gefunden_ueber": [
+    "NAND"
+   ],
+   "bezug": [
+    "SNDK",
+    "NAND"
+   ],
+   "hashtags": [
+    "#SanDisk",
+    "#NAND"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 1
+  },
+  {
+   "id": "5ec1e2986b8fd86f",
+   "titel": "Nvidia Aktie: Hugging-Face-Übernahme steht im Raum - Börse Global",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOZ3JRUnAybDNxLTN4NnFOc0JJOEUtdEh4ckNieS1rb09iYmZjd3FfcDFlMWV4Q1dldHBQcGtVNVh1NV9rUDB2cTR0cm5rbXVDbmFSVEJ5aUNiemJWQ1JQcGJGelF0UFc1YktESmtEWE9fbmlrTVdmN1pWTUtxeUVDWVlNdGhWMlU5VVlLLVpROA?oc=5",
+   "quelle": "Börse Global",
+   "datum": "2026-08-30T00:53:27+00:00",
+   "gefunden_ueber": [
+    "HBM"
+   ],
+   "bezug": [
+    "NVDA",
+    "HBM"
+   ],
+   "hashtags": [
+    "#NVIDIA",
+    "#HBM"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": 1
+  },
+  {
+   "id": "e8a9d8f1c5bd0e6e",
+   "titel": "HBF-Speicher: Oxmiq Labs zeigt 14-fach höhere Kapazität als HBM - Börse Express",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPSm1sdW9jczN0ZzJVakRYSW84dkVFVHhNZEhOekcwQUJNN3VRaTMtN1l5WGZGaHBjUDFEMEFOYW0xejdmb29oU2xQc09DX0gwVlNtNGFfbnhmQWt2azFyNVA5UGF6WVdtM1FuMkZyOEg4Z1NBWHljbnRGb3NwYnVjQXFMY3E3SHRMbERBZ3lMZXQ0V1pEdDc4YWItY1plcldIckJFN2g4MG9OYkk3OFA0OV9BRFpybWM?oc=5",
+   "quelle": "Börse Express",
+   "datum": "2026-08-28T10:23:02+00:00",
+   "gefunden_ueber": [
+    "HBM"
+   ],
+   "bezug": [
+    "HBM"
+   ],
+   "hashtags": [
+    "#HBM"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "ea09de686539d725",
+   "titel": "2,2 Milliarden für Mikroreaktoren: Der Energie-Superzyklus läuft an Deutschland vorbei - Börse Express",
+   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPd0lBX2laNDJtU3FFVGp3SWktc3J2Z3JycERaVnh0MjN3elNhX1A2REZSTnBRUnV6RnB5cDcwYXVzLThhZ3BkQW9DclZmQXdMcEl1YXpCRmVVczlPZVk1eGZNekdqSkVPNGl2dWZWVkRnd2pFcFppMndTSW9jZWtjQTM1SXk3bTNpZ1dQaUdXdDBNMTc4UTZhZjlGbWlLRWRFZW9DRXJLZWZMbFZKblA1ZTVGZWhxWms0UHZKU1RrNzRpZ1h1cEkyaWJGSmZhM1JIRTRfeA?oc=5",
+   "quelle": "Börse Express",
+   "datum": "2026-08-28T10:40:01+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "1f36fbdb3c6bb6a3",
+   "titel": "Micron: 26 Milliarden Dollar für 2026 - Börse Express",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNakxUTW1xU001Q2wtSHZfSE1KcHlsMFMyX2pMcWZ5Q3VyLXBmZ1lIRU5GakpBdURKbFNMSG50dFRYMF9zYTV6OXNTSE83WUtUNzBmVXFLQ0JxVE9oX2k4aXBybXNsVzd2R3QwbUZVeUhmRGl2U2ZjcElfNE0tcWFCUTJ2UldjV0M5TU5uT0xia2xtVDA?oc=5",
+   "quelle": "Börse Express",
+   "datum": "2026-08-28T11:19:06+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "bf5a04e9fff79925",
+   "titel": "SK hynix (NasdaqGS:SKHY) Draws Fresh Valuation Focus, Is The Stock Still Cheap? - simplywall.st",
+   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOcDNEaU1aWXNxM0NTUTdxLTVmNGpXOG1RdW5tRUxHWnZWN0NPdFNTNndtQ3VuaWp6aG5xRUpudGFYVjBPRENmQnpuUzlGSHhKUWcwQ2dERUFUOXZRZzFXcE05dnJkWEV6dGFYMHN1bzM4WkF6WmFfdVRVeDRFeUF3c1BhTHVkOHVieENkTl9XeERHYmgxRGRyeFZQSW1tb3FmSC1rd3A2cVJUZkdIb0RhNmJxQzh5RHpnM2s1cTBYczdqQ0w0cW1od1pfV2NWQdIB0wFBVV95cUxPclFiZ3E1TnFsTkpkOE5yNTY1am1KbUVXYnQ0VGd5eGZ3VldSOWFLVWpZdDc3cldSOEM0R01MdXI4Y3FMX2VuT2pPWEVwUTlRS1VjOUh6LWw2WGsyZ2tXTmowUzFlTm04TWJ4YzhnZmY4MlpSTHZoc3hSY1ZEV3lSS3I4TElXSXhrQ012TnNONXVEZk51ZUpkcWx2RkFMd2NBcl96QkEwYURGX2NJYlV4NE1nS2xvc2U1SjdJUkQyVV9EdXBjM0F4RXJJR3BIa1lHcUpz?oc=5",
+   "quelle": "simplywall.st",
+   "datum": "2026-08-28T11:30:16+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "6c4bb488ab6c8246",
+   "titel": "SK Hynix (KOSE:A000660) Stock Looks Cheap On Earnings But Pricey After Big Gains - simplywall.st",
+   "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQa2xfWVc0a2o2MkZPRjY0VW84OVdGSUhkMXNWX3lJZk1aVU5FYWJPMlJvNDJsaEU3RFFJN3JReHhmVG8yNzdVaXdocU5HbUpvZTZWektCeGcwYkRfMUVrUVIzUFV3YzMwQVRSU0pWU1RBT0phRW1EeVFkcnF4S0ZsQVNxd3FrTXZEczZNNlJ3SFNfeDJaU2J5RGtKWENMRUlYQXhKQUdfbThsYWQtVDNEUjZkQlgtRGp0VGxIaEprZnBWNFN4Wk1heWRObllBNDEwX2o2OEtiVmTSAd4BQVVfeXFMT0llckRYYzFIUjBmcHJCWG1DUlBRYng5RkNYZDFvNWZHMmUxbDNleGdpZUVDRG5QXzFvanl1WVk0cVhQOEFmN3Zyb09VY29KTGlPS0dnblRkMGwtNEJuWW5QLVhReDR1NkJhcnJORUhwdHY2Qi1XUkVvY3lXeDVnck9GTmQxVEZTTW1NQVZHampQQWpaVlBjNlUySTktNzVBbmE1QUh0Y1dJeVEzMWVieDN5WWRBX2FTQ0JMWG5jbUlYd0tFV0ZMRW96UzhfNExUcHVZOHFUUmN4QWdwU1hB?oc=5",
+   "quelle": "simplywall.st",
+   "datum": "2026-08-28T13:49:53+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "8372dbb73e3bee40",
+   "titel": "Micron Technology Consolidation: Soaring Memory Revenue Meets Fresh Policy Uncertainty - Benzinga",
+   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOazBtWFJsUzB0ODZ5R1YyQWpBUVNOVUFybVlVTXkyMUZmYkkwbWRXdWpWZFFheE9Od3NjUUFaNVJEVFRKYU5yY2F0cjJVc0F5aDNpUy1aWjV2SE1HV0U3MWFac0FTYlNRQ2J1eWNoQUlUUUlrZXFCY3JjaWo5Z1V1U2JvTlJucGkzZTNfbkIwM1c4THdwOFNLMl9tT0lZdWZscDJaZWk2Q0VFbFg2bTdyY2d5Xzg5SjR1TXZqbWlBTFpIZllFVmR2Tkp6RlFFQll5cXJDYQ?oc=5",
+   "quelle": "Benzinga",
+   "datum": "2026-08-28T14:03:17+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "bb47010d9404342c",
+   "titel": "UR1F5Y | Put auf SK Hynix ADR von Unicredit | DE000UR1F5Y9 | 16.06.2027 - Finanzen.net",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5hOGFFaW1IeEktTGFEeExUQ21Id3RFMDM2b1ptaGM0bmh2T0tNVFlUenZhT1hJeHROamFpbC1uQnRzeDZGa0hGeklqdjQ1akpjeGNxNnB2TkhjQnIyRWlRMHMtMnhhYzYwNmtMYTgwWkRjblVXZGc?oc=5",
+   "quelle": "Finanzen.net",
+   "datum": "2026-08-28T14:45:04+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "8e81ce1d67af8c65",
+   "titel": "Völlig verrückt: Jetzt kauft sogar Michael Burry Aktien von Nvidia - Börse Online",
+   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNQUpDUmwwRng1UmZWM3lkNmluY0tKM2k4NldVTUxqS3hOcENXUnRXT0VsT0c0bUpyNnpDU3VFRjVYTGtQLW1BSGtMbHlBb1FhbnpvazQzV0RoRGxuR2VUbDBJSTFNTjIycHdHdDJQdm9zdjB1cENhRHRzbEl2cGRoN003Z2dDNG1mM2Z0aUlHU1JuTWlCZlpRS09UMEY0Y0Q3Mm5FdE0waDZTWk9pQzdveUVoYW4tLUlQSXNzSWJqVWJiaHhhWkRsVg?oc=5",
+   "quelle": "Börse Online",
+   "datum": "2026-08-28T15:20:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "6703d21642f24eee",
+   "titel": "Nvidia nach Rekordzahlen: Starinvestor Michael Burry baut seine Short-Wette aus - FinanzNachrichten.de",
+   "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNVTVYZ3g5ZUFKX1RjcE1MYmxFUTdvRl9LQVBYSDlQRVJxekJERG5mZzgwby05c1dFaU5IaGdWdENLY1d2VnFvdXVWWTJneGdYaEVaZnF5OHh1TzhPN3FSbzFZVnFFVng2Ny1Bb0p1OGNiVC1QNkRpWWh3NllYUTFtNTV3eDZ5ckdUNGl4elFad2Y4NzUwbDJOY3dpTHJFQVRUamtfOW1oNXdrUHpZangxbFlXbHFEek45UFl5NUZ3MEh0WGNjRUM1dzBYd09idzNkdXdtdmFpYXNrQUY4Y0pJdkZn?oc=5",
+   "quelle": "FinanzNachrichten.de",
+   "datum": "2026-08-28T15:53:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "25154b575739138b",
+   "titel": "Here's Why Micron Stock Can Double Next Year - The Motley Fool",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOYUFudDZKTFJxQUZFZHdmczlDVFVYeV9lZ0s3U3JKWFpUVEo2MWw5QkF4Si13NnNKLVhkcVNaalpDcVFkMGFwM1IwNHZOWWtySE40YjQ4emtIazZtWTJaVEozTXlZdEZtQnRRM3Y0NlRjNFNJWUhaM2hDaE54VzV3S2hPQ3QtVUpfTkkybG84NA?oc=5",
+   "quelle": "The Motley Fool",
+   "datum": "2026-08-28T17:17:00+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "a8314298d7677743",
+   "titel": "NVIDIA Aktie fällt deutlich - Ursachen und Ausblick - 28.08.2026 - Wallstreet Online",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQcmFmb2NnV2hXdnVndERxdVNXTGdUTXRpSGxFMEdJVXh0ZXUxcmIySUFKQUwtZm50ZmlEYWtfeF9YZE02R2gwbUFmOE13NG9YeTh6VlhGOGkxZGxiX1cxUFJsdVUzTGJZYmNTQnJmWlVzNVFONEV3WGNfa1piWThtY1k0SW83Z1hPaWRlVEZhRVZnQklOaktnYUR2R1RsbmxDVGxJT0pmZl9RcDY1cG5BWXlLRk11MlptLUE?oc=5",
+   "quelle": "Wallstreet Online",
+   "datum": "2026-08-28T19:00:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "a031e2089023b921",
+   "titel": "NVIDIA-Aktie im Fokus: Umsatzbeteiligungsprogramm mit KI-Clouds offenbar ausgesetzt - Finanzen.net",
+   "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQZmdvTE14ZDZNYUl2SlRqcnpabnZ2MzhlRjdDRk9Md1l5cW55cGs3dzRTUkZEOXMyTmx6N0tvRGdTMXJPbVBWSUQySklOajZKcllIb08yVjNpQ3I4NmM2LWxUQVRXRlNOSFJXLVU3UDMxOU1TNHoycm1NVzhHM1d1bE5FcHRwRzlHMVZIT0hrRnZFRE9fMXMwYWdnbE5CUEU5RkhNTHdrclkzYXBrbmV4Y0dXRUx3MmpkdjVlMlFBVjFlLVdrRzhZam9udElrOWlVTGtvd2h0U1dnMDZObmJzOUZ0MV93cU85cUN1SA?oc=5",
+   "quelle": "Finanzen.net",
+   "datum": "2026-08-28T20:08:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "3c530bf0a7ccda0a",
+   "titel": "Micron-Aktie: Warum Jim Cramer trotz Boom vor dem Gesamtmarkt warnt - Finanzen.net",
+   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPRWpia1pVSGNwQl9hSVIxMFFaSnNXSFN3NHJqUjdQaW9Ral9DMjZxUUhjRGNwQVVBeGFOVllzWEZ0aWc3Uk5IVU5CbFRTYW5RcFl4N0JJX0JVZWpIYl9vM2RDalBWdlgwT1kxSm9NUU1tNUNQSzM1TXM1eVdYQ19UZzZlYlJaMEE3Zmd0V2xPeDFoVi1seVdCOFFaNHVCakU5MUhHblFmV3cyS1dMdFBHNU9hTlUwRkZuQi15bEJsUF9QbnprWDlmaWVzTEpnMmxYUWY0YkdGdHZ4ZkU?oc=5",
+   "quelle": "Finanzen.net",
+   "datum": "2026-08-28T20:10:00+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "35bd7b8e5d541ea9",
+   "titel": "Prediction: This Is What a $1,000 Investment in Micron Stock Will Be Worth by 2030 - The Motley Fool",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQSFphTmJpcVNvVUtTUEZsRnc0Sm1QWDBSZ1VEWEhPN3dpTEgyaUg2TFZjMmRndFdqZ2pJbHBlNXRsY3FRVWkwMENkYk5NampkaXRycml2bW1IZkhneWVMakJXRWxaYnljcjlEcDlsejk3WV9MQTRPTVBfNjRsVk10RVA0cGFjeTJlQS11UTQ2NHVGcWRWZHlqdm9KMTNMaVQ4WmpJN0o3UEJremR3TWVTRVJFOGZqS28wbTRaN3hucmNIWHBU?oc=5",
+   "quelle": "The Motley Fool",
+   "datum": "2026-08-28T22:33:00+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "c837bb660b7794c8",
+   "titel": "IREN Aktie: Nvidia sichert sich 30-Millionen-Option - Finanztrends",
+   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPNDhnSFRQLXRZaW9taHZDRHlDYy0tLXFVOEZGVmp1SmlqSjJ6TUQ5c0QtZDZWc1BTQWpfcjFfVklFUy1ObHpvLV9oNi1ncG9GLXZxXzFLLTNKQmktWHI3ZXE0bUdmVGdXSV9ONmU1NERWR3pDQU5tNEpIRG9ZVEFLd3FFZFJlU1pFUjlRcg?oc=5",
+   "quelle": "Finanztrends",
+   "datum": "2026-08-28T22:44:04+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "10ea33f9fab8a9ca",
+   "titel": "SK Hynix-Aktie unter 38-Tage-Linie - boerse.de",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQNzd0cFFmV1lMbEd6YUNmd1l4ZlZWbHpXTGlZajNncmpGT1F1dnc2Q2JQU3l5UmhBalpkbldqYUZJQ3pkWkNFSjEyNG40MFdiZEl6c1BqS0Uyd3BDY2tNdFRMeU5QUXJJX0xiU1FkbjJtdWp6WmZaQlc2WmtJZVZFYWRRdw?oc=5",
+   "quelle": "boerse.de",
+   "datum": "2026-08-29T00:11:00+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "c4e0848a18300107",
+   "titel": "SK Hynix Aktie: Lohnvereinbarung scheitert an 25 Stimmen - Börse Express",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxONXkzVFdfSmNhX215Q2d0MVpqVDd2TWVZRmdVN01lYmd2Rlc0czRqMTdmRWJpY2dMQ3pKUTlzSi1DbVZIT21QOVhReWo4SXNqbzYtU2RYUV8tV3ZENzdHNTh4MWQxVFZsX3J0aG9rdUpWdnB3S0pJZDdtOHN1Q0ttTEQ3RkdJanFwel9mZTU3RTBkX1N6b3RBTV84RnJUd0xkQnFWd0tTNzhydmc?oc=5",
+   "quelle": "Börse Express",
+   "datum": "2026-08-29T00:47:09+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "b932024970d5e0e2",
+   "titel": "Micron: Bhatia wird President und COO - Börse Express",
+   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPb0MwTTZtUE45TjBsajZjQUVuRC1sTE9JbnNmZkFKUWstSVhKa1pJN2ppRTdQNTVRMTY2NzFYbzU4ejNWUExjaUVfc1pJeHM5YmRtSF9wa3BPdk4wVUN5UHRkUmp5NnozNVlMUUtWcFJSSTJYeDhCLS1manVqRFQ3TDc0dmtJcjBWZENoclpWbGhVQQ?oc=5",
+   "quelle": "Börse Express",
+   "datum": "2026-08-29T01:09:07+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "5b6e6df2659b8113",
+   "titel": "Micron Technology director Alexis Bjorlin sells $28,308 in stock - Investing.com",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPVGRfamp2SnNEZ09JVzg2WlBtUEtJT05naE02bU5KLWlrWmFEcTl1ckR5M202bndjSmxOazF2QkJLQ0RMMWdNNExCS0dNMXRPZGxBSXE4d2h0VXBXNEsyWXhhbmdRdFJVOV9WVXRMakpCUFltVkJMOGZweWhBVzRiV1FtNFhwb2FSbUdlUDljeUtpLVZYZW1EUnpHZ0g2Ui1HNXNJRUQzNV9ZcGk0LVJmTGo3THI1b3dETUt2OExaUkRWaVUzLXc?oc=5",
+   "quelle": "Investing.com",
+   "datum": "2026-08-29T01:12:17+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "529e3e7fe1ca3c22",
+   "titel": "Micron Technology-Aktie über 38-Tage-Linie - boerse.de",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNSHlWRkEtbVV1dkVFT2ZlbFdOc1lydkxSelZGdGxVWC1GWHZTRExXcTFneXB3b25hVDBvay13T3dSRTBOOXBUUjlBT1ltejlkTFQ1ZjNYVjNRdnNTRDc1SWMyMG53bFBEbkpJMjA4bXV0MFhlR1ZwVHIwTXpFS19jb3JpX3dqckM4LVoweHN6VQ?oc=5",
+   "quelle": "boerse.de",
+   "datum": "2026-08-29T02:20:00+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "5ff7f82d80392e25",
+   "titel": "Micron: 10-Milliarden-Investition in Boise angekündigt - Börse Global",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxONVZNMVl1OHVZYzFCSE4yRHZHaEZiODlxYUtWSWw4N2xmeTh3dFZMcDBXZmRmTWpqdkVSTTE0UnJjM3hRUnRHd2lKZmE5OElhR2dsWjdtNktBZHQwdWtQNHFyOU9VdF9sUVFPb2pvUm90cVVwcGx4U2tpSjVVRGMzb0tNNFVfUVR0cF8tVGtadVhIbExB?oc=5",
+   "quelle": "Börse Global",
+   "datum": "2026-08-29T03:18:22+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "ea538bfe5afc67bb",
+   "titel": "BOTSI®-Advisor Abstufung SK Hynix von Rang 8 auf ... - boerse.de - boerse.de",
+   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQTUJCQnh6MlB1a3FKZHFqenJKQmhFQjgxZU5zcHd1YnBnOHB4QXJrRXZFdkYwMWtRUTZNVHZiSzJrRGQ4NzU0MFlYY2FoV25sbUtHbmc0Y2VESFd0NFhCeElOdERKWXZpVUVTMGtpVWVDbG9sajE4MmxlNUhWRExlVGJZQUJKWFpCemR0ak51c0RMcUdVNGJQeFNR0gGaAUFVX3lxTFBNQkJCeHoyUHVrcUpkcWp6ckpCaEVCODFlTnNwd3VicGc4cHhBcmtFdkV2RjAxa1FRNk1UdmJLMmtEZDg3NTQwWVhjYWhXbmxtS0duZzRjZURIV3Q0WEJ4SU50REpZdmlVRVMwa2lVZUNsb2xqMTgybGU1SFZETGVUYllBQkpYWkJ6ZHRqTnVzRExxR1U0YlB4U1E?oc=5",
+   "quelle": "boerse.de",
+   "datum": "2026-08-29T05:10:00+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "985932a86246c44a",
+   "titel": "BOTSI®-Advisor Abstufung Micron Technology von Rang 1 auf ... - boerse.de - boerse.de",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZ3o1MjlKSUtVQ3ZRekxvRnhVVzY2VmM5N3padjB4MGVTb21yNDUyc3lRYVR6cExnQVJ5SkdNYk14RE5Pdkh5UmY5WWowM09XY1JYSzdLNHB5YWgyWjJrSzNYQlI1WVF3cUVuTUFYNXNmSmFTMEViM1czVEx3UUVNU0pXMTBobmtwYU5Gbk5Td3pubWJfbWVRREJTZFdjRnZ5aEg5Q1Fn0gGmAUFVX3lxTFBnejUyOUpJS1VDdlF6TG9GeFVXNjZWYzk3elp2MHgwZVNvbXI0NTJzeVFhVHpwTGdBUnlKR01iTXhETk92SHlSZjlZajAzT1djUlhLN0s0cHlhaDJaMmtLM1hCUjVZUXdxRW5NQVg1c2ZKYVMwRWIzVzNUTHdRRU1TSlcxMGhua3BhTkZuTlN3em5tYl9tZVFEQlNkV2NGdnloSDlDUWc?oc=5",
+   "quelle": "boerse.de",
+   "datum": "2026-08-29T05:18:00+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "e84301daf4b5e735",
+   "titel": "Nvidia-Aktie: Ab jetzt ist alles anders! - Börse Express",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbVZPNXdYRWxUQUI1VHhNcWJzYkx1NjJkSE4tZV9YejdORDdJaEtRWHNwNEhVRFBrY2ZoM1g4U2k5RlpOYlpXeVQ1RHhVcjdCSXZLSGp1TUlTNzcxYWFrZ1dtVXRpV3pjMkw3Sko3RnhDNkVmNzVxbnZJdDM3cktKd1lKS3ZSeVA0SURxMjBibXl3TXNX?oc=5",
+   "quelle": "Börse Express",
+   "datum": "2026-08-29T05:59:15+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "d967ad6eefbb7c30",
+   "titel": "Micron Technology Aktie • 869020 • US5951121038 - Onvista",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA4cHEzRzFPWTh5Y0ZyUmJNYjB0QlBVbWZWejVZUGFVVm1ua0l2OWF4LW9XcC1jYU1XanFJaVo0V1U2UWNwNDA2TlVnWUE5SDczMFF6c3BzNWFJWlNabkg5SFZXaThCYnU0QkFqNUVNU0swc0Vm?oc=5",
+   "quelle": "Onvista",
+   "datum": "2026-08-29T06:16:45+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "b475dca820da4875",
+   "titel": "Nvidia-Aktie: Der neue Großkunde hinter dem Rekordausblick - Der Aktionär",
+   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPaDRLVDZiRXdzdkRKTl96N2pZckstWElJd1IyTWs1cFRtTmRJanZvd1ZSWHRTbm5tYWxRWXJyVV9iTW5SeHEyNEZjVGxPaHZ0dVdkNHRVRFBzdndTYjhKRkdFLWRoV3NDOHdzS2VIMi0wbnk5Q0JNaUxib0d4NXpyVnFMLWpTcUpkM0hzODFNTGZHM05OWEpNMzlCR3FtUkI1VFJZdkN2eV9CSXMzM1ZKZU41a3U2UWNRVVhFQmx1VnMtRW1BRWVqUWNGTXA?oc=5",
+   "quelle": "Der Aktionär",
+   "datum": "2026-08-29T08:41:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "0a81d7c73590006c",
+   "titel": "Nvidia-Aktie: Neue Höchststände nach dem Zahlenknall? - sharedeals.de",
+   "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSVhoMTRqdTc5RXN0TFVrRXdGVGgwSDRuR3BRSzh0dmlEZHM4aGtHckt3eVVRLXQ4QkVtNzdHT1J0cUlPSTF4U041SHNDNWNZT05aVkRQNS1EZnNnUjE3S2dscUVzWW9KMkVvenFubGIwYmRPeFdrQkRFQ1RKUkxvS19lVnM0dTg?oc=5",
+   "quelle": "sharedeals.de",
+   "datum": "2026-08-29T09:46:35+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "52253a1cd4123fa2",
+   "titel": "Das Nvidia-Paradox: 1.874 Prozent sorgen für Klartext! - Der Aktionär",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOSG4zUElPTkVkQml4SVVCZ3lBVnFWTGdrOXNGYXBfelpKa0UyNG04UDk5TERiRlUzYVRCMkZiQldpRlpFMVM3Q01qbFFvSG01TW90QU9KZmxwVGp0NTZUUFZQenJKU3B2RHl1bWhGUWFrbmQxSFNHR29TTklpNllQSmk5Qm13bGFScnR3MmRNZ0pmQ1dDTnlHOTNWQTFGNjU2cVVOZERkdnFldkRlVmc?oc=5",
+   "quelle": "Der Aktionär",
+   "datum": "2026-08-29T10:01:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "b499f27651ae691a",
+   "titel": "SK Hynix Aktie: Belegschaft lehnt Lohnpakt ab - Finanztrends",
+   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNMElZMEFYMUlxbTZYYTQwOC1ac3RvOWhUclljeS1TSEhfQW9KaU94Zk9FUFRPckRZcDUzNlJUdlFkZ0lkZ2lhdldsa1lVdUVRQkg1bXRrMnpZQjNSak40eG5MZ0RJQWFqT1NtZVVOb2ZLSE5LVV94bWVGc2hRemJ0dU1hTmQ?oc=5",
+   "quelle": "Finanztrends",
+   "datum": "2026-08-29T12:24:05+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "4f20d7998ac4b8e9",
+   "titel": "SK Hynix Aktie: Speicherknappheit bis Ende 2030 - Börse Express",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQaXFzamd3cDBZOXFmaHdtbUhBXzVrRVp1eW9hZ0N0Z25OcHFkTUxET1dmRG51Q0ZlZ2FiLUtuT2ZGc25SalROOURJR0k0bjdRb2p4a0wzdlprdFpMd2NCYU9JaEFfaHNGdXA5Y19jRVJjanE3elktazU2VXIyOFJFQjgzNGtoUDltc0k2MXp5SkdNZnRBSHNOUWtnMjBEdDg?oc=5",
+   "quelle": "Börse Express",
+   "datum": "2026-08-29T15:14:03+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "dbca58d8c6e3e824",
+   "titel": "Die AI-Nachfrage wächst weiter schneller als das Angebot - Wallstreet Online",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNR19OY0EzM3FFZ3NkOTNvSHdqT0ZjaWl0LURGNmZDM0dQcU5naFpDVm5yMG1QcmhDLXRuVzRTS1JjTHdhRGwwQTgwdWpzT2VfR0daYW92cmpfM3MtNjV0WlJEZ2JDQXQ1NmtIdl91V1hoZmhMaGFJRXgtTVpqdE1kTnhMQ2FzNERXLTVNelEzQlVyQ3hURkZEMVRGREQ4NHVISDZBQkl4ZXFrLTV3bkE?oc=5",
+   "quelle": "Wallstreet Online",
+   "datum": "2026-08-29T15:35:43+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "af79ae4d6df6e46e",
+   "titel": "Micron: 52,7 Millionen Insiderverkäufe am 20./21. August - Finanztrends",
+   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZ3R1aDBTOGVEVEdyNjBtaWctRWZCdkpkVFNWR0F0YmpTMzhQemNwMUUzLUFVQTFyeG1uQndCb1pVOXFzMklvVng4MmNRZl8tOUNXdUR2NktGZ0dFdXhqMHV5WEdRR3N5cHdNM1hNTVBsZHFuV0hiNktpNHduS1pGUkx4aEVPVFZJU2JDRzV3ZEs?oc=5",
+   "quelle": "Finanztrends",
+   "datum": "2026-08-29T18:19:05+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "a89e6d8307906be4",
+   "titel": "Indexfonds von Bridgewater: Auf diese 9 ETFs setzt der größte Hedgefonds der Welt - FinanzNachrichten.de",
+   "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQaFBheFNwcnZjVHJydktQM0Z6VkxXWWl0YnRJTEkyWDNpRXhIV1N1UkU4NjRpb2dNNUc2UDlDMmJwLUxfVXg4ZVVkVXpJUjdvdlBLSnBiNTUzd2xnbEZfRkswOVNGVkdieUJqZTdjZVl4akh2SXZrTDJGR2ZTbjAwWF9SUTNCQl9VNFhGYkJ5cjhDYjREdEZ1M09aRU5HWFgtY1V5MDY2ZU5LTzM0VzdIRUQzclJ5QnYwNzRvWHNEUFk0REdWVVVDLXVxNWhRZnV0ZkpYekRhWHNTbWVlQjJoSEUtNm1TMUk?oc=5",
+   "quelle": "FinanzNachrichten.de",
+   "datum": "2026-08-29T18:23:00+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "a5e20778709cc5b5",
+   "titel": "Micron: Erhöht Investitionen auf 45 Milliarden 2027 - Börse Express",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPbjZTanI5MUk0NkduTUI1ZGxyaUFCZ01aOWlnR1R6SjFYeldTdVNQRVFDOFFxaXVybWJ4dEkwcnZnNXQ5UFBiZHFGblRDa0tJN19qdHRXLWV0UWU2MmRzcWFSLUt1dDNhamVuVjRPMjQxTkZrX2d4OXFYTHlzOGdQUUdWaHAxWm5KbmI5dlM3OFlSZGswb2ZUaEtsU2IzTy1ZVkpHOG9R?oc=5",
+   "quelle": "Börse Express",
+   "datum": "2026-08-29T18:34:05+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "ec2a2ad7715b93f3",
+   "titel": "Is Micron’s US$10 Billion AI R&D and Training Push Altering The Investment Case For Micron Technology (MU)? - simplywall.st",
+   "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOSUY4SndOdzdndGVkWGZQTm0zRG1xWXNxWVpUcEtMT2FmN0U5RTBPbGJoVnFYMTVNNmtLQ1poVFhrcFNZcnhaTUJBcVQ3ejNPQmlJSkhrNnVCQkliQWhCSzVxNGFQNEpSN2NibGRONjRoU19qVE0yY1dGZ085bHNhOGhPelAwVWRZcVA0RFo1dkgzSWd5SUVqQWNmUEN0d3RtRWtlRS1XTDN6ZFktT1lZaU90WXNHXzBldHNwUGJVdk5fT3lURlFTMEdmVE1SV1dlTjFwOS1jZHRyT3FU0gHcAUFVX3lxTE5JRjhKd053N2d0ZWRYZlBObTNEbXFZc3FZWlRwS0xPYWY3RTlFME9sYmhWcVgxNU02a0tDWmhUWGtwU1lyeFpNQkFxVDd6M09CaUlKSGs2dUJCSWJBaEJLNXE0YVA0SlI3Y2JsZE42NGhTX2pUTTJjV0ZnTzlsc2E4aE96UDBVZFlxUDREWjV2SDNJZ3lJRWpBY2ZQQ3R3dG1Fa2VFLVdMM3pkWS1PWVlpT3RZc0dfMGV0c3BQYlV2Tl9PeVRGUVMwR2ZUTVJXV2VOMXA5LWNkdHJPcVQ?oc=5",
+   "quelle": "simplywall.st",
+   "datum": "2026-08-29T22:23:02+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "e743ff1b5c8179ab",
+   "titel": "Verändert Microns 10-Milliarden-US-Dollar-Offensive in den Bereichen KI-Forschung, -Entwicklung und -Schulung die Investitionsargumente für Micron Technology (MU)? - simplywall.st",
+   "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOLW1jVk9XcWZIM0dtMG1ESDVOazVPRWg4elRJcENMTklpTTl3TjRzNUNpblBFNnpUN1NvSE1sdmlSaF9Bcm5aM0FkZ2VPclNxVnpmSVBUQkVyYWo0TVNEVXBOVldIaGw3QmlUZ0ZlSFFDMnNhQldFVXF0ZlRtcHFDQ0dLSDBFNE0xYjMtVHJkekNWVEQycGI0QnEycTBrbE1OY1Zhak5yRnlqR2VBMnlTMVU0eGtRWXVZUHlOa0sxcm9YNnhMUjNnSENQWGdBMGtyU0h5WmxkSkVLLTg2ckhN0gHfAUFVX3lxTE4tbWNWT1dxZkgzR20wbURINU5rNU9FaDh6VElwQ0xOSWlNOXdONHM1Q2luUEU2elQ3U29ITWx2aVJoX0FyblozQWRnZU9yU3FWemZJUFRCRXJhajRNU0RVcE5WV0hobDdCaVRnRmVIUUMyc2FCV0VVcXRmVG1wcUNDR0tIMEU0TTFiMy1UcmR6Q1ZURDJwYjRCcTJxMGtsTU5jVmFqTnJGeWpHZUEyeVMxVTR4a1FZdVlQeU5rSzFyb1g2eExSM2dIQ1BYZ0Ewa3JTSHlabGRKRUstODZySE0?oc=5",
+   "quelle": "simplywall.st",
+   "datum": "2026-08-29T22:58:52+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "e25dbffefcfd423e",
+   "titel": "SK Hynix (KOSE:A000660) Buyback Puts Its AI Memory Valuation Story Back In Focus - simplywall.st",
+   "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQTWFNSnl4aWFEblpiWWQzU3ByeHNyb2ExcWhySmFnTi1JRjlpTVF6Ui03bXFhQV9iNmRndTdUbFBUQUo4dVpJTWZLcjRPaXk1MDM1YjJmX2oweVFnX1V5M01UTTZydl9haGltWUNUYjRDWHp6MHpDVk9QNWl5MTFOY1Z3Vkl1TkRPVHUxNFdTaEVMQlBWSlh2OVJpeWp4RzM0WDFUaHJVNzVreE1GWlEyY3BWWXhDX0xadV9PdkxqZ01sYWhURkN2bmlDWEJRVlI1WkJqRVQwV1fSAd4BQVVfeXFMUE5QTjM5MFBnNGxDNXBfMWo4MkhNWkJCbVEtSHFoVVNlVWRoQkxBZmp1SUNvaVVLYWh0NmMwd1FFQy1ROTAwdWJqb0ZodGQ4NnVpMU5WWkhROGxfeEtGaC1rMFVLZ05IZzU3ZzBFWWRVVTI5VXZodmFIMER6bzB3V25WRlFGLU1MUXp6dTVHQk81QUtKRFdnVTRWd0l4MnBkckdjdEJHV2szSHRDYWNhUVhldjItem5YazU2anZvSWhDaVR2Q1lkTjhFRmdYVU9hbHlrX0o1NE03b3RXRF9R?oc=5",
+   "quelle": "simplywall.st",
+   "datum": "2026-08-30T00:44:40+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "ccd852f2ba4f72a6",
+   "titel": "Micron Technology Aktie: Gartner sieht Speichermarkt bei 837,3 Milliarden Dollar - Börse Global",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSlo3c2tBTnZpSnNsMmpqSlNmajdzV01pR1pLQmNTNHJIV2pQamNfbWFtQ0dHM1pRVmhGOGtPMWhEYUxmclFneVFTQnkwUWFBaHh5VWk3MzVFcnpTNEJlbkJqaUpUSGxkVzAtVkxjZXlMNG4wTi1wMnBqdGIwWG91Q01Kc0R2Q19LNDd4TG1Nck90Nmt0VFBLRGdKNGp5aHpzSnN3eF9NTWxhS3pRc1czVlZWb0k?oc=5",
+   "quelle": "Börse Global",
+   "datum": "2026-08-30T01:09:27+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "fbd5d9c5093a1daa",
+   "titel": "SK Hynix Aktie: 54 Billionen Won für Cheongju M17 - Börse Global",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQd3B5V2duUW96Si00dzdUenZIRW5CUGdLZGw4UlUzUDFJQnRtdVljN0FLdWdyckhVd2J4blFvLUxPNk5NYW4zaGl6X0pBV1BVMWlPdFVaMFB4dG12T3FxaVBnTkx1Y0ljc1p4akFjc00yTmRMZndBZC1TZlZ3WEI2MDdBWkpleDE0ZHpTcXFn?oc=5",
+   "quelle": "Börse Global",
+   "datum": "2026-08-30T01:17:23+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "16d0de897c616b90",
+   "titel": "Nvidia Aktie Und Zwei Weitere Wachstumsaktien Mit Starken Bilanzen - simplywall.st",
+   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPQlo4eGpKdzdUYmpaR09PQm5tdXgzMEF5Y1dtNzdNanlUUGdSM09qZWRZLTRCbjRfWklZd2ZWWi15V2lBYlhZZFBxTDZsTk03cHJZRjZPWWZITmNMY2JJb0RFUU5JZWZaOXJrVmY1Y3lUWmRHTzhwWENadHkwX1VQejRHeF9LeGhLMm43UXdwc3R5eU01T2NJOVpZTFdxc2gwZm5KUll0TWlHX3A4UTlqZ2hTLUgxMjQ4b2J1MEYxWVJOZDRUYXBlNlhLZXNKeEnSAdQBQVVfeXFMTlNJUTcxRDNlZ3I3czVlNVNpbVhWYmlWV3RYOEJhNngxekFMWUdzTHZEdHNab2tXdnBCZVF2ZUF0LU1UVEJrRDU3bG15M0s4ZGVib2lHM0VzR0ZtRnFxOGY5OHU0WmxNeU1hT0tzWmhORk03bUhKaDh3RGU1WkpxbThUbk9ZZjJIU2Q4bTdaay1XSVJjbV9GSXZlQlg3enh3Vlp2dEZFOEQzRk5hUTVuSmxLM2J3REpfZmNDZFVnUV9BbF9IbXpCeWdBemxHdUFINzgwdmM?oc=5",
+   "quelle": "simplywall.st",
+   "datum": "2026-08-30T01:18:11+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "26915dcbd1600949",
+   "titel": "SK Hynix Aktie: Belegschaft lehnt Lohnpaket ab - Börse Express",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQR3VPRTk1dndVMGxvUHA3cVNFT295Ul9TTEZwZnhFVThSODNLWnhUem5MLWVYMHhvcXF2dFpRSUkyXzduSF9qT2lQTGVWaGFLRkNqc3BOM0haREh4LVVhUWJCeUdtUjdEeVNucHp6WFNrVzJtUF84Xy03V1BjN09ncFhWVnlGNnBhdUlKMGNFaEdKTFpuWHlya2xXOU8zdw?oc=5",
+   "quelle": "Börse Express",
+   "datum": "2026-08-30T06:09:04+00:00",
+   "gefunden_ueber": [
+    "SKHYNIX"
+   ],
+   "bezug": [
+    "SKHYNIX"
+   ],
+   "hashtags": [
+    "#SKHynix"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -1
+  },
+  {
+   "id": "c13b45e8ff760812",
+   "titel": "Micron Technology Aktie News: Micron Technology gibt am Freitagnachmittag ab - Finanzen.net",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNLVZRLVVrVExlX0VPOTJUaWhlaHd6Rk1sbHpsejVPZ2d6MlItTTJUUlgyY2NlRWhWUTlHVE1vTXc0QWZsa0VIaUFIYjdlNTZjQ0VxQlo4ZDNlLXJ2T0g3bEN3anQ0ODY5LV92QUFieHZEdC1qdnpKN2FZMi1mUkd0ZUtJSEY3VkZZX0l2UENhTklQcVZOTk9VeHdZR3ZDaVU?oc=5",
+   "quelle": "Finanzen.net",
+   "datum": "2026-08-28T14:08:32+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -6
+  },
+  {
+   "id": "2aa88c4bd27dbd79",
+   "titel": "Micron Technology Aktie News: Micron Technology am Freitagabend mit Abschlägen - Finanzen.net",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPc1QyTnppOF9zT0p3bW1ocjBjeDZDTEpsbVBMWUFadmVzSHBaSDVpQzlOWHBhNDlfVlBaRE5JUlBheFBZVngzTE81UmNkVHowQjdGVjdYTmRRRE9pcmlrOGZBNlBLTmphZ3VQZHJGcTRSQ01mYTF6OEZyNFdBd25Vc3drZXNxT1MxWXR5c3Y2dEh1WDQ2UWo1MGxFZXQtRTg?oc=5",
+   "quelle": "Finanzen.net",
+   "datum": "2026-08-28T18:24:29+00:00",
+   "gefunden_ueber": [
+    "MU"
+   ],
+   "bezug": [
+    "MU"
+   ],
+   "hashtags": [
+    "#Micron"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -6
+  },
+  {
+   "id": "ec393bef5d3d1418",
+   "titel": "Nvidia vor dem nächsten Kurssprung? Analysten sehen 70 % Potenzial - Wallstreet Online",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNckU3eVYxbFhidXhPWkJnSjdMdG92ZU9pM05ERFoyUUV6TVVFdXhqZjNGX09janVUNXQ3akhnUUtpNGh6M0U1cGJpZUtnYkktRUI5dWpPUGRpbXZRRk9tdzVYTnlDeTFGUXdKLW1qcDBiQzJ5YWJmRlF2YThrN2J2bXdfN1VMT2M3SjZPa3hsTFdvejRaUmxUb2MzVE8xTnhFODJiXw?oc=5",
+   "quelle": "Wallstreet Online",
+   "datum": "2026-08-30T05:43:00+00:00",
+   "gefunden_ueber": [
+    "NVDA"
+   ],
+   "bezug": [
+    "NVDA"
+   ],
+   "hashtags": [
+    "#NVIDIA"
+   ],
+   "neu": true,
+   "rauschen": true,
+   "gewicht": -6
+  }
+ ]
+}

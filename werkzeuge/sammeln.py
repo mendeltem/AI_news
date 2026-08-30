@@ -1,0 +1,293 @@
+#!/usr/bin/env python3
+"""Holt die Nachrichten des Tages zu allem, was in themen.json steht.
+
+Quelle ist der RSS-Ausgang von Google News - kein Schluessel, kein Konto, kein
+Anbieter dazwischen, der wegfallen kann. Je Eintrag der Beobachtungsliste eine
+Abfrage, danach zusammenlegen und entdoppeln.
+
+Der Lauf merkt sich in archiv/gesehen.json, was er schon hatte. Ein zweiter
+Aufruf am selben Tag holt also nur Neues und schreibt nichts doppelt.
+
+Rueckgabewerte:
+  0  fertig (auch wenn nichts Neues da war)
+  1  keine einzige Abfrage kam durch - vermutlich kein Netz
+
+Aufruf:  python werkzeuge/sammeln.py [--tage 2] [--limit N] [--nur NVDA,HBM]
+"""
+
+import argparse
+import hashlib
+import json
+import re
+import sys
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
+import xml.etree.ElementTree as ET
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
+WURZEL = Path(__file__).resolve().parent.parent
+THEMEN = WURZEL / "themen.json"
+ARCHIV = WURZEL / "archiv"
+GESEHEN = ARCHIV / "gesehen.json"
+LOG = WURZEL / "lauf.log"
+
+KOPF = {"User-Agent": "Mozilla/5.0 (compatible; AI-news-sammler/1.0; "
+                      "+https://github.com/mendeltem/AI_news)"}
+PAUSE = 0.35          # Sekunden zwischen zwei Abfragen
+ZEITFENSTER_TAGE = 2  # aelter als das interessiert im Tagesfeed nicht
+
+# Quellen, deren Meldungen erfahrungsgemaess Substanz haben. Kein Filter -
+# nur ein Bonus bei der Sortierung, damit oben nicht die Aggregatoren stehen.
+GUTE_QUELLEN = {
+    "reuters", "bloomberg", "financial times", "wall street journal", "nikkei",
+    "the information", "tom's hardware", "anandtech", "servethehome",
+    "semianalysis", "trendforce", "digitimes", "heise", "golem", "the register",
+    "ieee spectrum", "techcrunch", "ars technica", "cnbc", "handelsblatt",
+    "korea herald", "businesskorea", "the elec", "nikkei asia", "eetimes",
+}
+
+# Aktientipp-Muehlen. Die schreiben taeglich ueber dieselben Ticker, ohne dass
+# etwas passiert ist - genau das Rauschen, das den Feed unbrauchbar macht.
+# Kein harter Ausschluss, aber sie sollen nicht oben stehen.
+SCHWACHE_QUELLEN = {
+    "der aktionär", "der aktionaer", "ntg24", "investing.com", "sharewise",
+    "finanznachrichten", "wallstreet-online", "wallstreet online", "motley fool",
+    "the motley fool", "zacks", "benzinga", "tipranks", "simply wall st",
+    "simplywall", "insider monkey", "24/7 wall st", "aktiencheck", "boerse",
+    "börse", "marketbeat", "stocktwits", "invezz", "barchart", "gurufocus",
+    "finanzen.ch", "finanzen.net", "finanztrends", "tradingkey", "fool.de",
+    "aktien-global", "onvista", "boersennews", "4investors", "stock3",
+    "investing.com deutsch", "sharedeals", "boersen-zeitung",
+}
+
+# Schlagzeilenmuster ohne Nachricht: Kauf-oder-Verkauf-Vergleiche, Kursziele,
+# Depotumschichtungen. Erkennt man am Titel, nicht an der Quelle.
+RAUSCHMUSTER = re.compile(
+    r"(better (stock|buy)|which .* (stock|giant)|should you buy|buy or sell|"
+    r"kursziel|aktie kaufen|jetzt einsteigen|prognose \d{4}|"
+    r"\bmillionär|reich werden|these \d+ stocks|top \d+ stocks|"
+    r"schichtet um|depot|dividende|\bpennystock|"
+    r"aktie news|tendiert|b[uü]sst|gewinnt am|verliert am|zeigt sich|"
+    r"aktienkursprognose|kursanalyse|charttechnik|analysten|kaufempfehlung|"
+    r"so viel .* w[aä]re|h[aä]tten sie|w[aä]re ihr investment)", re.I)
+
+
+def log(msg):
+    zeile = "%s  sammeln  %s" % (datetime.now().strftime("%Y-%m-%d %H:%M:%S"), msg)
+    print(zeile)
+    try:
+        with LOG.open("a", encoding="utf-8") as f:
+            f.write(zeile + "\n")
+    except Exception:
+        pass
+
+
+def rss_url(suche, sprache="de"):
+    """Beide Sprachen, absichtlich: die deutsche Presse bringt Golem und heise,
+    die Substanz zu Speicherpreisen und Fertigung steht bei TrendForce,
+    DigiTimes und Reuters und erscheint nur englisch."""
+    q = urllib.parse.quote(suche)
+    if sprache == "en":
+        return ("https://news.google.com/rss/search?q=%s+when:7d"
+                "&hl=en-US&gl=US&ceid=US:en" % q)
+    return ("https://news.google.com/rss/search?q=%s+when:7d"
+            "&hl=de&gl=DE&ceid=DE:de" % q)
+
+
+def hole(url, versuche=2):
+    for i in range(versuche):
+        try:
+            req = urllib.request.Request(url, headers=KOPF)
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return r.read()
+        except (urllib.error.URLError, TimeoutError, OSError) as e:
+            if i + 1 == versuche:
+                return None
+            time.sleep(1.5)
+    return None
+
+
+def parse_rss(roh):
+    """Gibt (titel, link, quelle, datum_iso) je Eintrag zurueck."""
+    try:
+        wurzel = ET.fromstring(roh)
+    except ET.ParseError:
+        return []
+    raus = []
+    for item in wurzel.iter("item"):
+        t = (item.findtext("title") or "").strip()
+        link = (item.findtext("link") or "").strip()
+        if not t or not link:
+            continue
+        quelle = ""
+        src = item.find("source")
+        if src is not None and src.text:
+            quelle = src.text.strip()
+        # Google haengt " - Quelle" an den Titel; das trennen wir ab.
+        if not quelle and " - " in t:
+            t, _, quelle = t.rpartition(" - ")
+        dat = item.findtext("pubDate") or ""
+        iso = ""
+        for fmt in ("%a, %d %b %Y %H:%M:%S %Z", "%a, %d %b %Y %H:%M:%S %z"):
+            try:
+                iso = datetime.strptime(dat, fmt).replace(
+                    tzinfo=timezone.utc).isoformat()
+                break
+            except ValueError:
+                continue
+        raus.append((t.strip(), link, quelle.strip(), iso))
+    return raus
+
+
+def schluessel(titel):
+    """Erkennt dieselbe Meldung bei verschiedenen Haeusern am normalisierten
+    Titel - Satzzeichen und Fuellwoerter raus, dann Hash."""
+    t = titel.lower()
+    t = re.sub(r"[^\wäöüß ]+", " ", t)
+    t = re.sub(r"\b(der|die|das|den|dem|des|ein|eine|einen|und|oder|von|mit|"
+               r"fuer|für|the|a|an|of|to|in|on|for|and|is|says|said)\b", " ", t)
+    t = re.sub(r"\s+", " ", t).strip()
+    return hashlib.sha1(t.encode("utf-8")).hexdigest()[:16]
+
+
+def treffer(text, eintrag):
+    """Kommt dieser beobachtete Eintrag im Text vor?"""
+    name = eintrag["name"]
+    if len(name) >= 4 and re.search(r"\b%s\b" % re.escape(name), text, re.I):
+        return True
+    # Ticker nur, wenn er nicht zufaellig ein Wort ist (ON, ARM, NOW ...)
+    tic = eintrag.get("id", "")
+    if (eintrag.get("art") == "boersennotiert" and 3 <= len(tic) <= 8
+            and tic.isupper() and tic not in {"ON", "ARM", "NOW", "ALL"}):
+        if re.search(r"\b%s\b" % re.escape(tic), text):
+            return True
+    for s in eintrag.get("suchen", []):
+        kern = s.split()[0]
+        if len(kern) >= 3 and re.search(r"\b%s\b" % re.escape(kern), text, re.I):
+            return True
+    return False
+
+
+def main():
+    p = argparse.ArgumentParser()
+    p.add_argument("--tage", type=int, default=ZEITFENSTER_TAGE)
+    p.add_argument("--limit", type=int, help="nur die ersten N Eintraege abfragen")
+    p.add_argument("--nur", help="Kommaliste von IDs, sonst alles")
+    a = p.parse_args()
+
+    if not THEMEN.exists():
+        log("themen.json fehlt - erst werkzeuge/saat.py laufen lassen")
+        return 1
+    T = json.loads(THEMEN.read_text(encoding="utf-8"))
+    beob = T["beobachtet"]
+    if a.nur:
+        will = {x.strip().upper() for x in a.nur.split(",")}
+        beob = [e for e in beob if e["id"].upper() in will]
+    if a.limit:
+        beob = beob[:a.limit]
+
+    ARCHIV.mkdir(exist_ok=True)
+    gesehen = {}
+    if GESEHEN.exists():
+        try:
+            gesehen = json.loads(GESEHEN.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            log("gesehen.json unlesbar - wird neu angelegt")
+
+    grenze = datetime.now(timezone.utc) - timedelta(days=a.tage)
+    meldungen = {}
+    ok = 0
+
+    for i, e in enumerate(beob, 1):
+        suchen = e.get("suchen") or [e["name"]]
+        # Kern-Eintraege in beiden Sprachen, Anwendungsfirmen nur englisch -
+        # ueber die schreibt die deutsche Presse ohnehin kaum.
+        sprachen = ("de", "en") if e.get("stufe") == 1 else ("en",)
+        for s in suchen:
+            for spr in sprachen:
+                roh = hole(rss_url(s, spr))
+                time.sleep(PAUSE)
+                if roh is None:
+                    continue
+                ok += 1
+                for titel, link, quelle, iso in parse_rss(roh):
+                    if iso:
+                        try:
+                            if datetime.fromisoformat(iso) < grenze:
+                                continue
+                        except ValueError:
+                            pass
+                    k = schluessel(titel)
+                    m = meldungen.setdefault(k, {
+                        "id": k, "titel": titel, "link": link,
+                        "quelle": quelle, "datum": iso,
+                        "gefunden_ueber": [], "bezug": [],
+                    })
+                    if e["id"] not in m["gefunden_ueber"]:
+                        m["gefunden_ueber"].append(e["id"])
+        if i % 25 == 0:
+            log("%d/%d abgefragt, %d Meldungen" % (i, len(beob), len(meldungen)))
+
+    if ok == 0:
+        log("keine einzige Abfrage kam durch")
+        return 1
+
+    # Bezug bestimmen: welcher beobachtete Eintrag steht wirklich im Titel.
+    alle = {e["id"]: e for e in T["beobachtet"]}
+    for m in meldungen.values():
+        text = m["titel"]
+        bezug = [eid for eid, e in alle.items() if treffer(text, e)]
+        # Was die Suche gefunden hat, zaehlt auch - aber nachrangig.
+        for eid in m["gefunden_ueber"]:
+            if eid not in bezug:
+                bezug.append(eid)
+        m["bezug"] = bezug[:6]
+        m["hashtags"] = [alle[b]["hashtag"] for b in m["bezug"] if b in alle]
+        m["neu"] = m["id"] not in gesehen
+
+        q = (m["quelle"] or "").lower()
+        gut = any(g in q for g in GUTE_QUELLEN)
+        schwach = any(g in q for g in SCHWACHE_QUELLEN)
+        rausch = bool(RAUSCHMUSTER.search(m["titel"]))
+        kern = sum(1 for b in m["bezug"] if alle.get(b, {}).get("stufe") == 1)
+        m["rauschen"] = schwach or rausch
+        m["gewicht"] = round(kern * 2 + (3 if gut else 0)
+                             + (2 if m["neu"] else 0)
+                             + min(len(m["gefunden_ueber"]), 4)
+                             - (6 if schwach else 0)
+                             - (5 if rausch else 0), 1)
+
+    sortiert = sorted(meldungen.values(),
+                      key=lambda m: (-m["gewicht"], m.get("datum") or ""))
+
+    heute = datetime.now().strftime("%Y-%m-%d")
+    aus = {
+        "stand": datetime.now().isoformat(timespec="seconds"),
+        "tag": heute,
+        "abgefragt": len(beob),
+        "meldungen_gesamt": len(sortiert),
+        "meldungen_neu": sum(1 for m in sortiert if m["neu"]),
+        "meldungen": sortiert,
+    }
+    (WURZEL / "nachrichten.json").write_text(
+        json.dumps(aus, ensure_ascii=False, indent=1), encoding="utf-8")
+    (ARCHIV / ("%s.json" % heute)).write_text(
+        json.dumps(aus, ensure_ascii=False, indent=1), encoding="utf-8")
+
+    for m in sortiert:
+        gesehen[m["id"]] = heute
+    # Aelteres als 60 Tage brauchen wir zum Entdoppeln nicht mehr.
+    schwelle = (datetime.now() - timedelta(days=60)).strftime("%Y-%m-%d")
+    gesehen = {k: v for k, v in gesehen.items() if v >= schwelle}
+    GESEHEN.write_text(json.dumps(gesehen, ensure_ascii=False), encoding="utf-8")
+
+    log("%d Meldungen (%d neu) aus %d Abfragen"
+        % (len(sortiert), aus["meldungen_neu"], ok))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>KI-Lagemeldung</title>
+<meta name="description" content="Taeglicher Nachrichtenstand zur KI-Lieferkette: 125 beobachtete Firmen und Themen, Straenge nach Hashtag, Einordnung fuer Nvidia, DRAM und NAND.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%230B6E99'/></svg>">
+<style>
+:root{
+  --papier:#F3F1EC;
+  --blatt:#FBFAF7;
+  --blatt2:#E8E5DE;
+  --blatt3:#DBD7CE;
+  --tinte:#15191E;
+  --tinte2:#3D444C;
+  --grau:#6E757D;
+  --linie:#CFCBC2;
+  --linie-zart:#E2DED6;
+  --akzent:#0B6E99;
+  --akzent-hell:#0E86B8;
+  --akzent-zart:rgba(11,110,153,.10);
+  --neu:#9A5B00;
+  --neu-zart:rgba(154,91,0,.12);
+  --warn:#A03328;
+  --schatten:0 1px 0 rgba(21,25,30,.04),0 10px 28px -20px rgba(21,25,30,.45);
+
+  --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+  --sans:"Segoe UI","Helvetica Neue",-apple-system,system-ui,sans-serif;
+  --mono:"Cascadia Mono",Consolas,"SFMono-Regular",ui-monospace,monospace;
+  --schmal:Bahnschrift,"DIN Alternate","Arial Narrow",var(--sans);
+
+  --pad:clamp(1rem,3.5vw,2.5rem);
+  --maxw:1180px;
+  --lese:64ch;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --papier:#0D1013; --blatt:#141920; --blatt2:#1C232B; --blatt3:#252E38;
+    --tinte:#E8ECF0; --tinte2:#B3BCC6; --grau:#7E8892;
+    --linie:#26303A; --linie-zart:#1B222A;
+    --akzent:#4DB6E0; --akzent-hell:#6FC9EE; --akzent-zart:rgba(77,182,224,.13);
+    --neu:#E0A63A; --neu-zart:rgba(224,166,58,.14); --warn:#E5675A;
+    --schatten:0 1px 0 rgba(255,255,255,.03),0 16px 36px -24px #000;
+  }
+}
+:root[data-theme="dark"]{
+  --papier:#0D1013; --blatt:#141920; --blatt2:#1C232B; --blatt3:#252E38;
+  --tinte:#E8ECF0; --tinte2:#B3BCC6; --grau:#7E8892;
+  --linie:#26303A; --linie-zart:#1B222A;
+  --akzent:#4DB6E0; --akzent-hell:#6FC9EE; --akzent-zart:rgba(77,182,224,.13);
+  --neu:#E0A63A; --neu-zart:rgba(224,166,58,.14); --warn:#E5675A;
+  --schatten:0 1px 0 rgba(255,255,255,.03),0 16px 36px -24px #000;
+}
+
+*{box-sizing:border-box;margin:0}
+body{background:var(--papier);color:var(--tinte);font-family:var(--sans);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--akzent);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--akzent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.label{font-family:var(--mono);font-size:.7rem;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--grau)}
+
+/* Kopf */
+header.kopf{border-bottom:2px solid var(--tinte);background:var(--papier);
+  position:sticky;top:0;z-index:50}
+.kopf-in{max-width:var(--maxw);margin:0 auto;padding:.5rem var(--pad);
+  display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.marke{font-family:var(--schmal);font-variation-settings:"wght" 700,"wdth" 78;
+  font-size:1.15rem;text-transform:uppercase;letter-spacing:.03em;margin-right:auto}
+.marke b{color:var(--akzent)}
+.kopf-in nav{display:flex;gap:.1rem;flex-wrap:wrap}
+.kopf-in nav a{font-family:var(--mono);font-size:.72rem;color:var(--grau);
+  text-decoration:none;padding:.28rem .5rem;border-radius:3px}
+.kopf-in nav a:hover{color:var(--tinte);background:var(--akzent-zart)}
+
+/* Aufmacher */
+.aufmacher{padding:clamp(1.6rem,4vw,2.8rem) 0 1.2rem;border-bottom:1px solid var(--linie)}
+.aufmacher h1{font-family:var(--schmal);font-variation-settings:"wght" 700,"wdth" 76;
+  font-size:clamp(2rem,1.2rem + 3.4vw,3.8rem);text-transform:uppercase;
+  line-height:.98;letter-spacing:-.005em;text-wrap:balance}
+.aufmacher .unter{font-family:var(--serif);font-size:clamp(1rem,.95rem + .3vw,1.15rem);
+  color:var(--tinte2);max-width:var(--lese);margin-top:.7rem;line-height:1.55}
+.zahlen{display:flex;gap:clamp(.9rem,3vw,2rem);flex-wrap:wrap;margin-top:1.1rem}
+.zahlen div{display:grid;gap:.05rem}
+.zahlen b{font-family:var(--mono);font-size:1.15rem;font-weight:600;
+  font-variant-numeric:tabular-nums}
+.zahlen small{font-family:var(--mono);font-size:.66rem;color:var(--grau);
+  letter-spacing:.06em;text-transform:uppercase}
+
+/* Lage */
+.lage{border:1px solid var(--linie);border-left:3px solid var(--akzent);
+  background:var(--blatt);border-radius:0 4px 4px 0;padding:1rem 1.1rem;
+  margin-top:1.5rem;box-shadow:var(--schatten)}
+.lage h2{font-family:var(--schmal);font-variation-settings:"wght" 700,"wdth" 82;
+  font-size:1.15rem;text-transform:uppercase;margin-bottom:.2rem}
+.lage ul{margin:.7rem 0 0;padding-left:1.1rem;display:grid;gap:.45rem}
+.lage li{font-family:var(--serif);font-size:.98rem;line-height:1.55;color:var(--tinte2)}
+.lage li::marker{color:var(--akzent)}
+.autor{display:inline-flex;align-items:center;gap:.35rem;font-family:var(--mono);
+  font-size:.63rem;letter-spacing:.07em;text-transform:uppercase;padding:.12rem .4rem;
+  border-radius:2px;border:1px solid;white-space:nowrap}
+.autor.modell{color:var(--grau);border-color:var(--linie);background:var(--blatt2)}
+.autor.redaktion{color:var(--akzent);border-color:var(--akzent-zart);background:var(--akzent-zart)}
+
+/* Abschnitte */
+section{padding-block:clamp(1.8rem,4vw,2.8rem)}
+.sec-kopf{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap;
+  border-bottom:1px solid var(--tinte);padding-bottom:.4rem;margin-bottom:1.2rem}
+.sec-kopf h2{font-family:var(--schmal);font-variation-settings:"wght" 700,"wdth" 80;
+  font-size:clamp(1.3rem,1.1rem + .8vw,1.9rem);text-transform:uppercase}
+.sec-kopf p{margin-left:auto}
+
+/* Straenge */
+.straenge{display:grid;gap:.5rem;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.strang{appearance:none;font:inherit;text-align:left;cursor:pointer;
+  border:1px solid var(--linie);background:var(--blatt);border-radius:3px;
+  padding:.6rem .7rem;display:grid;gap:.25rem;color:inherit}
+.strang:hover{border-color:var(--akzent);background:var(--akzent-zart)}
+.strang .h{font-family:var(--mono);font-size:.9rem;color:var(--akzent);font-weight:600}
+.strang .n{font-family:var(--mono);font-size:.68rem;color:var(--grau)}
+
+/* Filterleiste */
+.filter{position:sticky;top:44px;z-index:40;background:var(--papier);
+  border-bottom:1px solid var(--linie);padding:.5rem 0;margin-bottom:1rem}
+.filter-in{display:flex;gap:.35rem;flex-wrap:wrap;align-items:center}
+.chip{appearance:none;font:inherit;font-family:var(--mono);font-size:.72rem;
+  cursor:pointer;padding:.28rem .6rem;border-radius:2px;border:1px solid var(--linie);
+  background:var(--blatt);color:var(--tinte2)}
+.chip:hover{border-color:var(--akzent);color:var(--tinte)}
+.chip[aria-pressed="true"]{background:var(--akzent);border-color:var(--akzent);
+  color:var(--papier);font-weight:600}
+.suche{font:inherit;font-family:var(--mono);font-size:.75rem;padding:.28rem .5rem;
+  border:1px solid var(--linie);border-radius:2px;background:var(--blatt);
+  color:var(--tinte);min-width:150px;margin-left:auto}
+
+/* Feed */
+.feed{display:grid;gap:0;max-width:var(--lese)}
+.post{border-bottom:1px solid var(--linie-zart);padding:.95rem 0;display:grid;gap:.4rem}
+.post[hidden]{display:none}
+.post-kopf{display:flex;gap:.5rem;align-items:baseline;flex-wrap:wrap}
+.post-kopf .q{font-family:var(--mono);font-size:.72rem;color:var(--tinte2);font-weight:600}
+.post-kopf .z{font-family:var(--mono);font-size:.7rem;color:var(--grau)}
+.post-kopf .neu{font-family:var(--mono);font-size:.62rem;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--neu);background:var(--neu-zart);
+  border:1px solid var(--neu-zart);border-radius:2px;padding:.06rem .3rem}
+.post h3{font-family:var(--serif);font-size:1.08rem;line-height:1.4;font-weight:400}
+.post h3 a{color:var(--tinte);text-decoration:none}
+.post h3 a:hover{color:var(--akzent);text-decoration:underline}
+.post .original{font-family:var(--mono);font-size:.72rem;color:var(--grau);
+  line-height:1.45}
+.tags{display:flex;gap:.3rem;flex-wrap:wrap}
+.tag{appearance:none;font:inherit;cursor:pointer;font-family:var(--mono);
+  font-size:.7rem;color:var(--akzent);background:none;border:0;padding:.05rem .2rem;
+  border-radius:2px}
+.tag:hover{background:var(--akzent-zart);text-decoration:underline}
+.leer{padding:2rem 0;color:var(--grau);font-family:var(--mono);font-size:.8rem}
+.mehr{margin-top:1rem}
+.mehr button{appearance:none;font:inherit;font-family:var(--mono);font-size:.75rem;
+  cursor:pointer;padding:.45rem .9rem;border:1px solid var(--linie);border-radius:3px;
+  background:var(--blatt);color:var(--tinte2)}
+.mehr button:hover{border-color:var(--akzent);color:var(--tinte)}
+
+/* Analyse */
+.analyse{max-width:var(--lese)}
+.artikel{border-top:2px solid var(--tinte);padding-top:1rem;margin-bottom:2.2rem}
+.artikel h3{font-family:var(--schmal);font-variation-settings:"wght" 700,"wdth" 82;
+  font-size:clamp(1.35rem,1.1rem + 1vw,1.9rem);text-transform:uppercase;
+  line-height:1.05;text-wrap:balance;margin-bottom:.5rem}
+.artikel .meta{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;margin-bottom:.9rem}
+.artikel p{font-family:var(--serif);font-size:1.02rem;line-height:1.65;
+  color:var(--tinte2);margin-bottom:.85rem}
+.artikel p:first-letter{}
+.artikel p strong{color:var(--tinte)}
+.artikel h4{font-family:var(--schmal);font-variation-settings:"wght" 700,"wdth" 85;
+  font-size:1.02rem;text-transform:uppercase;margin:1.3rem 0 .5rem;color:var(--tinte)}
+.artikel .kasten{border-left:3px solid var(--akzent);background:var(--akzent-zart);
+  padding:.75rem .9rem;margin:1rem 0;border-radius:0 3px 3px 0}
+.artikel .kasten p{margin:0;font-size:.95rem}
+
+/* Schwesterseiten */
+.schwestern{display:grid;gap:.6rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.schwester{border:1px solid var(--linie);border-radius:3px;background:var(--blatt);
+  padding:.8rem .9rem;text-decoration:none;color:inherit;display:grid;gap:.3rem}
+.schwester:hover{border-color:var(--akzent);background:var(--akzent-zart)}
+.schwester b{font-family:var(--schmal);font-variation-settings:"wght" 700,"wdth" 85;
+  font-size:1rem;text-transform:uppercase;color:var(--tinte)}
+.schwester span{font-size:.84rem;color:var(--tinte2);line-height:1.45}
+
+footer{border-top:1px solid var(--linie);padding-block:1.8rem 3rem;
+  color:var(--grau);font-size:.8rem}
+footer .wrap{display:grid;gap:.6rem;max-width:78ch}
+footer strong{color:var(--tinte2)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<header class="kopf">
+  <div class="kopf-in">
+    <span class="marke">KI-<b>Lagemeldung</b></span>
+    <nav>
+      <a href="#lage">Lage</a>
+      <a href="#straenge">Straenge</a>
+      <a href="#feed">Meldungen</a>
+      <a href="#analyse">Einordnung</a>
+      <a href="#quellen">Quellen</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap aufmacher">
+  <p class="label" id="stempel">wird geladen …</p>
+  <h1>Was heute<br>durchgelaufen ist</h1>
+  <p class="unter">Taeglicher Nachrichtenstand entlang der KI-Lieferkette &mdash; von der
+  Lithografie ueber HBM, DRAM und NAND bis zu denen, die die Rechenzeit kaufen.
+  Beobachtet wird, was auf den beiden Schwesterseiten steht: die boersennotierten
+  Firmen der Kette und die Anwendungen, die sie bezahlen.</p>
+  <div class="zahlen" id="zahlen"></div>
+  <div class="lage" id="lage">
+    <h2>Die Lage</h2>
+    <p class="label" id="lage-meta">…</p>
+    <div id="lage-inhalt"></div>
+  </div>
+</div>
+
+<section class="wrap" id="straenge">
+  <div class="sec-kopf">
+    <h2>Straenge</h2>
+    <p class="label">worueber heute mehr als einmal berichtet wurde</p>
+  </div>
+  <div class="straenge" id="straenge-liste"></div>
+</section>
+
+<section class="wrap" id="feed">
+  <div class="sec-kopf">
+    <h2>Meldungen</h2>
+    <p class="label" id="feed-zahl"></p>
+  </div>
+  <div class="filter">
+    <div class="filter-in" id="filter">
+      <button class="chip" data-f="alle" aria-pressed="true">Alle</button>
+      <button class="chip" data-f="speicher" aria-pressed="false">Speicher</button>
+      <button class="chip" data-f="silizium" aria-pressed="false">Silizium</button>
+      <button class="chip" data-f="cloud" aria-pressed="false">Cloud</button>
+      <button class="chip" data-f="anwendung" aria-pressed="false">Anwendung</button>
+      <button class="chip" data-f="neu" aria-pressed="false">Nur neu</button>
+      <input class="suche" id="suche" type="search" placeholder="suchen …" aria-label="Meldungen durchsuchen">
+    </div>
+  </div>
+  <div class="feed" id="feed-liste"><p class="leer">wird geladen …</p></div>
+  <div class="mehr"><button id="mehr" hidden>Mehr anzeigen</button></div>
+</section>
+
+<section class="wrap" id="analyse">
+  <div class="sec-kopf">
+    <h2>Einordnung</h2>
+    <p class="label">was das fuer Nvidia, DRAM und NAND heisst</p>
+  </div>
+  <div class="analyse" id="analyse-liste"><p class="leer">wird geladen …</p></div>
+</section>
+
+<section class="wrap" id="quellen">
+  <div class="sec-kopf"><h2>Die Schwesterseiten</h2></div>
+  <div class="schwestern">
+    <a class="schwester" href="https://mendeltem.github.io/AI_Companys/nvidia-oekosystem.html">
+      <b>Nvidia-Oekosystem</b>
+      <span>66 boersennotierte Firmen entlang der Kette, mit Quartalszahlen und Bewertung. Liefert die Beobachtungsliste dieser Seite.</span></a>
+    <a class="schwester" href="https://mendeltem.github.io/ai_use_cases_overview/">
+      <b>KI-Use-Cases</b>
+      <span>91 Anwendungen in 15 Clustern, jede mit Kennzahl, Quelle und Vorbehalt. Die Nachfrageseite.</span></a>
+    <a class="schwester" href="https://mendeltem.github.io/nvidia-roadmap/">
+      <b>Silizium-Roadmap</b>
+      <span>Ampere bis Feynman: Architekturvergleich und Technologie-Atlas. Der Taktgeber der ganzen Kette.</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Wie das hier entsteht.</strong> Um 6 Uhr fragt ein Lauf auf dem eigenen
+    Rechner den Nachrichtenausgang zu jedem der beobachteten Eintraege ab, legt
+    Doppelmeldungen zusammen und gewichtet sie. Anschliessend uebersetzt ein lokales
+    Sprachmodell die englischen Schlagzeilen und schreibt die Lage. Beides traegt
+    das Kuerzel <span class="autor modell">Modell</span>.</p>
+    <p><strong>Was das Modell nicht macht.</strong> Die Einordnung &mdash; was eine
+    Meldung fuer Nvidia, fuer die Speicherpreise und fuer die Kette bedeutet &mdash;
+    entsteht nicht im 6-Uhr-Lauf. Lieferketteneffekte herzuleiten ist genau das,
+    wobei ein kleines Modell plausibel falsch liegt. Diese Texte tragen
+    <span class="autor redaktion">Redaktion</span> und erscheinen unregelmaessig.</p>
+    <p><strong>Grenzen.</strong> Schlagzeilen sind keine Belege. Was hier steht, ist
+    der Stand der Berichterstattung, nicht der Stand der Dinge. Anlegertipp-Quellen
+    und Kursmeldungen ohne Nachricht werden abgewertet, aber nicht entfernt &mdash;
+    sie stehen weiter unten. Zahlen aus Unternehmensmitteilungen sind nicht geprueft.</p>
+    <p class="mono" id="fuss-stand"></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s==null?"":s).replace(/[&<>"']/g,
+    c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+  const SCHICHT_FILTER = {
+    speicher: ["Speicher","Packaging","Packaging und Test"],
+    silizium: ["Chip-Entwurf","Fertigung","Fertigungsanlagen","Silizium",
+               "Netzwerk und Optik","Systeme","Systeme (weitere)"],
+    cloud:    ["Cloud und Betrieb","KI-Labor","Energie","Strom und Kuehlung"],
+    anwendung:["Anwendung","Anwendung und Erloes","Wirkstoffsuche","LiDAR-Systeme",
+               "Edge-Gehirn","Aktoren und Roboter","Licht und Detektor","Endgeraete"]
+  };
+
+  let N=null, T=null, EINTRAG={}, sichtbar=25, filter="alle", tagFilter=null, suchtext="";
+
+  function zeit(iso){
+    if(!iso) return "";
+    const d=new Date(iso); if(isNaN(d)) return "";
+    const min=Math.round((Date.now()-d.getTime())/60000);
+    if(min<60) return min+" Min";
+    if(min<1440) return Math.round(min/60)+" Std";
+    return Math.round(min/1440)+" Tg";
+  }
+
+  function passt(m){
+    if(filter==="neu" && !m.neu) return false;
+    if(filter!=="alle" && filter!=="neu"){
+      const wollen=SCHICHT_FILTER[filter]||[];
+      const hat=(m.bezug||[]).some(b=>EINTRAG[b] && wollen.includes(EINTRAG[b].schicht));
+      if(!hat) return false;
+    }
+    if(tagFilter && !(m.hashtags||[]).includes(tagFilter)) return false;
+    if(suchtext){
+      const h=((m.zeile||"")+" "+m.titel+" "+(m.quelle||"")+" "+(m.hashtags||[]).join(" ")).toLowerCase();
+      if(!h.includes(suchtext)) return false;
+    }
+    return true;
+  }
+
+  function zeichneFeed(){
+    const liste=(N.meldungen||[]).filter(passt);
+    const zeigen=liste.slice(0,sichtbar);
+    $("#feed-zahl").textContent = liste.length+" von "+(N.meldungen||[]).length
+      + (tagFilter? " · "+tagFilter : "");
+    if(!zeigen.length){
+      $("#feed-liste").innerHTML='<p class="leer">Nichts gefunden. Filter zuruecksetzen?</p>';
+      $("#mehr").hidden=true; return;
+    }
+    $("#feed-liste").innerHTML = zeigen.map(m=>{
+      const zeile = m.zeile || m.titel;
+      const zeigOriginal = m.zeile && m.zeile!==m.titel;
+      return '<article class="post">'
+        + '<div class="post-kopf">'
+        +   '<span class="q">'+esc(m.quelle||"unbekannt")+'</span>'
+        +   '<span class="z">'+esc(zeit(m.datum))+'</span>'
+        +   (m.neu?'<span class="neu">neu</span>':'')
+        +   (m.rauschen?'<span class="z" title="Anlegertipp-Quelle oder Kursmeldung">· abgewertet</span>':'')
+        + '</div>'
+        + '<h3><a href="'+esc(m.link)+'" target="_blank" rel="noopener">'+esc(zeile)+'</a></h3>'
+        + (zeigOriginal?'<p class="original">'+esc(m.titel)+'</p>':'')
+        + '<div class="tags">'+(m.hashtags||[]).map(h=>
+            '<button class="tag" data-tag="'+esc(h)+'">'+esc(h)+'</button>').join("")+'</div>'
+        + '</article>';
+    }).join("");
+    $("#mehr").hidden = liste.length<=sichtbar;
+  }
+
+  function zeichneStraenge(){
+    const s=N.straenge||{};
+    const eintraege=Object.entries(s).slice(0,12);
+    if(!eintraege.length){ $("#straenge-liste").innerHTML=
+      '<p class="leer">Heute lief nichts mehrfach durch.</p>'; return; }
+    $("#straenge-liste").innerHTML = eintraege.map(([h,ids])=>
+      '<button class="strang" data-tag="'+esc(h)+'">'
+      + '<span class="h">'+esc(h)+'</span>'
+      + '<span class="n">'+ids.length+' Meldungen</span></button>').join("");
+  }
+
+  function zeichneLage(){
+    const m=N.modell||{};
+    $("#lage-meta").innerHTML = N.lage
+      ? '<span class="autor modell">Modell</span> &nbsp;'+esc(m.name||"lokal")
+        +' · '+esc((m.stand||"").replace("T"," ").slice(0,16))
+      : '<span class="autor modell">Modell</span> &nbsp;war beim Lauf nicht erreichbar';
+    if(!N.lage){
+      $("#lage-inhalt").innerHTML='<p style="font-family:var(--serif);color:var(--tinte2)">'
+        +'Keine Zusammenfassung. Die Meldungen unten sind trotzdem aktuell &mdash; '
+        +'sie brauchen das Modell nicht.</p>'; return;
+    }
+    const zeilen=String(N.lage).split(/\n+/).map(z=>z.replace(/^[-*•]\s*/,"").trim())
+      .filter(z=>z.length>3);
+    $("#lage-inhalt").innerHTML='<ul>'+zeilen.map(z=>'<li>'+esc(z)+'</li>').join("")+'</ul>';
+  }
+
+  function zeichneZahlen(){
+    const kern=(T.beobachtet||[]).filter(e=>e.stufe===1).length;
+    $("#zahlen").innerHTML=[
+      [ (N.meldungen||[]).length, "Meldungen heute"],
+      [ N.meldungen_neu||0, "davon neu"],
+      [ (T.beobachtet||[]).length, "beobachtet"],
+      [ kern, "davon Kern"],
+      [ Object.keys(N.straenge||{}).length, "Straenge"]
+    ].map(([b,s])=>'<div><b>'+b+'</b><small>'+s+'</small></div>').join("");
+    $("#stempel").textContent = "Stand "+String(N.stand||"").replace("T"," ").slice(0,16)
+      + " · " + (T.beobachtet||[]).length + " Eintraege beobachtet";
+    $("#fuss-stand").textContent = "Sammellauf "+String(N.stand||"").slice(0,16).replace("T"," ")
+      + " · " + (N.abgefragt||0) + " Abfragen";
+  }
+
+  function zeichneAnalyse(artikel){
+    if(!artikel.length){
+      $("#analyse-liste").innerHTML='<p class="leer">Noch keine Einordnung geschrieben. '
+        +'Die Meldungen oben stehen unabhaengig davon.</p>'; return;
+    }
+    $("#analyse-liste").innerHTML = artikel.map(a=>
+      '<article class="artikel">'
+      + '<h3>'+esc(a.titel)+'</h3>'
+      + '<div class="meta"><span class="autor redaktion">'+esc(a.autor||"Redaktion")+'</span>'
+      +   '<span class="label">'+esc(a.tag||"")+'</span></div>'
+      + (a.absaetze||[]).map(p=>{
+          if(typeof p==="string") return '<p>'+p+'</p>';
+          if(p.art==="zwischentitel") return '<h4>'+esc(p.text)+'</h4>';
+          if(p.art==="kasten") return '<div class="kasten"><p>'+p.text+'</p></div>';
+          return '<p>'+p.text+'</p>';
+        }).join("")
+      + '<div class="tags">'+(a.hashtags||[]).map(h=>
+          '<button class="tag" data-tag="'+esc(h)+'">'+esc(h)+'</button>').join("")+'</div>'
+      + '</article>').join("");
+  }
+
+  document.addEventListener("click", e=>{
+    const t=e.target.closest("[data-tag]");
+    if(t){ tagFilter = (tagFilter===t.dataset.tag)? null : t.dataset.tag;
+      sichtbar=25; zeichneFeed();
+      document.getElementById("feed").scrollIntoView({behavior:"smooth",block:"start"});
+      return; }
+    const c=e.target.closest(".chip");
+    if(c){ document.querySelectorAll(".chip").forEach(x=>
+      x.setAttribute("aria-pressed", String(x===c)));
+      filter=c.dataset.f; sichtbar=25; zeichneFeed(); }
+  });
+  $("#mehr").addEventListener("click", ()=>{ sichtbar+=25; zeichneFeed(); });
+  $("#suche").addEventListener("input", e=>{
+    suchtext=e.target.value.trim().toLowerCase(); sichtbar=25; zeichneFeed(); });
+
+  async function jsonOderNull(pfad){
+    try{ const r=await fetch(pfad,{cache:"no-store"}); if(!r.ok) return null;
+      return await r.json(); }catch(_){ return null; }
+  }
+
+  (async function start(){
+    N = await jsonOderNull("nachrichten.json");
+    T = await jsonOderNull("themen.json");
+    if(!N || !T){
+      $("#feed-liste").innerHTML='<p class="leer">Die Datendateien fehlen. '
+        +'Erst <code>werkzeuge/sammeln.py</code> laufen lassen.</p>'; return;
+    }
+    (T.beobachtet||[]).forEach(e=>EINTRAG[e.id]=e);
+    zeichneZahlen(); zeichneLage(); zeichneStraenge(); zeichneFeed();
+
+    const idx = await jsonOderNull("analyse/index.json");
+    const dateien = (idx && idx.artikel) ? idx.artikel : [];
+    const geladen=[];
+    for(const d of dateien.slice(0,6)){
+      const a = await jsonOderNull("analyse/"+d);
+      if(a) geladen.push(a);
+    }
+    zeichneAnalyse(geladen);
+  })();
+})();
+</script>
+</body>
+</html>

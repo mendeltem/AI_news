@@ -1,0 +1,1658 @@
+{
+ "erzeugt": "2026-08-30",
+ "quellen": {
+  "firmen": "mendeltem/AI_Companys - nvidia-oekosystem.html",
+  "firmen_stand": "2026-08-06",
+  "anwendungen": "mendeltem/ai_use_cases_overview - index.html"
+ },
+ "cluster": [
+  {
+   "n": 1,
+   "kategorie": "phys",
+   "titel_de": "Mobilität & Transport",
+   "titel_en": "Mobility & transport"
+  },
+  {
+   "n": 2,
+   "kategorie": "phys",
+   "titel_de": "Physische Ströme: Lager & Energie",
+   "titel_en": "Physical flows: warehouse & energy"
+  },
+  {
+   "n": 3,
+   "kategorie": "phys",
+   "titel_de": "Roboter am Werk: Industrie & Humanoide",
+   "titel_en": "Robots at work: industry & humanoids"
+  },
+  {
+   "n": 4,
+   "kategorie": "phys",
+   "titel_de": "Landwirtschaft",
+   "titel_en": "Agriculture"
+  },
+  {
+   "n": 5,
+   "kategorie": "phys",
+   "titel_de": "Medizin & Körper",
+   "titel_en": "Medicine & the body"
+  },
+  {
+   "n": 6,
+   "kategorie": "phys",
+   "titel_de": "Gefahrenzonen",
+   "titel_en": "Hazardous zones"
+  },
+  {
+   "n": 7,
+   "kategorie": "phys",
+   "titel_de": "Wissenschaft & Vorhersage",
+   "titel_en": "Science & forecasting"
+  },
+  {
+   "n": 8,
+   "kategorie": "soft",
+   "titel_de": "Wissensarbeit-Agenten",
+   "titel_en": "Knowledge-work agents"
+  },
+  {
+   "n": 9,
+   "kategorie": "soft",
+   "titel_de": "Systeme verteidigen: Security & Fraud",
+   "titel_en": "Defends systems: security & fraud"
+  },
+  {
+   "n": 10,
+   "kategorie": "soft",
+   "titel_de": "Backoffice & Bürokratie",
+   "titel_en": "Back office & bureaucracy"
+  },
+  {
+   "n": 11,
+   "kategorie": "infra",
+   "titel_de": "Die Stadt im Hintergrund",
+   "titel_en": "The city in the background"
+  },
+  {
+   "n": 12,
+   "kategorie": "infra",
+   "titel_de": "Enabler",
+   "titel_en": "Enablers"
+  },
+  {
+   "n": 13,
+   "kategorie": "infra",
+   "titel_de": "Das Compute- & Energie-Substrat",
+   "titel_en": "The compute & energy substrate"
+  },
+  {
+   "n": 14,
+   "kategorie": "phys",
+   "titel_de": "Consumer- & Heimroboter",
+   "titel_en": "Consumer & home robots"
+  },
+  {
+   "n": 15,
+   "kategorie": "soft",
+   "titel_de": "Medien & Unterhaltung",
+   "titel_en": "Media & entertainment"
+  }
+ ],
+ "beobachtet": [
+  {
+   "id": "NVDA",
+   "name": "NVIDIA",
+   "rolle": "GPU-Entwurf, Systeme, Software",
+   "schicht": "Chip-Entwurf",
+   "cik": "0001045810",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#NVIDIA"
+  },
+  {
+   "id": "AVGO",
+   "name": "Broadcom",
+   "rolle": "Custom-ASIC, Netzwerkchips",
+   "schicht": "Chip-Entwurf",
+   "cik": "0001730168",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Broadcom"
+  },
+  {
+   "id": "AMD",
+   "name": "AMD",
+   "rolle": "GPU- und CPU-Entwurf",
+   "schicht": "Chip-Entwurf",
+   "cik": "0000002488",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#AMD"
+  },
+  {
+   "id": "ARM",
+   "name": "Arm Holdings",
+   "rolle": "CPU-Architektur als Lizenz",
+   "schicht": "Chip-Entwurf",
+   "cik": "0001973239",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#ArmHoldings"
+  },
+  {
+   "id": "MRVL",
+   "name": "Marvell",
+   "rolle": "Custom-Silizium, Optik-DSP",
+   "schicht": "Chip-Entwurf",
+   "cik": "0001835632",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Marvell"
+  },
+  {
+   "id": "TSM",
+   "name": "TSMC",
+   "rolle": "Auftragsfertigung, CoWoS",
+   "schicht": "Fertigung",
+   "cik": null,
+   "boerse": "TAI",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#TSMC"
+  },
+  {
+   "id": "INTC",
+   "name": "Intel",
+   "rolle": "Eigene Chips und Auftragsfertigung",
+   "schicht": "Fertigung",
+   "cik": "0000050863",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Intel"
+  },
+  {
+   "id": "UMC",
+   "name": "UMC",
+   "rolle": "Auftragsfertigung reifer Knoten",
+   "schicht": "Fertigung",
+   "cik": null,
+   "boerse": "TAI",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#UMC"
+  },
+  {
+   "id": "GFS",
+   "name": "GlobalFoundries",
+   "rolle": "Auftragsfertigung Spezialknoten",
+   "schicht": "Fertigung",
+   "cik": "0001709048",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#GlobalFoundries"
+  },
+  {
+   "id": "ASML",
+   "name": "ASML",
+   "rolle": "Lithografie, EUV-Monopol",
+   "schicht": "Fertigungsanlagen",
+   "cik": "0000937966",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#ASML"
+  },
+  {
+   "id": "AMAT",
+   "name": "Applied Materials",
+   "rolle": "Beschichtung, Aetzen, Inspektion",
+   "schicht": "Fertigungsanlagen",
+   "cik": "0000006951",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#AppliedMaterials"
+  },
+  {
+   "id": "LRCX",
+   "name": "Lam Research",
+   "rolle": "Aetzen, Abscheidung, HBM-Stapel",
+   "schicht": "Fertigungsanlagen",
+   "cik": "0000707549",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#LamResearch"
+  },
+  {
+   "id": "KLAC",
+   "name": "KLA",
+   "rolle": "Prozesskontrolle, Defektpruefung",
+   "schicht": "Fertigungsanlagen",
+   "cik": "0000319201",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#KLA"
+  },
+  {
+   "id": "SKHYNIX",
+   "name": "SK hynix",
+   "rolle": "HBM-Marktfuehrer, DRAM, NAND",
+   "schicht": "Speicher",
+   "cik": null,
+   "boerse": "KSC",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#SKHynix"
+  },
+  {
+   "id": "SAMSUNG",
+   "name": "Samsung Electronics",
+   "rolle": "DRAM, NAND, eigene Fertigung",
+   "schicht": "Speicher",
+   "cik": null,
+   "boerse": "KSC",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#SamsungElectronics"
+  },
+  {
+   "id": "MU",
+   "name": "Micron",
+   "rolle": "DRAM, HBM, NAND",
+   "schicht": "Speicher",
+   "cik": "0000723125",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Micron"
+  },
+  {
+   "id": "SNDK",
+   "name": "SanDisk",
+   "rolle": "NAND-Flash",
+   "schicht": "Speicher",
+   "cik": "0002003245",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#SanDisk"
+  },
+  {
+   "id": "KIOXIA",
+   "name": "Kioxia",
+   "rolle": "NAND-Flash",
+   "schicht": "Speicher",
+   "cik": null,
+   "boerse": "JPX",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Kioxia"
+  },
+  {
+   "id": "ASE",
+   "name": "ASE Technology",
+   "rolle": "Montage und Test, groesster OSAT",
+   "schicht": "Packaging und Test",
+   "cik": null,
+   "boerse": "TAI",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#ASETechnology"
+  },
+  {
+   "id": "AMKR",
+   "name": "Amkor",
+   "rolle": "Montage und Test",
+   "schicht": "Packaging und Test",
+   "cik": "0001047127",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Amkor"
+  },
+  {
+   "id": "ANET",
+   "name": "Arista Networks",
+   "rolle": "Rechenzentrums-Switching",
+   "schicht": "Netzwerk und Optik",
+   "cik": "0001596532",
+   "boerse": "NYQ",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#AristaNetworks"
+  },
+  {
+   "id": "COHR",
+   "name": "Coherent",
+   "rolle": "Optische Transceiver, Laser",
+   "schicht": "Netzwerk und Optik",
+   "cik": "0000820318",
+   "boerse": "NYQ",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Coherent"
+  },
+  {
+   "id": "ALAB",
+   "name": "Astera Labs",
+   "rolle": "Verbindungs-Silizium",
+   "schicht": "Netzwerk und Optik",
+   "cik": "0001736946",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#AsteraLabs"
+  },
+  {
+   "id": "CRDO",
+   "name": "Credo",
+   "rolle": "Serdes, aktive Kupferkabel",
+   "schicht": "Netzwerk und Optik",
+   "cik": "0001807794",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Credo"
+  },
+  {
+   "id": "DELL",
+   "name": "Dell Technologies",
+   "rolle": "Server, KI-Fabriken",
+   "schicht": "Systeme",
+   "cik": "0001571996",
+   "boerse": "NYQ",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#DellTechnologies"
+  },
+  {
+   "id": "SMCI",
+   "name": "Super Micro",
+   "rolle": "Server, Fluessigkuehlung",
+   "schicht": "Systeme",
+   "cik": "0001375365",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#SuperMicro"
+  },
+  {
+   "id": "HONHAI",
+   "name": "Hon Hai (Foxconn)",
+   "rolle": "Auftragsmontage der KI-Racks",
+   "schicht": "Systeme",
+   "cik": null,
+   "boerse": "TAI",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#HonHaiFoxconn"
+  },
+  {
+   "id": "VRT",
+   "name": "Vertiv",
+   "rolle": "Kuehlung, Rack-Stromversorgung",
+   "schicht": "Strom und Kuehlung",
+   "cik": "0001674101",
+   "boerse": "NYQ",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Vertiv"
+  },
+  {
+   "id": "GEV",
+   "name": "GE Vernova",
+   "rolle": "Turbinen, Netztechnik",
+   "schicht": "Strom und Kuehlung",
+   "cik": "0001996810",
+   "boerse": "NYQ",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#GEVernova"
+  },
+  {
+   "id": "MPWR",
+   "name": "Monolithic Power",
+   "rolle": "Leistungshalbleiter fuer Racks",
+   "schicht": "Strom und Kuehlung",
+   "cik": "0001280452",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#MonolithicPower"
+  },
+  {
+   "id": "MSFT",
+   "name": "Microsoft",
+   "rolle": "Azure, Beteiligung an OpenAI",
+   "schicht": "Cloud und Betrieb",
+   "cik": "0000789019",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Microsoft"
+  },
+  {
+   "id": "GOOGL",
+   "name": "Alphabet",
+   "rolle": "Google Cloud, eigene TPU",
+   "schicht": "Cloud und Betrieb",
+   "cik": "0001652044",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Alphabet"
+  },
+  {
+   "id": "AMZN",
+   "name": "Amazon",
+   "rolle": "AWS, eigenes Trainium",
+   "schicht": "Cloud und Betrieb",
+   "cik": "0001018724",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Amazon"
+  },
+  {
+   "id": "META",
+   "name": "Meta Platforms",
+   "rolle": "Eigene Rechenzentren, MTIA",
+   "schicht": "Cloud und Betrieb",
+   "cik": "0001326801",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#MetaPlatforms"
+  },
+  {
+   "id": "ORCL",
+   "name": "Oracle",
+   "rolle": "OCI, Vermietung an KI-Labore",
+   "schicht": "Cloud und Betrieb",
+   "cik": "0001341439",
+   "boerse": "NYQ",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Oracle"
+  },
+  {
+   "id": "CRWV",
+   "name": "CoreWeave",
+   "rolle": "GPU-Vermietung, Neocloud",
+   "schicht": "Cloud und Betrieb",
+   "cik": "0001769628",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#CoreWeave"
+  },
+  {
+   "id": "NBIS",
+   "name": "Nebius",
+   "rolle": "GPU-Vermietung, Europa",
+   "schicht": "Cloud und Betrieb",
+   "cik": "0001731348",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Nebius"
+  },
+  {
+   "id": "SONY",
+   "name": "Sony Group",
+   "rolle": "SPAD-Detektor, Bildsensoren",
+   "schicht": "Licht und Detektor",
+   "cik": null,
+   "boerse": "JPX",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#SonyGroup"
+  },
+  {
+   "id": "AMSOSR",
+   "name": "ams OSRAM",
+   "rolle": "VCSEL-Laser, dToF-Module",
+   "schicht": "Licht und Detektor",
+   "cik": null,
+   "boerse": "EBS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#AmsOSRAM"
+  },
+  {
+   "id": "LITE",
+   "name": "Lumentum",
+   "rolle": "Hochleistungslaser, VCSEL",
+   "schicht": "Licht und Detektor",
+   "cik": "0001633978",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Lumentum"
+  },
+  {
+   "id": "STM",
+   "name": "STMicroelectronics",
+   "rolle": "SPAD-Detektoren, Fertigung",
+   "schicht": "Licht und Detektor",
+   "cik": "0000932787",
+   "boerse": "NYQ",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#STMicroelectronics"
+  },
+  {
+   "id": "ON",
+   "name": "onsemi",
+   "rolle": "SiPM- und SPAD-Arrays",
+   "schicht": "Licht und Detektor",
+   "cik": "0001097864",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Onsemi"
+  },
+  {
+   "id": "HSAI",
+   "name": "Hesai Group",
+   "rolle": "LiDAR, Volumenfuehrer",
+   "schicht": "LiDAR-Systeme",
+   "cik": "0001861737",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#HesaiGroup"
+  },
+  {
+   "id": "ROBOSENSE",
+   "name": "RoboSense",
+   "rolle": "LiDAR, Robotik-Marktfuehrer",
+   "schicht": "LiDAR-Systeme",
+   "cik": null,
+   "boerse": "HKG",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#RoboSense"
+  },
+  {
+   "id": "OUST",
+   "name": "Ouster",
+   "rolle": "LiDAR fuer Industrie, Robotik",
+   "schicht": "LiDAR-Systeme",
+   "cik": "0001816581",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Ouster"
+  },
+  {
+   "id": "AEVA",
+   "name": "Aeva Technologies",
+   "rolle": "FMCW-LiDAR mit Tempomessung",
+   "schicht": "LiDAR-Systeme",
+   "cik": "0001789029",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#AevaTechnologies"
+  },
+  {
+   "id": "INVZ",
+   "name": "Innoviz",
+   "rolle": "Solid-State-LiDAR",
+   "schicht": "LiDAR-Systeme",
+   "cik": "0001835654",
+   "boerse": "NCM",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Innoviz"
+  },
+  {
+   "id": "MBLY",
+   "name": "Mobileye",
+   "rolle": "Fahrassistenz, Wahrnehmung",
+   "schicht": "Edge-Gehirn",
+   "cik": "0001910139",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Mobileye"
+  },
+  {
+   "id": "AMBA",
+   "name": "Ambarella",
+   "rolle": "Edge-KI-Chips fuer Kameras",
+   "schicht": "Edge-Gehirn",
+   "cik": "0001280263",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Ambarella"
+  },
+  {
+   "id": "QCOM",
+   "name": "Qualcomm",
+   "rolle": "Sparsame Roboter-Recheneinheit",
+   "schicht": "Edge-Gehirn",
+   "cik": "0000804328",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Qualcomm"
+  },
+  {
+   "id": "ABB",
+   "name": "ABB",
+   "rolle": "Industrieroboter, Antriebe",
+   "schicht": "Aktoren und Roboter",
+   "cik": null,
+   "boerse": "PNK",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#ABB"
+  },
+  {
+   "id": "ISRG",
+   "name": "Intuitive Surgical",
+   "rolle": "Chirurgieroboter",
+   "schicht": "Aktoren und Roboter",
+   "cik": "0001035267",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#IntuitiveSurgical"
+  },
+  {
+   "id": "AAPL",
+   "name": "Apple",
+   "rolle": "Endgeraete, kaum KI-Infrastruktur",
+   "schicht": "Endgeraete",
+   "cik": "0000320193",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Apple"
+  },
+  {
+   "id": "SDGR",
+   "name": "Schroedinger",
+   "rolle": "Physik- und ML-Software fuer Molekuele",
+   "schicht": "Wirkstoffsuche",
+   "cik": "0001490978",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Schroedinger"
+  },
+  {
+   "id": "CERT",
+   "name": "Certara",
+   "rolle": "Biosimulation fuer Zulassungsdossiers",
+   "schicht": "Wirkstoffsuche",
+   "cik": "0001827090",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Certara"
+  },
+  {
+   "id": "SLP",
+   "name": "Simulations Plus",
+   "rolle": "Biosimulation, Nischenanbieter",
+   "schicht": "Wirkstoffsuche",
+   "cik": "0001023459",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#SimulationsPlus"
+  },
+  {
+   "id": "TEM",
+   "name": "Tempus AI",
+   "rolle": "Klinische Daten und Diagnostik",
+   "schicht": "Wirkstoffsuche",
+   "cik": "0001717115",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#TempusAI"
+  },
+  {
+   "id": "RXRX",
+   "name": "Recursion",
+   "rolle": "KI-erst-Wirkstoffsuche, eigene Pipeline",
+   "schicht": "Wirkstoffsuche",
+   "cik": "0001601830",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Recursion"
+  },
+  {
+   "id": "LLY",
+   "name": "Eli Lilly",
+   "rolle": "Pharma, kauft Rechenzeit und Modelle",
+   "schicht": "Wirkstoffsuche",
+   "cik": "0000059478",
+   "boerse": "NYQ",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#EliLilly"
+  },
+  {
+   "id": "PLTR",
+   "name": "Palantir",
+   "rolle": "Agentenplattform fuer Behoerden, Industrie",
+   "schicht": "Anwendung und Erloes",
+   "cik": "0001321655",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Palantir"
+  },
+  {
+   "id": "APP",
+   "name": "AppLovin",
+   "rolle": "KI-Werbemaschine, Auktionsmodelle",
+   "schicht": "Anwendung und Erloes",
+   "cik": "0001751008",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#AppLovin"
+  },
+  {
+   "id": "NOW",
+   "name": "ServiceNow",
+   "rolle": "Arbeitsablaeufe mit Agenten",
+   "schicht": "Anwendung und Erloes",
+   "cik": "0001373715",
+   "boerse": "NYQ",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#ServiceNow"
+  },
+  {
+   "id": "CRM",
+   "name": "Salesforce",
+   "rolle": "Vertriebssoftware, Agentforce",
+   "schicht": "Anwendung und Erloes",
+   "cik": "0001108524",
+   "boerse": "NYQ",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Salesforce"
+  },
+  {
+   "id": "INTU",
+   "name": "Intuit",
+   "rolle": "Steuer- und Buchhaltung mit Agenten",
+   "schicht": "Anwendung und Erloes",
+   "cik": "0000896878",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Intuit"
+  },
+  {
+   "id": "DUOL",
+   "name": "Duolingo",
+   "rolle": "Sprachkurse, KI-Abostufen",
+   "schicht": "Anwendung und Erloes",
+   "cik": "0001562088",
+   "boerse": "NMS",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#Duolingo"
+  },
+  {
+   "id": "HPE",
+   "name": "Hewlett Packard Enterprise",
+   "rolle": "Server, Netzwerk, KI-Systeme",
+   "schicht": "Systeme (weitere)",
+   "cik": "0001645590",
+   "boerse": "NYQ",
+   "stufe": 1,
+   "art": "boersennotiert",
+   "hashtag": "#HewlettPackardEnterprise"
+  },
+  {
+   "id": "OPENAI",
+   "name": "OpenAI",
+   "rolle": "GPT, groesster Einzelabnehmer von Rechenzeit",
+   "schicht": "KI-Labor",
+   "stufe": 1,
+   "art": "privat",
+   "hashtag": "#OpenAI"
+  },
+  {
+   "id": "ANTHROPIC",
+   "name": "Anthropic",
+   "rolle": "Claude, Coding-Agenten",
+   "schicht": "KI-Labor",
+   "stufe": 1,
+   "art": "privat",
+   "hashtag": "#Anthropic"
+  },
+  {
+   "id": "XAI",
+   "name": "xAI",
+   "rolle": "Grok, eigenes Rechenzentrum Colossus",
+   "schicht": "KI-Labor",
+   "stufe": 1,
+   "art": "privat",
+   "hashtag": "#xAI"
+  },
+  {
+   "id": "MISTRAL_AI",
+   "name": "Mistral AI",
+   "rolle": "offene Modelle, Europa",
+   "schicht": "KI-Labor",
+   "stufe": 1,
+   "art": "privat",
+   "hashtag": "#MistralAI"
+  },
+  {
+   "id": "SAFE_SUPERINTELLIGENCE",
+   "name": "Safe Superintelligence",
+   "rolle": "Forschung, kein Produkt",
+   "schicht": "KI-Labor",
+   "stufe": 1,
+   "art": "privat",
+   "hashtag": "#SafeSuperintelligence"
+  },
+  {
+   "id": "DEEPSEEK",
+   "name": "DeepSeek",
+   "rolle": "offene Modelle, China",
+   "schicht": "KI-Labor",
+   "stufe": 1,
+   "art": "privat",
+   "hashtag": "#DeepSeek"
+  },
+  {
+   "id": "ISOMORPHIC_LABS",
+   "name": "Isomorphic Labs",
+   "rolle": "Wirkstoffsuche, gehoert Alphabet",
+   "schicht": "KI-Labor",
+   "stufe": 1,
+   "art": "privat",
+   "hashtag": "#IsomorphicLabs"
+  },
+  {
+   "id": "INSILICO",
+   "name": "Insilico",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    5,
+    7
+   ],
+   "reife": [
+    "early",
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Insilico"
+  },
+  {
+   "id": "SIEMENS",
+   "name": "Siemens",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    11,
+    12
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Siemens"
+  },
+  {
+   "id": "AMP_ROBOTICS",
+   "name": "AMP Robotics",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    11
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#AMPRobotics"
+  },
+  {
+   "id": "ABNORMAL_SECURITY",
+   "name": "Abnormal Security",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    9
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#AbnormalSecurity"
+  },
+  {
+   "id": "ABRIDGE",
+   "name": "Abridge",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    10
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Abridge"
+  },
+  {
+   "id": "ADONIS",
+   "name": "Adonis",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    10
+   ],
+   "reife": [
+    "early"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Adonis"
+  },
+  {
+   "id": "AEROVIRONMENT",
+   "name": "AeroVironment",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    6
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#AeroVironment"
+  },
+  {
+   "id": "AETHON_TUG",
+   "name": "Aethon TUG",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    5
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#AethonTUG"
+  },
+  {
+   "id": "AGENTFORCE",
+   "name": "Agentforce",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    8
+   ],
+   "reife": [
+    "early"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Agentforce"
+  },
+  {
+   "id": "AGIBOT",
+   "name": "AgiBot",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    3
+   ],
+   "reife": [
+    "early"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#AgiBot"
+  },
+  {
+   "id": "AGROBOT",
+   "name": "Agrobot",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    4
+   ],
+   "reife": [
+    "early"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Agrobot"
+  },
+  {
+   "id": "ALPHAFOLD_DEEPMIND",
+   "name": "AlphaFold (DeepMind",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    7
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#AlphaFoldDeepMind"
+  },
+  {
+   "id": "ALPHAFOLD3",
+   "name": "AlphaFold3",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    7
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#AlphaFold3"
+  },
+  {
+   "id": "ALTERA",
+   "name": "Altera",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    13
+   ],
+   "reife": [
+    "early"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Altera"
+  },
+  {
+   "id": "AMAZON_ROBOTICS",
+   "name": "Amazon Robotics",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    2
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#AmazonRobotics"
+  },
+  {
+   "id": "AMBIENCE",
+   "name": "Ambience",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    10
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Ambience"
+  },
+  {
+   "id": "ANDROID_EARTHQUAKE_ALERT",
+   "name": "Android Earthquake Alerts",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    6
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#AndroidEarthquakeAlerts"
+  },
+  {
+   "id": "ANDURIL",
+   "name": "Anduril",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    6
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Anduril"
+  },
+  {
+   "id": "ARCELORMITTAL",
+   "name": "ArcelorMittal",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    3
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#ArcelorMittal"
+  },
+  {
+   "id": "ARCHER",
+   "name": "Archer",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    1
+   ],
+   "reife": [
+    "early"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Archer"
+  },
+  {
+   "id": "ARMIS",
+   "name": "Armis",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    9
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Armis"
+  },
+  {
+   "id": "AURORA",
+   "name": "Aurora",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    1
+   ],
+   "reife": [
+    "early"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Aurora"
+  },
+  {
+   "id": "AUTOGRID",
+   "name": "AutoGrid",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    2
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#AutoGrid"
+  },
+  {
+   "id": "AYAR_LABS",
+   "name": "Ayar Labs",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    13
+   ],
+   "reife": [
+    "early"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#AyarLabs"
+  },
+  {
+   "id": "BASF",
+   "name": "BASF",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    3
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#BASF"
+  },
+  {
+   "id": "BHP",
+   "name": "BHP",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    2
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#BHP"
+  },
+  {
+   "id": "BAIDU_APOLLO_GO",
+   "name": "Baidu Apollo Go",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    1
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#BaiduApolloGo"
+  },
+  {
+   "id": "BASWARE",
+   "name": "Basware",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    10
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Basware"
+  },
+  {
+   "id": "BETTERMENT",
+   "name": "Betterment",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    10
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Betterment"
+  },
+  {
+   "id": "BIONTECH_GENENTECH",
+   "name": "BioNTech/Genentech",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    5
+   ],
+   "reife": [
+    "early"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#BioNTechGenentech"
+  },
+  {
+   "id": "BLACKROCK_ALADDIN",
+   "name": "BlackRock Aladdin",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    10
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#BlackRockAladdin"
+  },
+  {
+   "id": "BOLTZ",
+   "name": "Boltz",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    7
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Boltz"
+  },
+  {
+   "id": "BOSTON_DYNAMICS_SPOT",
+   "name": "Boston Dynamics Spot",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    6
+   ],
+   "reife": [
+    "pilot"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#BostonDynamicsSpot"
+  },
+  {
+   "id": "BRAINBOX_AI",
+   "name": "BrainBox AI",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    11
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#BrainBoxAI"
+  },
+  {
+   "id": "BUILT_ROBOTICS",
+   "name": "Built Robotics",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    3
+   ],
+   "reife": [
+    "pilot"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#BuiltRobotics"
+  },
+  {
+   "id": "C3_AI",
+   "name": "C3 AI",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    2
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#C3AI"
+  },
+  {
+   "id": "CMU_SURTRAC",
+   "name": "CMU Surtrac",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    11
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#CMUSurtrac"
+  },
+  {
+   "id": "CADENCE_CHIPSTACK",
+   "name": "Cadence ChipStack",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    13
+   ],
+   "reife": [
+    "early"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#CadenceChipStack"
+  },
+  {
+   "id": "CARBON_MAPPER",
+   "name": "Carbon Mapper",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    7
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#CarbonMapper"
+  },
+  {
+   "id": "CARBON_ROBOTICS",
+   "name": "Carbon Robotics",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    4
+   ],
+   "reife": [
+    "early"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#CarbonRobotics"
+  },
+  {
+   "id": "CATERPILLAR",
+   "name": "Caterpillar",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    2
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Caterpillar"
+  },
+  {
+   "id": "CLAROTY",
+   "name": "Claroty",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    9
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Claroty"
+  },
+  {
+   "id": "CLAUDE",
+   "name": "Claude",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    8
+   ],
+   "reife": [
+    "early"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Claude"
+  },
+  {
+   "id": "CLAUDE_CODE",
+   "name": "Claude Code",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    8
+   ],
+   "reife": [
+    "prod"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#ClaudeCode"
+  },
+  {
+   "id": "CLAY",
+   "name": "Clay",
+   "rolle": "",
+   "schicht": "Anwendung",
+   "cluster": [
+    8
+   ],
+   "reife": [
+    "early"
+   ],
+   "stufe": 2,
+   "art": "anwendung",
+   "hashtag": "#Clay"
+  },
+  {
+   "id": "HBM",
+   "name": "HBM",
+   "schicht": "Speicher",
+   "suchen": [
+    "HBM4",
+    "HBM Preis",
+    "HBM Kapazitaet"
+   ],
+   "stufe": 1,
+   "art": "thema",
+   "hashtag": "#HBM"
+  },
+  {
+   "id": "DRAM",
+   "name": "DRAM",
+   "schicht": "Speicher",
+   "suchen": [
+    "DRAM Preis",
+    "DRAM Kontraktpreis",
+    "DDR5 Preis"
+   ],
+   "stufe": 1,
+   "art": "thema",
+   "hashtag": "#DRAM"
+  },
+  {
+   "id": "NAND",
+   "name": "NAND",
+   "schicht": "Speicher",
+   "suchen": [
+    "NAND Preis",
+    "NAND Flash Nachfrage",
+    "eSSD"
+   ],
+   "stufe": 1,
+   "art": "thema",
+   "hashtag": "#NAND"
+  },
+  {
+   "id": "COWOS",
+   "name": "CoWoS",
+   "schicht": "Packaging",
+   "suchen": [
+    "CoWoS Kapazitaet",
+    "Advanced Packaging"
+   ],
+   "stufe": 1,
+   "art": "thema",
+   "hashtag": "#CoWoS"
+  },
+  {
+   "id": "RECHENZENTRUM_STROM",
+   "name": "Rechenzentrum-Strom",
+   "schicht": "Energie",
+   "suchen": [
+    "Rechenzentrum Netzanschluss",
+    "data center power constraint"
+   ],
+   "stufe": 1,
+   "art": "thema",
+   "hashtag": "#RechenzentrumStrom"
+  },
+  {
+   "id": "NVIDIA_ARCHITEKTUR",
+   "name": "NVIDIA-Architektur",
+   "schicht": "Silizium",
+   "suchen": [
+    "Rubin GPU",
+    "Vera Rubin",
+    "Blackwell Ultra",
+    "Feynman GPU"
+   ],
+   "stufe": 1,
+   "art": "thema",
+   "hashtag": "#NVIDIAArchitektur"
+  },
+  {
+   "id": "EXPORTKONTROLLE",
+   "name": "Exportkontrolle",
+   "schicht": "Politik",
+   "suchen": [
+    "Chip Exportkontrolle China",
+    "semiconductor export restriction"
+   ],
+   "stufe": 1,
+   "art": "thema",
+   "hashtag": "#Exportkontrolle"
+  }
+ ]
+}
