@@ -66,6 +66,14 @@ sind das 40 % der Rohtreffer.
 | `werkzeuge/schreiben.py` | der Modell-Lauf |
 | `werkzeuge/taeglich.cmd` | was die Aufgabenplanung startet |
 
+`lauf.log` steht bewusst **nicht** im Repo — es wird nach dem Commit
+weitergeschrieben und hielte den Arbeitsbaum sonst dauerhaft schmutzig.
+
+Rückgabewerte von `taeglich.cmd`: `0` fertig und gepusht · `1` Sammeln
+fehlgeschlagen, alter Stand bleibt · `2` Modell war aus, gepusht ohne deutsche
+Zeilen · `3` Push nach drei Versuchen fehlgeschlagen, der Commit liegt lokal und
+der nächste Lauf schiebt ihn mit.
+
 ## Selbst laufen lassen
 
 ```bash
