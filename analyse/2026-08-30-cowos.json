@@ -1,0 +1,40 @@
+{
+ "tag": "2026-08-30",
+ "titel": "CoWoS: der Flaschenhals weitet sich, aber die Nachfrage laeuft ihm davon",
+ "autor": "Redaktion",
+ "hashtags": ["#CoWoS", "#TSMC", "#NVIDIA", "#ASETechnology", "#Amkor", "#HBM"],
+ "bezug": ["COWOS", "TSM", "NVDA", "ASE", "AMKR", "HBM", "NVIDIA_ARCHITEKTUR"],
+ "absaetze": [
+  {"art": "absatz", "text": "Die Oekosystem-Seite fuehrt Packaging und Test als kleinste Schicht der ganzen Kette &mdash; zwei Firmen, zusammen keine 100 Milliarden Dollar Marktwert, elf Prozent operative Marge. Und sie stellt gleich daneben fest, dass diese Schicht &bdquo;direkt die Zahl lieferbarer Beschleuniger deckelt&ldquo;. Genau dazu gibt es jetzt Zahlen, und sie sind bemerkenswert eindeutig."},
+
+  {"art": "zwischentitel", "text": "Die Kapazitaet verdoppelt sich, und das reicht nicht"},
+
+  {"art": "absatz", "text": "TSMCs monatliche CoWoS-Kapazitaet lag 2025 bei rund <strong>70.000 Wafern</strong>. Bis Ende 2026 soll sie auf <strong>120.000 bis 140.000</strong> steigen, fuer 2027 kursieren Zahlen von 170.000 bis mindestens 200.000. Die OSAT-Partner ASE/SPIL und Amkor legen weitere 50.000 bis 60.000 im Monat drauf. Das ist, gemessen an der Traegheit von Halbleiterfertigung, ein brachialer Ausbau."},
+
+  {"art": "absatz", "text": "Und er reicht trotzdem nicht. Die weltweite CoWoS-Nachfrage soll sich von <strong>1,3 bis 1,4 Millionen Wafern 2026 auf 2,5 bis 2,7 Millionen 2027</strong> etwa verdoppeln. TrendForce sieht die Luecke zwischen Angebot und Nachfrage bis Ende 2026 von 20 auf 10 Prozent schrumpfen &mdash; das ist die gute Nachricht, aber sie heisst eben auch: die Luecke bleibt. CoWoS ist 2026 ausverkauft, und Nvidia hat Berichten zufolge <strong>mehr als die Haelfte</strong> der Kapazitaet fuer 2026 und 2027 gebucht."},
+
+  {"art": "kasten", "text": "Der Satz, der die Kette erklaert: Ein Beschleuniger ohne CoWoS-Platz ist kein Beschleuniger, sondern ein Die im Regal. Deshalb ist die kleinste und margenschwaechste Schicht der Lieferkette diejenige, die den Takt vorgibt &mdash; nicht die Lithografie, nicht der Speicher."},
+
+  {"art": "zwischentitel", "text": "Was tatsaechlich neu ist"},
+
+  {"art": "absatz", "text": "<strong>Erstens: TSMC gibt Arbeit ab.</strong> Fuer 2026 sollen 240.000 bis 270.000 Wafer jaehrlich an OSAT-Partner gehen &mdash; geschaetzt 180.000 bis 190.000 an Amkor, 60.000 bis 80.000 an SPIL. Im Juni 2026 haben Amkor und TSMC dazu eine <strong>Zehnjahresvereinbarung</strong> geschlossen. Das ist ein Bruch mit dem bisherigen Muster: TSMC hat fortgeschrittenes Packaging als Differenzierungsmerkmal immer im Haus behalten."},
+
+  {"art": "absatz", "text": "<strong>Zweitens: ASE baut sechs Werke gleichzeitig.</strong> 2026 beginnt der Bau an sechs Standorten parallel &mdash; die groesste Ausbaustufe der Firmengeschichte. Die CoWoS-Kapazitaet soll von 20.000 Wafern monatlich Ende 2026 auf 40.000 bis 45.000 Ende 2027 steigen. Fuer eine Firma mit elf Prozent operativer Marge ist das eine erhebliche Wette."},
+
+  {"art": "absatz", "text": "<strong>Drittens, und technisch am interessantesten: CoPoS.</strong> TSMC treibt Chip-on-Panel-on-Substrate voran &mdash; Packaging auf rechteckigen Panels statt auf runden Wafern. Ein Panel nutzt die Flaeche deutlich besser aus als ein Wafer, an dem die Ecken fehlen. Das ist der eigentliche Weg aus dem Flaschenhals, und TSMC versucht ihn sich exklusiv zu sichern."},
+
+  {"art": "zwischentitel", "text": "Warum Rubin das Problem verschaerft"},
+
+  {"art": "absatz", "text": "Rubin kombiniert <strong>CoWoS-L mit SoIC</strong>, also 2.5D-Verbindung plus echtes 3D-Stapeln. Jede zusaetzliche Stufe im Packaging kostet Durchsatz und Ausbeute. Auf der Roadmap steht Rubin Ultra 2027 mit <em>vier</em> retikelgrossen Dies pro Paket und Feynman 2028 mit gestapelten Dies &mdash; die Richtung ist eindeutig: Jede Generation braucht pro Beschleuniger mehr Packaging-Aufwand, nicht weniger."},
+
+  {"art": "absatz", "text": "Das ist die Verbindung zum NVHBM-Artikel von heute frueh, und sie ist unbequem. Nvidias eigener HBM-Unterbau bringt 25 Prozent mehr nutzbare Rechenflaeche &mdash; aber diese Flaeche muss verpackt werden. Effizienzgewinne beim Speicher landen als Mehrbedarf beim Packaging. Die beiden Engpaesse verschieben sich gegeneinander, sie loesen sich nicht auf."},
+
+  {"art": "zwischentitel", "text": "Was ich davon halte"},
+
+  {"art": "absatz", "text": "Der Ausbau ist echt und gross, aber er ist eine Aufholjagd, keine Entspannung. Interessanter als die Kapazitaetszahlen finde ich die Auslagerung: Wenn TSMC nach Jahren der Abschottung eine Zehnjahresvereinbarung mit Amkor unterschreibt, heisst das entweder, dass die Nachfrage die eigene Ausbaufaehigkeit uebersteigt &mdash; oder dass CoWoS auf dem Weg ist, vom Alleinstellungsmerkmal zur Massenware zu werden, waehrend TSMC die Differenzierung schon auf CoPoS verlagert. Beides waere fuer ASE und Amkor eine gute Nachricht, aber aus voellig verschiedenen Gruenden, und mit sehr verschiedener Haltbarkeit."},
+
+  {"art": "absatz", "text": "<strong>Woran man merken wuerde, dass ich falsch liege:</strong> Wenn die 2027er-Nachfragezahl von 2,5 Millionen Wafern eine Extrapolation aus Bestellungen ist, die nie abgerufen werden, kippt der Markt von Knappheit in Ueberkapazitaet &mdash; sechs gleichzeitig gebaute ASE-Werke waeren dann ein Klassiker der Halbleiterzyklik. Und wenn CoPoS frueher traegt als erwartet, ist die ganze Wafer-Rechnerei ab 2028 hinfaellig."},
+
+  {"art": "absatz", "text": "<strong>Vorbehalt:</strong> Fast keine dieser Zahlen stammt von TSMC, ASE oder Amkor selbst. Es sind Analystenschaetzungen und Berichte von DigiTimes, TrendForce und taiwanischen Brokern &mdash; in diesem Feld traditionell gut informiert, aber regelmaessig um zweistellige Prozentsaetze daneben. Die Groessenordnung stimmt vermutlich, die zweite Stelle nicht."}
+ ]
+}
