@@ -1,117 +1,122 @@
 {
  "tag": "2026-08-30",
- "lage": "- Micron-Mitarbeiter unterstützen den Streik zunehmend, während Samsung und SK hynix hohe Bonuszahlungen leisten.\n- Kioxia und SanDisk planen bis 2032 Investitionen von über 31 Milliarden US-Dollar in japanische NAND-Fabriken.\n- Intel hat sein NAND-Speicher-Geschäft für rund 9 Milliarden US-Dollar verkauft und ist nun weniger wert als Micron.\n- Bedrohungsakteure geben sich als KI-Unternehmen aus, um Zugangsdaten zu erbeuten, und Marvell-Aktien fallen aufgrund verzögerter Gewinne.\n- Alphabet profitiert von steigenden Cloud-Einnahmen, während Amazon und Anthropic Millionen von Büchern für KI-Trainingsdaten löschen.",
+ "lage": "- SK hynix treibt Hybridbonding für HBM5 voran und verlängert MR-MUF für Nvidia Rubin, während Samsung und SK hynix vom Serverumsatzanstieg profitieren und HBM-Preise 2027 stark steigen könnten.\n- OpenAIs 700W Jalapeño-ASIC übertrifft Nvidia Blackwell in Effizienz und Latenz, und SpaceXAI plant den Einsatz von Nvidia Vera-Rubin-CPUs für KI-Workloads im Weltraum.\n- Nvidia plant Preiserhöhungen von über 15 % für Vera-Rubin- und Grace-Blackwell-Server ab 2027 und präsentiert mit NVHBM sowie dem GB300 DGX Station neue High-End-Produkte.\n- TSMC-Verpackungsänderungen könnten AMDs CoWoS-Anteil erhöhen und Nvidias Zuteilung kürzen, während Marvell das Recycling von DDR4 für CXL-Speicher empfiehlt.\n- Die indische KI-Branche bestellt 9.000 Nvidia Vera Rubin Systeme, und Speicherpreise werden 2027 einen großen Teil der CapEx der großen Cloud-Anbieter ausmachen.",
  "straenge": {
   "#NVIDIA": [
-   "3b7f223f94f17c8f",
-   "f016a257e8d2ac24",
-   "f582415cd9f8ea18",
-   "c548665867c5e909",
-   "cabf7f442c0f54db",
-   "8df1d806909cb0c5",
-   "d68d1e330aba23aa",
-   "81d51d1d5fe96d00",
-   "c423e03d63b50921",
-   "1142b2dc8a0af707",
-   "459fb0889db60775"
-  ],
-  "#Amazon": [
-   "d791cc40191dc020",
-   "49bba32bab14d370",
-   "0ee5e08f47690406",
-   "fa84663920720927",
-   "0ead9fab51f45c5b",
-   "4075db8c9d235c13",
-   "c548665867c5e909",
-   "cabf7f442c0f54db",
-   "8df1d806909cb0c5",
-   "f40ec95108ad468b"
-  ],
-  "#Apple": [
-   "752308a8d26d33fa",
-   "49bba32bab14d370",
-   "0ee5e08f47690406",
-   "4075db8c9d235c13",
-   "f40ec95108ad468b",
-   "2e473e69a91bc78b",
-   "cfe7d944bd2127c3"
-  ],
-  "#SKHynix": [
-   "68f4bc713d57d489",
-   "2e64468bff954ae8",
-   "de5931dcf7f479e3",
-   "c905b594bc0c3c4c",
-   "798b028bf3ec891a"
-  ],
-  "#NAND": [
-   "dd92bc3f2f98f8d2",
-   "68471e263c056d01",
-   "2e64468bff954ae8",
-   "4e7358474de6a26c",
-   "837088a62031b4c8"
-  ],
-  "#Anthropic": [
-   "d791cc40191dc020",
-   "9510541d7b426747",
-   "8b045c54c254cbc6",
-   "e92ec5bbf6dd061d",
-   "46f6806788bb29f9"
-  ],
-  "#Micron": [
-   "68f4bc713d57d489",
-   "4e7358474de6a26c",
-   "837088a62031b4c8",
-   "925754230a8fc961"
-  ],
-  "#SanDisk": [
-   "dd92bc3f2f98f8d2",
-   "68471e263c056d01",
-   "925754230a8fc961"
-  ],
-  "#Marvell": [
-   "e60bc376c2400744",
-   "f016a257e8d2ac24",
-   "9d30f9635b6b5ba5"
-  ],
-  "#Microsoft": [
-   "752308a8d26d33fa",
-   "fa84663920720927",
-   "0ead9fab51f45c5b"
-  ],
-  "#Intel": [
-   "4e7358474de6a26c",
-   "f016a257e8d2ac24",
-   "837088a62031b4c8"
-  ],
-  "#OpenAI": [
-   "9510541d7b426747",
-   "62d6651d9ba63a4c",
-   "a40f50a0896fd65c"
-  ],
-  "#SamsungElectronics": [
-   "de5931dcf7f479e3",
-   "c905b594bc0c3c4c",
-   "798b028bf3ec891a"
-  ],
-  "#Kioxia": [
-   "dd92bc3f2f98f8d2",
-   "68471e263c056d01"
-  ],
-  "#Alphabet": [
-   "fa84663920720927",
-   "0ead9fab51f45c5b"
-  ],
-  "#Broadcom": [
-   "f582415cd9f8ea18",
-   "c423e03d63b50921"
+   "69f9793c2a37fde7",
+   "7e1d419438bec7ad",
+   "a71e2af5a019847d",
+   "258d1614aaa69a9f",
+   "ca56eea9b7a4f444",
+   "115f1796a66c5932",
+   "2e1cb3e7e860f22b",
+   "3da6e494f4a6eba1",
+   "1b7ec84d74329d8b",
+   "874f7c696ccd51f2",
+   "53c646c906df43ae",
+   "a728431d80fa81aa",
+   "af6da61ee2ef9818",
+   "e8d1e3df2f53245b",
+   "f3899a87d5176bb6",
+   "1422711407779586",
+   "f212713c6f592591",
+   "4038c7ab3800b192",
+   "cb914baab8d6b6fe",
+   "1048d511cdda1d45",
+   "142678eb95ac2cff",
+   "ff19d4f28bbb6145",
+   "a8ad8abbbd8d1362",
+   "45f707ae81384269",
+   "b5c76812a7666c86",
+   "407d97efc33de247",
+   "f4841312f5b47ac5",
+   "d9eaa533599c1467",
+   "bbec15430d924056"
   ],
   "#NVIDIAArchitektur": [
-   "81d51d1d5fe96d00",
-   "3406c3862fe005d7"
+   "69f9793c2a37fde7",
+   "a71e2af5a019847d",
+   "115f1796a66c5932",
+   "2e1cb3e7e860f22b",
+   "3da6e494f4a6eba1",
+   "1b7ec84d74329d8b",
+   "874f7c696ccd51f2",
+   "53c646c906df43ae",
+   "a728431d80fa81aa",
+   "af6da61ee2ef9818",
+   "cb914baab8d6b6fe",
+   "142678eb95ac2cff",
+   "a8ad8abbbd8d1362",
+   "45f707ae81384269",
+   "b5c76812a7666c86",
+   "407d97efc33de247",
+   "bbec15430d924056"
+  ],
+  "#HBM": [
+   "7e1d419438bec7ad",
+   "115f1796a66c5932",
+   "11d2900e9ec2c84b",
+   "10c9500a4a17821a",
+   "f212713c6f592591",
+   "4038c7ab3800b192",
+   "1048d511cdda1d45",
+   "b7eda34e51fb5d37",
+   "5a7e4ad3fcd03be3",
+   "f4841312f5b47ac5",
+   "d9eaa533599c1467",
+   "bbec15430d924056"
+  ],
+  "#SKHynix": [
+   "69f9793c2a37fde7",
+   "7e1d419438bec7ad",
+   "11d2900e9ec2c84b",
+   "b7eda34e51fb5d37",
+   "ff19d4f28bbb6145",
+   "5a7e4ad3fcd03be3",
+   "f4841312f5b47ac5",
+   "d9eaa533599c1467",
+   "96b0f54f081ca7cc"
+  ],
+  "#OpenAI": [
+   "a71e2af5a019847d",
+   "258d1614aaa69a9f",
+   "10c9500a4a17821a",
+   "e8d1e3df2f53245b",
+   "407d97efc33de247"
+  ],
+  "#NAND": [
+   "c9f998803f1cc9b7",
+   "18cb079216ed9d7a",
+   "eaa62e994146f285",
+   "7c1e140c1ea624fb",
+   "88e90e45922a3555"
+  ],
+  "#Micron": [
+   "69f9793c2a37fde7",
+   "ff19d4f28bbb6145",
+   "88e90e45922a3555"
+  ],
+  "#DRAM": [
+   "afeeaa7e2503d72c",
+   "c9f998803f1cc9b7",
+   "18cb079216ed9d7a"
+  ],
+  "#Kioxia": [
+   "eaa62e994146f285",
+   "7c1e140c1ea624fb",
+   "88e90e45922a3555"
+  ],
+  "#CoWoS": [
+   "ca56eea9b7a4f444",
+   "5a7e4ad3fcd03be3"
+  ],
+  "#Microsoft": [
+   "a8ad8abbbd8d1362",
+   "45f707ae81384269"
   ]
  },
  "modell": {
-  "stand": "2026-08-30T13:52:00",
+  "stand": "2026-08-30T14:00:35",
   "name": "Qwen3.6-35B-A3B lokal",
   "eingedeutscht": 40,
   "eskaliert": 0
