@@ -163,14 +163,21 @@ def main():
         if i % 10 == 0:
             log("%d/%d" % (i, len(offen)))
 
-    # Tageslage aus den obersten Schlagzeilen. Bewusst knapp gehalten - ein
-    # laengerer Prompt kostet bei diesem Modell vor allem Wartezeit.
-    oben = kandidaten[:15]
+    # Tageslage aus den obersten Schlagzeilen.
+    #
+    # Knapp gehalten, und das aus gemessenem Grund: der Prefill laeuft bei
+    # dieser MoE auf der CPU und wird je Aufruf neu gerechnet. Auf dieser
+    # Maschine sind das zeitweise unter 2 t/s - fuenfzehn Schlagzeilen haben
+    # damit das 300-Sekunden-Limit gerissen und die Lage fiel aus. Zehn
+    # Zeilen und ein grosszuegigeres Limit; der Tageslauf hat zwei Stunden.
+    oben = kandidaten[:10]
     eingabe = "\n".join("- " + (m.get("zeile") or m["titel"]) for m in oben)
-    lage, code = lok("tldr", eingabe, zeitlimit=300)
+    lage, code = lok("tldr", eingabe, zeitlimit=900)
     if code != 0 or not lage:
         lage = None
-        log("Tageslage eskaliert oder leer (Code %d)" % code)
+        log("Tageslage ohne Ergebnis (Code %d: %s)" % (code, {
+            2: "eskaliert", 3: "Server nicht erreichbar",
+            4: "Zeitueberschreitung"}.get(code, "unbekannt")))
 
     # Straenge: worueber heute mehrfach NEU berichtet wurde.
     #

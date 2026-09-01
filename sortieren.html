@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Sortieren</title>
+<meta name="description" content="Meldungen selbst einordnen: nach links Gegenwind, nach rechts Rueckenwind. Die Urteile werden als Korrekturdatei exportiert.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%230B6E99'/></svg>">
+<style>
+:root{
+  --papier:#F3F1EC; --blatt:#FBFAF7; --blatt2:#E8E5DE;
+  --tinte:#15191E; --tinte2:#3D444C; --grau:#6E757D;
+  --linie:#CFCBC2; --linie-zart:#E2DED6;
+  --akzent:#0B6E99; --akzent-zart:rgba(11,110,153,.10);
+  --gegen:#AF4130; --gegen-zart:rgba(175,65,48,.13);
+  --rueck:#2C6F44; --rueck-zart:rgba(44,111,68,.13);
+  --grau-zart:rgba(110,117,125,.12);
+  --schatten:0 1px 0 rgba(21,25,30,.04),0 10px 28px -20px rgba(21,25,30,.45);
+  --karte-schatten:0 2px 4px rgba(21,25,30,.06),0 18px 40px -22px rgba(21,25,30,.6);
+  --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+  --sans:"Segoe UI","Helvetica Neue",-apple-system,system-ui,sans-serif;
+  --mono:"Cascadia Mono",Consolas,"SFMono-Regular",ui-monospace,monospace;
+  --schmal:Bahnschrift,"DIN Alternate","Arial Narrow",var(--sans);
+  --pad:clamp(1rem,3.5vw,2rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --papier:#0D1013; --blatt:#141920; --blatt2:#1C232B;
+    --tinte:#E8ECF0; --tinte2:#B3BCC6; --grau:#7E8892;
+    --linie:#26303A; --linie-zart:#1B222A;
+    --akzent:#4DB6E0; --akzent-zart:rgba(77,182,224,.13);
+    --gegen:#EA8272; --gegen-zart:rgba(234,130,114,.16);
+    --rueck:#6DC98D; --rueck-zart:rgba(109,201,141,.16);
+    --grau-zart:rgba(126,136,146,.16);
+    --schatten:0 1px 0 rgba(255,255,255,.03),0 16px 36px -24px #000;
+    --karte-schatten:0 2px 4px rgba(0,0,0,.4),0 22px 46px -20px #000;
+  }
+}
+:root[data-theme="dark"]{
+  --papier:#0D1013; --blatt:#141920; --blatt2:#1C232B;
+  --tinte:#E8ECF0; --tinte2:#B3BCC6; --grau:#7E8892;
+  --linie:#26303A; --linie-zart:#1B222A;
+  --akzent:#4DB6E0; --akzent-zart:rgba(77,182,224,.13);
+  --gegen:#EA8272; --gegen-zart:rgba(234,130,114,.16);
+  --rueck:#6DC98D; --rueck-zart:rgba(109,201,141,.16);
+  --grau-zart:rgba(126,136,146,.16);
+  --schatten:0 1px 0 rgba(255,255,255,.03),0 16px 36px -24px #000;
+  --karte-schatten:0 2px 4px rgba(0,0,0,.4),0 22px 46px -20px #000;
+}
+
+*{box-sizing:border-box;margin:0}
+body{background:var(--papier);color:var(--tinte);font-family:var(--sans);
+  line-height:1.6;-webkit-font-smoothing:antialiased;
+  min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden}
+a{color:var(--akzent)}
+:focus-visible{outline:2px solid var(--akzent);outline-offset:3px;border-radius:2px}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+header{border-bottom:2px solid var(--tinte);padding:.5rem var(--pad);
+  display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+header .marke{font-family:var(--schmal);font-variation-settings:"wght" 700,"wdth" 78;
+  font-size:1.05rem;text-transform:uppercase;margin-right:auto}
+header .marke b{color:var(--akzent)}
+header a{font-family:var(--mono);font-size:.72rem;color:var(--grau);text-decoration:none;
+  padding:.28rem .5rem;border-radius:3px}
+header a:hover{color:var(--tinte);background:var(--akzent-zart)}
+
+main{flex:1;display:grid;place-items:center;padding:1rem var(--pad) 0}
+.buehne{width:100%;max-width:560px;display:grid;gap:1rem}
+
+.achsenfrage{font-family:var(--serif);font-size:.98rem;color:var(--tinte2);
+  line-height:1.5;text-align:center;max-width:48ch;margin:0 auto;text-wrap:balance}
+.fortschritt{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;
+  font-family:var(--mono);font-size:.72rem;color:var(--grau)}
+.balken{flex:1;min-width:110px;height:4px;border-radius:3px;background:var(--blatt2);
+  overflow:hidden}
+.balken i{display:block;height:100%;background:var(--akzent);width:0;
+  transition:width .3s ease}
+
+.stapel{position:relative;height:min(60vh,410px);touch-action:pan-y}
+.karte{
+  position:absolute;inset:0;background:var(--blatt);border:1px solid var(--linie);
+  border-radius:8px;padding:1.3rem;box-shadow:var(--karte-schatten);
+  display:grid;grid-template-rows:auto 1fr auto;gap:.8rem;
+  cursor:grab;user-select:none;
+}
+.karte.zieht{cursor:grabbing}
+/* Bei position:absolute malt der Browser das letzte Geschwisterelement
+   zuoberst - ohne z-index laege die hinterste Karte vorn. */
+.karte:nth-child(1){z-index:3}
+.karte:nth-child(2){z-index:2;transform:scale(.955) translateY(11px);opacity:.65;
+  pointer-events:none;box-shadow:var(--schatten)}
+.karte:nth-child(3){z-index:1;transform:scale(.91) translateY(22px);opacity:.35;
+  pointer-events:none;box-shadow:none}
+.karte:nth-child(n+4){display:none}
+.karte .kopf{display:flex;gap:.5rem;align-items:baseline;flex-wrap:wrap}
+.karte .q{font-family:var(--mono);font-size:.72rem;color:var(--tinte2);font-weight:600}
+.karte .z{font-family:var(--mono);font-size:.7rem;color:var(--grau)}
+.karte h2{font-family:var(--serif);font-size:clamp(1.05rem,1rem + .6vw,1.4rem);
+  line-height:1.4;font-weight:400;align-self:center;text-wrap:balance}
+.karte .orig{font-family:var(--mono);font-size:.7rem;color:var(--grau);
+  line-height:1.45;margin-top:.5rem}
+.karte .fuss{display:flex;gap:.3rem;flex-wrap:wrap;align-items:center}
+.karte .tag{font-family:var(--mono);font-size:.68rem;color:var(--akzent);
+  background:var(--akzent-zart);padding:.1rem .34rem;border-radius:2px}
+.karte .quelle-link{font-family:var(--mono);font-size:.68rem;margin-left:auto}
+
+/* Stempel, die beim Ziehen erscheinen */
+.stempel{
+  position:absolute;top:1.1rem;font-family:var(--schmal);
+  font-variation-settings:"wght" 700,"wdth" 82;font-size:1.5rem;
+  text-transform:uppercase;letter-spacing:.03em;padding:.2rem .7rem;
+  border:3px solid;border-radius:5px;opacity:0;pointer-events:none;
+}
+.stempel.links{right:1.1rem;color:var(--gegen);border-color:var(--gegen);
+  transform:rotate(13deg)}
+.stempel.rechts{left:1.1rem;color:var(--rueck);border-color:var(--rueck);
+  transform:rotate(-13deg)}
+.stempel.hoch{left:50%;translate:-50% 0;color:var(--grau);border-color:var(--grau);
+  font-size:1.1rem}
+
+/* Aufloesung: was die Regel gesagt hat */
+.aufloesung{
+  border:1px solid var(--linie);border-radius:5px;background:var(--blatt);
+  padding:.7rem .85rem;display:grid;gap:.3rem;min-height:64px;
+}
+.aufloesung .zeile{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;
+  font-family:var(--mono);font-size:.73rem;color:var(--tinte2)}
+.aufloesung .mark{font-family:var(--mono);font-size:.65rem;text-transform:uppercase;
+  letter-spacing:.06em;padding:.08rem .36rem;border-radius:2px;border:1px solid}
+.mark.gegenwind{color:var(--gegen);border-color:var(--gegen-zart);background:var(--gegen-zart)}
+.mark.rueckenwind{color:var(--rueck);border-color:var(--rueck-zart);background:var(--rueck-zart)}
+.mark.unbestimmt,.mark.gemischt{color:var(--grau);border-color:var(--grau-zart);background:var(--grau-zart)}
+.aufloesung .streit{color:var(--gegen);font-weight:600}
+.aufloesung .einig{color:var(--grau)}
+.aufloesung .warum{font-family:var(--mono);font-size:.68rem;color:var(--grau)}
+.aufloesung.leer{color:var(--grau);font-family:var(--mono);font-size:.72rem;
+  align-content:center}
+
+.knoepfe{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap}
+.k{appearance:none;font:inherit;cursor:pointer;font-family:var(--mono);font-size:.78rem;
+  padding:.6rem 1rem;border-radius:5px;border:1px solid var(--linie);
+  background:var(--blatt);color:var(--tinte2);display:flex;gap:.45rem;align-items:center}
+.k:hover{border-color:var(--tinte2);color:var(--tinte)}
+.k kbd{font-family:var(--mono);font-size:.66rem;background:var(--blatt2);
+  border:1px solid var(--linie);border-radius:3px;padding:0 .28rem;color:var(--grau)}
+.k.gegen{border-color:var(--gegen-zart);color:var(--gegen)}
+.k.gegen:hover{background:var(--gegen-zart)}
+.k.rueck{border-color:var(--rueck-zart);color:var(--rueck)}
+.k.rueck:hover{background:var(--rueck-zart)}
+
+.werkzeug{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;
+  border-top:1px solid var(--linie-zart);padding-top:.8rem}
+.werkzeug button,.werkzeug select{appearance:none;font:inherit;font-family:var(--mono);
+  font-size:.72rem;cursor:pointer;padding:.35rem .6rem;border-radius:3px;
+  border:1px solid var(--linie);background:var(--blatt);color:var(--tinte2)}
+.werkzeug button:hover{border-color:var(--akzent);color:var(--tinte)}
+.werkzeug .zahl{font-family:var(--mono);font-size:.72rem;color:var(--grau);margin-left:auto}
+
+.fertig{text-align:center;display:grid;gap:.8rem;padding:2.5rem 1rem}
+.fertig h2{font-family:var(--schmal);font-variation-settings:"wght" 700,"wdth" 82;
+  font-size:1.5rem;text-transform:uppercase}
+.fertig p{font-family:var(--serif);color:var(--tinte2);max-width:46ch;margin:0 auto}
+
+footer{padding:1.4rem var(--pad) 2.4rem;color:var(--grau);font-size:.78rem;
+  max-width:70ch;margin:1.5rem auto 0;border-top:1px solid var(--linie-zart)}
+footer p{margin-bottom:.5rem}
+footer code{font-family:var(--mono);font-size:.9em;background:var(--blatt2);
+  padding:.05rem .25rem;border-radius:2px}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <span class="marke">KI-<b>Lagemeldung</b> · Sortieren</span>
+  <a href="AI_new.html">&larr; zurueck zum Feed</a>
+</header>
+
+<main>
+  <div class="buehne" id="buehne">
+    <p class="achsenfrage" id="frage">…</p>
+
+    <div class="fortschritt">
+      <span id="fortschritt-text">wird geladen …</span>
+      <span class="balken"><i id="balken"></i></span>
+    </div>
+
+    <div class="stapel" id="stapel"></div>
+
+    <div class="aufloesung leer" id="aufloesung">Nach dem Urteil steht hier, was die Regel gesagt hat.</div>
+
+    <div class="knoepfe" id="knoepfe"></div>
+
+    <div class="werkzeug">
+      <select id="achse" aria-label="Was wird sortiert">
+        <option value="richtung">Achse: Richtung</option>
+        <option value="wichtigkeit">Achse: Wichtigkeit</option>
+      </select>
+      <select id="auswahl" aria-label="Welche Meldungen sortieren">
+        <option value="offen">noch nicht beurteilt</option>
+        <option value="unbestimmt">nur von der Regel unbestimmte</option>
+        <option value="alle">alle ohne Rauschen</option>
+      </select>
+      <button id="zurueck">&#8630; zurueck <kbd>u</kbd></button>
+      <button id="export">herunterladen</button>
+      <button id="leeren">verwerfen</button>
+      <span class="zahl" id="zahl"></span>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p><strong>Wie das gedacht ist.</strong> Nach links, was den Ausbau von
+  KI-Rechenzentren erschwert, nach rechts, was ihn erleichtert. Dieselbe Frage,
+  nach der auch die Automatik entscheidet &mdash; deshalb sind die Faelle, in denen
+  ihr beide auseinandergeht, die wertvollsten.</p>
+  <p><strong>Wo das landet.</strong> Diese Seite liegt auf GitHub Pages und kann
+  nicht ins Repo zurueckschreiben. Deine Urteile stehen im Browser
+  (<code>localStorage</code>) und bleiben dort, bis du sie herunterlaedst oder
+  verwirfst. Die Datei pflegst du mit
+  <code>python werkzeuge/einpflegen.py urteile.json</code> in
+  <code>korrekturen.json</code> ein; ab dem naechsten Lauf gilt dein Etikett.</p>
+  <p><strong>Was gespeichert wird.</strong> Meldungs-ID, dein Urteil, was die
+  Automatik gesagt hatte, und der Zeitpunkt. Der Titel steht zur Kontrolle mit
+  dabei. Nichts davon verlaesst deinen Rechner, solange du die Datei nicht
+  weitergibst.</p>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s==null?"":s).replace(/[&<>"']/g,
+    c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const SPEICHER = "ai_news_urteile_v1";
+  const NAME = {gegenwind:"Gegenwind", rueckenwind:"Rueckenwind",
+                unbestimmt:"unbestimmt", gemischt:"gemischt",
+                wichtig:"wichtig", unwichtig:"unwichtig", egal:"unklar"};
+
+  // Zwei Achsen, nacheinander statt in einer ueberladenen Geste. Jede Achse
+  // hat ihre eigene Automatik, gegen die sich das Urteil vergleichen laesst:
+  //   Richtung     <- Signalwoerter (bewerten.py)
+  //   Wichtigkeit  <- Gewicht und Rauschmarke aus dem Sammellauf
+  const ACHSEN = {
+    richtung: {
+      feld: "urteil",
+      links: "gegenwind", rechts: "rueckenwind", hoch: "unbestimmt",
+      frage: "Erleichtert die Meldung den Ausbau von KI-Rechenzentren "
+           + "oder erschwert sie ihn?",
+      automatik: m => m.wind || "unbestimmt",
+      begruendung: m => (m.wind_grund||[]).map(g =>
+        g.grund + (g.fundstelle ? " (" + g.fundstelle + ")" : "")).join(", "),
+      klasse: {gegenwind:"gegenwind", rueckenwind:"rueckenwind"}
+    },
+    wichtigkeit: {
+      feld: "wichtig",
+      links: "unwichtig", rechts: "wichtig", hoch: "egal",
+      frage: "Wuerdest du das jemandem weitererzaehlen, der die Kette verfolgt?",
+      // Die Automatik der Wichtigkeit ist das Gewicht des Sammellaufs.
+      automatik: m => m.rauschen ? "unwichtig"
+                    : (m.gewicht >= 8 ? "wichtig"
+                    : (m.gewicht <= 3 ? "unwichtig" : "unbestimmt")),
+      begruendung: m => "Gewicht " + (m.gewicht==null?"?":m.gewicht)
+                      + (m.rauschen ? ", als Rauschen markiert" : "")
+                      + ", " + ((m.bezug||[]).length) + " Bezuege",
+      klasse: {unwichtig:"gegenwind", wichtig:"rueckenwind"}
+    }
+  };
+  const achse = () => ACHSEN[$("#achse").value];
+
+  let alle=[], reihe=[], zeiger=0, urteile={}, letztes=null, ziehen=null;
+
+  function lies(){
+    try{ return JSON.parse(localStorage.getItem(SPEICHER)||"{}"); }
+    catch(_){ return {}; }
+  }
+  function schreib(){
+    try{ localStorage.setItem(SPEICHER, JSON.stringify(urteile)); }
+    catch(_){ /* privater Modus o.ae. - dann bleibt es bei dieser Sitzung */ }
+  }
+
+  function baueReihe(){
+    const modus = $("#auswahl").value, A = achse();
+    reihe = alle.filter(m=>{
+      // Rauschen bleibt draussen - ausser man will genau das beurteilen.
+      if(m.rauschen && A.feld !== "wichtig") return false;
+      const u = urteile[m.id];
+      if(modus === "offen" && u && u[A.feld]) return false;
+      if(modus === "unbestimmt") return A.automatik(m) === "unbestimmt"
+                                     && !(u && u[A.feld]);
+      return true;
+    });
+    zeiger = 0;
+  }
+
+  function zeichneKnoepfe(){
+    const A = achse();
+    $("#knoepfe").innerHTML =
+        '<button class="k gegen" data-urteil="'+A.links+'">'
+      +   NAME[A.links]+' <kbd>&larr;</kbd></button>'
+      + '<button class="k" data-urteil="'+A.hoch+'">'
+      +   NAME[A.hoch]+' <kbd>&darr;</kbd></button>'
+      + '<button class="k rueck" data-urteil="'+A.rechts+'">'
+      +   NAME[A.rechts]+' <kbd>&rarr;</kbd></button>';
+    $("#knoepfe").querySelectorAll(".k").forEach(b=>
+      b.addEventListener("click", ()=>entscheide(b.dataset.urteil)));
+    $("#frage").textContent = A.frage;
+  }
+
+  function karteHtml(m){
+    const A = achse();
+    const zeile = m.zeile || m.titel;
+    const zeigOrig = m.zeile && m.zeile !== m.titel;
+    return '<article class="karte" data-id="'+esc(m.id)+'">'
+      + '<div class="kopf"><span class="q">'+esc(m.quelle||"unbekannt")+'</span>'
+      +   '<span class="z">'+esc((m.datum||"").slice(0,10))+'</span></div>'
+      + '<div><h2>'+esc(zeile)+'</h2>'
+      +   (zeigOrig?'<p class="orig">'+esc(m.titel)+'</p>':'')+'</div>'
+      + '<div class="fuss">'
+      +   (m.hashtags||[]).slice(0,4).map(h=>'<span class="tag">'+esc(h)+'</span>').join("")
+      +   '<a class="quelle-link" href="'+esc(m.link)+'" target="_blank" rel="noopener">oeffnen &nearr;</a>'
+      + '</div>'
+      + '<span class="stempel links">'+NAME[A.links]+'</span>'
+      + '<span class="stempel rechts">'+NAME[A.rechts]+'</span>'
+      + '<span class="stempel hoch">'+NAME[A.hoch]+'</span>'
+      + '</article>';
+  }
+
+  function zeichne(){
+    const rest = reihe.slice(zeiger, zeiger+3);
+    const st = $("#stapel");
+    if(!rest.length){
+      st.innerHTML = '<div class="fertig"><h2>Durch</h2>'
+        + '<p>Keine Meldungen mehr in dieser Auswahl. Lade die Urteile herunter '
+        + 'oder waehle oben eine andere Auswahl.</p></div>';
+    } else {
+      st.innerHTML = rest.map(karteHtml).join("");
+      binde(st.firstElementChild);
+    }
+    const gesamt = reihe.length;
+    const fertig = Math.min(zeiger, gesamt);
+    $("#fortschritt-text").textContent = gesamt
+      ? (fertig+" von "+gesamt+" beurteilt") : "nichts zu tun";
+    $("#balken").style.width = gesamt ? (fertig/gesamt*100)+"%" : "0%";
+    const n = Object.keys(urteile).length;
+    $("#zahl").textContent = n ? (n+" gespeichert") : "noch nichts gespeichert";
+    $("#zurueck").disabled = !letztes;
+  }
+
+  function urteile_setzen(m, urteil){
+    const A = achse();
+    const alt = urteile[m.id] || {titel: m.titel};
+    alt[A.feld] = urteil;
+    alt[A.feld + "_automatik"] = A.automatik(m);
+    alt.titel = m.titel;
+    alt.zeit = new Date().toISOString().slice(0,19);
+    urteile[m.id] = alt;
+    schreib();
+    letztes = m.id;
+    zeigeAufloesung(m, urteil);
+    zeiger++;
+    zeichne();
+  }
+
+  function zeigeAufloesung(m, urteil){
+    const A = achse();
+    const a = A.automatik(m);
+    const streit = (a !== urteil) && a !== "unbestimmt";
+    const gruende = esc(A.begruendung(m) || "");
+    const kl = u => A.klasse[u] || "unbestimmt";
+    $("#aufloesung").className = "aufloesung";
+    $("#aufloesung").innerHTML =
+        '<div class="zeile">du: <span class="mark '+kl(urteil)+'">'+esc(NAME[urteil]||urteil)+'</span>'
+      + ' &nbsp;Automatik: <span class="mark '+kl(a)+'">'+esc(NAME[a]||a)+'</span>'
+      + (streit ? ' <span class="streit">&mdash; ihr geht auseinander</span>'
+                : (a==="unbestimmt" ? ' <span class="einig">&mdash; die Regel hatte nichts</span>'
+                                    : ' <span class="einig">&mdash; einig</span>'))
+      + '</div>'
+      + (gruende ? '<div class="warum">Automatik stuetzte sich auf: '+gruende+'</div>' : '');
+  }
+
+  function entscheide(urteil){
+    const m = reihe[zeiger];
+    if(!m) return;
+    const karte = $("#stapel").firstElementChild;
+    if(karte && karte.classList.contains("karte")){
+      const A = achse();
+      const weg = urteil===A.links ? -1 : urteil===A.rechts ? 1 : 0;
+      karte.style.transition = "transform .32s ease, opacity .32s ease";
+      karte.style.transform = weg
+        ? "translateX("+(weg*window.innerWidth)+"px) rotate("+(weg*22)+"deg)"
+        : "translateY(420px)";
+      karte.style.opacity = "0";
+    }
+    setTimeout(()=>urteile_setzen(m, urteil), 90);
+  }
+
+  function binde(karte){
+    if(!karte || !karte.classList.contains("karte")) return;
+    karte.addEventListener("pointerdown", e=>{
+      if(e.target.closest("a")) return;
+      ziehen = {id:e.pointerId, x0:e.clientX, y0:e.clientY, el:karte};
+      karte.setPointerCapture(e.pointerId);
+      karte.classList.add("zieht");
+      karte.style.transition = "none";
+    });
+    karte.addEventListener("pointermove", e=>{
+      if(!ziehen || ziehen.id!==e.pointerId) return;
+      const dx = e.clientX-ziehen.x0, dy = e.clientY-ziehen.y0;
+      karte.style.transform = "translate("+dx+"px,"+dy+"px) rotate("+(dx/22)+"deg)";
+      const l = karte.querySelector(".stempel.links"),
+            r = karte.querySelector(".stempel.rechts"),
+            h = karte.querySelector(".stempel.hoch");
+      l.style.opacity = dx<-16 ? Math.min(1,(-dx-16)/70) : 0;
+      r.style.opacity = dx> 16 ? Math.min(1,( dx-16)/70) : 0;
+      h.style.opacity = (Math.abs(dx)<40 && dy>40) ? Math.min(1,(dy-40)/70) : 0;
+    });
+    const los = e=>{
+      if(!ziehen || ziehen.id!==e.pointerId) return;
+      const dx = e.clientX-ziehen.x0, dy = e.clientY-ziehen.y0;
+      ziehen = null;
+      karte.classList.remove("zieht");
+      karte.style.transition = "transform .25s ease, opacity .25s ease";
+      const A = achse();
+      if(dx < -95) return entscheide(A.links);
+      if(dx >  95) return entscheide(A.rechts);
+      if(dy >  95) return entscheide(A.hoch);
+      karte.style.transform = "";
+      karte.querySelectorAll(".stempel").forEach(s=>s.style.opacity=0);
+    };
+    karte.addEventListener("pointerup", los);
+    karte.addEventListener("pointercancel", los);
+  }
+
+  document.addEventListener("keydown", e=>{
+    if(e.target.tagName==="SELECT") return;
+    const A = achse();
+    if(e.key==="ArrowLeft") { e.preventDefault(); entscheide(A.links); }
+    else if(e.key==="ArrowRight"){ e.preventDefault(); entscheide(A.rechts); }
+    else if(e.key==="ArrowDown"){ e.preventDefault(); entscheide(A.hoch); }
+    else if(e.key==="u"){ zurueck(); }
+  });
+
+  function zurueck(){
+    if(!letztes) return;
+    const A = achse(), u = urteile[letztes];
+    if(u){
+      delete u[A.feld]; delete u[A.feld + "_automatik"];
+      const rest = Object.keys(u).filter(k=>k!=="titel" && k!=="zeit");
+      if(rest.length) urteile[letztes] = u; else delete urteile[letztes];
+    }
+    letztes = null;
+    schreib();
+    zeiger = Math.max(0, zeiger-1);
+    $("#aufloesung").className = "aufloesung leer";
+    $("#aufloesung").textContent = "Zurueckgenommen.";
+    zeichne();
+  }
+  $("#zurueck").addEventListener("click", zurueck);
+
+  $("#auswahl").addEventListener("change", ()=>{ baueReihe(); zeichne(); });
+  $("#achse").addEventListener("change", ()=>{
+    letztes = null; zeichneKnoepfe(); baueReihe(); zeichne();
+    $("#aufloesung").className = "aufloesung leer";
+    $("#aufloesung").textContent = "Achse gewechselt.";
+  });
+
+  $("#export").addEventListener("click", ()=>{
+    const n = Object.keys(urteile).length;
+    if(!n){ alert("Noch keine Urteile gefaellt."); return; }
+    const werte = Object.values(urteile);
+    const uneins = werte.filter(u =>
+        (u.urteil && u.urteil_automatik && u.urteil !== u.urteil_automatik
+         && u.urteil_automatik !== "unbestimmt")
+     || (u.wichtig && u.wichtig_automatik && u.wichtig !== u.wichtig_automatik
+         && u.wichtig_automatik !== "unbestimmt")).length;
+    const inhalt = JSON.stringify({
+      erzeugt: new Date().toISOString().slice(0,19),
+      achsen: {
+        richtung: ACHSEN.richtung.frage,
+        wichtigkeit: ACHSEN.wichtigkeit.frage
+      },
+      anzahl: n,
+      richtung_beurteilt: werte.filter(u=>u.urteil).length,
+      wichtigkeit_beurteilt: werte.filter(u=>u.wichtig).length,
+      // Die Faelle, in denen Mensch und Automatik auseinandergehen, sind die
+      // eigentlich lehrreichen - deshalb stehen sie hier gezaehlt oben.
+      abweichungen: uneins,
+      urteile: urteile
+    }, null, 1);
+    const b = new Blob([inhalt], {type:"application/json"});
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(b);
+    a.download = "urteile-" + new Date().toISOString().slice(0,10) + ".json";
+    document.body.appendChild(a); a.click();
+    setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 800);
+  });
+
+  $("#leeren").addEventListener("click", ()=>{
+    if(!confirm("Alle gespeicherten Urteile verwerfen?")) return;
+    urteile = {}; letztes = null; schreib(); baueReihe(); zeichne();
+    $("#aufloesung").className = "aufloesung leer";
+    $("#aufloesung").textContent = "Verworfen.";
+  });
+
+  (async function start(){
+    urteile = lies();
+    try{
+      const r = await fetch("nachrichten.json", {cache:"no-store"});
+      if(!r.ok) throw new Error(r.status);
+      const N = await r.json();
+      alle = N.meldungen || [];
+    }catch(_){
+      $("#stapel").innerHTML = '<div class="fertig"><h2>Keine Daten</h2>'
+        + '<p>nachrichten.json liess sich nicht laden.</p></div>';
+      return;
+    }
+    zeichneKnoepfe();
+    baueReihe();
+    zeichne();
+  })();
+})();
+</script>
+</body>
+</html>

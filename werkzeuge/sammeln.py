@@ -77,6 +77,20 @@ RAUSCHMUSTER = re.compile(
     r"tiefstpreis|bestpreis|nie g[uü]nstiger|deal des tages|"
     r"schn[aä]ppchen|jetzt reduziert|prime day|black friday)", re.I)
 
+# Videokanal-Auswurf. Faellt beim Sortieren von Hand sofort auf: Titel wie
+# "10 AKTIEN Alphabet Microsoft Amazon ... Real Betis Vs Elche (u2FAu6pMjM)"
+# reihen Firmennamen aneinander und haengen eine Video-Kennung an. Sie treffen
+# damit ein Dutzend beobachteter Eintraege auf einmal und stehen ohne diesen
+# Filter weit oben.
+SPAM = [
+    # Emoji im Titel - serioese Nachrichtenhaeuser setzen keine.
+    re.compile(r"[\U0001F300-\U0001FAFF☀-➿️]"),
+    # elfstellige Videokennung in Klammern, wie sie YouTube vergibt
+    re.compile(r"\([A-Za-z0-9_-]{11}\)"),
+    # Aufzaehlungs-Clickbait
+    re.compile(r"^\s*\d{1,2}\s+(aktien|stocks|shares)\b", re.I),
+]
+
 
 def log(msg):
     zeile = "%s  sammeln  %s" % (datetime.now().strftime("%Y-%m-%d %H:%M:%S"), msg)
@@ -278,7 +292,8 @@ def main():
         q = (m["quelle"] or "").lower()
         gut = any(g in q for g in GUTE_QUELLEN)
         schwach = any(g in q for g in SCHWACHE_QUELLEN)
-        rausch = bool(RAUSCHMUSTER.search(m["titel"]))
+        rausch = bool(RAUSCHMUSTER.search(m["titel"])) or any(
+            p.search(m["titel"]) for p in SPAM)
         kern = sum(1 for b in m["bezug"] if alle.get(b, {}).get("stufe") == 1)
         m["rauschen"] = schwach or rausch
         m["gewicht"] = round(kern * 2 + (3 if gut else 0)

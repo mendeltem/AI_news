@@ -67,6 +67,9 @@ sind das 40 % der Rohtreffer.
 | `werkzeuge/sammeln.py` | der Sammellauf |
 | `werkzeuge/schreiben.py` | der Modell-Lauf |
 | `werkzeuge/bewerten.py` | Richtung je Meldung, per Signalwort |
+| `sortieren.html` | Meldungen selbst wischen, zwei Achsen |
+| `werkzeuge/einpflegen.py` | pflegt die gewischten Urteile ein |
+| `urteile.json` | alle Urteile beider Achsen, der Datensatz |
 | `korrekturen.json` | Redaktionskorrekturen der Richtung — der Lernteil |
 | `werkzeuge/archivieren.py` | schreibt den Korpus fort |
 | `werkzeuge/taeglich.cmd` | was die Aufgabenplanung startet |
@@ -165,6 +168,42 @@ ein Datensatz aus Titel, Etikett, Begründung und der Angabe, wer entschieden
 hat — das Material, aus dem sich später lernen lässt, *warum* etwas Rückenwind
 ist. Redaktionskorrekturen sind dabei die wertvollen Zeilen: sie markieren genau
 die Fälle, in denen die Regel danebenlag.
+
+## Selbst sortieren
+
+**[sortieren.html](https://mendeltem.github.io/AI_news/sortieren.html)** legt die
+Meldungen einzeln als Karte vor: nach links wischen, nach rechts, oder
+Pfeiltasten. Zwei Achsen, umschaltbar:
+
+| Achse | ← links | → rechts | ↓ unten |
+|---|---|---|---|
+| Richtung | Gegenwind | Rückenwind | unbestimmt |
+| Wichtigkeit | unwichtig | wichtig | unklar |
+
+Nach jedem Urteil erscheint, **was die Automatik gesagt hätte** — und ob ihr
+auseinandergeht. Beide Achsen haben eine Automatik zum Vergleich: die Richtung
+aus den Signalwörtern, die Wichtigkeit aus Gewicht und Rauschmarke.
+
+Die Abweichungen sind der Ertrag. Wo Mensch und Regel dasselbe sagen, lernt man
+nichts.
+
+### Der Weg zurück ins Repo
+
+GitHub Pages ist statisch — die Seite kann nicht ins Repo schreiben, und ein
+Zugangstoken im Quelltext wäre die falsche Lösung für das richtige Problem.
+Also über eine Datei:
+
+```bash
+python werkzeuge/einpflegen.py urteile-2026-09-01.json
+```
+
+Der Lauf listet die Abweichungen auf. Die **Richtung** wirkt sofort zurück, sie
+landet in `korrekturen.json` und schlägt ab dem nächsten Lauf die Automatik. Die
+**Wichtigkeit** wird gesammelt (`urteile.json`), aber noch nicht angewandt —
+dafür braucht es erst genug Urteile, um zu prüfen, ob sich daraus überhaupt eine
+Regel ableiten lässt.
+
+`--trocken` zeigt, was passieren würde, ohne zu schreiben.
 
 ## Zwei Zeitfenster
 

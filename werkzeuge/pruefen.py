@@ -20,7 +20,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from sammeln import treffer, schluessel, RAUSCHMUSTER, SCHWACHE_QUELLEN  # noqa: E402
+from sammeln import treffer, schluessel, RAUSCHMUSTER, SPAM  # noqa: E402
 from bewerten import bewerte  # noqa: E402
 
 WURZEL = Path(__file__).resolve().parent.parent
@@ -87,6 +87,11 @@ RAUSCH_FAELLE = [
     ("SK hynix breaks ground on first HBM plant in the US", False),
     ("Kioxia and SanDisk Plan Over $31 Billion for Japan NAND Fabs", False),
     ("Tiefstpreis geortet: Apple AirTag im 4er-Pack nie guenstiger", True),
+    # Videokanal-Auswurf, beim Sortieren von Hand aufgefallen
+    ("🚨 10 AKTIEN 💥 Alphabet Microsoft Amazon Meta Apple "
+     "Real Betis Vs Elche (u2FAu6pMjM) - Mshale", True),
+    ("10 Stocks To Watch This Week", True),
+    ("TSMC raises CoWoS capacity targets for 2026-2027", False),
 ]
 
 
@@ -112,7 +117,7 @@ def main():
 
     print("Rauschfilter:")
     for titel, soll in RAUSCH_FAELLE:
-        ist = bool(RAUSCHMUSTER.search(titel))
+        ist = bool(RAUSCHMUSTER.search(titel)) or any(p.search(titel) for p in SPAM)
         if ist != soll:
             fehler += 1
             print("  FEHLGESCHLAGEN soll=%-5s ist=%-5s  %s" % (soll, ist, titel[:56]))
