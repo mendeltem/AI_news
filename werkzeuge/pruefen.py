@@ -21,6 +21,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from sammeln import treffer, schluessel, RAUSCHMUSTER, SCHWACHE_QUELLEN  # noqa: E402
+from bewerten import bewerte  # noqa: E402
 
 WURZEL = Path(__file__).resolve().parent.parent
 
@@ -56,12 +57,36 @@ FAELLE = [
     ("ARM", "Robot arm assembles servers", False),
 ]
 
+# (Schlagzeile, erwartete Richtung) - Standpunkt: erleichtert oder erschwert
+# die Meldung den Ausbau von KI-Rechenzentren?
+WIND_FAELLE = [
+    # eindeutig, in beide Richtungen
+    ("Micron-Angestellte in Taiwan stimmen fuer Streik", "gegenwind"),
+    ("TSMC CoWoS capacity fully booked, lead times 78 weeks", "gegenwind"),
+    ("US adds chipmaker to Entity List", "gegenwind"),
+    ("SK hynix breaks ground on first HBM plant in the US", "rueckenwind"),
+    ("Kioxia und SanDisk investieren 31 Milliarden in NAND-Fabriken", "rueckenwind"),
+    ("Powertech startet Serienproduktion", "rueckenwind"),
+
+    # --- Kollisionen, die es schon gab ---
+    # invest\w* verschluckte "investigation"
+    ("Nvidia supplier Unimicron under investigation over relabeling", "gegenwind"),
+    # "brand" ist deutsch Feuer, englisch Marke
+    ("VMware nutzt die von Nvidia bevorzugte AI Factory brand", "unbestimmt"),
+    # accelerat\w* traf das Substantiv
+    ("Solving the CoWoS Bottleneck for Next-Gen AI Accelerators", "gegenwind"),
+    # ein Dementi ist kein Ereignis
+    ("SK Hynix dementiert Intel-Foundry-Deal fuer HBM4E-Chips", "unbestimmt"),
+    ("Nvidia denies plans for new fab", "unbestimmt"),
+]
+
 RAUSCH_FAELLE = [
     ("Nvidia Aktie News: Nvidia tendiert am Mittag schwaecher", True),
     ("Which Semiconductor Giant Is the Better Stock Buy?", True),
     ("ARK Invest schichtet um: Cathie Wood trennt sich von AMD", True),
     ("SK hynix breaks ground on first HBM plant in the US", False),
     ("Kioxia and SanDisk Plan Over $31 Billion for Japan NAND Fabs", False),
+    ("Tiefstpreis geortet: Apple AirTag im 4er-Pack nie guenstiger", True),
 ]
 
 
@@ -92,6 +117,14 @@ def main():
             fehler += 1
             print("  FEHLGESCHLAGEN soll=%-5s ist=%-5s  %s" % (soll, ist, titel[:56]))
 
+    print("Richtung:")
+    for titel, soll in WIND_FAELLE:
+        ist, _ = bewerte(titel)
+        if ist != soll:
+            fehler += 1
+            print("  FEHLGESCHLAGEN soll=%-12s ist=%-12s  %s"
+                  % (soll, ist, titel[:52]))
+
     print("Entdoppeln:")
     # Dieselbe Meldung bei zwei Haeusern muss denselben Schluessel ergeben.
     a = schluessel("SK hynix breaks ground on the first HBM plant in the US")
@@ -105,7 +138,7 @@ def main():
         fehler += 1
         print("  FEHLGESCHLAGEN verschiedene Meldungen ergeben denselben Schluessel")
 
-    gesamt = len(FAELLE) + len(RAUSCH_FAELLE) + 2
+    gesamt = len(FAELLE) + len(RAUSCH_FAELLE) + len(WIND_FAELLE) + 2
     if fehler:
         print("\n%d von %d Faellen gescheitert" % (fehler, gesamt))
         return 1

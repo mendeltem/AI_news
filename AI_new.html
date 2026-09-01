@@ -23,6 +23,12 @@
   --akzent-zart:rgba(11,110,153,.10);
   --neu:#9A5B00;
   --neu-zart:rgba(154,91,0,.12);
+  --gegen:#AF4130;
+  --gegen-zart:rgba(175,65,48,.13);
+  --rueck:#2C6F44;
+  --rueck-zart:rgba(44,111,68,.13);
+  --gemischt:#8A6410;
+  --gemischt-zart:rgba(138,100,16,.13);
   --warn:#A03328;
   --schatten:0 1px 0 rgba(21,25,30,.04),0 10px 28px -20px rgba(21,25,30,.45);
 
@@ -42,6 +48,9 @@
     --linie:#26303A; --linie-zart:#1B222A;
     --akzent:#4DB6E0; --akzent-hell:#6FC9EE; --akzent-zart:rgba(77,182,224,.13);
     --neu:#E0A63A; --neu-zart:rgba(224,166,58,.14); --warn:#E5675A;
+    --gegen:#EA8272; --gegen-zart:rgba(234,130,114,.16);
+    --rueck:#6DC98D; --rueck-zart:rgba(109,201,141,.16);
+    --gemischt:#DCAE47; --gemischt-zart:rgba(220,174,71,.16);
     --schatten:0 1px 0 rgba(255,255,255,.03),0 16px 36px -24px #000;
   }
 }
@@ -51,6 +60,9 @@
   --linie:#26303A; --linie-zart:#1B222A;
   --akzent:#4DB6E0; --akzent-hell:#6FC9EE; --akzent-zart:rgba(77,182,224,.13);
   --neu:#E0A63A; --neu-zart:rgba(224,166,58,.14); --warn:#E5675A;
+  --gegen:#EA8272; --gegen-zart:rgba(234,130,114,.16);
+  --rueck:#6DC98D; --rueck-zart:rgba(109,201,141,.16);
+  --gemischt:#DCAE47; --gemischt-zart:rgba(220,174,71,.16);
   --schatten:0 1px 0 rgba(255,255,255,.03),0 16px 36px -24px #000;
 }
 
@@ -90,6 +102,58 @@ header.kopf{border-bottom:2px solid var(--tinte);background:var(--papier);
   font-variant-numeric:tabular-nums}
 .zahlen small{font-family:var(--mono);font-size:.66rem;color:var(--grau);
   letter-spacing:.06em;text-transform:uppercase}
+
+/* Windanzeige */
+.wind{
+  display:grid;gap:1rem;grid-template-columns:minmax(230px,290px) 1fr;
+  align-items:center;border:1px solid var(--linie);background:var(--blatt);
+  border-radius:4px;padding:1.1rem;margin-top:1.4rem;box-shadow:var(--schatten)
+}
+@media (max-width:640px){.wind{grid-template-columns:1fr}}
+.wind svg{width:100%;height:auto;display:block}
+.wind .skala-bogen{fill:none;stroke-width:13;stroke-linecap:round}
+.wind .nadel{
+  transform-origin:100px 88px;
+  transition:transform 1.4s cubic-bezier(.22,1.2,.36,1);
+  transform:rotate(-90deg);
+}
+.wind.is-lit .nadel{transform:rotate(var(--grad,0deg))}
+.wind .nadel line{stroke:var(--tinte);stroke-width:2.4;stroke-linecap:round}
+.wind .nadel circle{fill:var(--tinte)}
+.wind .achse{font-family:var(--mono);font-size:8.5px;fill:var(--grau);
+  letter-spacing:.08em;text-transform:uppercase}
+.wind .zeigerwert{font-family:var(--mono);font-size:23px;font-weight:600;
+  fill:var(--tinte);text-anchor:middle}
+.wind-text{display:grid;gap:.6rem}
+.wind-text h2{font-family:var(--schmal);font-variation-settings:"wght" 700,"wdth" 82;
+  font-size:1.2rem;text-transform:uppercase}
+.wind-text .frage{font-family:var(--serif);font-size:.94rem;color:var(--tinte2);
+  line-height:1.5;max-width:52ch}
+.wind-zahlen{display:flex;gap:.4rem;flex-wrap:wrap}
+.wz{appearance:none;font:inherit;cursor:pointer;font-family:var(--mono);
+  font-size:.72rem;padding:.3rem .6rem;border-radius:2px;border:1px solid var(--linie);
+  background:var(--papier);color:var(--tinte2);display:flex;gap:.4rem;align-items:center}
+.wz:hover{border-color:var(--tinte2);color:var(--tinte)}
+.wz b{font-weight:600;color:var(--tinte)}
+.wz::before{content:"";width:7px;height:7px;border-radius:2px;flex:none}
+.wz[data-w="gegenwind"]::before{background:var(--gegen)}
+.wz[data-w="rueckenwind"]::before{background:var(--rueck)}
+.wz[data-w="gemischt"]::before{background:var(--gemischt)}
+.wz[data-w="unbestimmt"]::before{background:var(--linie)}
+.wz[aria-pressed="true"]{background:var(--tinte);border-color:var(--tinte);color:var(--papier)}
+.wz[aria-pressed="true"] b{color:var(--papier)}
+.wind-hinweis{font-family:var(--mono);font-size:.66rem;color:var(--grau);line-height:1.5}
+
+/* Richtungsmarke an der Meldung */
+.wm{display:inline-flex;align-items:center;gap:.3rem;font-family:var(--mono);
+  font-size:.63rem;letter-spacing:.06em;text-transform:uppercase;
+  padding:.06rem .34rem;border-radius:2px;border:1px solid;white-space:nowrap}
+.wm::before{content:"";width:5px;height:5px;border-radius:1px;background:currentColor}
+.wm.gegenwind{color:var(--gegen);border-color:var(--gegen-zart);background:var(--gegen-zart)}
+.wm.rueckenwind{color:var(--rueck);border-color:var(--rueck-zart);background:var(--rueck-zart)}
+.wm.gemischt{color:var(--gemischt);border-color:var(--gemischt-zart);background:var(--gemischt-zart)}
+.post .warum{font-family:var(--mono);font-size:.68rem;color:var(--grau);line-height:1.5}
+.post .warum b{color:var(--tinte2);font-weight:600}
 
 /* Lage */
 .lage{border:1px solid var(--linie);border-left:3px solid var(--akzent);
@@ -220,6 +284,28 @@ footer strong{color:var(--tinte2)}
   Beobachtet wird, was auf den beiden Schwesterseiten steht: die boersennotierten
   Firmen der Kette und die Anwendungen, die sie bezahlen.</p>
   <div class="zahlen" id="zahlen"></div>
+  <div class="wind" id="wind">
+    <svg viewBox="0 0 200 108" role="img" aria-labelledby="wind-titel">
+      <title id="wind-titel">Zeiger zwischen Gegenwind und Rueckenwind</title>
+      <path class="skala-bogen" d="M22 88 A 78 78 0 0 1 61 20" stroke="var(--gegen)"></path>
+      <path class="skala-bogen" d="M61 20 A 78 78 0 0 1 139 20" stroke="var(--linie)"></path>
+      <path class="skala-bogen" d="M139 20 A 78 78 0 0 1 178 88" stroke="var(--rueck)"></path>
+      <text class="achse" x="22" y="103" text-anchor="start">Gegenwind</text>
+      <text class="achse" x="178" y="103" text-anchor="end">Rueckenwind</text>
+      <text class="zeigerwert" id="wind-zahl" x="100" y="80">·</text>
+      <g class="nadel" id="wind-nadel">
+        <line x1="100" y1="88" x2="100" y2="30"></line>
+        <circle cx="100" cy="88" r="4.5"></circle>
+      </g>
+    </svg>
+    <div class="wind-text">
+      <h2>Rueckenwind oder Gegenwind</h2>
+      <p class="frage" id="wind-frage">…</p>
+      <div class="wind-zahlen" id="wind-zahlen"></div>
+      <p class="wind-hinweis" id="wind-hinweis"></p>
+    </div>
+  </div>
+
   <div class="lage" id="lage">
     <h2>Die Lage</h2>
     <p class="label" id="lage-meta">…</p>
@@ -314,7 +400,29 @@ footer strong{color:var(--tinte2)}
                "Edge-Gehirn","Aktoren und Roboter","Licht und Detektor","Endgeraete"]
   };
 
-  let N=null, T=null, EINTRAG={}, sichtbar=25, filter="alle", tagFilter=null, suchtext="";
+  let N=null, T=null, EINTRAG={}, sichtbar=25, filter="alle", tagFilter=null,
+      suchtext="", windFilter=null;
+
+  const WIND_NAME={gegenwind:"Gegenwind",rueckenwind:"Rueckenwind",
+                   gemischt:"gemischt",unbestimmt:"unbestimmt"};
+
+  function zeichneWind(){
+    const w=N.wind;
+    const el=$("#wind");
+    if(!w){ el.hidden=true; return; }
+    $("#wind-frage").textContent=w.standpunkt;
+    // Zeiger: -1 ganz links, +1 ganz rechts. Der Bogen deckt 240 Grad ab.
+    const grad=Math.max(-1,Math.min(1,w.stand))*120;
+    el.style.setProperty("--grad",grad.toFixed(1)+"deg");
+    $("#wind-zahl").textContent=(w.stand>0?"+":"")+w.stand.toFixed(2);
+    $("#wind-zahlen").innerHTML=["rueckenwind","gegenwind","gemischt","unbestimmt"]
+      .map(k=>'<button class="wz" data-w="'+k+'" aria-pressed="'
+        +(windFilter===k)+'"><b>'+(w[k]||0)+'</b> '+WIND_NAME[k]+'</button>').join("");
+    $("#wind-hinweis").innerHTML="Verfahren: "+esc(w.verfahren)
+      +". Was kein Signalwort trifft, bleibt unbestimmt — geraten wird nicht."
+      +(w.korrigiert?" "+w.korrigiert+" von der Redaktion korrigiert.":"");
+    requestAnimationFrame(()=>el.classList.add("is-lit"));
+  }
 
   function zeit(iso){
     if(!iso) return "";
@@ -333,6 +441,7 @@ footer strong{color:var(--tinte2)}
       if(!hat) return false;
     }
     if(tagFilter && !(m.hashtags||[]).includes(tagFilter)) return false;
+    if(windFilter && m.wind!==windFilter) return false;
     if(suchtext){
       const h=((m.zeile||"")+" "+m.titel+" "+(m.quelle||"")+" "+(m.hashtags||[]).join(" ")).toLowerCase();
       if(!h.includes(suchtext)) return false;
@@ -358,9 +467,15 @@ footer strong{color:var(--tinte2)}
         +   '<span class="z">'+esc(zeit(m.datum))+'</span>'
         +   (m.neu?'<span class="neu">neu</span>':'')
         +   (m.rauschen?'<span class="z" title="Anlegertipp-Quelle oder Kursmeldung">· abgewertet</span>':'')
+        +   (m.wind && m.wind!=='unbestimmt'
+              ? '<span class="wm '+esc(m.wind)+'">'+esc(WIND_NAME[m.wind]||m.wind)+'</span>' : '')
         + '</div>'
         + '<h3><a href="'+esc(m.link)+'" target="_blank" rel="noopener">'+esc(zeile)+'</a></h3>'
         + (zeigOriginal?'<p class="original">'+esc(m.titel)+'</p>':'')
+        + ((m.wind_grund&&m.wind_grund.length)
+            ? '<p class="warum"><b>warum:</b> '+m.wind_grund.map(g=>
+                esc(g.grund)+(g.fundstelle?' &middot; <i>'+esc(g.fundstelle)+'</i>':'')
+              ).join(' &nbsp;/&nbsp; ')+'</p>' : '')
         + '<div class="tags">'+(m.hashtags||[]).map(h=>
             '<button class="tag" data-tag="'+esc(h)+'">'+esc(h)+'</button>').join("")+'</div>'
         + '</article>';
@@ -437,6 +552,14 @@ footer strong{color:var(--tinte2)}
       sichtbar=25; zeichneFeed();
       document.getElementById("feed").scrollIntoView({behavior:"smooth",block:"start"});
       return; }
+    const wz=e.target.closest(".wz");
+    if(wz){ const k=wz.dataset.w;
+      windFilter = (windFilter===k)? null : k;
+      document.querySelectorAll(".wz").forEach(x=>
+        x.setAttribute("aria-pressed", String(x.dataset.w===windFilter)));
+      sichtbar=25; zeichneFeed();
+      document.getElementById("feed").scrollIntoView({behavior:"smooth",block:"start"});
+      return; }
     const c=e.target.closest(".chip");
     if(c){ document.querySelectorAll(".chip").forEach(x=>
       x.setAttribute("aria-pressed", String(x===c)));
@@ -459,7 +582,7 @@ footer strong{color:var(--tinte2)}
         +'Erst <code>werkzeuge/sammeln.py</code> laufen lassen.</p>'; return;
     }
     (T.beobachtet||[]).forEach(e=>EINTRAG[e.id]=e);
-    zeichneZahlen(); zeichneLage(); zeichneStraenge(); zeichneFeed();
+    zeichneZahlen(); zeichneWind(); zeichneLage(); zeichneStraenge(); zeichneFeed();
 
     const idx = await jsonOderNull("analyse/index.json");
     const dateien = (idx && idx.artikel) ? idx.artikel : [];

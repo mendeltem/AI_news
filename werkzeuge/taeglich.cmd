@@ -5,8 +5,9 @@ REM
 REM   0. pruefen.py    Selbsttest der Zuordnung - schlaegt er an, bricht der Lauf ab
 REM   1. sammeln.py    Nachrichten zu allen beobachteten Eintraegen holen
 REM   2. schreiben.py  lokales Modell: eindeutschen und Lage schreiben
-REM   3. archivieren.py  Tagesstand in archiv/korpus.jsonl fortschreiben
-REM   4. committen und pushen, mit drei Versuchen
+REM   3. bewerten.py   Richtung je Meldung: Rueckenwind, Gegenwind, unbestimmt
+REM   4. archivieren.py  Tagesstand in archiv/korpus.jsonl fortschreiben
+REM   5. committen und pushen, mit drei Versuchen
 REM
 REM Rueckgabewerte:
 REM   0  fertig und gepusht
@@ -40,9 +41,11 @@ python werkzeuge\schreiben.py >> lauf.log 2>&1
 set SCHREIB=%ERRORLEVEL%
 if "%SCHREIB%"=="2" echo HINWEIS Modell war aus - Feed ohne deutsche Zeilen >> lauf.log
 
+python werkzeuge\bewerten.py >> lauf.log 2>&1
+
 python werkzeuge\archivieren.py >> lauf.log 2>&1
 
-git add -A nachrichten.json themen.json archiv artikel analyse >> lauf.log 2>&1
+git add -A nachrichten.json themen.json archiv artikel analyse korrekturen.json >> lauf.log 2>&1
 git diff --cached --quiet
 if not errorlevel 1 (
   echo Nichts geaendert - kein Commit >> lauf.log

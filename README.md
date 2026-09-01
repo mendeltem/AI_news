@@ -66,6 +66,8 @@ sind das 40 % der Rohtreffer.
 | `werkzeuge/pruefen.py` | Selbsttest der Zuordnung — Torwächter des Laufs |
 | `werkzeuge/sammeln.py` | der Sammellauf |
 | `werkzeuge/schreiben.py` | der Modell-Lauf |
+| `werkzeuge/bewerten.py` | Richtung je Meldung, per Signalwort |
+| `korrekturen.json` | Redaktionskorrekturen der Richtung — der Lernteil |
 | `werkzeuge/archivieren.py` | schreibt den Korpus fort |
 | `werkzeuge/taeglich.cmd` | was die Aufgabenplanung startet |
 
@@ -103,6 +105,66 @@ eng sein.
 Der Test deckt 28 Fälle ab — einen je Fehler, den es schon gab, dazu die Ticker,
 die auch normale Wörter sind (`ON`, `NOW`, `ARM`), den Rauschfilter und das
 Entdoppeln.
+
+## Rückenwind oder Gegenwind
+
+Oben auf der Seite steht ein Zeiger zwischen **Gegenwind** und **Rückenwind**.
+Der Standpunkt ist festgelegt und steht daneben:
+
+> Erleichtert die Meldung den Ausbau von KI-Rechenzentren oder erschwert sie ihn?
+
+Ohne festen Standpunkt ist „gut" und „schlecht" bedeutungslos. Steigende
+DRAM-Preise sind gut für Micron, schlecht für Nvidias Stückkosten und schlecht
+für den PC-Käufer. Erst der Standpunkt macht das Etikett prüfbar — und nur ein
+prüfbares Etikett taugt später als Lernmaterial.
+
+### Warum kein Sprachmodell
+
+Der naheliegende Weg wäre, das lokale Modell klassifizieren zu lassen. Gemessen
+am 30.08.2026 auf dieser Maschine:
+
+| | |
+|---|---|
+| Geschwindigkeit | 27–65 s je Meldung, Decode 0,3–0,8 t/s statt 19 |
+| Ergebnis | „neutral" für einen Streik, für 31 Mrd. Investition, für +50 % Preise |
+
+Ein Streik ist kein neutrales Ereignis. Bewerten heißt urteilen, und genau davon
+rät die Anleitung zum lokalen Modell ab. Deshalb entscheidet eine Liste von
+Signalwörtern — und das ist hier nicht der Notbehelf, sondern die bessere
+Lösung:
+
+- **nachvollziehbar** — das gefundene Signalwort *ist* die Begründung, sie steht
+  unter jeder Meldung
+- **reproduzierbar** — zweimal derselbe Titel, zweimal dasselbe Etikett
+- **korrigierbar** — ein falsches Signalwort sieht man und ändert es
+- **schnell** — Millisekunden statt einer halben Minute
+
+Was kein Signalwort trifft, bleibt **unbestimmt**. Raten wäre schlechter als
+zugeben, dass es unklar ist — derzeit sind rund 80 % unbestimmt. Die Liste
+wächst mit:
+
+```bash
+python werkzeuge/bewerten.py --zeige-unbestimmt
+```
+
+Ein Dementi kippt die Aussage nicht um, sondern auf unbestimmt: „SK hynix
+dementiert Intel-Deal" ist kein Rückenwind, nur weil „Deal" darin vorkommt.
+
+### Der Lernteil
+
+Jede Bewertung speichert, welches Signalwort sie ausgelöst hat. In
+`korrekturen.json` überschreibt die Redaktion einzelne Etiketten samt Grund:
+
+```json
+{"a1b2c3d4e5f6g7h8": {"richtung": "gegenwind",
+                      "grund": "Rekordauftrag ist hier Folge der Knappheit"}}
+```
+
+Beides landet im Korpus (`wind`, `wind_grund`, `wind_quelle`). Daraus entsteht
+ein Datensatz aus Titel, Etikett, Begründung und der Angabe, wer entschieden
+hat — das Material, aus dem sich später lernen lässt, *warum* etwas Rückenwind
+ist. Redaktionskorrekturen sind dabei die wertvollen Zeilen: sie markieren genau
+die Fälle, in denen die Regel danebenlag.
 
 ## Zwei Zeitfenster
 

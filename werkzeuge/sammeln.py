@@ -73,7 +73,9 @@ RAUSCHMUSTER = re.compile(
     r"schichtet um|depot|dividende|\bpennystock|"
     r"aktie news|tendiert|b[uü]sst|gewinnt am|verliert am|zeigt sich|"
     r"aktienkursprognose|kursanalyse|charttechnik|analysten|kaufempfehlung|"
-    r"so viel .* w[aä]re|h[aä]tten sie|w[aä]re ihr investment)", re.I)
+    r"so viel .* w[aä]re|h[aä]tten sie|w[aä]re ihr investment|"
+    r"tiefstpreis|bestpreis|nie g[uü]nstiger|deal des tages|"
+    r"schn[aä]ppchen|jetzt reduziert|prime day|black friday)", re.I)
 
 
 def log(msg):

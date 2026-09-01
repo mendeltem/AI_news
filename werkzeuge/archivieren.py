@@ -51,7 +51,8 @@ KORPUS = ARCHIV / "korpus.jsonl"
 LOG = WURZEL / "lauf.log"
 
 FELDER = ["id", "erstgesehen", "datum", "titel", "zeile", "quelle", "link",
-          "bezug", "hashtags", "gewicht", "rauschen"]
+          "bezug", "hashtags", "gewicht", "rauschen",
+          "wind", "wind_grund", "wind_quelle"]
 
 
 def log(msg):
@@ -116,6 +117,11 @@ def main():
             "hashtags": m.get("hashtags", []),
             "gewicht": m.get("gewicht"),
             "rauschen": bool(m.get("rauschen")),
+            # Richtung samt Begruendung - das eigentliche Lernmaterial.
+            # wind_quelle sagt, ob ein Signalwort oder die Redaktion entschied.
+            "wind": m.get("wind"),
+            "wind_grund": m.get("wind_grund", []),
+            "wind_quelle": m.get("wind_quelle"),
         }
         satz = {k: satz[k] for k in FELDER}
 
@@ -132,8 +138,20 @@ def main():
             alt = json.loads(zeilen[i])
         except json.JSONDecodeError:
             continue
+        geaendert = False
         if not alt.get("zeile") and satz["zeile"]:
             alt["zeile"] = satz["zeile"]
+            geaendert = True
+        # Die Richtung wird nachgetragen und aktualisiert: eine
+        # Redaktionskorrektur muss den alten Automatikwert ueberschreiben,
+        # sonst steht im Datensatz weiter das falsche Etikett.
+        if satz["wind"] and (alt.get("wind") != satz["wind"]
+                             or satz["wind_quelle"] == "redaktion"):
+            alt["wind"] = satz["wind"]
+            alt["wind_grund"] = satz["wind_grund"]
+            alt["wind_quelle"] = satz["wind_quelle"]
+            geaendert = True
+        if geaendert:
             zeilen[i] = json.dumps(alt, ensure_ascii=False)
             ergaenzt += 1
 
