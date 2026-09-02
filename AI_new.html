@@ -153,6 +153,17 @@ header.kopf{border-bottom:2px solid var(--tinte);background:var(--papier);
 .wm.rueckenwind{color:var(--rueck);border-color:var(--rueck-zart);background:var(--rueck-zart)}
 .wm.gemischt{color:var(--gemischt);border-color:var(--gemischt-zart);background:var(--gemischt-zart)}
 .post .warum{font-family:var(--mono);font-size:.68rem;color:var(--grau);line-height:1.5}
+.post .weitere{appearance:none;font:inherit;cursor:pointer;font-family:var(--mono);
+  font-size:.7rem;color:var(--akzent);background:none;border:0;padding:.1rem 0;
+  text-align:left;text-decoration:underline;text-underline-offset:3px}
+.post .weitere:hover{color:var(--tinte)}
+.post .andere{display:grid;gap:.32rem;border-left:2px solid var(--linie);
+  padding:.35rem 0 .1rem .7rem;margin-top:.15rem}
+.post .andere[hidden]{display:none}
+.post .andere a{font-family:var(--mono);font-size:.72rem;color:var(--tinte2);
+  text-decoration:none;line-height:1.45}
+.post .andere a:hover{color:var(--akzent);text-decoration:underline}
+.post .andere b{color:var(--grau);font-weight:600}
 .post .warum b{color:var(--tinte2);font-weight:600}
 
 /* Lage */
@@ -442,6 +453,10 @@ footer strong{color:var(--tinte2)}
   }
 
   function passt(m){
+    // Nur der Vertreter einer Geschichte kommt in den Feed. Die uebrigen
+    // haengen an seiner Karte und lassen sich dort aufklappen - dieselbe
+    // Meldung achtmal untereinander ist keine Information, sondern Laerm.
+    if(m.vertreter === false) return false;
     if(!zeigeAussortiert && aussortiert(m)) return false;
     if(filter==="neu" && !m.neu) return false;
     if(filter!=="alle" && filter!=="neu"){
@@ -492,6 +507,12 @@ footer strong{color:var(--tinte2)}
               ).join(' &nbsp;/&nbsp; ')+'</p>' : '')
         + '<div class="tags">'+(m.hashtags||[]).map(h=>
             '<button class="tag" data-tag="'+esc(h)+'">'+esc(h)+'</button>').join("")+'</div>'
+        + (m.weitere
+            ? '<button class="weitere" data-geschichte="'+esc(m.geschichte)+'">'
+              + '+'+m.weitere+' weitere Meldung'+(m.weitere>1?'en':'')
+              + ' zu dieser Geschichte</button>'
+              + '<div class="andere" id="g-'+esc(m.geschichte)+'" hidden></div>'
+            : '')
         + '</article>';
     }).join("");
     $("#mehr").hidden = liste.length<=sichtbar;
@@ -574,6 +595,26 @@ footer strong{color:var(--tinte2)}
       sichtbar=25; zeichneFeed();
       document.getElementById("feed").scrollIntoView({behavior:"smooth",block:"start"});
       return; }
+    const w=e.target.closest(".weitere");
+    if(w){
+      const kasten=document.getElementById("g-"+w.dataset.geschichte);
+      if(!kasten) return;
+      if(!kasten.dataset.gefuellt){
+        const andere=(N.meldungen||[]).filter(x=>
+          x.geschichte===w.dataset.geschichte && !x.vertreter);
+        kasten.innerHTML=andere.map(x=>
+          '<a href="'+esc(x.link)+'" target="_blank" rel="noopener">'
+          + '<b>'+esc(x.quelle||"unbekannt")+'</b> '
+          + esc(x.zeile || x.titel)+'</a>').join("");
+        kasten.dataset.gefuellt="1";
+      }
+      kasten.hidden=!kasten.hidden;
+      w.textContent=(kasten.hidden?"+":"−")+" "+
+        (kasten.hidden
+          ? w.textContent.replace(/^[+−]\s*/,"")
+          : "wieder einklappen");
+      return;
+    }
     const aus=e.target.closest("#aussortiert");
     if(aus){ zeigeAussortiert = !zeigeAussortiert;
       aus.setAttribute("aria-pressed", String(zeigeAussortiert));

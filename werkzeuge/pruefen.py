@@ -22,6 +22,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from sammeln import treffer, schluessel, RAUSCHMUSTER, SPAM, MARKTGEPLAUDER  # noqa: E402
 from bewerten import bewerte  # noqa: E402
+from gruppieren import worte as g_worte  # noqa: E402
 
 WURZEL = Path(__file__).resolve().parent.parent
 
@@ -147,6 +148,30 @@ def main():
             print("  FEHLGESCHLAGEN soll=%-12s ist=%-12s  %s"
                   % (soll, ist, titel[:52]))
 
+    print("Gruppieren:")
+    # Dieselbe Geschichte in zwei Sprachen muss genug seltene Woerter teilen.
+    # Das war der Fall, der acht fast gleiche Karten untereinander erzeugte.
+    a1 = g_worte("[News] SK hynix Reportedly Weighs Intel for HBM4E Base Dies "
+                 "amid TSMC Cost Pressure and Supply Diversification", "TrendForce")
+    a2 = g_worte("Intel statt TSMC?: SK Hynix will angeblich Intel fuer "
+                 "HBM-Base-Dies nutzen", "ComputerBase")
+    geteilt = a1 & a2
+    if len(geteilt) < 3:
+        fehler += 1
+        print("  FEHLGESCHLAGEN nur %d gemeinsame Woerter: %s"
+              % (len(geteilt), sorted(geteilt)))
+    # Der Quellenname darf nicht als gemeinsames Wort durchgehen.
+    if "trendforce" in a1 or "computerbase" in a2:
+        fehler += 1
+        print("  FEHLGESCHLAGEN Quellenname steht in der Wortmenge")
+    # Zwei verschiedene Geschichten duerfen sich nicht treffen.
+    b1 = g_worte("Anthropic signs $35 billion cloud deal with Nvidia-backed Lambda")
+    b2 = g_worte("Nvidia custom NVHBM promises 30% higher bandwidth than HBM4e")
+    if len(b1 & b2) >= 3:
+        fehler += 1
+        print("  FEHLGESCHLAGEN verschiedene Geschichten teilen %d Woerter: %s"
+              % (len(b1 & b2), sorted(b1 & b2)))
+
     print("Entdoppeln:")
     # Dieselbe Meldung bei zwei Haeusern muss denselben Schluessel ergeben.
     a = schluessel("SK hynix breaks ground on the first HBM plant in the US")
@@ -160,7 +185,7 @@ def main():
         fehler += 1
         print("  FEHLGESCHLAGEN verschiedene Meldungen ergeben denselben Schluessel")
 
-    gesamt = len(FAELLE) + len(RAUSCH_FAELLE) + len(WIND_FAELLE) + 2
+    gesamt = len(FAELLE) + len(RAUSCH_FAELLE) + len(WIND_FAELLE) + 5
     if fehler:
         print("\n%d von %d Faellen gescheitert" % (fehler, gesamt))
         return 1

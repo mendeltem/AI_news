@@ -44,6 +44,12 @@ if "%SCHREIB%"=="2" echo HINWEIS Modell war aus - Feed ohne deutsche Zeilen >> l
 
 python werkzeuge\bewerten.py >> lauf.log 2>&1
 
+REM Meldungen, die dieselbe Geschichte erzaehlen, zu einer Karte
+REM zusammenfassen. Das alte Entdoppeln traf nur woertliche Wiederholungen -
+REM ueber Redaktions- und Sprachgrenzen hinweg stand dieselbe Nachricht
+REM achtmal untereinander.
+python werkzeuge\gruppieren.py >> lauf.log 2>&1
+
 REM Der Lernfilter schreibt seine Einschaetzung an jede Meldung. Die Seite
 REM raeumt weg, was er und die Regeln fuer unwichtig halten - aber nur aus der
 REM Ansicht: ein Klick blendet alles wieder ein, samt Begruendung. Bei rund 85

@@ -67,6 +67,7 @@ sind das 40 % der Rohtreffer.
 | `werkzeuge/sammeln.py` | der Sammellauf |
 | `werkzeuge/schreiben.py` | der Modell-Lauf |
 | `werkzeuge/bewerten.py` | Richtung je Meldung, per Signalwort |
+| `werkzeuge/gruppieren.py` | fasst Meldungen derselben Geschichte zusammen |
 | `sortieren.html` | Meldungen selbst wischen, zwei Achsen |
 | `werkzeuge/einpflegen.py` | pflegt die gewischten Urteile ein |
 | `werkzeuge/lernfilter.py` | lernt aus den Urteilen, läuft im Schattenbetrieb |
@@ -304,6 +305,38 @@ merkt es nie.
 
 Bis dahin bleibt er ein Beobachter. Das ist die ganze Absicherung: er darf
 mitschreiben, aber nichts wegwerfen.
+
+## Dieselbe Meldung nur einmal
+
+Am 02.09.2026 stand die SK-hynix/Intel-Nachricht **achtmal** untereinander im
+Feed — TrendForce, ComputerBase, biggo, digitimes, aktien.news, TechPowerUp. Das
+alte Entdoppeln verglich normalisierte Titel und traf damit nur wörtliche
+Wiederholungen; über Redaktions- und Sprachgrenzen hinweg versagt es
+vollständig. Kein Wort war identisch.
+
+`werkzeuge/gruppieren.py` vergleicht stattdessen die **seltenen** Wörter,
+gewichtet mit ihrer Seltenheit und bezogen auf die kürzere Schlagzeile:
+
+```
+aehnlichkeit = summe(idf der gemeinsamen) / min(summe(idf) je Titel)
+```
+
+Gemeinsam sind hier `hynix, intel, hbm4e, tsmc` — Jaccard über alle Wörter ergäbe
+0,25 und damit keine Gruppe, die idf-gewichtete Überlappung 0,57. Zusätzlich muss
+mindestens ein beobachteter Eintrag geteilt sein, sonst gruppiert es Meldungen,
+die nur zufällig Fachvokabular teilen.
+
+**Kein Union-Find.** Der erste Anlauf schloss transitiv ab und legte 123
+Meldungen in eine Gruppe: NVHBM, ein Cloud-Vertrag von Anthropic, eine
+MediaTek-Beteiligung und ein Großauftrag aus Indien, verkettet über
+Zwischenglieder. Jetzt Leader-Clustering — die gewichtigste freie Meldung wird
+Vertreter, aufgenommen wird nur, wer *ihr selbst* ähnlich ist. Keine Ketten,
+dafür gelegentlich zwei Gruppen für eine Geschichte: der harmlosere Fehler.
+
+Ergebnis: 6.204 Meldungen → 4.430 Geschichten, **1.774 Wiederholungen
+zusammengefasst**. Im sichtbaren Feed 25 % weniger Karten. Gelöscht wird nichts —
+unter jeder Karte steht *„+13 weitere Meldungen zu dieser Geschichte"* zum
+Aufklappen, mit Quelle je Eintrag.
 
 ## Zwei Zeitfenster
 
