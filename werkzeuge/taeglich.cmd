@@ -6,8 +6,9 @@ REM   0. pruefen.py    Selbsttest der Zuordnung - schlaegt er an, bricht der Lau
 REM   1. sammeln.py    Nachrichten zu allen beobachteten Eintraegen holen
 REM   2. schreiben.py  lokales Modell: eindeutschen und Lage schreiben
 REM   3. bewerten.py   Richtung je Meldung: Rueckenwind, Gegenwind, unbestimmt
-REM   4. archivieren.py  Tagesstand in archiv/korpus.jsonl fortschreiben
-REM   5. committen und pushen, mit drei Versuchen
+REM   4. lernfilter.py Relevanz je Meldung, trainiert aus urteile.json
+REM   5. archivieren.py  Tagesstand in archiv/korpus.jsonl fortschreiben
+REM   6. committen und pushen, mit drei Versuchen
 REM
 REM Rueckgabewerte:
 REM   0  fertig und gepusht
@@ -43,17 +44,25 @@ if "%SCHREIB%"=="2" echo HINWEIS Modell war aus - Feed ohne deutsche Zeilen >> l
 
 python werkzeuge\bewerten.py >> lauf.log 2>&1
 
-REM Der Lernfilter laeuft im Schattenbetrieb: er sagt seine Einschaetzung
-REM an jede Meldung, aber es wird nichts danach gefiltert. So sammelt sich
-REM Beweismaterial, ohne dass ein noch unerprobtes Modell die Seite
-REM beschneidet. Ob er reif ist, sagt "lernfilter.py pruefen" - erst wenn
-REM der Rueckgabewert 0 ist und die Genauigkeit ueber den Regeln liegt,
-REM gehoert er in den Weg. Scheitert er hier, ist das kein Grund zum Abbruch.
+REM Der Lernfilter schreibt seine Einschaetzung an jede Meldung. Die Seite
+REM raeumt weg, was er und die Regeln fuer unwichtig halten - aber nur aus der
+REM Ansicht: ein Klick blendet alles wieder ein, samt Begruendung. Bei rund 85
+REM Prozent Genauigkeit ist etwa jede siebte Aussortierung falsch, deshalb
+REM wegraeumen statt loeschen.
+REM
+REM Er trainiert bei jedem Lauf neu aus urteile.json - was gestern sortiert
+REM wurde, wirkt heute. Scheitert er, ist das kein Grund zum Abbruch: dann
+REM fehlt nur das Feld und die Seite zeigt wieder alles.
 python werkzeuge\lernfilter.py anwenden >> lauf.log 2>&1
+
+REM Welche der eigenen Urteile dem Modell verdaechtig sind. Dreht nichts um,
+REM legt sie nur unter "nochmal ansehen" wieder auf den Stapel.
+python werkzeuge\lernfilter.py zweifel >> lauf.log 2>&1
 
 python werkzeuge\archivieren.py >> lauf.log 2>&1
 
-git add -A nachrichten.json themen.json archiv artikel analyse korrekturen.json >> lauf.log 2>&1
+git add -A nachrichten.json themen.json archiv artikel analyse ^
+        korrekturen.json urteile.json zweifel.json >> lauf.log 2>&1
 git diff --cached --quiet
 if not errorlevel 1 (
   echo Nichts geaendert - kein Commit >> lauf.log
