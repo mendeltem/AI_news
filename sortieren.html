@@ -215,6 +215,7 @@ footer code{font-family:var(--mono);font-size:.9em;background:var(--blatt2);
     <div class="werkzeug">
       <select id="auswahl" aria-label="Welche Meldungen sortieren">
         <option value="unsicher">wo das Modell unsicher ist</option>
+        <option value="zweifel">nochmal ansehen (Widerspruch)</option>
         <option value="offen">noch nicht beurteilt</option>
         <option value="unbestimmt">nur von der Regel unbestimmte</option>
         <option value="alle">alle ohne Rauschen</option>
@@ -288,6 +289,12 @@ footer code{font-family:var(--mono);font-size:.9em;background:var(--blatt2);
   const achse = () => ACHSEN[achsenName];
 
   let alle=[], reihe=[], zeiger=0, urteile={}, letztes=null, ziehen=null;
+  const ZWEIFEL = new Set();
+
+  async function jsonOderNull(pfad){
+    try{ const r = await fetch(pfad, {cache:"no-store"});
+      if(!r.ok) return null; return await r.json(); }catch(_){ return null; }
+  }
 
   function lies(){
     try{ return JSON.parse(localStorage.getItem(SPEICHER)||"{}"); }
@@ -304,10 +311,14 @@ footer code{font-family:var(--mono);font-size:.9em;background:var(--blatt2);
       // Rauschen bleibt draussen - ausser man will genau das beurteilen.
       if(m.rauschen && A.feld !== "wichtig") return false;
       const u = urteile[m.id];
-      if(u && u[A.feld]) return false;      // schon beurteilt, egal in welchem Modus
+      if(modus !== "zweifel" && u && u[A.feld]) return false;
       // Wo das Modell nichts entscheiden konnte, lernt es am meisten dazu.
       // relevanz ist null, wenn der Lernfilter unter seiner Schwelle blieb.
       if(modus === "unsicher") return "relevanz" in m && m.relevanz === null;
+      // Faelle, denen das Modell entschieden widerspricht - moegliche
+      // Ausrutscher beim schnellen Durchwischen. Hier wird eine bestehende
+      // Beurteilung bewusst NICHT ausgeblendet, sie soll ja geprueft werden.
+      if(modus === "zweifel") return ZWEIFEL.has(m.titel);
       if(modus === "unbestimmt") return A.automatik(m) === "unbestimmt";
       return true;
     });
@@ -542,6 +553,12 @@ footer code{font-family:var(--mono);font-size:.9em;background:var(--blatt2);
       return;
     }
     zeichneKnoepfe();
+    const z = await jsonOderNull("zweifel.json");
+    if(z && z.faelle){
+      z.faelle.forEach(f => ZWEIFEL.add(f.titel));
+      const opt = document.querySelector('#auswahl option[value="zweifel"]');
+      if(opt) opt.textContent = "nochmal ansehen (" + z.faelle.length + ")";
+    }
     baueReihe();
     zeichne();
   })();

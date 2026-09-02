@@ -1,0 +1,84 @@
+{
+ "stand": "2026-09-02T07:05:12",
+ "hinweis": "Verdacht, keine Feststellung. Das Modell irrt selbst in jedem siebten Fall.",
+ "faelle": [
+  {
+   "titel": "Nvidia's top-end RTX 5090 gaming GPU now costs at least $5,000 — Blackwell cards continue to endure drastic price hikes - Tom's Hardware",
+   "dein_urteil": "wichtig",
+   "modell": "unwichtig",
+   "sicherheit": 1.0
+  },
+  {
+   "titel": "Amazon's Zoox, Alphabet's Waymo expand robotaxi services to more US cities - Reuters",
+   "dein_urteil": "wichtig",
+   "modell": "unwichtig",
+   "sicherheit": 0.999
+  },
+  {
+   "titel": "Intel Aktie: SK Hynix prüft HBM-Produktion - AD HOC NEWS",
+   "dein_urteil": "unwichtig",
+   "modell": "wichtig",
+   "sicherheit": 0.999
+  },
+  {
+   "titel": "How Apple Stumbled Into AI Hardware Success, Salesforce Revamps AI Pricing, AI Homebuilder Company - The Information",
+   "dein_urteil": "wichtig",
+   "modell": "unwichtig",
+   "sicherheit": 0.995
+  },
+  {
+   "titel": "OpenAI Jalapeño: Better Than Nvidia Blackwell - newsletter.semianalysis.com",
+   "dein_urteil": "unwichtig",
+   "modell": "wichtig",
+   "sicherheit": 0.985
+  },
+  {
+   "titel": "Nvidia GB300 Blackwell Ultra: Mass Production Hits $89B - tech-insider.org",
+   "dein_urteil": "wichtig",
+   "modell": "unwichtig",
+   "sicherheit": 0.96
+  },
+  {
+   "titel": "TSMC packaging shift could boost AMD CoWoS share and trim Nvidia's allocation - digitimes",
+   "dein_urteil": "unwichtig",
+   "modell": "wichtig",
+   "sicherheit": 0.957
+  },
+  {
+   "titel": "AMD, Broadcom book most of Powertech's FOPLP capacity ahead of 2027 ramp - digitimes",
+   "dein_urteil": "wichtig",
+   "modell": "unwichtig",
+   "sicherheit": 0.954
+  },
+  {
+   "titel": "Options Market Statistics | Intel Pre Market Up 1.37%, SK Hynix Evaluates Intel for HBM4E Chip Production - moomoo.com",
+   "dein_urteil": "unwichtig",
+   "modell": "wichtig",
+   "sicherheit": 0.944
+  },
+  {
+   "titel": "Microsoft Outlook and OpenAI's ChatGPT Work are experiencing user outages - CNBC",
+   "dein_urteil": "wichtig",
+   "modell": "unwichtig",
+   "sicherheit": 0.938
+  },
+  {
+   "titel": "\"Chinese semiconductors are terrifying\" ... Samsung Electronics and SK Hynix-level HBM3E to enter mass production next year - 매일경제",
+   "dein_urteil": "unwichtig",
+   "modell": "wichtig",
+   "sicherheit": 0.932
+  },
+  {
+   "titel": "OpenAI und Anthropic räumen Mac-mini-Lager leer, Apple meldet Rekordquartal - Pasquale Pillitteri",
+   "dein_urteil": "wichtig",
+   "modell": "unwichtig",
+   "sicherheit": 0.927
+  },
+  {
+   "titel": "ASE CEO describes AI resource squeeze as a short-term problem - digitimes",
+   "dein_urteil": "unwichtig",
+   "modell": "wichtig",
+   "sicherheit": 0.913
+  }
+ ]
+}

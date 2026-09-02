@@ -295,6 +295,41 @@ def lernkurve(beispiele, saaten=6):
         print("    dann auf sortieren.html die Auswahl 'wo das Modell unsicher ist'")
 
 
+def zweifel(beispiele, schwelle=0.90, falten=FALTEN, saat=11):
+    """Sucht Urteile, denen das Modell entschieden widerspricht.
+
+    Der Anlass ist eine Selbstauskunft: beim schnellen Durchwischen langer
+    Strecken Boersenrauschen rutscht das eine oder andere in die falsche
+    Richtung. Das ist normal und kein Vorwurf - aber ein Lernfilter, der jedes
+    Etikett fuer Wahrheit haelt, uebernimmt diese Ausrutscher.
+
+    Verfahren: jedes Beispiel wird von einem Modell beurteilt, das es nicht
+    gesehen hat. Sagt dieses Modell mit hoher Sicherheit das Gegenteil, ist das
+    ein Verdacht - keine Feststellung. Entscheiden muss der Mensch, deshalb
+    landen die Faelle im Sortierstapel und werden nicht automatisch gedreht.
+
+    Ein Modell mit 85 Prozent Genauigkeit irrt in jedem siebten Fall selbst.
+    Die Schwelle liegt deshalb hoeher als beim normalen Anwenden."""
+    r = random.Random(saat)
+    daten = list(beispiele)
+    r.shuffle(daten)
+    teile = [daten[i::falten] for i in range(falten)]
+    verdacht = []
+    for i in range(falten):
+        test = teile[i]
+        train = [x for j, t in enumerate(teile) if j != i for x in t]
+        if not train or not test:
+            continue
+        b = Bayes().lernen(train)
+        for m, k, titel in test:
+            vor, sicher, _ = b.vorhersage(m)
+            if vor and vor != k and sicher >= schwelle:
+                verdacht.append({"titel": titel, "dein_urteil": k,
+                                 "modell": vor, "sicherheit": round(sicher, 3)})
+    verdacht.sort(key=lambda v: -v["sicherheit"])
+    return verdacht
+
+
 def erklaeren(b, titel, oben=8):
     m = merkmale(titel)
     vor, sicher, beitrag = b.vorhersage(m)
@@ -320,7 +355,8 @@ def erklaeren(b, titel, oben=8):
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("befehl", choices=["pruefen", "trainieren", "anwenden", "erklaeren"])
+    p.add_argument("befehl", choices=["pruefen", "trainieren", "anwenden",
+                                      "erklaeren", "zweifel"])
     p.add_argument("text", nargs="?")
     p.add_argument("--schwelle", type=float, default=SCHWELLE)
     p.add_argument("--kurve", action="store_true",
@@ -351,6 +387,27 @@ def main():
             "gesamt": dict(b.gesamt),
         }, ensure_ascii=False), encoding="utf-8")
         log("modell.json geschrieben, %d Beispiele" % len(beispiele))
+        return 0
+
+    if a.befehl == "zweifel":
+        v = zweifel(beispiele)
+        ZWEIFEL = WURZEL / "zweifel.json"
+        ZWEIFEL.write_text(json.dumps(
+            {"stand": __import__("datetime").datetime.now().isoformat(timespec="seconds"),
+             "hinweis": "Verdacht, keine Feststellung. Das Modell irrt selbst in "
+                        "jedem siebten Fall.",
+             "faelle": v}, ensure_ascii=False, indent=1), encoding="utf-8")
+        if not v:
+            print("Kein Urteil, dem das Modell entschieden widerspricht.")
+            return 0
+        print("%d Urteile, denen das Modell entschieden widerspricht "
+              "(Verdacht, keine Feststellung):\n" % len(v))
+        for x in v:
+            print("  du: %-10s  Modell: %-10s (%.0f%%)"
+                  % (x["dein_urteil"], x["modell"], x["sicherheit"] * 100))
+            print("      %s" % x["titel"][:84])
+        print("\nzweifel.json geschrieben. Auf sortieren.html unter "
+              "'nochmal ansehen' erneut vorlegen.")
         return 0
 
     if a.befehl == "erklaeren":

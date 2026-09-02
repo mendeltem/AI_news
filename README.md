@@ -256,6 +256,42 @@ Flach. Der Engpass ist nicht die Menge der Urteile, sondern das Material: aus
 Titelwörtern ist herausgeholt, was drin ist. Was hilft, sind die Fälle, bei
 denen das Modell **unsicher** ist — dort steckt die Information.
 
+### Etiketten sind selbst fehlerbehaftet
+
+Selbstauskunft beim Sortieren: *„manchmal mache ich nicht alles korrekt, weil zu
+viel Aktien-Blabla."* Beim schnellen Durchwischen langer Strecken Börsenrauschen
+rutscht etwas in die falsche Richtung. Das ist normal — aber ein Lernfilter, der
+jedes Etikett für Wahrheit hält, übernimmt diese Ausrutscher.
+
+Zwei Antworten darauf:
+
+**Strukturell.** Die 22 Aktien-Meldungen, die den Rhythmus erzeugt haben, fängt
+`MARKTGEPLAUDER` jetzt vorher ab. Sie werden gar nicht mehr vorgelegt.
+
+**Prüfend.** `lernfilter.py zweifel` sucht Urteile, denen ein Modell *das sie
+nicht gesehen hat* mit über 90 % Sicherheit widerspricht:
+
+```
+du: unwichtig   Modell: wichtig (96%)
+    TSMC packaging shift could boost AMD CoWoS share and trim Nvidia's allocation
+```
+
+Das ist **Verdacht, keine Feststellung** — ein Modell mit 85 % Genauigkeit irrt
+in jedem siebten Fall selbst. Nichts wird automatisch gedreht. Die Fälle landen
+in `zweifel.json` und auf `sortieren.html` unter *„nochmal ansehen"*, wo die
+bestehende Beurteilung ausnahmsweise sichtbar bleibt.
+
+### Wegwerfen, aber umkehrbar
+
+Der Feed blendet aus, was Regeln oder Lernfilter für unwichtig halten. Die
+Zählzeile nennt die Zahl, ein Klick auf **„Aussortiertes zeigen"** holt alles
+zurück, und an jeder Meldung steht, wer sie aussortiert hat und mit welcher
+Sicherheit.
+
+Das ist der Kompromiss: wegräumen ja, löschen nein. Bei 85 % Genauigkeit ist
+ungefähr jede siebte Aussortierung falsch — wer das nicht nachprüfen kann,
+merkt es nie.
+
 ### Der Weg zur Automatisierung
 
 1. **Schattenbetrieb** (läuft bereits): Der Lernfilter schätzt jede Meldung ein,

@@ -335,6 +335,7 @@ footer strong{color:var(--tinte2)}
       <button class="chip" data-f="cloud" aria-pressed="false">Cloud</button>
       <button class="chip" data-f="anwendung" aria-pressed="false">Anwendung</button>
       <button class="chip" data-f="neu" aria-pressed="false">Nur neu</button>
+      <button class="chip" id="aussortiert" aria-pressed="false">Aussortiertes zeigen</button>
       <input class="suche" id="suche" type="search" placeholder="suchen …" aria-label="Meldungen durchsuchen">
     </div>
   </div>
@@ -402,7 +403,13 @@ footer strong{color:var(--tinte2)}
   };
 
   let N=null, T=null, EINTRAG={}, sichtbar=25, filter="alle", tagFilter=null,
-      suchtext="", windFilter=null;
+      suchtext="", windFilter=null, zeigeAussortiert=false;
+
+  // Aussortiert heisst hier weggeraeumt, nicht geloescht: entweder haben die
+  // Regeln zugeschlagen, oder der Lernfilter hat sich sicher genug fuer
+  // "unwichtig" entschieden. Ein Klick holt alles zurueck - was ein Filter
+  // wegwirft, muss nachpruefbar bleiben.
+  const aussortiert = m => !!m.rauschen || m.relevanz === "unwichtig";
 
   const WIND_NAME={gegenwind:"Gegenwind",rueckenwind:"Rueckenwind",
                    gemischt:"gemischt",unbestimmt:"unbestimmt"};
@@ -435,6 +442,7 @@ footer strong{color:var(--tinte2)}
   }
 
   function passt(m){
+    if(!zeigeAussortiert && aussortiert(m)) return false;
     if(filter==="neu" && !m.neu) return false;
     if(filter!=="alle" && filter!=="neu"){
       const wollen=SCHICHT_FILTER[filter]||[];
@@ -453,8 +461,10 @@ footer strong{color:var(--tinte2)}
   function zeichneFeed(){
     const liste=(N.meldungen||[]).filter(passt);
     const zeigen=liste.slice(0,sichtbar);
+    const weg=(N.meldungen||[]).filter(aussortiert).length;
     $("#feed-zahl").textContent = liste.length+" von "+(N.meldungen||[]).length
-      + (tagFilter? " · "+tagFilter : "");
+      + (tagFilter? " · "+tagFilter : "")
+      + (weg? " · "+weg+" aussortiert"+(zeigeAussortiert?" (eingeblendet)":"") : "");
     if(!zeigen.length){
       $("#feed-liste").innerHTML='<p class="leer">Nichts gefunden. Filter zuruecksetzen?</p>';
       $("#mehr").hidden=true; return;
@@ -467,7 +477,10 @@ footer strong{color:var(--tinte2)}
         +   '<span class="q">'+esc(m.quelle||"unbekannt")+'</span>'
         +   '<span class="z">'+esc(zeit(m.datum))+'</span>'
         +   (m.neu?'<span class="neu">neu</span>':'')
-        +   (m.rauschen?'<span class="z" title="Anlegertipp-Quelle oder Kursmeldung">· abgewertet</span>':'')
+        +   (m.rauschen?'<span class="z" title="Anlegertipp-Quelle oder Kursmeldung">· Regel: aussortiert</span>':'')
+        +   (!m.rauschen && m.relevanz==="unwichtig"
+              ?'<span class="z" title="'+esc((m.relevanz_grund||[]).join(", "))
+               +'">· Lernfilter: aussortiert ('+Math.round((m.relevanz_sicher||0)*100)+'%)</span>':'')
         +   (m.wind && m.wind!=='unbestimmt'
               ? '<span class="wm '+esc(m.wind)+'">'+esc(WIND_NAME[m.wind]||m.wind)+'</span>' : '')
         + '</div>'
@@ -561,8 +574,12 @@ footer strong{color:var(--tinte2)}
       sichtbar=25; zeichneFeed();
       document.getElementById("feed").scrollIntoView({behavior:"smooth",block:"start"});
       return; }
+    const aus=e.target.closest("#aussortiert");
+    if(aus){ zeigeAussortiert = !zeigeAussortiert;
+      aus.setAttribute("aria-pressed", String(zeigeAussortiert));
+      sichtbar=25; zeichneFeed(); return; }
     const c=e.target.closest(".chip");
-    if(c){ document.querySelectorAll(".chip").forEach(x=>
+    if(c){ document.querySelectorAll(".chip[data-f]").forEach(x=>
       x.setAttribute("aria-pressed", String(x===c)));
       filter=c.dataset.f; sichtbar=25; zeichneFeed(); }
   });
