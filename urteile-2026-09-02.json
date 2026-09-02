@@ -1,0 +1,667 @@
+{
+ "erzeugt": "2026-09-02T04:27:39",
+ "achsen": {
+  "richtung": "Erleichtert die Meldung den Ausbau von KI-Rechenzentren oder erschwert sie ihn?",
+  "wichtigkeit": "Wuerdest du das jemandem weitererzaehlen, der die Kette verfolgt?"
+ },
+ "anzahl": 109,
+ "richtung_beurteilt": 109,
+ "wichtigkeit_beurteilt": 0,
+ "abweichungen": 4,
+ "urteile": {
+  "2044e2f914813ae5": {
+   "titel": "SanDisk, Micron, AMD, Nvidia, Intel, Others Plunge Pre-Market As Chip Stocks See-Saw - NDTV Profit",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:10:42"
+  },
+  "ff4d8d960f299bca": {
+   "titel": "[News] SK hynix Reportedly Weighs Intel for HBM4E Base Dies amid TSMC Cost Pressure and Supply Diversification - TrendForce",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:10:50"
+  },
+  "f9eda8a4dea89a3e": {
+   "titel": "AI Memory Stocks Rally After Nvidia Earnings: SanDisk, Micron and SK Hynix Rise — Which Stock Is Best to Buy? - Mitrade",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:11:08"
+  },
+  "90bc7cbd14440f6a": {
+   "titel": "OpenAI Jalapeño: Better Than Nvidia Blackwell - newsletter.semianalysis.com",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:11:13"
+  },
+  "ca56eea9b7a4f444": {
+   "titel": "TSMC packaging shift could boost AMD CoWoS share and trim Nvidia's allocation - digitimes",
+   "urteil": "gegenwind",
+   "urteil_automatik": "gegenwind",
+   "zeit": "2026-09-02T04:11:23"
+  },
+  "682788a7e42369d3": {
+   "titel": "Intel statt TSMC?: SK Hynix will angeblich Intel für HBM-Base-Dies nutzen - ComputerBase",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:11:31"
+  },
+  "5907b3feddb4857d": {
+   "titel": "Tesla's AI Investments Pale In Comparison To Microsoft, Amazon And Alphabet - Investor's Business Daily",
+   "urteil": "gegenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:11:38"
+  },
+  "7e1d419438bec7ad": {
+   "titel": "[News] NVIDIA’s Reported 15% Server Hike Boosts Samsung, SK hynix, With HBM Prices Potentially Up 50%+ in 2027 - TrendForce",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:11:59"
+  },
+  "708be8f3778ffa7a": {
+   "titel": "SK Hynix Weighs Intel Foundry for HBM4E Base Die, Reducing TSMC Dependence - finance.biggo.com",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:12:02"
+  },
+  "0fb4eefef79c77ec": {
+   "titel": "Micron, SpaceX, Nvidia, Intel, Rocket Lab, Fermi, AppLovin, and More Stocks That Explain Today's Market -- Barrons.com - moomoo.com",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:12:06"
+  },
+  "8ee6646845e77b11": {
+   "titel": "Micron Taiwan Unions Demand Bonuses Matching Samsung Electronics, SK Hynix - chosun.com",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:12:11"
+  },
+  "e115fc6413206da7": {
+   "titel": "US Markt Jubelt Nach CPI - Apple, Now, CRM, Duolingo, Microsoft, Lufthansa, Lockheed, IBM, Biontech Suzanne Ashman (9M1dgeocj3) - Mshale",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:12:17"
+  },
+  "098d6dbf911b1aaf": {
+   "titel": "TSMC delays CoWoS orders as CoPoS plans take shape - digitimes",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "gemischt",
+   "zeit": "2026-09-02T04:12:22"
+  },
+  "ac51bb4ba9c65c8b": {
+   "titel": "OpenAI says Apple has only itself to blame in trade-secret fight - Reuters",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:12:30"
+  },
+  "073afbe833d35821": {
+   "titel": "Rubin CPX: NVIDIA optimiert Chip für KI-Rechenzentren ab 2027 - BornCity",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:12:33"
+  },
+  "1e0dae3c1e91f7f2": {
+   "titel": "Apple-Klage gegen OpenAI: „Schockierende Beweise“ eingereicht - heise online",
+   "urteil": "gegenwind",
+   "urteil_automatik": "gegenwind",
+   "zeit": "2026-09-02T04:12:35"
+  },
+  "b619c9b5dd15f7f3": {
+   "titel": "The Zacks Analyst Blog Highlights Broadcom, Nvidia, Palantir, Fortinet and Quanta Services - Yahoo Finance",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:12:38"
+  },
+  "6ebeda3754b2cf25": {
+   "titel": "SK Hynix Could Partner With Intel Foundry to Produce Next-Generation HBM4E Memory - eTeknix",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:12:44"
+  },
+  "d580a576ac5ce824": {
+   "titel": "Over 175,000 tech jobs cut in 2026: Apple, Microsoft, Amazon, Oracle and more join layoff wave | Hindustan Times - Hindustan Times",
+   "urteil": "gegenwind",
+   "urteil_automatik": "gegenwind",
+   "zeit": "2026-09-02T04:12:48"
+  },
+  "eef3bbfb8175c6f5": {
+   "titel": "Global markets live: Amazon, Tesla, Nvidia, Apple, Eli Lilly… - marketscreener.com",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:12:52"
+  },
+  "5c29558fd0488493": {
+   "titel": "NVIDIA's \"Rubin CPX\" GPU Reborn with HBM4 Memory, No More GDDR7 - TechPowerUp",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:12:56"
+  },
+  "3685578613e86e7d": {
+   "titel": "Amazon's Zoox, Alphabet's Waymo expand robotaxi services to more US cities - Reuters",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:13:00"
+  },
+  "115f1796a66c5932": {
+   "titel": "Nvidia custom 'NVHBM' promises 30% higher bandwidth, 15% lower power than commodity HBM4e — custom base die and PHY will be available to NVLink Fusion partners - Tom's Hardware",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:13:09"
+  },
+  "79c159fb0e5be1f7": {
+   "titel": "AMD, Broadcom book most of Powertech's FOPLP capacity ahead of 2027 ramp - digitimes",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:13:18"
+  },
+  "fcea510df8127e75": {
+   "titel": "[News] Intel’s Advanced Packaging, Led by EMIB-T, Set to Hit Its Stride in 2029; DRAM Manufacturing Ruled Out - TrendForce",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:13:30"
+  },
+  "b722e86c973d993e": {
+   "titel": "SK Hynix Reportedly Taps Intel Foundry for HBM Base Dies, Threatening TSMC's Monopoly - finance.biggo.com",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:13:39"
+  },
+  "d3eea8bdeb7d6504": {
+   "titel": "SK Hynix prüft Intel als Partner für HBM4E-Basis-Chips - aktien.news",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:13:42"
+  },
+  "1f95cd102585e075": {
+   "titel": "Options Market Statistics | Intel Pre Market Up 1.37%, SK Hynix Evaluates Intel for HBM4E Chip Production - moomoo.com",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:13:50"
+  },
+  "b168fa0db143d8c8": {
+   "titel": "Chip-Aktien im Blick: NVIDIA, Broadcom & Marvell - Warum Vernetzung der nächste KI-Treiber ist - finanzen.at",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:13:52"
+  },
+  "f947edcb3b1fd0ad": {
+   "titel": "SK Hynix explores Intel as second source for HBM base dies - digitimes",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:13:56"
+  },
+  "c56441ed26cd172b": {
+   "titel": "Qualcomm rival MediaTek jumps 10% after $3.5 billion Nvidia AI chip deal - CNBC",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:14:10"
+  },
+  "b1a33aa54d4b2589": {
+   "titel": "OpenAI: Apple legt neue Beweise für Diebstahl von Geschäftsgeheimnissen vor - Golem.de",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:14:16"
+  },
+  "0d7b1f6d4a90e3de": {
+   "titel": "\"Chinese semiconductors are terrifying\" ... Samsung Electronics and SK Hynix-level HBM3E to enter mass production next year - 매일경제",
+   "urteil": "gegenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:14:31"
+  },
+  "744cfb8adda2ee50": {
+   "titel": "Darf Rechenzentrum benutzen: Anthropic schließt Milliarden-Deal mit Nvidia-Partner - n-tv.de",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:14:38"
+  },
+  "0e745666c586a385": {
+   "titel": "Anthropic inks $35B deal with Nvidia-backed cloud provider Lambda: Report - CNBC",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:14:46"
+  },
+  "49634c67286da283": {
+   "titel": "Save $300 on this 240Hz OLED gaming laptop with an RTX 5070 Ti, now just $1,899 — Acer Predator Helios rig ships with a 24-core Intel CPU, 32GB DDR5 and a 1TB SSD - Tom's Hardware",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:14:51"
+  },
+  "85d051606bdf9a1c": {
+   "titel": "Nvidia's top-end RTX 5090 gaming GPU now costs at least $5,000 — Blackwell cards continue to endure drastic price hikes - Tom's Hardware",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:14:58"
+  },
+  "50e23e18dc6067ed": {
+   "titel": "Microsoft, Apple and Oracle Face Rising Rate Pressure - FXEmpire",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:15:01"
+  },
+  "9ba487dfdad28e3b": {
+   "titel": "Microsoft, Apple and Oracle Face Rising Rate Pressure - Yahoo Finance Australia",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:15:04"
+  },
+  "19b34c93f33813e9": {
+   "titel": "Nvidia pours $3.5 billion into MediaTek — company will adopt NVLink Fusion for its custom AI accelerators - Tom's Hardware",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:15:10"
+  },
+  "009cff9378737cf5": {
+   "titel": "AI data center firm SB Energy, which is backed by Softbank, Nvidia and OpenAI, files for IPO - CNBC",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:15:19"
+  },
+  "4361026002d9ad76": {
+   "titel": "NVIDIA and Mediatek Ink $3.5B Investment Deal, Accelerate NVLink Fusion Adoption - servethehome.com",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:15:24"
+  },
+  "6759eed03545a31d": {
+   "titel": "NVIDIA Vera Rubin First Benchmark Revealed: DeepSeek AI Throughput Skyrockets 30X - eu.36kr.com",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:15:27"
+  },
+  "ae399b72d46b5506": {
+   "titel": "SK Hynix Next-Gen HBM Memory to Use Intel EMIB-T Packaging - TechPowerUp",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:15:30"
+  },
+  "6e3a48b444ac4ad2": {
+   "titel": "Samsung (005930 KS) and SK Hynix (000660 KS) are reportedly expected to increase the share of 8-high products in their shipments of HBM4 to Nvidia (NVDA); sources suggest the plan to increase supply to Nvidia will begin in H2'26, ZDnet Korea reports - Newsquawk",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:15:41"
+  },
+  "ad5896629cbda2a4": {
+   "titel": "Nvidia Aktie: SK Hynix sichert Vera-Rubin-Speicher - AD HOC NEWS",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:15:47"
+  },
+  "4957a81a4b1f8a30": {
+   "titel": "TSMC vs Intel vs Samsung: Solving Advanced CoWoS Bottleneck for Next-Gen AI Accelerators - intelligentliving.co",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "gegenwind",
+   "zeit": "2026-09-02T04:15:54"
+  },
+  "eb58be6e9aa632db": {
+   "titel": "[News] Powertech Bets NT$70B on World’s First Panel-Level AI Chip Packaging in 2027, Potentially Ahead of TSMC - TrendForce",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:16:09"
+  },
+  "84bcd9b802db91a5": {
+   "titel": "[News] TSMC: SoIC, CoWoS to Drive 50× Compute by 2029; Silicon Photonics to Top 50% of Transceiver Market by 2027 - TrendForce",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:16:16"
+  },
+  "93911f06f6358234": {
+   "titel": "SK Hynix prüft Intel für Base-Dies der nächsten HBM-Generation - MarketScreener Deutschland",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:16:28"
+  },
+  "2502948295707f02": {
+   "titel": "Not NVIDIA or AMD: Why TSMC Could Be the Biggest Winner in the AI Hardware Race - convergence-now.com",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:16:41"
+  },
+  "da86661225b9deab": {
+   "titel": "Chip Trade Defies Broader Market Trends; SanDisk, Micron, AMD, SK Hynix, Others Soar Up To 3% - NDTV Profit",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:16:52"
+  },
+  "5a63ee3f0ba762a0": {
+   "titel": "Intel Shares Climb on Report SK Hynix May Tap Its Foundry for Next-Gen HBM Base Dies - finance.biggo.com",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:17:03"
+  },
+  "edcd76b27082658a": {
+   "titel": "Microsoft Outlook and OpenAI's ChatGPT Work are experiencing user outages - CNBC",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:17:12"
+  },
+  "dc43581ca2f1085c": {
+   "titel": "SK Hynix dementiert Intel-Foundry-Deal für HBM4E-Chips - AD HOC NEWS",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:17:15"
+  },
+  "57f53e4aa64ee31e": {
+   "titel": "Anthropic Seals $35 Billion Cloud Deal With Nvidia-Backed Lambda - Bloomberg.com",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:17:18"
+  },
+  "3bc00cca57c9e49c": {
+   "titel": "Apple shares 'shocking evidence' against former employee accused of stealing company data for OpenAI - TechCrunch",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:17:22"
+  },
+  "bddb4a81551a8b26": {
+   "titel": "[News] MediaTek Ramps Up Advanced Packaging Push as TSMC Veteran Shang Hou Calls for More Talent - TrendForce",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:17:27"
+  },
+  "e085aa567cbcdc41": {
+   "titel": "SK Hynix stock rebounds, but a new HBM4 risk is getting harder to ignore - TradingView",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:17:34"
+  },
+  "61136d4e4aee67aa": {
+   "titel": "TSMC's 3DFabric Platform Evolves: CoWoS Transistor Integration Projected to Grow 48x by 2029 - finance.biggo.com",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:17:38"
+  },
+  "8b98f5ea184f0bee": {
+   "titel": "China’s CXMT begins small-scale HBM3E production: report - The Korea Herald",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:17:42"
+  },
+  "5a0524db21924e93": {
+   "titel": "Apple Says OpenAI Is Destroying Evidence in Trade Secrets Case - Bloomberg.com",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:17:47"
+  },
+  "591f7a345d7ef6b1": {
+   "titel": "ASE CEO describes AI resource squeeze as a short-term problem - digitimes",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:17:51"
+  },
+  "f5f7ccad400f0c2a": {
+   "titel": "Nasdaq 100 Futures Hold Below 30,000 amid Nvidia, Microsoft, Alphabet & Meta Drive - FXLeaders",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:17:54"
+  },
+  "153dfd41bc782785": {
+   "titel": "DELL, HPE Stocks Draw Focus Ahead Of Earnings This Week — And SMCI Bulls Are Watching Closely - TradingView",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:17:58"
+  },
+  "e1e4938cd1a4c003": {
+   "titel": "DELL, HPE Stocks Draw Focus Ahead Of Earnings This Week — And SMCI Bulls Are Watching Closely - Yahoo Finance",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:18:02"
+  },
+  "cd8475dcb8c7e5f9": {
+   "titel": "Fake OpenAI, Anthropic and DeepSeek Crawlers Target .env Files and Cloud Credentials - gbhackers.com",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:18:06"
+  },
+  "67b31f3395e2bc55": {
+   "titel": "Nasdaq, Dow, S&P 500 Futures Begin September On Weak Footing: Why NVDA, AAPL, TSLA, PANW, DELL, SLS, HUT Are In Focus - TradingView",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:18:08"
+  },
+  "89d315c14efd8647": {
+   "titel": "OpenAI und Anthropic räumen Mac-mini-Lager leer, Apple meldet Rekordquartal - Pasquale Pillitteri",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:18:13"
+  },
+  "02d1cf0100205bd4": {
+   "titel": "Samsung, SK hynix Unveil Next-Gen Memory Strategies in Taiwan - Businesskorea",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:18:21"
+  },
+  "6cdbb1499602e6f0": {
+   "titel": "Nvidia GB300 Blackwell Ultra: Mass Production Hits $89B - tech-insider.org",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:18:25"
+  },
+  "e450f0087e258708": {
+   "titel": "Here Are Tuesday’s Top Wall Street Analyst Research Calls: Akamai Technologies, Arista Networks, Booking Holdings, Cisco Systems, Dell Technologies, Duolingo, Robinhood Markets, PG&E, and More - Yahoo Finance",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:18:33"
+  },
+  "d455094a6f0f43c5": {
+   "titel": "Samsung Holds Top Spot In Q2 eSSD Market - Businesskorea",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:18:36"
+  },
+  "6bc41a2f1fd13988": {
+   "titel": "Semiconductor Stocks Slide as Global Bond Selloff Lifts Yields: Intel Drops 3%, NVIDIA and AMD Slip - Yahoo Finance",
+   "urteil": "gegenwind",
+   "urteil_automatik": "gegenwind",
+   "zeit": "2026-09-02T04:18:46"
+  },
+  "d19d1eed6dea7751": {
+   "titel": "Hackers Pose as OpenAI, Anthropic and DeepSeek to Steal Credentials and Secrets - CyberSecurityNews",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:18:50"
+  },
+  "fda6ce640c236266": {
+   "titel": "Anthropic signs $35B cloud deal with Nvidia-backed provider - Anadolu Ajansı",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:18:57"
+  },
+  "60c2bcd2a7aeec20": {
+   "titel": "Dell Falls 4% Ahead of Earnings as Its 266% Rally Raises the Bar, Super Micro and Hewlett Packard Enterprise Slip - Yahoo Finance",
+   "urteil": "gegenwind",
+   "urteil_automatik": "gegenwind",
+   "zeit": "2026-09-02T04:19:04"
+  },
+  "a810113154fc06e9": {
+   "titel": "OpenAI lifts the lid on its in-house Jalapeño chip - with benchmarks claiming it beats Nvidia's GB300 - Yahoo Tech",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:19:10"
+  },
+  "5bf00ca62012fd32": {
+   "titel": "Anthropic Beats OpenAI To The Punch With A Nominally Cheaper Claude Fable 5.1, As Samsung Bets Its Chip Designs On Claude Code - Wccftech",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:19:22"
+  },
+  "cde84f6db3d4def7": {
+   "titel": "Korea’s Trillion-Dollar Sovereign AI Investment: Nvidia Wins and Hynix Pays - newsletter.semianalysis.com",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:19:28"
+  },
+  "5061d44e8283664c": {
+   "titel": "NVIDIA Vera Rubin NVL72 Rack at Hot Chips 2026 - servethehome.com",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:19:32"
+  },
+  "b6fadd95285f1b6d": {
+   "titel": "NVIDIA Groq 3 LPU Hot Chips 2026 Vera Rubin Stack - servethehome.com",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:19:33"
+  },
+  "10c9500a4a17821a": {
+   "titel": "[News] OpenAI Debuts Jalapeño AI Inference Chip, with Samsung Reportedly Supplying HBM4 - TrendForce",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:19:38"
+  },
+  "f3899a87d5176bb6": {
+   "titel": "Hot Chips 2026: Nvidia touts benefits of its DSX MaxLPS site power management approach — tech allows for more compute from fixed data center power budgets - Tom's Hardware",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:20:07"
+  },
+  "f212713c6f592591": {
+   "titel": "Nvidia reportedly shifts HBM4 mix toward 8-high as memory supply stays tight - digitimes",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:20:12"
+  },
+  "eaa62e994146f285": {
+   "titel": "[News] Kioxia Reportedly Plans JPY 1T+ NAND Fab in Japan, Operations Eyed for 2029 or Later - TrendForce",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:20:15"
+  },
+  "4038c7ab3800b192": {
+   "titel": "[News] NVIDIA’s Supply Commitments Soar to $279B as Memory Costs Surge; New NVHBM Boosts Bandwidth 30% - TrendForce",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:20:23"
+  },
+  "7c1e140c1ea624fb": {
+   "titel": "Kioxia weighs third Kitakami fab as NAND demand rises - digitimes",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:20:26"
+  },
+  "cb914baab8d6b6fe": {
+   "titel": "Nvidia Vera Rubin drives 800VDC, lifts BBU demand - digitimes",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:20:28"
+  },
+  "94e175762ae640d1": {
+   "titel": "SK Hynix starts construction of first HBM chip packaging plant in US - Nikkei Asia",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:20:31"
+  },
+  "1048d511cdda1d45": {
+   "titel": "Nvidia kündigt High Bandwidth Memory NVHBM an - heise online",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:20:36"
+  },
+  "142678eb95ac2cff": {
+   "titel": "Nvidia expects to sell $20 billion of Vera Rubin systems in Q3 as shipments begin — figure would account for 20% of its data center revenue mix, marks fastest ramp in company history - Tom's Hardware",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:21:25"
+  },
+  "070b25e4fbae2b66": {
+   "titel": "Kioxia und Sandisk: 31,4 Mrd. Dollar für NAND-Fabrik bis 2032 - BornCity",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:21:28"
+  },
+  "b7eda34e51fb5d37": {
+   "titel": "[News] SK hynix Breaks Ground on Indiana Packaging Plant, Eyes HBM4E by 3Q29; CEO Sees Tight Supply Through 2030 - TrendForce",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:21:36"
+  },
+  "79a8e7fed31ad36b": {
+   "titel": "Why Is Micron Stock in Focus After Nvidia Earnings? AI Memory Shortage and HBM4 Explained - MEXC",
+   "urteil": "gegenwind",
+   "urteil_automatik": "gegenwind",
+   "zeit": "2026-09-02T04:21:45"
+  },
+  "d97cfaad17952717": {
+   "titel": "AI Chip Design Agents Go Mainstream: Virtual Engineers, CoWoS Packaging, and Data Center Power Limits - intelligentliving.co",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:21:54"
+  },
+  "54fd231a0cc54dca": {
+   "titel": "Nvidia und der Speicher: neue HBM-Technik, aber nicht fürs Gaming - PCGH",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:22:04"
+  },
+  "fc720a836efb017f": {
+   "titel": "Samsung Electronics Aktie: HBM4-Anteil springt von 5 auf 35 Prozent - kapitalmarktexperten.de",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:22:10"
+  },
+  "f6ed18d970d5cdb5": {
+   "titel": "SK Hynix may choose Intel to manufacture HBM base dies. - 超能网",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:22:12"
+  },
+  "c6beb4a2e4419508": {
+   "titel": "Kioxia and Sandisk bet $31 billion on NAND flash as AI demand surges - Evertiq",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:22:17"
+  },
+  "a6d44360a5f02174": {
+   "titel": "SK Hynix Denies Report of Intel Foundry Partnership for HBM4E - marketscreener.com",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:22:20"
+  },
+  "da39edf6d354a419": {
+   "titel": "Börsen-Ticker: US-Indizes starten mit Verlusten - Apple und Chevron gefragt - Alphabet, Meta und Amazon unter Druck - SMI in Verlustzone - Holcim im Angebot - Logitech an Tabellenspitze - Cash",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:22:22"
+  },
+  "02751dfb71cea5ad": {
+   "titel": "SK hynix Eyes Intel Foundry for HBM4E Base Die Manufacturing - TechPowerUp",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:22:26"
+  },
+  "10b0ae2545c011bb": {
+   "titel": "Intel Aktie: SK Hynix prüft HBM-Produktion - AD HOC NEWS",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:22:29"
+  },
+  "ff19e8a1f954aa9e": {
+   "titel": "Nvidia to invest $3.5 billion in chipmaker MediaTek, expand partnership - Reuters",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:22:33"
+  },
+  "329eb667b5f521f7": {
+   "titel": "How Apple Stumbled Into AI Hardware Success, Salesforce Revamps AI Pricing, AI Homebuilder Company - The Information",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:22:38"
+  },
+  "38a651a02571ac52": {
+   "titel": "Not Nvidia, Not AMD. Micron Could Be September's Biggest AI Winner or Loser. - Yahoo Finance",
+   "urteil": "gegenwind",
+   "urteil_automatik": "unbestimmt",
+   "zeit": "2026-09-02T04:22:53"
+  },
+  "02111ab5b2302992": {
+   "titel": "Vorwurf der Trickserei: Unfaire Preise für Werbung? Klage gegen Amazon in den USA - app.handelsblatt.com",
+   "urteil": "gegenwind",
+   "urteil_automatik": "gegenwind",
+   "zeit": "2026-09-02T04:22:58"
+  },
+  "5d32a25c6b81297f": {
+   "titel": "Kioxia and Sandisk Plan $31B Japan Investment to Expand NAND Capacity - EE Times Asia",
+   "urteil": "rueckenwind",
+   "urteil_automatik": "rueckenwind",
+   "zeit": "2026-09-02T04:23:01"
+  }
+ }
+}

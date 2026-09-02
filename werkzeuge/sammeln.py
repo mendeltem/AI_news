@@ -82,6 +82,38 @@ RAUSCHMUSTER = re.compile(
 # reihen Firmennamen aneinander und haengen eine Video-Kennung an. Sie treffen
 # damit ein Dutzend beobachteter Eintraege auf einmal und stehen ohne diesen
 # Filter weit oben.
+# Marktgeplauder. Abgeleitet aus 109 von Hand sortierten Meldungen vom
+# 02.09.2026: von den Meldungen, die den bisherigen Filter passiert hatten,
+# wurden 36 Prozent als wertlos aussortiert - fast durchweg Kursberichte,
+# Quartalsvorschauen und Wer-gewinnt-Spekulation.
+#
+# Aufgenommen sind nur die mechanisch eindeutigen Faelle. Grenzfaelle wie
+# "TSMC packaging shift could boost AMD CoWoS share" wurden zwar ebenfalls
+# aussortiert, sind aber inhaltlich Lieferkettenmeldungen - die bleiben drin.
+MARKTGEPLAUDER = re.compile(
+    # Indexstaende, Futures, Vorboersliches
+    r"(pre-?market|nachboerslich|vorboerslich|"
+    r"\b(nasdaq|dow jones|s&p ?500|dax|nikkei)\b.*\b(futures?|schliesst|starten|"
+    r"hold|slide|rise)|"
+    # b[oö] traf "börsen" und "borsen", nicht aber die oe-Umschrift, die in
+    # deutschen Titeln genauso vorkommt.
+    r"b(oe|ö|o)rsen-?ticker|markets? live|us[- ]markt|marktbericht|"
+    # Kursbewegung als Nachricht
+    r"\bstocks?\b.{0,24}\b(rally|slide|soar|plunge|see-?saw|jump|tumble|dip)|"
+    r"\b(shares?|aktien?)\b.{0,20}\b(steigen|fallen|springen|rutschen|verlieren)|"
+    r"chip[- ]aktien|semiconductor stocks|memory stocks|"
+    # Quartalsvorschau und Analystenrunden
+    r"ahead of (its |their )?earnings|vor den quartalszahlen|"
+    r"analyst (research calls?|blog)|zacks|options market statistics|"
+    r"draw[s]? focus|in focus after|"
+    # Wer-gewinnt-Spekulation
+    r"biggest (ai )?(winner|loser)|winner or loser|which stock|"
+    r"^not (nvidia|amd|intel)\b|better than nvidia|"
+    # Makro ohne Chipbezug
+    r"rate pressure|bond selloff|lifts yields|amid .* yields|"
+    # Angebote
+    r"save \$\d+|now just \$|\bdeal[s]? of the day)", re.I)
+
 SPAM = [
     # Emoji im Titel - serioese Nachrichtenhaeuser setzen keine.
     re.compile(r"[\U0001F300-\U0001FAFF☀-➿️]"),
@@ -292,8 +324,9 @@ def main():
         q = (m["quelle"] or "").lower()
         gut = any(g in q for g in GUTE_QUELLEN)
         schwach = any(g in q for g in SCHWACHE_QUELLEN)
-        rausch = bool(RAUSCHMUSTER.search(m["titel"])) or any(
-            p.search(m["titel"]) for p in SPAM)
+        rausch = (bool(RAUSCHMUSTER.search(m["titel"]))
+                  or bool(MARKTGEPLAUDER.search(m["titel"]))
+                  or any(p.search(m["titel"]) for p in SPAM))
         kern = sum(1 for b in m["bezug"] if alle.get(b, {}).get("stufe") == 1)
         m["rauschen"] = schwach or rausch
         m["gewicht"] = round(kern * 2 + (3 if gut else 0)

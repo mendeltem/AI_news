@@ -69,6 +69,17 @@ header a:hover{color:var(--tinte);background:var(--akzent-zart)}
 main{flex:1;display:grid;place-items:center;padding:1rem var(--pad) 0}
 .buehne{width:100%;max-width:560px;display:grid;gap:1rem}
 
+.achsenwahl{display:flex;align-items:center;gap:.7rem;justify-content:center;
+  flex-wrap:wrap}
+.achsenwahl .label{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--grau)}
+.reiter{display:flex;border:1px solid var(--linie);border-radius:5px;overflow:hidden}
+.reiter button{appearance:none;font:inherit;cursor:pointer;font-family:var(--schmal);
+  font-variation-settings:"wght" 700,"wdth" 88;font-size:.92rem;text-transform:uppercase;
+  padding:.35rem .95rem;border:0;background:var(--blatt);color:var(--grau)}
+.reiter button + button{border-left:1px solid var(--linie)}
+.reiter button:hover{color:var(--tinte)}
+.reiter button[aria-pressed="true"]{background:var(--tinte);color:var(--papier)}
 .achsenfrage{font-family:var(--serif);font-size:.98rem;color:var(--tinte2);
   line-height:1.5;text-align:center;max-width:48ch;margin:0 auto;text-wrap:balance}
 .fortschritt{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;
@@ -181,6 +192,13 @@ footer code{font-family:var(--mono);font-size:.9em;background:var(--blatt2);
 
 <main>
   <div class="buehne" id="buehne">
+    <div class="achsenwahl">
+      <span class="label">Du sortierst nach</span>
+      <div class="reiter" id="reiter">
+        <button data-achse="richtung" aria-pressed="true">Richtung</button>
+        <button data-achse="wichtigkeit" aria-pressed="false">Wichtigkeit</button>
+      </div>
+    </div>
     <p class="achsenfrage" id="frage">…</p>
 
     <div class="fortschritt">
@@ -195,11 +213,8 @@ footer code{font-family:var(--mono);font-size:.9em;background:var(--blatt2);
     <div class="knoepfe" id="knoepfe"></div>
 
     <div class="werkzeug">
-      <select id="achse" aria-label="Was wird sortiert">
-        <option value="richtung">Achse: Richtung</option>
-        <option value="wichtigkeit">Achse: Wichtigkeit</option>
-      </select>
       <select id="auswahl" aria-label="Welche Meldungen sortieren">
+        <option value="unsicher">wo das Modell unsicher ist</option>
         <option value="offen">noch nicht beurteilt</option>
         <option value="unbestimmt">nur von der Regel unbestimmte</option>
         <option value="alle">alle ohne Rauschen</option>
@@ -269,7 +284,8 @@ footer code{font-family:var(--mono);font-size:.9em;background:var(--blatt2);
       klasse: {unwichtig:"gegenwind", wichtig:"rueckenwind"}
     }
   };
-  const achse = () => ACHSEN[$("#achse").value];
+  let achsenName = "richtung";
+  const achse = () => ACHSEN[achsenName];
 
   let alle=[], reihe=[], zeiger=0, urteile={}, letztes=null, ziehen=null;
 
@@ -288,9 +304,11 @@ footer code{font-family:var(--mono);font-size:.9em;background:var(--blatt2);
       // Rauschen bleibt draussen - ausser man will genau das beurteilen.
       if(m.rauschen && A.feld !== "wichtig") return false;
       const u = urteile[m.id];
-      if(modus === "offen" && u && u[A.feld]) return false;
-      if(modus === "unbestimmt") return A.automatik(m) === "unbestimmt"
-                                     && !(u && u[A.feld]);
+      if(u && u[A.feld]) return false;      // schon beurteilt, egal in welchem Modus
+      // Wo das Modell nichts entscheiden konnte, lernt es am meisten dazu.
+      // relevanz ist null, wenn der Lernfilter unter seiner Schwelle blieb.
+      if(modus === "unsicher") return "relevanz" in m && m.relevanz === null;
+      if(modus === "unbestimmt") return A.automatik(m) === "unbestimmt";
       return true;
     });
     zeiger = 0;
@@ -462,7 +480,12 @@ footer code{font-family:var(--mono);font-size:.9em;background:var(--blatt2);
   $("#zurueck").addEventListener("click", zurueck);
 
   $("#auswahl").addEventListener("change", ()=>{ baueReihe(); zeichne(); });
-  $("#achse").addEventListener("change", ()=>{
+  $("#reiter").addEventListener("click", e=>{
+    const b = e.target.closest("button[data-achse]");
+    if(!b) return;
+    achsenName = b.dataset.achse;
+    $("#reiter").querySelectorAll("button").forEach(x=>
+      x.setAttribute("aria-pressed", String(x.dataset.achse===achsenName)));
     letztes = null; zeichneKnoepfe(); baueReihe(); zeichne();
     $("#aufloesung").className = "aufloesung leer";
     $("#aufloesung").textContent = "Achse gewechselt.";

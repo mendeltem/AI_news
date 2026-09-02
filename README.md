@@ -69,6 +69,8 @@ sind das 40 % der Rohtreffer.
 | `werkzeuge/bewerten.py` | Richtung je Meldung, per Signalwort |
 | `sortieren.html` | Meldungen selbst wischen, zwei Achsen |
 | `werkzeuge/einpflegen.py` | pflegt die gewischten Urteile ein |
+| `werkzeuge/lernfilter.py` | lernt aus den Urteilen, läuft im Schattenbetrieb |
+| `werkzeuge/auswerten.py` | sucht die Regel hinter den Handurteilen |
 | `urteile.json` | alle Urteile beider Achsen, der Datensatz |
 | `korrekturen.json` | Redaktionskorrekturen der Richtung — der Lernteil |
 | `werkzeuge/archivieren.py` | schreibt den Korpus fort |
@@ -204,6 +206,68 @@ dafür braucht es erst genug Urteile, um zu prüfen, ob sich daraus überhaupt e
 Regel ableiten lässt.
 
 `--trocken` zeigt, was passieren würde, ohne zu schreiben.
+
+## Der Lernfilter
+
+`werkzeuge/lernfilter.py` lernt aus den sortierten Urteilen, was wichtig ist —
+Naive Bayes über Titelwörter, Quelle und ein paar Zählmerkmale. Kein Fremdpaket,
+und jede Entscheidung lässt sich in ihre Bestandteile zerlegen:
+
+```
+DELL, HPE Stocks Draw Focus Ahead Of Earnings This Week
+  -> unwichtig  (Sicherheit 100%)
+  spricht dafuer:
+    w:stocks    +3.15    w:earnings  +2.98    w:dell  +2.98
+```
+
+Das ist keine Kosmetik: ein Filter, der nicht sagen kann, warum er etwas
+wegwirft, ist nicht korrigierbar.
+
+### Die wichtigste Zahl ist nicht die Trefferquote
+
+Ein Modell, das auf seinen eigenen Trainingsdaten geprüft wird, hat immer recht.
+Deshalb misst `pruefen` mit Kreuzvalidierung und vergleicht gegen zwei
+Messlatten. Stand 02.09.2026 mit 109 Urteilen:
+
+| | |
+|---|---|
+| immer „wichtig" raten | 64 % |
+| handgeschriebene Regeln | 84 % |
+| **das Modell** | **85 %** auf 86 % der Fälle |
+
+**Urteil: nicht einsetzen.** 85 gegen 84 Prozent ist Rauschen, kein Fortschritt.
+Ein Filter, der falsch aussortiert, kostet mehr als keiner. Das Werkzeug sagt
+das selbst und endet mit Rückgabewert 2.
+
+### Warum mehr Sortieren allein nicht hilft
+
+```bash
+python werkzeuge/lernfilter.py pruefen --kurve
+```
+
+| Beispiele | Genauigkeit |
+|---|---|
+| 40 | 86 % |
+| 60 | 87 % |
+| 80 | 86 % |
+| 109 | 86 % |
+
+Flach. Der Engpass ist nicht die Menge der Urteile, sondern das Material: aus
+Titelwörtern ist herausgeholt, was drin ist. Was hilft, sind die Fälle, bei
+denen das Modell **unsicher** ist — dort steckt die Information.
+
+### Der Weg zur Automatisierung
+
+1. **Schattenbetrieb** (läuft bereits): Der Lernfilter schätzt jede Meldung ein,
+   gefiltert wird nichts. Aktuell 818 wichtig, 3761 unwichtig, **1702
+   Enthaltungen**.
+2. **Gezielt sortieren**: auf `sortieren.html` die Auswahl *„wo das Modell
+   unsicher ist"* — das sind genau jene 1702.
+3. **Erneut prüfen**: `lernfilter.py pruefen`. Erst wenn der Rückgabewert 0 ist
+   *und* die Genauigkeit spürbar über den Regeln liegt, gehört er in den Weg.
+
+Bis dahin bleibt er ein Beobachter. Das ist die ganze Absicherung: er darf
+mitschreiben, aber nichts wegwerfen.
 
 ## Zwei Zeitfenster
 

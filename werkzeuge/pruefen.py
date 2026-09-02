@@ -20,7 +20,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from sammeln import treffer, schluessel, RAUSCHMUSTER, SPAM  # noqa: E402
+from sammeln import treffer, schluessel, RAUSCHMUSTER, SPAM, MARKTGEPLAUDER  # noqa: E402
 from bewerten import bewerte  # noqa: E402
 
 WURZEL = Path(__file__).resolve().parent.parent
@@ -92,6 +92,21 @@ RAUSCH_FAELLE = [
      "Real Betis Vs Elche (u2FAu6pMjM) - Mshale", True),
     ("10 Stocks To Watch This Week", True),
     ("TSMC raises CoWoS capacity targets for 2026-2027", False),
+
+    # --- Marktgeplauder, am 02.09.2026 aus 109 Handurteilen abgeleitet ---
+    ("SanDisk, Micron, AMD, Nvidia, Intel, Others Plunge Pre-Market As Chip "
+     "Stocks See-Saw", True),
+    ("AI Memory Stocks Rally After Nvidia Earnings: Which Stock Is Best?", True),
+    ("Boersen-Ticker: US-Indizes starten mit Verlusten", True),
+    ("DELL, HPE Stocks Draw Focus Ahead Of Earnings This Week", True),
+    ("The Zacks Analyst Blog Highlights Broadcom, Nvidia, Palantir", True),
+    ("Microsoft, Apple and Oracle Face Rising Rate Pressure", True),
+    ("Save $300 on this 240Hz OLED gaming laptop with an RTX 5070 Ti", True),
+    ("Not NVIDIA or AMD: Why TSMC Could Be the Biggest Winner", True),
+    # ... und was trotz Firmennamen im Titel durchgelassen werden muss
+    ("SK hynix Reportedly Weighs Intel for HBM4E Base Dies", False),
+    ("Nvidia custom NVHBM promises 30% higher bandwidth than HBM4e", False),
+    ("AMD, Broadcom book most of Powertech FOPLP capacity ahead of 2027 ramp", False),
 ]
 
 
@@ -117,7 +132,9 @@ def main():
 
     print("Rauschfilter:")
     for titel, soll in RAUSCH_FAELLE:
-        ist = bool(RAUSCHMUSTER.search(titel)) or any(p.search(titel) for p in SPAM)
+        ist = (bool(RAUSCHMUSTER.search(titel))
+               or bool(MARKTGEPLAUDER.search(titel))
+               or any(p.search(titel) for p in SPAM))
         if ist != soll:
             fehler += 1
             print("  FEHLGESCHLAGEN soll=%-5s ist=%-5s  %s" % (soll, ist, titel[:56]))

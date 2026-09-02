@@ -43,6 +43,14 @@ if "%SCHREIB%"=="2" echo HINWEIS Modell war aus - Feed ohne deutsche Zeilen >> l
 
 python werkzeuge\bewerten.py >> lauf.log 2>&1
 
+REM Der Lernfilter laeuft im Schattenbetrieb: er sagt seine Einschaetzung
+REM an jede Meldung, aber es wird nichts danach gefiltert. So sammelt sich
+REM Beweismaterial, ohne dass ein noch unerprobtes Modell die Seite
+REM beschneidet. Ob er reif ist, sagt "lernfilter.py pruefen" - erst wenn
+REM der Rueckgabewert 0 ist und die Genauigkeit ueber den Regeln liegt,
+REM gehoert er in den Weg. Scheitert er hier, ist das kein Grund zum Abbruch.
+python werkzeuge\lernfilter.py anwenden >> lauf.log 2>&1
+
 python werkzeuge\archivieren.py >> lauf.log 2>&1
 
 git add -A nachrichten.json themen.json archiv artikel analyse korrekturen.json >> lauf.log 2>&1
