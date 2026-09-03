@@ -26,28 +26,33 @@ cd /d "%WURZEL%"
 echo. >> lauf.log
 echo ===== %DATE% %TIME% ===== >> lauf.log
 
+echo [%TIME%] pruefen >> lauf.log
 python werkzeuge\pruefen.py >> lauf.log 2>&1
 if errorlevel 1 (
   echo FEHLER Selbsttest - Lauf abgebrochen, es wird nichts veroeffentlicht >> lauf.log
   exit /b 4
 )
 
+echo [%TIME%] sammeln >> lauf.log
 python werkzeuge\sammeln.py >> lauf.log 2>&1
 if errorlevel 1 (
   echo FEHLER Sammeln - abgebrochen, alter Stand bleibt >> lauf.log
   exit /b 1
 )
 
+echo [%TIME%] schreiben >> lauf.log
 python werkzeuge\schreiben.py >> lauf.log 2>&1
 set SCHREIB=%ERRORLEVEL%
 if "%SCHREIB%"=="2" echo HINWEIS Modell war aus - Feed ohne deutsche Zeilen >> lauf.log
 
+echo [%TIME%] bewerten >> lauf.log
 python werkzeuge\bewerten.py >> lauf.log 2>&1
 
 REM Meldungen, die dieselbe Geschichte erzaehlen, zu einer Karte
 REM zusammenfassen. Das alte Entdoppeln traf nur woertliche Wiederholungen -
 REM ueber Redaktions- und Sprachgrenzen hinweg stand dieselbe Nachricht
 REM achtmal untereinander.
+echo [%TIME%] gruppieren >> lauf.log
 python werkzeuge\gruppieren.py >> lauf.log 2>&1
 
 REM Der Lernfilter schreibt seine Einschaetzung an jede Meldung. Die Seite
@@ -59,14 +64,18 @@ REM
 REM Er trainiert bei jedem Lauf neu aus urteile.json - was gestern sortiert
 REM wurde, wirkt heute. Scheitert er, ist das kein Grund zum Abbruch: dann
 REM fehlt nur das Feld und die Seite zeigt wieder alles.
+echo [%TIME%] lernfilter anwenden >> lauf.log
 python werkzeuge\lernfilter.py anwenden >> lauf.log 2>&1
 
 REM Welche der eigenen Urteile dem Modell verdaechtig sind. Dreht nichts um,
 REM legt sie nur unter "nochmal ansehen" wieder auf den Stapel.
+echo [%TIME%] lernfilter zweifel >> lauf.log
 python werkzeuge\lernfilter.py zweifel >> lauf.log 2>&1
 
+echo [%TIME%] archivieren >> lauf.log
 python werkzeuge\archivieren.py >> lauf.log 2>&1
 
+echo [%TIME%] git >> lauf.log
 git add -A nachrichten.json themen.json archiv artikel analyse ^
         korrekturen.json urteile.json zweifel.json >> lauf.log 2>&1
 git diff --cached --quiet
@@ -95,7 +104,7 @@ echo        der naechste Lauf schiebt ihn mit nach >> lauf.log
 exit /b 3
 
 :gepusht
-echo Gepusht >> lauf.log
+echo [%TIME%] fertig und gepusht >> lauf.log
 exit /b %SCHREIB%
 
 :push

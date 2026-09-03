@@ -37,8 +37,17 @@ LOG = WURZEL / "lauf.log"
 KOPF = {"User-Agent": "Mozilla/5.0 (compatible; AI-news-sammler/1.0; "
                       "+https://github.com/mendeltem/AI_news)"}
 PAUSE = 0.35          # Sekunden zwischen zwei Abfragen
-ZEITBUDGET_MIN = 25   # danach wird abgebrochen und mit dem Erreichten gearbeitet
-ABFRAGE_LIMIT = 12    # Sekunden je Abfrage, vorher 30
+# Das Sammeln darf dauern - es startet um 6 Uhr, und hochgeladen wird, wenn es
+# fertig ist. Die drei Stunden sind kein Ziel, sondern eine Notbremse: sie
+# verhindern nur, dass ein kaputter Gegenueber den Lauf endlos haengen laesst.
+# Regulaer sind es fuenf bis zehn Minuten.
+ZEITBUDGET_MIN = 180
+# Fuenfzehn Sekunden je Abfrage statt dreissig. Am 03.09.2026 dauerte das
+# Sammeln fast zwei Stunden, weil jede haengende Abfrage bei 30 Sekunden mal
+# zwei Versuchen eine volle Minute kostet - bei 257 Abfragen ein Vormittag.
+# Ein RSS-Ausgang, der nach fuenfzehn Sekunden nichts geliefert hat, liefert
+# auch nach dreissig nichts.
+ABFRAGE_LIMIT = 15
 ZEITFENSTER_TAGE = 2    # Firmen: aelteres interessiert im Tagesfeed nicht
 ZEITFENSTER_THEMEN = 8  # Themen bewegen sich im Wochentakt, nicht taeglich
 
