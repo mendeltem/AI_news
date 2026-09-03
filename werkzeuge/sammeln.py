@@ -37,6 +37,8 @@ LOG = WURZEL / "lauf.log"
 KOPF = {"User-Agent": "Mozilla/5.0 (compatible; AI-news-sammler/1.0; "
                       "+https://github.com/mendeltem/AI_news)"}
 PAUSE = 0.35          # Sekunden zwischen zwei Abfragen
+ZEITBUDGET_MIN = 25   # danach wird abgebrochen und mit dem Erreichten gearbeitet
+ABFRAGE_LIMIT = 12    # Sekunden je Abfrage, vorher 30
 ZEITFENSTER_TAGE = 2    # Firmen: aelteres interessiert im Tagesfeed nicht
 ZEITFENSTER_THEMEN = 8  # Themen bewegen sich im Wochentakt, nicht taeglich
 
@@ -151,10 +153,17 @@ def rss_url(suche, sprache="de", tage=7):
 
 
 def hole(url, versuche=2):
+    """Zwei Versuche mit knappem Limit.
+
+    Am 03.09.2026 brauchte der Sammellauf fast zwei Stunden: das Netz war zaeh,
+    und bei 30 Sekunden Limit mal zwei Versuchen kostet jede haengende Abfrage
+    eine Minute. Bei 257 Abfragen reicht das fuer einen halben Vormittag. Zwoelf
+    Sekunden genuegen fuer einen RSS-Ausgang; was laenger braucht, ist ohnehin
+    kaputt."""
     for i in range(versuche):
         try:
             req = urllib.request.Request(url, headers=KOPF)
-            with urllib.request.urlopen(req, timeout=30) as r:
+            with urllib.request.urlopen(req, timeout=ABFRAGE_LIMIT) as r:
                 return r.read()
         except (urllib.error.URLError, TimeoutError, OSError) as e:
             if i + 1 == versuche:
@@ -239,6 +248,8 @@ def main():
                    help="Zeitfenster fuer Querschnittsthemen (Vorgabe 8)")
     p.add_argument("--limit", type=int, help="nur die ersten N Eintraege abfragen")
     p.add_argument("--nur", help="Kommaliste von IDs, sonst alles")
+    p.add_argument("--budget", type=int, default=ZEITBUDGET_MIN,
+                   help="Minuten, nach denen das Sammeln abbricht")
     a = p.parse_args()
 
     if not THEMEN.exists():
@@ -264,12 +275,22 @@ def main():
     # sind Tagesgeschaeft, Querschnittsthemen wie CoWoS oder NAND-Preise
     # bewegen sich im Wochentakt. Mit einem gemeinsamen 2-Tage-Fenster sehen
     # genau die strukturellen Themen leer aus, wegen derer die Seite existiert.
+    schluss = time.monotonic() + a.budget * 60
     grenze_firma = datetime.now(timezone.utc) - timedelta(days=a.tage)
     grenze_thema = datetime.now(timezone.utc) - timedelta(days=a.tage_themen)
     meldungen = {}
     ok = 0
 
+    abgebrochen = 0
     for i, e in enumerate(beob, 1):
+        # Harte Obergrenze. Lieber ein unvollstaendiger Stand als ein Lauf, der
+        # den ganzen Vormittag belegt und am Zeitlimit der Aufgabenplanung
+        # stirbt, ohne etwas geschrieben zu haben.
+        if time.monotonic() > schluss:
+            abgebrochen = len(beob) - i + 1
+            log("Zeitbudget von %d Minuten erschoepft - %d Eintraege "
+                "uebersprungen" % (a.budget, abgebrochen))
+            break
         suchen = e.get("suchen") or [e["name"]]
         # Kern-Eintraege in beiden Sprachen, Anwendungsfirmen nur englisch -
         # ueber die schreibt die deutsche Presse ohnehin kaum.
@@ -342,7 +363,8 @@ def main():
     aus = {
         "stand": datetime.now().isoformat(timespec="seconds"),
         "tag": heute,
-        "abgefragt": len(beob),
+        "abgefragt": len(beob) - abgebrochen,
+        "uebersprungen": abgebrochen,
         "meldungen_gesamt": len(sortiert),
         "meldungen_neu": sum(1 for m in sortiert if m["neu"]),
         "meldungen": sortiert,

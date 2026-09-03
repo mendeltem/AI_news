@@ -80,10 +80,14 @@ git commit -q -m "Stand %DATE%" >> lauf.log 2>&1
 REM Der Push kann an einem DNS-Aussetzer scheitern. Dreimal versuchen - und
 REM wenn es dann immer noch nicht geht, das auch sagen. Ein stiller Fehlschlag
 REM hier heisst, die Seite steht tagelang still, ohne dass es auffaellt.
+REM Gewartet wird mit ping, nicht mit timeout. timeout liest von der Konsole,
+REM und unter der Aufgabenplanung gibt es keine: am 03.09.2026 hing der Lauf
+REM dadurch zwei Stunden mit 0,02 CPU-Sekunden fest, bis das Zeitlimit ihn
+REM abraeumte - ohne eine einzige Zeile im Protokoll nach dem Selbsttest.
 call :push && goto :gepusht
-timeout /t 20 /nobreak >nul
+ping -n 21 127.0.0.1 >nul 2>&1
 call :push && goto :gepusht
-timeout /t 30 /nobreak >nul
+ping -n 31 127.0.0.1 >nul 2>&1
 call :push && goto :gepusht
 
 echo FEHLER Push nach drei Versuchen - Commit liegt lokal, >> lauf.log
